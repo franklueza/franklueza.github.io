@@ -1,0 +1,31 @@
+body {
+    background-color: #18BC9C;
+    font-family: Lato;
+}
+.conteiner {
+    display: flex;
+    /*flex-flow: column wrap; */
+    flex-direction: column;
+    justify-content: center;
+
+}
+img {
+    display: inline;
+    margin: auto;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+h1 {
+    display: inline;
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+p {
+    display: inline;
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+}
