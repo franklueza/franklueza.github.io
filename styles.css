@@ -36,11 +36,11 @@ p {
     color: #fff;
     text-align: center;
 }
-.vuejs {
+.portafolio .vuejs {
     background-image: url('./img/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 350px;
-    height: 250px;
+    width: 350px !important;
+    height: 250px !important;
 }
