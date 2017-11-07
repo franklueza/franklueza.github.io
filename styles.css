@@ -1,9 +1,9 @@
 body {
-    background-color: #18BC9C;
     font-family: Lato;
 }
 .conteiner {
     display: flex;
+    background-color: #18BC9C;
     /*flex-flow: column wrap; */
     flex-direction: column;
     justify-content: center;
@@ -25,9 +25,22 @@ h1 {
     color: #fff;
     text-align: center;
 }
+.port {
+    display: block;
+    color: #000;
+    text-align: center;
+}
 p {
     display: inline;
     font-size: 35px;
     color: #fff;
     text-align: center;
+}
+.vuejs {
+    background-image: url('./img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px;
+    height: 250px;
 }
