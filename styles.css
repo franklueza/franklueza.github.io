@@ -25,19 +25,36 @@ h1 {
     color: #fff;
     text-align: center;
 }
-.port {
-    display: block;
-    color: #000;
-    text-align: center;
-}
 p {
     display: inline;
     font-size: 35px;
     color: #fff;
     text-align: center;
 }
-.portafolio .vuejs {
+.conteiner i {
+    text-align:center;
+    font-size: 50px;
+    display: block;
+    color: #fff;
+}
+.port {
+    display: block;
+    color: #000;
+    text-align: center;
+}
+.work {
+    display: flex;
+}
+.work .vuejs {
     background-image: url('./img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px !important;
+    height: 250px !important;
+}
+.work .cv {
+    background-image: url('./img/Lueza.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
