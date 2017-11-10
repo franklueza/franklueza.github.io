@@ -1,0 +1,54 @@
+/* Cómo */
+/* Cascade Stylesheets */
+/* Hojas de estilo en Cascada */
+body {
+    margin: 0;
+}
+
+#container {
+    background-color: #2D2D2D;
+    height: 300px;
+    display: flex;
+    justify-content: center; /*Alineacion horizontal*/
+    align-items: center;
+}
+
+#container #inner {
+    display: flex;
+    flex-direction: column; /*Alineacion vertical*/
+    align-items: center; 
+}
+
+#container #inner .title {
+    color: white;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+#container #inner .subtitle {
+    color: white;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+#container #inner .buttons a {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #fff;
+    background-color: #05A5D1; 
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top:30px;
+    margin-bottom: 12px;
+    text-align: center;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3)
+}

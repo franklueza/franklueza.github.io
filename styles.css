@@ -80,6 +80,17 @@ hr {
     height: 250px !important;
     margin-bottom: 50px;
 }
+.work .react {
+    background-image: url('./img/header_logo.png');
+    background-color: #2D2D2D;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px !important;
+    height: 250px !important;
+    margin-bottom: 50px;
+}
+
 .work .cv {
     background-image: url('./img/Lueza.jpg');
     background-size: contain;
@@ -112,6 +123,16 @@ hr {
 .work .angular {
     background-image: url('./img/angular-logo.svg');
     background-color: #F44336;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 350px !important;
+    height: 250px !important;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.work .rubyonrails {
+    background-image: url('./img/rails-logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
