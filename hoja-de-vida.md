@@ -9,7 +9,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 ## Educación actual
 * Front-End Developer en World Teach Maker
 ## Educación Profesional
-* Ing. Físico en Universidad Autónoma Metropolitrana, unidad Azcapotzalco
+* Ing. Físico en Universidad Autónoma Metropolitana, Unidad Azcapotzalco
 ## Idiomas
 * Español: Nativo
 * Inglés: Comprensión de textos técnicos y científicos
