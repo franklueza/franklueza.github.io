@@ -1,14 +1,18 @@
 .content1 {
     min-height: 600px; 
     color: #fff;
-    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
     padding-top: 50px;
-    background: #34e89e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}    
-
+    background-image: url('img/starwars.jpeg');
+    background-size: 1500px 600px;
+    background-repeat: no-repeat;
+    /*background: #34e89e;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+nav h1{
+    font-family: 'Freckle Face', cursive;
+    color: #fff;
+}  
 .content2 {
     min-height: 600px; 
     
