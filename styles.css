@@ -13,7 +13,7 @@ body {
     background-image: url('img/starwars.jpeg');
     background-size: 1500px 600px;
     background-repeat: no-repeat;
-    font-family: 'Bad Script', cursive;
+    font-family: 'Lato', sans-serif;
     /*background: #34e89e;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
@@ -26,9 +26,16 @@ nav h1 {
     font-family: 'Sacramento', cursive;
     color: #fff;
 }  
+/*.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}*/
 .content2 {
     min-height: 600px; 
-    font-family: 'Bad Script', cursive;
+    font-family: 'Lato', sans-serif;
     color: #fff;
     background: #000046;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
@@ -36,7 +43,7 @@ nav h1 {
 }
 
 .content3 {
-    font-family: 'Bad Script', cursive;
+    font-family: 'Lato', sans-serif;
     min-height: 300px;
     padding-top: 50px;
     color: #fff;
@@ -45,9 +52,12 @@ nav h1 {
     background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
+.certificaciones {
+    font-family: 'Lato', sans-serif;
+}
 .content4 {
-    font-family: 'Bad Script', cursive;
-        min-height: 300px;
+    font-family: 'Lato', sans-serif;
+    min-height: 300px;
     padding-top: 50px;
     color: #fff;
     background: #093028;  /* fallback for old browsers */
@@ -64,7 +74,7 @@ nav h1 {
     color: #000;
 }
 .content5{
-    font-family: 'Bad Script', cursive;
+    font-family: 'Lato', sans-serif;
     color:#fff;
     background: #4ECDC4;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
