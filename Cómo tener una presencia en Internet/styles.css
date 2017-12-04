@@ -1,0 +1,23 @@
+body {
+    font-size: 20px;
+}
+.pos-f-t a {
+    font-family: 'Bad Script', cursive;
+    color:#fff;
+}
+nav h1 {
+    /*ont-family: 'Berkshire Swash', cursive;*/
+    font-family: 'Sacramento', cursive;
+    color: #fff;
+}  
+/*.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}*/
+
+.blog-footer{
+    background-color: #242424;
+}
