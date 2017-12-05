@@ -1,11 +1,10 @@
-# Francisco Israel Lueza Martinez
+# Francisco Israel Lueza Martínez
 ![FrankLu Lueza](https://franklueza.github.io/img/Lueza.jpg)
 ## Contacto
 * email: ixfanalytics@gmail.com
 * web: [franklueza](https://franklueza.github.io/)
 * Tel: 7171444026
-## Domicilio
-Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
+* Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
 ## Resumen
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, y la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y empreder mis ideas e inquietudes.
 ## Educación actual
