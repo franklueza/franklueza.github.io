@@ -15,38 +15,40 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>    
     <body>
-        <nav class="nav bg-dark justify-content-center">
+        <!--<nav class="nav bg-light justify-content-center">
             <h1 class="col-12 col-lg-6 text-center display-4 lead pt-3">Frank Lueza</h1>
-        </nav>
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
-                    <a class="navbar-brand" href="#">Inico</a>
-                    <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="#">Frank Lu</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Entrenamiento</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                    </ul> 
-                </div>
+        </nav>-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="https://franklueza.github.io/"><h1 class="yo justify-content-md-center">Frank Lueza</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#film">Frank Lueza <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#portafolio">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://franklueza.github.io/blog/">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Capacitación</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown10">
+                    <a class="dropdown-item" href="#">Google Analytics</a>
+                    <a class="dropdown-item" href="#">WordPress</a>
+                    <a class="dropdown-item" href="#">HTML y CSS</a>
+                  </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contáctanos</a>
+                </li>
+                </li>
+              </ul>
             </div>
-            <nav class="navbar navbar-dark bg-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
-            <nav class="navbar fixed-bottom navbar-light bg-light">
-                <a class="navbar-brand" href="#">Fixed bottom</a>
-            </nav>
-            
+          </nav>
         </div>
         <div class="container-fluid content1">
             <div class="row justify-content-center align-items-center pt-5">
@@ -56,13 +58,14 @@
                     <span class="sr-only">Loading...</span> 
                     <h3>¿Cuál es el mejor método para aprender?</h3>
                     <h6>Aprende mirando y modificando</h6>
-                    <button class="btn btn-danger buttonload">
-                        <i class="fa fa-circle-o-notch fa-spin"></i> Consulta nuestro Blog
-                    </button>
+                    
+                        
+                        <a class="btn btn-danger" href="https://franklueza.github.io/blog/"><i class="fa fa-circle-o-notch fa-spin"></i> Consulta nuestro Blog</a>
+                    
                 </div>
             </div>   
         </div>
-        <div class="container-fluid d-flex justify-content-center content2 pb-5">
+        <div class="container-fluid d-flex justify-content-center content2 pb-5" id="film">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card justify-content-center" style="width: 20rem;">
@@ -79,7 +82,7 @@
                 he acumulado en estos últimos meses. También he colocado un formulario 
                 de contacto abajo, siente libre de contactarme. Me encantaría tener la
                 oportunidad de escucharte y saber de ti.</p>-->  
-        <div class="container-fluid d-flex flex-column content3 pt-5 pb-5">
+        <div class="container-fluid d-flex flex-column content3 pt-5 pb-5" id="portafolio">
             <div class="row justify-content-center">
                 <div class="col text-center pt-5 pb-5">
                     <h2>PORTAFOLIO</h2>
@@ -140,7 +143,7 @@
             </div>       
         </div>
                          
-        <div class="container-fluid content4">
+        <div class="container-fluid content4" id="contacto">
             <div class="row flex-column align-items-center pb-5">
                 <h1 class="col-12 col-lg-6 text-center display-5">Contáctame</h1>
             </div>

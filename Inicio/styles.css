@@ -1,6 +1,7 @@
 body {
     font-size: 20px;
 }
+
 .pos-f-t a {
     font-family: 'Bad Script', cursive;
     color:#fff;
@@ -29,7 +30,7 @@ body {
 nav h1 {
     /*ont-family: 'Berkshire Swash', cursive;*/
     font-family: 'Sacramento', cursive;
-    color: #fff;
+    color: rgba(0,0,0,0.4);
 }  
 /*.myVideo {
     position: fixed;
@@ -54,7 +55,7 @@ nav h1 {
     background-image: url("img/switzerland-zermatt-mountain.jpg");
     
     /* Set a specific height */
-    height: 700px; 
+    min-height: 700px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
