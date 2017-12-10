@@ -1,104 +1,92 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
 body {
-    font-size: 20px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+.logo img{
+  border-radius: 50%;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
 }
 
-.pos-f-t a {
-    font-family: 'Bad Script', cursive;
-    color:#fff;
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
 }
-.content1 {
-    
-    min-height: 500px;   
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    /*padding-top: 50px;*/
-    background-image: url('img/montañas.jpeg');
-    /*background-size: 1500px 600px;
-    background-repeat: no-repeat;
-    font-family: 'Lato', sans-serif;
-    /*background: #34e89e;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-}
-.btn ,   h6{
-    font-size: 20px;
-}
-nav h1 {
-    /*ont-family: 'Berkshire Swash', cursive;*/
-    font-family: 'Sacramento', cursive;
-    color: rgba(0,0,0,0.4);
-}  
-/*.myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-}*/
-.content2 {
-    font-family: 'Lato', sans-serif;
-    min-height: 300px;
-    padding-top: 50px;
-    color: #000;
-    /*background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);*/
-    /*background: #159957;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-}
-.content3 {
-    color: #fff;
-    /* The image used */
-    background-image: url("img/switzerland-zermatt-mountain.jpg");
-    
-    /* Set a specific height */
-    min-height: 700px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    /*min-height: 600px; 
-    font-family: 'Lato', sans-serif;
-    
-    background: #000046;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-}
-.certificaciones {
-    font-family: 'Lato', sans-serif;
-}
-.content4 {
-    font-family: 'Lato', sans-serif;
-    min-height: 300px;
-    padding-top: 50px;
-    color: #fff;
-    background: #093028;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
 }
 
-.content4 a{
-    color: #fff;
-    text-decoration: none;
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 
-.content4 a:hover{
-    color: #000;
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
-.content5{
-    font-family: 'Lato', sans-serif;
-    color:#fff;
-    background: #4ECDC4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
 }
-.blog-footer{
-    background-color: #242424;
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
 }
