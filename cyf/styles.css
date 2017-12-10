@@ -9,3 +9,6 @@ nav h1 {
 hr {
     color: #000000;
 }
+img {
+    border-radius:50%; 
+}
