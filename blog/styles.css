@@ -1,7 +1,10 @@
 body {
     min-height: 75rem; /* Can be removed; just added for demo purposes */
+    background-color: #fff;
   }
-  
+main{
+  background-color: #fff;
+}
   .navbar {
     margin-bottom: 0;
   }
