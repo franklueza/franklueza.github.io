@@ -12,9 +12,9 @@ body {
   }
   .curso {
       min-height: 500px;
-      background: #FFB75E;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to top, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to top, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+      background: #C02425;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to top, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to top, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
       color:#fff;
   }
   /* Since positioning the image, we need to help out the caption */
