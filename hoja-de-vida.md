@@ -39,8 +39,8 @@ _Actividades:_
 * Formación de una consultoria de Marketing Digital y Diseño Web
 * Creación de aplicaciones
 * Desarrollarme como Front-End
-### Curso de formación
-* Diplomado en Inbound Marketing con Certificacion Internacional en Inbound por Hubspot, Marzo 25 a Junio 03 2017. Digital Business Academy
+### Cursos de formación
+* Diplomado en Inbound Marketing con Certificación Internacional en Inbound por Hubspot, Marzo 25 a Junio 03 2017. Digital Business Academy
 * Creación de una web profesional con WordPress, 2017. Domestika.
 * Técnicas de Desarrollo Web con HTML5 y CSS3, 2017. Domestika.
 * Introducción al Desarrollo Web Responsive con HTML y CSS, 2017. Domestika.
