@@ -18,6 +18,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 ## Habilidades
 * Autodidacta  
 * Manejo del CMS WordPress
+* Manejo de FTP FileZilla
 * Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes
 * Facebook Ads
 * Google Analytics
