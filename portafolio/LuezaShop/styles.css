@@ -1,0 +1,28 @@
+.encabezado {
+    background-color: #99c84a;
+    color: #fff;
+}
+.login {
+    color: #fff;
+    
+}
+.encabezado a:hover {
+    color: red;
+    text-decoration: none;
+}
+.carousel-item img{
+    height: 500px;
+}
+
+.info {
+    background-color: #99c84a;
+    color: #fff;
+}
+.formulario {
+    background-color: #1c3643;
+    color: #fff;
+}
+
+.menupie a {
+    color:#fff;
+}

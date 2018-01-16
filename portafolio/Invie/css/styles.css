@@ -1,0 +1,37 @@
+body {
+    font-family: 'Allerta', sans-serif;
+    margin: 0;
+}
+.portada {
+    background-image: url('../images/background.png');
+    color:#fff;
+    padding: 20px;
+}
+.menu {
+    font-size: 24px;
+    display: inline-block;
+}
+.menu li {
+    display: inline-block;
+}
+.logotipo {
+    display: inline-block;
+}
+.titulo {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.titulo-a {
+    font-size: 24px;
+}
+.guitarras {
+    color: #1f313c;
+}
+.guitarras h2 {
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+.titulo-b {
+    font-size: 50px;
+}
