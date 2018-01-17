@@ -24,6 +24,10 @@ body {
 }
 .costo1 {
   font-size: 5em;
+  color:#007BFF;
+}
+.card-title {
+  color: #454545;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -58,11 +62,10 @@ body {
 /* Center align the text within the three columns below the carousel */
 .marketing {
   background: #44A08D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
-  height: 28rem;
+  height: 20rem;
 }
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
@@ -91,6 +94,12 @@ background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, F
   letter-spacing: -.05rem;
 }
 
+.pie {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:#fff;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
