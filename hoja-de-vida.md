@@ -9,22 +9,22 @@
 ## Resumen
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, y la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y empreder mis ideas e inquietudes.
 ## Educación actual
-* Front-End Developer en World Teach Maker
+* Carrera de Marketing Digital en Platzi
 ## Educación Profesional
 * Ing. Físico en UAM-A, Unidad Azcapotzalco
 ## Idiomas
 * Español: Nativo
 * Inglés: Comprensión de textos técnicos y científicos
-## Habilidades
+## Habilidades y aprendizajes
 * Autodidacta  
-* Manejo del CMS WordPress
-* Manejo de FTP FileZilla
-* Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes
-* Facebook Ads
-* Google Analytics
-* Publicidad en la Red de búsqueda (AdWords)
-* HTML5 y CSS3
-* React
+* Manejo del CMS WordPress 60%
+* Manejo de FTP FileZilla 80%
+* Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes 80%
+* Facebook Ads 80%
+* Google Analytics 85%
+* Publicidad en la Red de búsqueda (AdWords) 85%
+* HTML5 y CSS3 75%
+* React 10%
 ## Certificaciones
 * Inbound by HubSpot
 * Analytics by Google
@@ -37,8 +37,8 @@ _Actividades:_
 * Análisis SEO y SEO Onpage
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
-* Formación de una consultoria de Marketing Digital y Diseño Web
-* Creación de aplicaciones
+* Formación de una consultoria de Marketing Digital y Desarrollo Web
+* Creación de aplicaciones en React Native
 * Desarrollarme como Front-End
 ### Cursos de formación
 * Diplomado en Inbound Marketing con Certificación Internacional en Inbound por Hubspot, Marzo 25 a Junio 03 2017. Digital Business Academy
