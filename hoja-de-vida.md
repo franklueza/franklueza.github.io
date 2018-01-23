@@ -55,6 +55,40 @@ _Actividades:_
 * Introducción al Marketing y Estrategias Digitales, 2016. Platzi.
 * SEO Posicionamiento en Buscadores, 2016. Platzi.
 * Email Marketing, 2016. Platzi
+* Introducción a Machine Learning, 2017. Miriada X
+### Otros cursos, ponencias y conferencias academicas
+* Cartel: Caracterización de una red neuronal recurrente
+bidimensional, UAM-CUA, VII Semana de Computacion y
+Matemáticas Aplicadas, Departamento de Matematicas
+Aplicadas, 6 de Junio. 2014
+* Cartel: Caracterización de una red neuronal recurrente
+bidimensional, Primer Simposio del Posgrado en Ciencias
+Naturales e Ingeniería, UAM-CUA, División de Ciencias Naturales
+e Ingeniería y la Coordinación de Estudios de Posgrado
+29 y 30 de Mayo.2014
+* Certificate. Massive Open Online Course: Introduction
+to Dynamical Systems and Chaos, Santa Fe Institute,
+Winter 2014, 6 Jan to 1 Apr. 2014
+* Curso Teórico: "La tipificacion de microorganismos mediante
+Electroforésis de Campos Pulsantes en minigeles
+(miniECP)", UACM, ICyT y CDEDF, 30 de Julio al 03 de
+Agosto (20 hrs) 2012
+* Ponencia en el 3er Congreso Internacional de Transporte,
+Perspectivas y Equilibrio de la Movilidad Urbana
+Sustentable", Asociación Mexicana de Transporte
+y Movilidad(AMTM), 19, 20 y 21 de Mayo.2011
+* Ponencia "Limites inversos Aplicados a la Economía" en
+el Seminario de Investigación Científica y Tecnológica
+en el X aniversario de la UACM, del 6 al 8 de Abril. 2011
+* Ponencia en el 1ro y 2do Simposio de Tecnologa Avanzada,
+Tema: "Síntesis de Óxido de Circonio ZrO2 para
+Dosimetría de Electrones en Radioterapia". CICATAIPN,
+del 16 al 20 Junio y del 28 de Noviembre al 5 de
+Diciembre. 2008
+* Publicación en el 1er Seminario de Investigación. "Síntesis
+de Óxido de Circonio ZrO2 para Dosimetría de Electrones
+en Radioterapia". Pag 17. CICATA-IPN, Junio.2008
+Los resúmenes aparecen en la página: http://www.repositoriodigital.ipn.mx/handle/123456789/10882
 ### Posiciones académicas
 * Profesor Titular, Área de Física, CECyTEM Cuautlitlan Izcalli, 2015.
 * Docente en Línea, Universidad Abierta y a Distancia México, 2015.
