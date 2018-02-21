@@ -3,8 +3,9 @@
 ## Contacto
 * email: ixfanalytics@gmail.com
 * web: [franklueza](https://franklueza.github.io/)
-* Cel: 5568895354
-* Tel casa: 7171444026
+       [franklu](https://franklu.com.mx/)
+* Cel: 55 68 89 53 54
+* Tel casa: (01) 717 144 40 26
 * Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
 ## Resumen
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, y la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y empreder mis ideas e inquietudes.
@@ -29,12 +30,16 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * Inbound by HubSpot
 * Analytics by Google
 * AdWords by Google
-### Colaboración actual en [Forma Vital](https://www.formavital.com)
+### Colaboración actual en:
+[Forma Vital](https://www.formavital.com)
 _Actividades:_
 * Análisis de datos del sitio web y de la página de Facebook
 * Administración del sitio web
 * Subida de contenido
 * Análisis SEO y SEO Onpage
+###Proyectos en desarrollo del sitio web:
+[Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
+[TDeTamal](http://www.tdetamal.mx/)
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
@@ -58,8 +63,8 @@ _Actividades:_
 * Introducción a Machine Learning, 2017. Miriada X
 ### Otros cursos, ponencias y conferencias academicas
 * Cartel: Caracterización de una red neuronal recurrente
-bidimensional, UAM-CUA, VII Semana de Computacion y
-Matemáticas Aplicadas, Departamento de Matematicas
+bidimensional, UAM-CUA, VII Semana de Computación y
+Matemáticas Aplicadas, Departamento de Matemáticas
 Aplicadas, 6 de Junio. 2014
 * Cartel: Caracterización de una red neuronal recurrente
 bidimensional, Primer Simposio del Posgrado en Ciencias
@@ -69,7 +74,7 @@ e Ingeniería y la Coordinación de Estudios de Posgrado
 * Certificate. Massive Open Online Course: Introduction
 to Dynamical Systems and Chaos, Santa Fe Institute,
 Winter 2014, 6 Jan to 1 Apr. 2014
-* Curso Teórico: "La tipificacion de microorganismos mediante
+* Curso Teórico: "La tipificación de microorganismos mediante
 Electroforésis de Campos Pulsantes en minigeles
 (miniECP)", UACM, ICyT y CDEDF, 30 de Julio al 03 de
 Agosto (20 hrs) 2012
@@ -80,7 +85,7 @@ y Movilidad(AMTM), 19, 20 y 21 de Mayo.2011
 * Ponencia "Limites inversos Aplicados a la Economía" en
 el Seminario de Investigación Científica y Tecnológica
 en el X aniversario de la UACM, del 6 al 8 de Abril. 2011
-* Ponencia en el 1ro y 2do Simposio de Tecnologa Avanzada,
+* Ponencia en el 1ro y 2do Simposio de Tecnología Avanzada,
 Tema: "Síntesis de Óxido de Circonio ZrO2 para
 Dosimetría de Electrones en Radioterapia". CICATAIPN,
 del 16 al 20 Junio y del 28 de Noviembre al 5 de
@@ -93,8 +98,7 @@ Los resúmenes aparecen en la página: http://www.repositoriodigital.ipn.mx/hand
 * Profesor Titular, Área de Física, CECyTEM Cuautlitlan Izcalli, 2015.
 * Docente en Línea, Universidad Abierta y a Distancia México, 2015.
 * Profesor del sistema Semi-Escolarizado, Instituto de Educación Media Superior IEMS, 2012-2014.
-* Profesor de Asignatura \A", Instituto Tecnológico de Tláhuac III, 2012.
-* Profesor Titular \B" de Matemáticas, Centro de Bachillerato Tecnológico, CBT Jaime Keller Torres, 2010.
+* Profesor de Asignatura "A", Instituto Tecnológico de Tláhuac III, 2012.
+* Profesor Titular "B" de Matemáticas, Centro de Bachillerato Tecnológico, CBT Jaime Keller Torres, 2010.
 * Profesor Titular "A" de Tiempo Parcial, Área de Matemáticas, Universidad Autónoma Metropolitana Unidad Azcapotzalco, 2010-2011.
 * Ayudante Nivel "A", Área de Matemáticas, Universidad Autónoma Metropolitana Unidad Azcapotzalco, 2005-2008.
-
