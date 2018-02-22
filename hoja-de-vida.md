@@ -2,8 +2,9 @@
 ![FrankLu Lueza](https://franklueza.github.io/img/Lueza.jpg)
 ## Contacto
 * email: ixfanalytics@gmail.com
-* web: [franklueza](https://franklueza.github.io/)
-       [franklu](https://franklu.com.mx/)
+* Sitio Web: 
+* [franklueza](https://franklueza.github.io/)
+* [franklu](https://franklu.com.mx/)
 * Cel: 55 68 89 53 54
 * Tel casa: (01) 717 144 40 26
 * Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
@@ -31,15 +32,15 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * Analytics by Google
 * AdWords by Google
 ### Colaboración actual en:
-[Forma Vital](https://www.formavital.com)
+* [Forma Vital](https://www.formavital.com)
 _Actividades:_
 * Análisis de datos del sitio web y de la página de Facebook
 * Administración del sitio web
 * Subida de contenido
 * Análisis SEO y SEO Onpage
 ###Proyectos en desarrollo del sitio web:
-[Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
-[TDeTamal](http://www.tdetamal.mx/)
+* [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
+* [TDeTamal](http://www.tdetamal.mx/)
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
