@@ -27,20 +27,19 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * Publicidad en la Red de búsqueda (AdWords) 85%
 * HTML5 y CSS3 75%
 * React 10%
-## Certificaciones
+## Certificaciones Internacionales
 * Inbound by HubSpot
 * Analytics by Google
 * AdWords by Google
-### Colaboración actual en:
-* [Forma Vital](https://www.formavital.com)
-_Actividades:_
-* Análisis de datos del sitio web y de la página de Facebook
-* Administración del sitio web
-* Subida de contenido
-* Análisis SEO y SEO Onpage
-###Proyectos en desarrollo del sitio web:
-* [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
-* [TDeTamal](http://www.tdetamal.mx/)
+### Colaboración actual en [Forma Vital](https://www.formavital.com)
+* Actividades:
+1. Análisis de datos del sitio web y de la página de Facebook
+2. Administración del sitio web
+3. Subida de contenido
+4. Análisis SEO y SEO Onpage
+### Proyectos en desarrollo del sitio web:
+1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
+2. [TDeTamal](http://www.tdetamal.mx/)
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
