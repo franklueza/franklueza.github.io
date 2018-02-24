@@ -9,7 +9,7 @@
 * Tel casa: (01) 717 144 40 26
 * Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
 ## Resumen
-Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, y la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y empreder mis ideas e inquietudes.
+Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y empreder mis ideas e inquietudes.
 ## Educación actual
 * Carrera de Marketing Digital en Platzi
 ## Educación Profesional
@@ -18,14 +18,15 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * Español: Nativo
 * Inglés: Comprensión de textos técnicos y científicos
 ## Habilidades y aprendizajes
-* Autodidacta  
-* Manejo del CMS WordPress 60%
-* Manejo de FTP FileZilla 80%
+* Autodidacta
+* Control de Versiones - GitHub -.  
+* Manejo del CMS WordPress 90%
+* Manejo de FTP 100%
 * Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes 80%
 * Facebook Ads 80%
 * Google Analytics 85%
 * Publicidad en la Red de búsqueda (AdWords) 85%
-* HTML5 y CSS3 75%
+* HTML5 y CSS3 85%
 * React 10%
 ## Certificaciones Internacionales
 * Inbound by HubSpot
@@ -33,13 +34,17 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * AdWords by Google
 ### Colaboración actual en [Forma Vital](https://www.formavital.com)
 * Actividades:
-1. Análisis de datos del sitio web y de la página de Facebook
-2. Administración del sitio web
-3. Subida de contenido
-4. Análisis SEO y SEO Onpage
-### Proyectos en desarrollo del sitio web:
+1. Rediseño del sitio web
+2. Etiquetado del sitio con código JavaScript de Google y Facebook para la obtención de datos en el sitio web
+3. Análisis de datos del sitio web y de la página de Facebook
+4. Administración del sitio web
+5. Subida de contenido al Blog y creación de nuevas páginas.
+6. Análisis SEO y SEO OnPage
+### Proyectos en curso de desarrollo del sitio web:
 1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
 2. [TDeTamal](http://www.tdetamal.mx/)
+3. Kauil Group
+4. Krav Maga Narvarte
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
