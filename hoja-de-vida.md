@@ -32,7 +32,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * Inbound by HubSpot
 * Analytics by Google
 * AdWords by Google
-### Colaboración actual en [Forma Vital](https://www.formavital.com)
+### Colaboración actual en [Forma Vital USA](https://www.formavital.com)
 * Actividades:
 1. Rediseño del sitio web
 2. Etiquetado del sitio con código JavaScript de Google y Facebook para la obtención de datos en el sitio web
