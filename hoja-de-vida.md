@@ -2,14 +2,15 @@
 ![FrankLu Lueza](https://franklueza.github.io/img/Lueza.jpg)
 ## Contacto
 * email: ixfanalytics@gmail.com
-* Sitio Web: 
+* email: hola@franklu.com.mx
+* Sitios Web: 
 * [franklueza](https://franklueza.github.io/)
 * [franklu](https://franklu.com.mx/)
 * Cel: 55 68 89 53 54
 * Tel casa: (01) 717 144 40 26
 * Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
 ## Resumen
-Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y empreder mis ideas e inquietudes.
+Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas, también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y emprender mis ideas e inquietudes.
 ## Educación actual
 * Carrera de Marketing Digital en Platzi
 ## Educación Profesional
@@ -27,6 +28,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * Google Analytics 85%
 * Publicidad en la Red de búsqueda (AdWords) 85%
 * HTML5 y CSS3 85%
+* JavaScript 30%
 * React 10%
 ## Certificaciones Internacionales
 * Inbound by HubSpot
@@ -38,7 +40,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 2. Etiquetado del sitio con código JavaScript de Google y Facebook para la obtención de datos en el sitio web
 3. Análisis de datos del sitio web y de la página de Facebook
 4. Administración del sitio web
-5. Subida de contenido al Blog y creación de nuevas páginas.
+5. Subida de contenido al Blog y creación de nuevas páginas
 6. Análisis SEO y SEO OnPage
 ### Proyectos en curso de desarrollo del sitio web:
 1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
@@ -48,7 +50,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
-* Creación de aplicaciones en React Native
+* Creación de aplicaciones en React Native y Ruby on Rails
 * Desarrollarme como Front-End
 ### Cursos de formación
 * Diplomado en Inbound Marketing con Certificación Internacional en Inbound por Hubspot, Marzo 25 a Junio 03 2017. Digital Business Academy
@@ -66,7 +68,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemete y sobr
 * SEO Posicionamiento en Buscadores, 2016. Platzi.
 * Email Marketing, 2016. Platzi
 * Introducción a Machine Learning, 2017. Miriada X
-### Otros cursos, ponencias y conferencias academicas
+### Otros cursos, ponencias y conferencias académicas
 * Cartel: Caracterización de una red neuronal recurrente
 bidimensional, UAM-CUA, VII Semana de Computación y
 Matemáticas Aplicadas, Departamento de Matemáticas
