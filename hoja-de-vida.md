@@ -28,8 +28,10 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sob
 * Google Analytics 85%
 * Publicidad en la Red de búsqueda (AdWords) 85%
 * HTML5 y CSS3 85%
-* JavaScript 30%
-* React 10%
+* Bootstrap 4 70%
+* Foundation 70%
+* JavaScript 30% y aumentando
+* React 10% y aumentando
 ## Certificaciones Internacionales
 * Inbound by HubSpot
 * Analytics by Google
