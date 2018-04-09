@@ -1,279 +1,312 @@
-<!doctype html>
-<html lang="en">
+<!doctype html> <!-- https://hostproton.com/wordpress/utilidades-css-anadir-modificar-css-animaciones-css/-->
+<html lang="es">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Aqui se coloca la descripción de tu página">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Frank Lueza | Web Developer & Design</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom styles for this template -->
-    <link href="./styles.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100852356-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-100852356-2');
-</script>
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/custom.css">
+    <title>Estudio Creativo de Desarrollo Web</title>
   </head>
-  <body>
-
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="https://franklueza.github.io/">
-          <div class="logo ">
-            <img src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
-          </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="https://franklueza.github.io/">
-                    <i class="fa fa-home fa-2x"></i><p>Home</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://franklueza.github.io/blog/">
-                    <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
-                    <p>Blog</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="mailto:ixfanalytics@gmail.com">
-                    <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
-                    <p>email</p>
-                </a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="tel:5568895354">
-                    <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
-                    <p>Phone</p>
-                </a>
-            </li> 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-code fa-2x" aria-hidden="true"></i> 
-                    <br>Training
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown08">
-                    <a class="dropdown-item" href="https://franklueza.github.io/curso-google-analytics/"><i class="fa fa-google" aria-hidden="true"></i> Google Analytics</a>
-                    <a class="dropdown-item" href="https://franklueza.github.io/curso-de-wordpress/"><i class="fa fa-wordpress" aria-hidden="true"></i> WordPress</a>
-                    <a class="dropdown-item" href="https://franklueza.github.io/curso-html5-y-css3/"><i class="fa fa-html5" aria-hidden="true"></i> <i class="fa fa-css3" aria-hidden="true"></i>HTML5 & CSS3</a>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+      <!-- Nabvar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand order-1 mr-0" href="https://franklu.com.mx" target="_blank">FIX Desarrollo Web</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link " href="#home">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Frank Lueza</a>
+                    <a class="nav-item nav-link" href="#">HTML5 & CSS3</a>
+                    <a class="nav-item nav-link" href="#">Facebook Ads</a>
                 </div>
-            </li>
-          </ul> 
+            </div>
         </div>
-      </nav>
-    </header>
+    </nav>
+      <!--/Nabvar-->
 
-    <main role="main">
-
-      <div id="myCarousel" class="carousel slide pt-5 pb-5" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="bootstrap.jpeg" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Desarrollo Web.</h1>
-                <p>Desarrollamos sitios web con la mejor tecnología JavaScript.</p>
-                <p><a class="btn btn-lg btn-primary" href="https://franklueza.github.io/diseno-web" role="button">Ver paquetes</a></p>
-              </div>
+    <!-- Jumbotrom-->
+    <div class="jumbotron jumbotron-fluid bg-info text-white ">
+        <div class="container text-sm-center pt-5">
+            <h1 class="display-4 fadeInUp mb-4">Web Designer / Front-End Developer</h1>
+            <h2 class=" display-5 fadeInUp">Mobile First!</h2> <!-- lead -->
+            <p class="sub fadeInUp">Hacemos sitios web responsivos y modernos</p>
+            <div class="btn-group fadeInUp mt-3" role="group" aria-label="Callout bottons">
+                <!--<img class="img-fluid frank" src="./img/jay.png" alt="Frank Lueza" width="50px">-->
+                <a class="btn btn-primary btn-lg fadeInUp" href="tel:5568895354">Contacto</a>
+                <a class="btn btn-success btn-lg fadeInUp" href="#speakers">Nuestro Blog</a>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="google-analytics.jpg" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Analítica Web.</h1>
-                <p>El valor de tu negocio reside en los datos originados en tu Sitio Web.</p>
-                <p><a class="btn btn-lg btn-primary" href="mailto:ixfanalytics@gmail.com" role="button">Quiero aprender</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="wordpress.jpeg" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>WordPress.</h1>
-                <p>Crea sitios profesionales con el CMS más famoso.</p>
-                <p><a class="btn btn-lg btn-primary" href="mailto:ixfanalytics@gmail.com" role="button">Quiero aprender</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="four-slide" src="html-y-css.jpg" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>HTML y CSS.</h1>
-                <p>Crea sitos con HTML5 y CSS3.</p>
-                <p><a class="btn btn-lg btn-primary" href="mailto:ixfanalytics@gmail.com" role="button">Quiero aprender</a></p>
-              </div>
-            </div>
-          </div>
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+    </div>
+    <!--/Jumbotrom-->
 
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing">
-        <div class="row d-flex justify-content-center pb-5">
-          <div class="col col-lg-6 text-center">
-            <h2>Nuestros clientes</h2>
-          </div>
+    <div class="container pt-4"> <!-- Container-->
+        <div id="about" class="row"> <!-- About-->
+            <div class="col-lg col-xl-4 order-lg-2">
+                <h3 class="mb-4">¿Qué es la Filosofía Mobile First?</h3>
+                <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/bootstrap.png" alt="Portland"> 
+                <p>En corto: es un concepto pensado para la construcción y diseño de sitios web primero en versión móvil.</p>
+                <p>Creamos proyectos responsivos y de primer nivel en dispositivos móviles para la web con la biblioteca de componentes <strong>front-end</strong> más popular, <strong>Bootstrap.</strong> 
+                   <br> <strong>Bootstrap</strong> es un kit de herramientas de código abierto para desarrollar con HTML, CSS y JS.
+                </p>
+            </div>
+            <div class="col-lg order-lg-1">
+                <h3 class="mb-4">¿Qué es el Desarrollo Web?</h3>
+                <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/desarrollo web.jpg" alt="HTML5 y CSS3"> 
+                <p>En corto: los desarrolladores web crean y mantienen sitios web.</p>
+                <p>El desarrollo web a menudo se divide en dos áreas, desarrollo de <strong>front-end</strong> y desarrollo
+                   de <strong>back-end</strong>.<br> Los desarrolladores <strong>front-end</strong> usan <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> para construir lo
+                   que ve el cliente - lo que se ejecuta en el navegador -. <br>El <strong>HTML</strong> significa <strong>Hyper Text Markup Language</strong>, es el lenguaje para la estructura, 
+                   cada página web comienza con él. Es la base sobre la cual las otras dos capas <strong>CSS</strong> y <strong>JavaScript</strong> - presentación e interactividad, respectivamente - se construyen.
+                   <br>El <strong>CSS</strong> significa <strong>Cascading Style Sheets</strong> es un lenguaje de presentación creado para estilizar el contenido
+                   <br>Y finalmente, <strong>JavaScript</strong> es el motor que impulsa el dinamismo a cada uno de los elementos del sitio.
+                   <br>Los desarrolladores de <strong>back-end</strong> son
+                   responsables de lo que se ejecuta en el servidor, usan lenguajes como <strong>Python</strong>, <strong>Ruby</strong> y <strong>Java</strong> para trabajar con bases 
+                   de datos para guardar, cambiar y recuperar datos.</p>
+            </div>
+            <div class="col-lg order-lg-3">
+                <h3 class="mb-4">¿Qué hace el Diseñador Web?</h3>
+                <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/diseño-web.jpg" alt="Portland"> 
+                <p>En corto: aplica el trabajo de los diseñadores y lleva sus diseños a código.</p>
+                <p>No hay un camino a seguir y no existen procedimientos estándar de la industria.
+                   Es inexacto y está lleno de toma de decisiones. Eso significa que con cada nuevo 
+                   <strong>diseño web</strong>, lo mejor es asumir lo menos posible y aprender todo lo que pueda. <br> 
+                   Las primeras fases del <strong>diseño web</strong> tienen muchos nombres, pero a veces las personas 
+                   llaman a este primer bloque la fase de descubrimiento. Porque estamos tratando 
+                   de encontrar tanta información como podamos, antes de que comencemos a diseñar 
+                   algo que realmente no se ajusta a las necesidades correctas.
+                </p>
+            </div>
+        </div><!--/About-->
+        <hr>
+        <!--<div class="row py-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-danger">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-success">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>    
         </div>
-        <!-- Three columns of text below the carousel -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+            </div>
+        </div>-->
+        <!--Speakers -->
+        <h1 id="speakers" class="display-4 text-center text-muted my-5">Artículos 2018</h1>
         <div class="row">
-          <div class="col-lg-4">
-            <img class="fv" src="Forma-Vital.svg" alt="Forma Vital" width="140" height="140">
-            <!--<h2>Forma Vital</h2>-->
-            <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="td" src="tdtamal.jpg" alt="TDTamal" width="140" height="140">
-            <!--<h2>T.D Tamal</h2>-->
-            <!--<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="kt" src="ktastrofe.jpg" alt="Ktastrofe" width="180" height="140">
-            <!--<h2>Ktastrofe</h2>-->
-            <!--<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-        <hr class="featurette-divider">
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="./img/vivianne.png" alt="Vivianne McVue">
+                    <div class="card-body">
+                        <h4 class="card-title">Buyer Persona</h4>
+                        <p class="card-text">El <strong>Buyer Persona</strong> es una representación semi-ficticia de tu cliente ideal, basada en 
+                        datos reales y una mezcla de especulación, sustentada en datos demográficos, comportamientos, motivaciones y metas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="./img/nodeStradamus.png" alt="NodeStradamus">
+                    <div class="card-body">
+                        <h4 class="card-title">Ecosistema Digital</h4>
+                        <p class="card-text">El ecosistema digital es un conjunto de estrategias enfocadas a desarrollar una propuesta de tu persona, 
+                        negocio y empresa en el Internet, utilizando diferentes técnicas de marketing digital...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="./img/robbie.png" alt="Robbie Redux">
+                    <div class="card-body">
+                        <h4 class="card-title">5 Recursos de imágenes para su sitio web</h4>
+                        <p class="card-text">Crear o buscar imágenes para su sitio web y redes sociales puede ser una tarea complicada debido a que 
+                        debe asegurarse que esta imagen sea la adecuada para su ...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="./img/ecma.png" alt="Ecma Scriptnstuff">
+                    <div class="card-body">
+                        <h4 class="card-title">¿Por qué tu negocio debería tener un sitio web?</h4>
+                        <p class="card-text">Tu negocio debe terner un sitio web por muchas razones, la primera de ellas es porque creas 
+                        credebilidad ante tus clientes potenciales, segundo, el sitio web es la parte esencial del ecositema digital.    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="./img/jay.png" alt="Jay Query">
+                    <div class="card-body">
+                        <h4 class="card-title">¿Cómo tener una presencia de nuestro negocio en Internet?</h4>
+                        <p class="card-text">De acuerdo con Google, para tener una presencia del negocio en Internet y 
+                        poder crecer nuestro negocio hay que hacer un recorrido por cuatro etapas ...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="./img/json.png" alt="Json Babel">
+                    <div class="card-body">
+                        <h4 class="card-title">Hablemos de Analítica Web</h4>
+                        <p class="card-text">Para aquellas personas que tienen un negocio y quieren o ya están en una 
+                        plataforma digital como WordPress o Facebook, etc; seguramente se hacen una serie de preguntas, por ejemplo: ¿Quien visita mi negocio? ...</p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Más artículos</button>
+        </div> 
+       <!--/Speakers -->
 
-        <!-- START THE FEATURETTES -->
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Francisco <span class="text-muted">Lueza.</span></h2>
-            <h3>Un poco sobre mi</h3>
-            <p class="lead">Me he convertido en desarrollador Web - FrontEnd -  a través de World Teach Makers, aprendiendo
-              lenguajes de marcado HTML5 y CSS3, así como el lenguaje de programación JavaScript. <br> 
-              Estudie Analítica Web en Internet Academi, la plataforma online de ISDI y un Diplomado en Inbound Marketing 
-              en Digital Business Academy. He obtenido las certificaciones internacionales en Inbound por HubsPot, Red de 
-              Búsqueda y Analytics por Google.<br> Soy un apasionado de la adquisición de nuevo conocimiento en el mundo 
-              digital el cual comparto a través de <a href="https://franklueza.github.io/blog/">artículos relacionados</a>
-              al <a href="https://franklueza.github.io/blog/como-tener-una-presencia-de-nuestro-negocio-en-Internet/"> Marketing Digital</a>,
-              la <a href="https://franklueza.github.io/blog/que-es-la-analitica-web/">Analítica Web</a> y la 
-              <a href="https://franklueza.github.io/blog/por-que-aprender-a-programar/">Programación</a>.</p>  
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="code.jpg" alt="Generic placeholder image">
-          </div>
+        <!--Schedule -->
+        <!--<h1 id="schedule" class="display-4 text-center text-muted my-5">Schedule</h1>-->
+
+        <!--Callout botton-->
+        <!--<button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't Miss Out, Register Now</button>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Keynote: Internet of Things</h5>
+                <span class="badge badge-pill badge-info p-2">9:00am</span>
+                </div>
+                <p class="mb-1">NodeStradamus</p>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">React Basics</h5>
+                <span class="badge badge-pill badge-info p-2">10:00am</span>
+                </div>
+                <p class="mb-1">Vivianne McVue</p>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Hey, Mongo!</h5>
+                <span class="badge badge-pill badge-info p-2">11:00am</span>
+                </div>
+                <p class="mb-1">Jay Query</p>
+            </li>
+            <li class="list-group-item list-group-item-success">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Lunch</h5>
+                <span class="badge badge-pill badge-info p-2">12:00pm</span>
+                </div>
+                <p class="mb-1">Free pizza for everyone!</p>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Introducing ES2015</h5>
+                <span class="badge badge-pill badge-info p-2">1:00pm</span>
+                </div>
+                <p class="mb-1">Ecma Scriptnstuff</p>
+            </li> 
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Getting Started With Redux</h5>
+                <span class="badge badge-pill badge-info p-2">2:00pm</span>
+                </div>
+                <p class="mb-1">Robbie Redux</p>
+            </li> 
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">What's Babel?</h5>
+                <span class="badge badge-pill badge-info p-2">3:00pm</span>
+                </div>
+                <p class="mb-1">Json Babel</p>
+            </li>        
+        </ul>-->
+
+         <!--/Schedule -->
+        <!-- signup form -->
+        <hr>
+        <div class="row py-4 text-muted bg-ligth">
+        <div class="col-md col-xl-5">
+            <p><strong>Acerca de FIX</strong></p>
+            <p>FIX brindamos consultoria tecnológica asequible a personas 
+               emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
         </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Lenguajes <span class="text-muted">HTML5 & CSS3.</span></h2>
-            <h3 class="text-muted">¿Qué es HTML5?</h3>
-            <p class="lead">HTML es un lenguaje de marcado para crear páginas web, sus siglas signifcan <span class="text-muted">Hyper Text Markup Language</span>.
-              Este tipo de lenguaje utiliza etiquetas (tags) para indicar donde deben de ir los encabezados, imágenes, listas, links, saltos de línea
-            y otros elementos dentro de la página</p>
-            <h3 class="text-muted">¿Qué es CSS3?</h3>
-            <p class="lead">CSS es una hoja de estilos que se agrega a tu HTML o de manera externa como un archivo css que se enlaza desde tu HTML a través de una etiqueta,
-              sus siglas siginifcan <span class="text-muted" >Cascading Style Sheets</span>. Aqui se describe como cada uno de los elementos HTML serán desplegados en pantalla de cualquier dispositivo.</p>
-            <p><a class="btn btn-lg btn-primary" href="mailto:ixfanalytics@gmail.com" role="button">Quiero aprender</a></p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto html" src="CSS3-HTML5.jpg" alt="CSS3 y HTML5">
-          </div>
+        <div class="col-md col-xl-5 ml-auto">
+            <p><strong>Manténgase actualizado con FIX</strong></p>
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Email">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Enviar</button>
+            </span>
+            </div>
         </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Desarrollando con <span class="text-muted">Bootstrap.</span></h2>
-            <p class="lead">El Framework más popular para construir sitios responsivos con la filosofia <span class="text-muted">Mobile-first</span>. 
-            De acuerdo con lo anterior, cada sitio creado es adaptable a cualquier tipo de pantalla sea chica, mediana, grande o extragrande. 
-            Utilizamos los lenguajes de marcado HTML5 y CSS3 con el lenguaje de programación JavaScript</p>
-            <p><a class="btn btn-lg btn-primary" href="mailto:ixfanalytics@gmail.com" role="button">Quiero una cotización</a></p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="bootstrap-stack.png" alt="Bootstrap4">
-          </div>
         </div>
+        <hr><!-- /signup form -->
 
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
-
-
-      <!-- FOOTER -->
-      <footer class="container-fluid pie pt-5">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017 Frank Lueza, Inc. <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>-->
-        <h5>Compartir en redes sociales</h5>
-        <ol class="list-unstyled d-flex">
-          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fa fa-facebook-official fa-3x m-2" aria-hidden="true"></i></a></li>
-          <li><a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fa fa-twitter-square fa-3x m-2" aria-hidden="true"></i></a></li>
-          <li><a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fa fa-google-plus-official fa-3x m-2" aria-hidden="true"></i></a></li> 
-        </ol>
-        <div class="container d-flex justify-content-center">
-          <!-- Begin: HubSpot Academy - Inbound Badge -->
-          <div class='academy-badge'>
-            <a href='http://academy.hubspot.com/certification' title='Inbound'>
-            <img src='http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2' class="img-fluid"/>
-            </a>
-          </div>
-            <!-- End: HubSpot Academy - Inbound Badge -->
+        <!--Footer-->    
+        <div class="row py-3">
+            <!--<div class="col-md-7">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tracks</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-outline-secundary">Oder Confs</button>
+                            <button type="button" class="btn btn-outline-secundary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">CSS Conf</a>
+                                <a class="dropdown-item" href="#">Phyton Conf</a>
+                                <a class="dropdown-item" href="#">Java Conf</a>
+                                <a class="dropdown-item" href="#">Swift Conf</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="col-md text-md-right">
+                <small>&copy; 2018 Web Designer / Front-End Developer &amp; FIX</small>
+            </div>
         </div>
-      </footer>
+        <!--/Footer-->
 
-    </main>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
-    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="https://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    </div> <!-- /Container-->
     
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a08708d1502098e">
-    </script>
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3398685.js"></script>
-<!-- End of HubSpot Embed Code -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

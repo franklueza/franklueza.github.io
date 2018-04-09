@@ -30,6 +30,7 @@ Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sob
 * HTML5 y CSS3 85%
 * Bootstrap 4 70%
 * Foundation 70%
+* JQuery 35% y aumentando
 * JavaScript 30% y aumentando
 * React 10% y aumentando
 ## Certificaciones Internacionales
