@@ -1,0 +1,53 @@
+
+@import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
+body {
+    font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.navbar .navbar-brand {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+}
+.jumbotron {
+    background-image: url('../../img/jumbo-bg.jpg');
+    background-size: cover;  
+}
+.frank {
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+}
+.sub {
+    text-align: center;
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeInUp {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    }
+    @keyframes fadeInUp {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+    } 
