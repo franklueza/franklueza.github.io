@@ -12,7 +12,22 @@ body {
     padding-top: 15%;
     
 }
-.fadeInUp {
+.frank {
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .jumbotron .titulo {
+        font-size: 25px;
+    }
+    .jumbotron .subtitulo {
+        font-size: 20px;
+    }
+}
+
+/*.fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
     -webkit-animation-duration: 1s;
@@ -70,4 +85,5 @@ body {
     25%, 75% {
     opacity: 0;
     }
-}  
+}  */
+
