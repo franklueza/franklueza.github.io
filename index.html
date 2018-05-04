@@ -46,8 +46,9 @@
             <p class="sub">Hacemos sitios web responsivos y modernos</p>
             <div class="btn-group fadeInUp mt-3 d-flex justify-content-center" role="group" aria-label="Callout bottons">
                 <!--<img class="img-fluid frank" src="./img/jay.png" alt="Frank Lueza" width="50px">-->
-                <a class="btn btn-primary btn-lg fadeInUp" href="tel:5568895354">Contacto</a>
-                <a class="btn btn-success btn-lg fadeInUp" href="#blog">Nuestro Blog</a>
+                <button type="button" class="btn btn-danger btn-lg mr-1" data-toggle="modal" data-target="#register">Cursos</button>
+                <a class="btn btn-primary btn-lg ml-1" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto">Contacto</a>
+                <!--<a class="btn btn-success btn-lg fadeInUp" href="#blog">Nuestro Blog</a>-->
             </div>
         </div>
     </div>
@@ -313,6 +314,66 @@
         <!--/Footer-->
 
     </div> <!-- /Container-->
+
+    <!--=====================================
+FORM MODAL
+=====================================-->
+<!-- Modal -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="exampleModalLabel">¡Registrate ahora!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <!--Registration form-->
+                <form>
+                    <!--<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Hurry!</strong> Early bird registration in two days.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>-->
+                    <h5 class="mb-4">¡Proximamente!</h5>
+                    <hr class="my-4">
+                    <h5 class="mb-4">Lanzaremos los siguientes cursos muy pronto </h5>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Introducción a HTML5 y CSS3</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">Facebook Ads</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">WhatsApp Business</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">Introducción a WordPress</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                        <label class="custom-control-label" for="customCheck5">Manejo del Tema Divi</label>
+                    </div>
+
+                    <hr class="my-4">
+                    
+                    <a class="btn btn-success  btn-lg" href="https://api.whatsapp.com/send?phone=525568895354&text=Informaci%C3%B3n%20de%20cursos">WhatsApp</a>
+                </form>
+                <!--/Registration form-->
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- WhatsHelp.io widget -->
 <script type="text/javascript">
     (function () {
