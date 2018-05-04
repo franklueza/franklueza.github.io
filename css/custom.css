@@ -17,13 +17,18 @@ body {
     width: 200px;
     height: auto;
 }
+.oftalfrancisco {
+    border-radius: 10%;
+}
 
 @media only screen and (max-width: 600px) {
     .jumbotron .titulo {
         font-size: 25px;
+        text-align: center;
     }
-    .jumbotron .subtitulo {
+    .jumbotron .subtitulo, .sub {
         font-size: 20px;
+        text-align: center;
     }
 }
 
