@@ -9,7 +9,7 @@
 * Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
 ## Resumen
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas; también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y emprender mis ideas e inquietudes. 
-He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi compañera Yadira Muñoz, la cual conocí en el diplomado de Inbound Marketing, quien me invito a coloborar en la empresa Forma Vital - CEO Jorge Fernández - como programador - Webmaster - y con quien actiualmente llevo en conjunto la construcción de otros sitios que se encuentran aún en producción, tales como TdeTamal, Ktastrofe y Oftalmólogo Retina. Por mi parte sigue en producción el sitio personal de Mónica Ortega Venzor y actualmente cuento con otro cliente Enrique Martínez al que le he terminado el sitio web para la empresa para la cual trabaja llamada Steak & Grills y también creare su sitio personal próximamente.
+He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi compañera Yadira Muñoz, la cual conocí en el diplomado de Inbound Marketing, quien me invito a coloborar en la empresa Forma Vital - CEO Jorge Fernández - como programador - Webmaster - y con quien actualmente llevo en conjunto la construcción de otros sitios que se encuentran aún en producción, tales como TdeTamal, Ktastrofe y Oftalmólogo Retina. Por mi parte sigue en producción el sitio personal de Mónica Ortega Venzor y actualmente cuento con otro cliente Enrique Martínez al que le he terminado el sitio web para la empresa para la cual trabaja llamada Steak & Grills y también creare su sitio personal próximamente.
 ## Educación actual
 * Carrera de Marketing Digital y Desarrollo Web en Next University
 ## Educación Profesional
@@ -48,7 +48,9 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 ### Proyectos en curso de desarrollo del sitio web:
 1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
 2. [TDeTamal](http://www.tdetamal.mx/)
-3. [Monica Venzor](https://monicavenzor.com/)
+3. [Dr. Francisco Olgín](http://oftalfrancisco.esy.es/)
+4. [Monica Venzor](https://monicavenzor.com/)
+5. [Steak and Grills](https://steakandgrills.com.mx/)
 ### Proyectos personales a corto plazo
 * Capacitación a emprendedores
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
