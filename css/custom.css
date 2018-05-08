@@ -9,9 +9,9 @@ body {
 .jumbotron {
     background-image: url('../img/jumbo-bg.jpg');
     background-size: cover;
-    padding-top: 15%;
-    
+    padding-top: 15%;    
 }
+
 .frank {
     border-radius: 10px;
     width: 200px;
