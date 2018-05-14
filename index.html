@@ -15,6 +15,14 @@
 
     <script src="./js/scripts.js"></script>
     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100852356-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-100852356-2');
+    </script>
     <title>Estudio Creativo de Diseño y Desarrollo Web</title>
   </head>
   <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -39,7 +47,7 @@
 
     <!-- Jumbotrom-->
     <div class="jumbotron jumbotron-fluid bg-info text-white ">
-        <div class="container text-sm-center pt-5">
+        <div class="container text-sm-center pt-5 list">
                 <ul>
                     <li>F</li>
                     <li>R</li>
@@ -64,7 +72,7 @@
     <div class="container cobro">
         <div class="row">
             <div class="col-12 ">
-                <h2 class="display-4 text-center">¿Cuánto cobro?</h2>
+                <h2 class="display-4 text-center text-muted my-5">¿Cuánto cobro?</h2>
                 <p>Está pregunta tan natural, es una constante que los futuros clientes me hacen cuando me contactan, así que te voy a explicar como cobro, pero antes, ¿te has preguntado alguna vez qué estarías dispuest@ a hacer por conocer a tu artista favorito?</p>
                 <p>Seguramente habrá muchas personas que estarían dispuestas a pagar mucho dinero por ello y hacer casi cualquier cosa por conseguir estar en el concierto y conocer a su artista de cerca, ¿no es así?. Entonces cada persona va a asignar un valor especial por la
                 experiencia, lo que implica que para algunas personas seria muy valioso y para otras no.</p>
@@ -115,42 +123,68 @@
                 </p>
             </div>
         </div><!--/About-->
-        <!--<div class="row py-3">
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body text-primary">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body text-danger">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card border-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body text-success">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>    
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <button type="button" class="btn btn-outline-primary">Primary</button>
-            </div>
-        </div>-->
-        <!--Speakers -->
         <hr>
+        <!--Schedule -->
+        <h1 id="schedule" class="display-4 text-center text-muted my-5">Calendario de pláticas y talleres gratuitos</h1>
+        <h2 id="schedule1" class="display-5 text-center text-muted my-5">Hablemos de Tecnología, Marketing Digital y Redes Sociales</h2>
+        <!--Callout botton-->
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">No lo olvides, Registro ¡Próximamente!</button>
+        <!--<ul class="list-group">
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Keynote: Internet of Things</h5>
+                <span class="badge badge-pill badge-info p-2">9:00am</span>
+                </div>
+                <p class="mb-1">NodeStradamus</p>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">React Basics</h5>
+                <span class="badge badge-pill badge-info p-2">10:00am</span>
+                </div>
+                <p class="mb-1">Vivianne McVue</p>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Hey, Mongo!</h5>
+                <span class="badge badge-pill badge-info p-2">11:00am</span>
+                </div>
+                <p class="mb-1">Jay Query</p>
+            </li>
+            <li class="list-group-item list-group-item-success">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Lunch</h5>
+                <span class="badge badge-pill badge-info p-2">12:00pm</span>
+                </div>
+                <p class="mb-1">Free pizza for everyone!</p>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Introducing ES2015</h5>
+                <span class="badge badge-pill badge-info p-2">1:00pm</span>
+                </div>
+                <p class="mb-1">Ecma Scriptnstuff</p>
+            </li> 
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Getting Started With Redux</h5>
+                <span class="badge badge-pill badge-info p-2">2:00pm</span>
+                </div>
+                <p class="mb-1">Robbie Redux</p>
+            </li> 
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                <h5 class="mb-1">What's Babel?</h5>
+                <span class="badge badge-pill badge-info p-2">3:00pm</span>
+                </div>
+                <p class="mb-1">Json Babel</p>
+            </li>        
+        </ul>-->
+
+         <!--/Schedule -->
+        
+        <hr>
+        <!--Artículos -->
         <h1 id="blog" class="display-4 text-center text-muted my-5">Artículos 2018</h1>
         <div class="row">
             <div class="col-md-6 col-lg-4">
@@ -221,66 +255,9 @@
             </div>
            <!-- <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Más artículos</button>-->
         </div> 
-       <!--/Speakers -->
+       <!--/Articulos -->
 
-        <!--Schedule -->
-        <!--<h1 id="schedule" class="display-4 text-center text-muted my-5">Schedule</h1>-->
-
-        <!--Callout botton-->
-        <!--<button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't Miss Out, Register Now</button>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Keynote: Internet of Things</h5>
-                <span class="badge badge-pill badge-info p-2">9:00am</span>
-                </div>
-                <p class="mb-1">NodeStradamus</p>
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">React Basics</h5>
-                <span class="badge badge-pill badge-info p-2">10:00am</span>
-                </div>
-                <p class="mb-1">Vivianne McVue</p>
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Hey, Mongo!</h5>
-                <span class="badge badge-pill badge-info p-2">11:00am</span>
-                </div>
-                <p class="mb-1">Jay Query</p>
-            </li>
-            <li class="list-group-item list-group-item-success">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Lunch</h5>
-                <span class="badge badge-pill badge-info p-2">12:00pm</span>
-                </div>
-                <p class="mb-1">Free pizza for everyone!</p>
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Introducing ES2015</h5>
-                <span class="badge badge-pill badge-info p-2">1:00pm</span>
-                </div>
-                <p class="mb-1">Ecma Scriptnstuff</p>
-            </li> 
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Getting Started With Redux</h5>
-                <span class="badge badge-pill badge-info p-2">2:00pm</span>
-                </div>
-                <p class="mb-1">Robbie Redux</p>
-            </li> 
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">What's Babel?</h5>
-                <span class="badge badge-pill badge-info p-2">3:00pm</span>
-                </div>
-                <p class="mb-1">Json Babel</p>
-            </li>        
-        </ul>-->
-
-         <!--/Schedule -->
+        
         <!-- signup form -->
         <div class="alert alert-success alert-dismissible fade show text-sm-center" role="alert">
             <strong>Adevertencia</strong> Este sitio utiliza cookies.
@@ -290,54 +267,26 @@
         </div>
         <hr>
         <div class="row py-4 text-muted bg-ligth">
-        <div class="col-md col-xl-5">
-            <p><strong>Acerca de FIX</strong></p>
-            <p>FIX brindamos consultoria tecnológica asequible a personas 
-               emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
-            <h5><strong>Comparte nuestro sitio</strong></h5>
-               <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fa fa-facebook-official fa-2x m-2" aria-hidden="true"></i></a>
-               <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fa fa-twitter-square fa-2x m-2" aria-hidden="true"></i></a>
-               <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fa fa-google-plus-official fa-2x m-2" aria-hidden="true"></i></a>
-        </div>
-        <div class="col-md col-xl-5 ml-auto">
-            <p><strong>Manténgase actualizado con FIX</strong></p>
-            <div class="input-group">
-            <input type="text" class="form-control" placeholder="Email">
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Enviar</button>
-            </span>
+            <div class="col-md col-xl-5">
+                <p><strong>Acerca de FIX</strong></p>
+                <p>FIX brindamos consultoria tecnológica asequible a personas 
+                emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
+                <h5><strong>Comparte nuestro sitio</strong></h5>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fa fa-facebook-official fa-2x m-2" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fa fa-twitter-square fa-2x m-2" aria-hidden="true"></i></a>
+                <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fa fa-google-plus-official fa-2x m-2" aria-hidden="true"></i></a>
             </div>
-            <a class="btn btn-danger btn-lg my-4" href="https://franklueza.github.io/aviso-de-privacidad">Leer "Aviso de Privacidad"</a>
-        </div>
+            <div class="col-md col-xl-5 ml-auto text-md-right">
+                <p><strong>Manténgase actualizado con FIX</strong></p>
+                <a class="btn btn-primary btn-lg ml-1" href="http://bit.ly/2IGVFAp">Dejanos tus datos</a>
+                <a class="btn btn-danger btn-lg my-4" href="https://franklueza.github.io/aviso-de-privacidad" target="_blank">Leer "Aviso de Privacidad"</a>
+            </div>    
         </div>
         <hr><!-- /signup form -->
 
         <!--Footer-->    
         <div class="row py-3">
-            <!--<div class="col-md-7">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tracks</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="btn-group dropup">
-                            <button type="button" class="btn btn-outline-secundary">Oder Confs</button>
-                            <button type="button" class="btn btn-outline-secundary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">CSS Conf</a>
-                                <a class="dropdown-item" href="#">Phyton Conf</a>
-                                <a class="dropdown-item" href="#">Java Conf</a>
-                                <a class="dropdown-item" href="#">Swift Conf</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div> -->
+            
             <div class="col-md text-md-right">
                 <small>&copy; 2018 Web Designer / Front-End Developer &amp; FIX</small>
             </div>
