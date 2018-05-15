@@ -6,14 +6,14 @@
 * Sitio Web:[https://franklueza.github.io](https://franklueza.github.io/)
 * Cel: 55 68 89 53 54
 * Tel casa: (01) 717 144 40 26
-* Domicilio: Mariano Matamoros 104 Int 06, Colonia Guadalupe, Tenango del Valle, Estado de México.
+* Domicilio: Insurgente No 145, Colonia La Soya, C.P. 523000, Tenango del Valle, Estado de México.
 ## Resumen
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas; también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y emprender mis ideas e inquietudes. 
 He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi compañera Yadira Muñoz, la cual conocí en el diplomado de Inbound Marketing, quien me invito a coloborar en la empresa Forma Vital - CEO Jorge Fernández - como programador - Webmaster - y con quien actualmente llevo en conjunto la construcción de otros sitios que se encuentran aún en producción, tales como TdeTamal, Ktastrofe y Oftalmólogo Retina. Por mi parte sigue en producción el sitio personal de Mónica Ortega Venzor y actualmente cuento con otro cliente Enrique Martínez al que le he terminado el sitio web para la empresa para la cual trabaja llamada Steak & Grills y también creare su sitio personal próximamente.
 ## Educación actual
 * Carrera de Marketing Digital y Desarrollo Web en Next University
 ## Educación Profesional
-* Ing. Físico en UAM-A, Unidad Azcapotzalco
+* Ing. Físico UAM-A, Unidad Azcapotzalco
 ## Idiomas
 * Español: Nativo
 * Inglés: Comprensión de textos técnicos y científicos
