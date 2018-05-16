@@ -30,6 +30,12 @@ body {
         font-size: 20px;
         text-align: center;
     }
+    .list-group .list-group-item .mb-1 {
+      font-size: 14px;
+    }
+    .badge{
+      font-size: 8px;
+    }
 }
 @media only screen and (max-width: 600px) {
   #schedule { 
