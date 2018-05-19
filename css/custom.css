@@ -8,7 +8,7 @@ body {
     font-size: 1rem;
 }
 .jumbotron {
-    background-image: url('../img/jaguar.JPEG');
+    background-image: url('../img/jaguar.jpeg');
     padding-top: 15%;  
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
