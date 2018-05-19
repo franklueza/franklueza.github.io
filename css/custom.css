@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
 body {
     font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    
 }
 .navbar .navbar-brand {
     color: rgba(255,255,255,0.85);
