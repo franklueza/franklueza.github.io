@@ -8,9 +8,13 @@ body {
     font-size: 1rem;
 }
 .jumbotron {
-    background-image: url('../img/jumbo-bg.jpg');
-    background-size: cover;
-    padding-top: 15%;    
+    background-image: url('../img/jaguar.JPEG');
+    padding-top: 15%;  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 
 .frank {
