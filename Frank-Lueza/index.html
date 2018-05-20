@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+    </script>
+
     <script src="./js/scripts.js"></script>
     
     <!-- Google Tag Manager -->
@@ -34,8 +39,10 @@
                 <div class="navbar-nav">
                     <a class="nav-item nav-link " href="https://franklueza.github.io/">Inicio <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="https://franklueza.github.io/Frank-Lueza">Frank Lueza</a>
+                    <a class="nav-item nav-link" href="#schedule">Webinar</a>
                     <!--<a class="nav-item nav-link" href="#">HTML5 & CSS3</a>
                     <a class="nav-item nav-link" href="#">Facebook Ads</a>-->
+                    <a class="nav-item nav-link" href="https://franklueza.github.io/blog/">Blog</a>
                 </div>
             </div>
         </div>
@@ -50,8 +57,8 @@
             <h1 class="display-4 fadeInUp mb-4 ">Soy <strong>Francisco Lueza</strong></h1>
             <h2 class=" display-5 fadeInUp">Freelancer</h2> <!--  -->
             <div class="acerca pt-3">
-                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#register">Cursos</button>
-                <a class="btn btn-primary btn-lg" href="tel:5568895354">Contacto</a>
+                <button type="button" class="btn btn-danger btn-lg cursos" data-toggle="modal" data-target="#register">Cursos</button>
+                <a class="btn btn-primary btn-lg contacto" href="tel:5568895354">Contacto</a>
             </div>
         </div>
     </div>
@@ -347,5 +354,36 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        //smoth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+            //https://github.com/jlmakes/scrollreveal
+            
+            sr.reveal('.jumbotron', { 
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+            });
+            sr.reveal('.cursos', { 
+            duration: 2000,
+            origin: 'left',
+            delay:1000
+            });
+            sr.reveal('.contacto', { 
+            duration: 2000,
+            origin: 'right',
+            delay:1000 
+            });
+        </script>
+
   </body>
 </html>
