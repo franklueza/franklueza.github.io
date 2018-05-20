@@ -377,7 +377,17 @@ FORM MODAL
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <script>
-        window.sr = ScrollReveal(); //https://github.com/jlmakes/scrollreveal
+    //smoth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    window.sr = ScrollReveal(); //https://github.com/jlmakes/scrollreveal
         
         sr.reveal('.jumbotron', { 
         duration: 2000,
@@ -394,75 +404,8 @@ FORM MODAL
         origin: 'right',
         delay:1000 
         });
-        sr.reveal('#schedule', { 
-        duration: 1000,
-        origin: 'left',
-        distance: '300px' ,
-        viewFactor:0.2
-        });
-        sr.reveal('#schedule1', { 
-        duration: 1000,
-        origin: 'right',
-        distance: '300px' ,
-        viewFactor:0.2
-        });
-        sr.reveal('.registro', { 
-        duration: 1000,
-        origin: 'top',
-        distance: '300px' ,
-        viewFactor:0.2
-        });
-        sr.reveal('.calendar', { 
-        duration: 1000,
-        origin: 'bottom',
-        distance: '300px' ,
-        viewFactor:0.2
-        });
-        sr.reveal('.Filosofia', { 
-        duration: 1000,
-        origin: 'bottom',
-        distance: '300px' ,
-        viewFactor:0.2
-        });
-        sr.reveal('.Desarrollador', { 
-        duration: 1000,
-        origin: 'left',
-        distance: '300px',
-        viewFactor:0.2
-        });
-        sr.reveal('.Diseñador', { 
-        duration: 1000,
-        origin: 'right',
-        distance: '300px',
-        viewFactor:0.2
-        });
-        sr.reveal('#blog', { 
-        duration: 1000,
-        origin: 'right',
-        distance: '300px',
-        viewFactor:0.2
-        });
-        sr.reveal('.blog', { 
-        duration: 1000,
-        origin: 'bottom',
-        distance: '300px',
-        viewFactor:0.2
-        });
-        sr.reveal('.Mas', { 
-        duration: 1000,
-        origin: 'rigth',
-        distance: '300px',
-        });
-        //smoth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-                });
-            });
-        });
+        
+        
     </script>
   </body>
 </html>
