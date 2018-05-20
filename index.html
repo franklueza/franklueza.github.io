@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+    </script>
 
     <script src="js/scripts.js"></script>
     
@@ -388,7 +391,7 @@ FORM MODAL
             });
         });
     });
-    window.sr = ScrollReveal(); //https://github.com/jlmakes/scrollreveal
+     //https://github.com/jlmakes/scrollreveal
         
         sr.reveal('.jumbotron', { 
         duration: 2000,
@@ -405,18 +408,16 @@ FORM MODAL
         origin: 'right',
         delay:1000 
         });
-        sr.reveal('#copy', { 
-        duration: 2000,
-        origin: 'right',
-        distance: '300px'
-        });
-        sr.reveal('#pie', { 
+        sr.reveal('#schedule', { 
         duration: 2000,
         origin: 'left',
-        distance: '300px'  
+        distance: '300px'
         });
-        
-        
+        sr.reveal('#schedule1', { 
+        duration: 2000,
+        origin: 'rigth',
+        distance: '300px'
+        });
     </script>
   </body>
 </html>
