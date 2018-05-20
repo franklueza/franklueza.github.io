@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
     <script src="js/scripts.js"></script>
     
     <!-- Google Tag Manager -->
@@ -255,7 +257,7 @@
             </button>
         </div>
         <hr>
-        <div class="row py-4 text-muted bg-ligth">
+        <div id="pie" class="row py-4 text-muted bg-ligth">
             <div class="col-md col-xl-5">
                 <p><strong>Acerca de FIX</strong></p>
                 <p>FIX brindamos consultoria tecnológica asequible a personas 
@@ -274,9 +276,9 @@
         <hr><!-- /signup form -->
 
         <!--Footer-->    
-        <div class="row py-3">
+        <div id="copy" class="row py-3">
             
-            <div class="col-md text-md-right">
+            <div  class="col-md text-md-right">
                 <small>&copy; 2018 Web Designer / Front-End Developer &amp; FIX</small>
             </div>
         </div>
@@ -374,7 +376,6 @@ FORM MODAL
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--Scroll Reveal-->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <script>
     //smoth scrolling
@@ -400,6 +401,16 @@ FORM MODAL
         delay:1000 
         });
         sr.reveal('.contacto', { 
+        duration: 2000,
+        origin: 'right',
+        delay:1000 
+        });
+        sr.reveal('#copy', { 
+        duration: 2000,
+        origin: 'right',
+        delay:1000 
+        });
+        sr.reveal('#pie', { 
         duration: 2000,
         origin: 'right',
         delay:1000 
