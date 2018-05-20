@@ -7,14 +7,23 @@ body {
     color: rgba(255,255,255,0.85);
     font-size: 1rem;
 }
+#block{
+  height: 670px;
+  background-color: rgba(0,0,0,0.6)
+}
 .jumbotron {
-    background-image: url('../img/jaguar.jpeg');
+    /*background-image: url('../img/jaguar.jpeg');*/ 
     padding-top: 15%;  
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;  
+}
+#video{
+  width: 100%;
+  min-width: 100%;
+  min-height: 50%;
 }
 
 .frank {
