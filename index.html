@@ -242,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-outline-danger btn-lg mx-auto my-5" href="https://franklueza.github.io/blog" onclick="ga('send', 'event', 'Blog', 'Art', 'Articulos', 0);">Más artículos</a>
+            <a class="btn btn-outline-danger btn-lg mx-auto my-5 Mas" href="https://franklueza.github.io/blog" onclick="ga('send', 'event', 'Blog', 'Art', 'Articulos', 0);">Más artículos</a>
         </div> 
        <!--/Articulos -->   
 
@@ -309,6 +309,7 @@ FORM MODAL
                     <h5 class="mb-4">¡Proximamente!</h5>
                     <hr class="my-4">
                     <h5 class="mb-4">Lanzaremos los siguientes cursos muy pronto </h5>
+                    
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                         <label class="custom-control-label" for="customCheck1">Introducción a HTML5 y CSS3</label>
@@ -329,12 +330,9 @@ FORM MODAL
                         <input type="checkbox" class="custom-control-input" id="customCheck5">
                         <label class="custom-control-label" for="customCheck5">Manejo del Tema Divi</label>
                     </div>
-
-                    <hr class="my-4">
-                    <div class="registro d-flex flex-column">
-                        <a class="btn btn-success btn-lg my-2" href="https://api.whatsapp.com/send?phone=525568895354&text=Informaci%C3%B3n%20de%20cursos" onclick="ga('send', 'event', 'RegistroCurso', 'WhatsApp', 'WhastsAppBusiness', 0);">WhatsApp</a>
-                        <a class="btn btn-danger btn-lg" href="https://franklueza.github.io/aviso-de-privacidad" onclick="ga('send', 'event', 'privacidad', 'view', '');">Leer "Aviso de Privacidad"</a>
-                    </div>
+                    <hr my-4>
+                    <a class="btn btn-success btn-lg my-2" href="https://api.whatsapp.com/send?phone=525568895354&text=Informaci%C3%B3n%20de%20cursos" onclick="ga('send', 'event', 'RegistroCurso', 'WhatsApp', 'WhastsAppBusiness', 0);">WhatsApp</a> 
+                    <a class="btn btn-danger btn-lg" href="https://franklueza.github.io/aviso-de-privacidad" onclick="ga('send', 'event', 'privacidad', 'view', '');">Leer "Aviso de Privacidad"</a>  
                 </form>
                 <!--/Registration form-->
                 </div>
@@ -401,56 +399,63 @@ FORM MODAL
         delay:1000 
         });
         sr.reveal('#schedule', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'left',
         distance: '300px' ,
         viewFactor:0.2
         });
         sr.reveal('#schedule1', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'right',
         distance: '300px' ,
         viewFactor:0.2
         });
         sr.reveal('.registro', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'top',
         distance: '300px' ,
         viewFactor:0.2
         });
         sr.reveal('.calendar', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'bottom',
         distance: '300px' ,
         viewFactor:0.2
         });
         sr.reveal('.Filosofia', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'bottom',
         distance: '300px' ,
         viewFactor:0.2
         });
         sr.reveal('.Desarrollador', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'left',
-        distance: '300px' ,
+        distance: '300px',
         viewFactor:0.2
         });
         sr.reveal('.Diseñador', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'right',
-        distance: '300px' ,
+        distance: '300px',
         viewFactor:0.2
         });
         sr.reveal('#blog', { 
-        duration: 2000,
+        duration: 1000,
         origin: 'right',
+        distance: '300px',
         viewFactor:0.2
         });
         sr.reveal('.blog', { 
-        duration: 2000,
-        origin: 'right',
+        duration: 1000,
+        origin: 'bottom',
+        distance: '300px',
         viewFactor:0.2
+        });
+        sr.reveal('.Mas', { 
+        duration: 1000,
+        origin: 'rigth',
+        distance: '300px',
         });
         //smoth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
