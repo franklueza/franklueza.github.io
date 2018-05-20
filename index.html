@@ -9,11 +9,10 @@
     emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo."><!-- Agregar descripción del sitio web-->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="./js/scripts.js"></script>
+    
+    <script src="js/scripts.js"></script>
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -37,9 +36,10 @@
                 <div class="navbar-nav">
                     <a class="nav-item nav-link " href="https://franklueza.github.io/">Inicio</a>
                     <a class="nav-item nav-link ml-3" href="https://franklueza.github.io/Frank-Lueza/">Frank Lueza</a>
+                    <a class="nav-item nav-link" href="#schedule">Webinar</a>
                     <!--<a class="nav-item nav-link" href="#">HTML5 & CSS3</a>
-                    <a class="nav-item nav-link" href="#">Facebook Ads</a>
-                    <a class="nav-item nav-link" href="#">Blog</a>-->
+                    <a class="nav-item nav-link" href="#">Facebook Ads</a>-->
+                    <a class="nav-item nav-link" href="https://franklueza.github.io/blog/">Blog</a>
                 </div>
             </div>
         </div>
@@ -64,8 +64,8 @@
             <p class="sub">Hacemos sitios web responsivos y modernos</p>
             <div class="btn-group fadeInUp mt-3 d-flex justify-content-center" role="group" aria-label="Callout bottons">
                 <!--<img class="img-fluid frank" src="./img/jay.png" alt="Frank Lueza" width="50px">-->
-                <button type="button" class="btn btn-danger btn-lg mr-1" data-toggle="modal" data-target="#register" onclick="ga('send', 'event', 'cursos', 'modal', '');">Cursos</button>
-                <a class="btn btn-primary btn-lg ml-1" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);">Contacto</a>
+                <button type="button" class="btn btn-danger btn-lg mr-1 cursos" data-toggle="modal" data-target="#register" onclick="ga('send', 'event', 'cursos', 'modal', '');">Cursos</button>
+                <a class="btn btn-primary btn-lg ml-1 contacto" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);">Contacto</a>
                 <!--<a class="btn btn-success btn-lg fadeInUp" href="#blog">Nuestro Blog</a>-->
             </div>
         </div>
@@ -77,11 +77,11 @@
         <h1 id="schedule" class="display-4 text-center text-muted my-5">Calendario de pláticas y talleres gratuitos</h1>
         <h2 id="schedule1" class="display-5 text-center text-muted my-5">Hablemos de Tecnología, Marketing Digital y Redes Sociales</h2>
         <!--Callout botton-->
-        <div class="btn-group fadeInUp mt-3 d-flex justify-content-center" role="group" aria-label="Callout bottons">
+        <div class="btn-group mt-3 d-flex justify-content-center registro" role="group" aria-label="Callout bottons">
             <a class="btn btn-primary btn-lg mb-5" href="#" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);">No lo olvides, Registro ¡Próximamente!</a>
         </div>
         
-        <ul class="list-group">
+        <ul class="list-group calendar">
             <li class="list-group-item">
                 <div class="d-flex justify-content-between">
                 <h5 class="mb-1">Para <strong>Emprender</strong>, hay que <strong>Aprender</strong> con <strong>Facebook</strong></h5>
@@ -136,7 +136,7 @@
          <!--/Schedule -->
          <hr>
         <div id="about" class="row"> <!-- About-->
-            <div class="col-lg col-xl-4 order-lg-2">
+            <div class="col-lg col-xl-4 order-lg-2 Filosofia">
                 <h3 class="mb-4">¿Qué es la Filosofía Mobile First?</h3>
                 <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="img/bootstrap.png" alt="Bootstrap" title="Bootstrap"> 
                 <p>En corto: es un concepto pensado para la construcción y diseño de sitios web primero en versión móvil.</p>
@@ -144,7 +144,7 @@
                    <br> <strong>Bootstrap</strong> es un kit de herramientas de código abierto para desarrollar con HTML, CSS y JS.
                 </p>
             </div>
-            <div class="col-lg order-lg-1">
+            <div class="col-lg order-lg-1 Desarrollador">
                 <h3 class="mb-4">¿Qué es el Desarrollo Web?</h3>
                 <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/jay.png" alt="HTML5-CSS3-JAVASCRIPT" title=""> 
                 <p>En corto: los desarrolladores web crean y mantienen sitios web.</p>
@@ -158,7 +158,7 @@
                    responsables de lo que se ejecuta en el servidor, usan lenguajes como <strong>Python</strong>, <strong>Ruby</strong> y <strong>Java</strong> para trabajar con bases 
                    de datos para guardar, cambiar y recuperar datos.</p>
             </div>
-            <div class="col-lg order-lg-3">
+            <div class="col-lg order-lg-3 Diseñador">
                 <h3 class="mb-4">¿Qué hace el Diseñador Web?</h3>
                 <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/json.png" alt="Diseñador Web"> 
                 <p>En corto: aplica el trabajo de los diseñadores y lleva sus diseños a código.</p>
@@ -175,7 +175,7 @@
         <hr>
         <!--Artículos -->
         <h1 id="blog" class="display-4 text-center text-muted my-5">Artículos 2018</h1>
-        <div class="row">
+        <div class="row blog">
             <div class="col-md-6 col-lg-4">
                 <div class="card mb-3">
                     <a href="https://franklueza.github.io/blog/Buyer-Persona/"><img class="card-img-top" src="img/vivianne.png" alt="Vivianne McVue"></a>
@@ -375,6 +375,94 @@ FORM MODAL
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script>
+        window.sr = ScrollReveal(); //https://github.com/jlmakes/scrollreveal
+        sr.reveal('.navbar', { 
+        duration: 2000,
+        origin: 'bottom',
+        opacity: 20,
+        });
+        sr.reveal('.jumbotron', { 
+        duration: 2000,
+        origin: 'top',
+        distance: '300px'
+        });
+        sr.reveal('.cursos', { 
+        duration: 2000,
+        origin: 'left',
+        delay:1000 
+        });
+        sr.reveal('.contacto', { 
+        duration: 2000,
+        origin: 'right',
+        delay:1000 
+        });
+        sr.reveal('#schedule', { 
+        duration: 2000,
+        origin: 'left',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('#schedule1', { 
+        duration: 2000,
+        origin: 'right',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('.registro', { 
+        duration: 2000,
+        origin: 'top',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('.calendar', { 
+        duration: 2000,
+        origin: 'bottom',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('.Filosofia', { 
+        duration: 2000,
+        origin: 'bottom',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('.Desarrollador', { 
+        duration: 2000,
+        origin: 'left',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('.Diseñador', { 
+        duration: 2000,
+        origin: 'right',
+        distance: '300px' ,
+        viewFactor:0.2
+        });
+        sr.reveal('#blog', { 
+        duration: 2000,
+        origin: 'right',
+        viewFactor:0.2
+        });
+        sr.reveal('.blog', { 
+        duration: 2000,
+        origin: 'right',
+        viewFactor:0.2
+        });
+        //smoth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+                });
+            });
+        });
+    </script>
   </body>
 </html>
 
