@@ -26,15 +26,6 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .jumbotron{
-      /* Create the parallax scrolling effect */
-    background-image: url('../img/freelancer.JPG');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    color: #645151;
-    }
     .jumbotron .titulo {
         font-size: 25px;
     }
@@ -49,6 +40,15 @@ body {
     }
 }
 @media only screen and (max-width: 600px) {
+  /*.jumbotron{
+  /* Create the parallax scrolling effect */
+  /*background-image: url('../img/freelancer.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  color: #645151;
+  }*/
   #schedule { 
       font-size: 30px;
       text-align: center;
