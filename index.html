@@ -50,9 +50,9 @@
         </div>
     </nav>
       <!--/Nabvar-->
-   
+
     <!-- Jumbotrom-->
-    <div class="jumbotron jumbotron-fluid bg-info text-white" id="block" data-vide-bg="img/Rocket" data-vide-options="positions: 0% 50%">
+    <div class="Jumbotrom Jumbotrom-fluid" id="block" data-vide-bg="img/Rocket" data-vide-options="position: 0% 50%">
         <div class="container text-sm-center pt-5  list">
             <ul>
                 <li>F</li>
@@ -63,11 +63,11 @@
                 <li>L</li>
                 <li>U</li>
             </ul>   
-            <h1 class="display-4 fadeInUp mb-4 titulo">Estudio Creativo de Diseño y Desarrollo Web</h1>
-            <h2 class=" display-5 fadeInUp subtitulo">Web Designer / Front-End Developer</h2>
-            <h2 class=" display-5 fadeInUp subtitulo">Mobile First!</h2> <!-- lead -->
+            <h1 class="display-4  mb-4 titulo text-center">Estudio Creativo de Diseño y Desarrollo Web</h1>
+            <h2 class=" display-5 subtitulo text-center">Web Designer / Front-End Developer</h2>
+            <h2 class=" display-5 subtitulo text-center">Mobile First!</h2> <!-- lead -->
             <p class="sub">Hacemos sitios web responsivos y modernos</p>
-            <div class="btn-group fadeInUp mt-3 d-flex justify-content-center" role="group" aria-label="Callout bottons">
+            <div class="btn-group mt-3 d-flex justify-content-center" role="group" aria-label="Callout bottons">
                 <!--<img class="img-fluid frank" src="./img/jay.png" alt="Frank Lueza" width="50px">-->
                 <button type="button" class="btn btn-danger btn-lg mr-1 cursos" data-toggle="modal" data-target="#register" onclick="ga('send', 'event', 'cursos', 'modal', '');">Cursos</button>
                 <a class="btn btn-primary btn-lg ml-1 contacto" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);">Contacto</a>
@@ -396,11 +396,7 @@ FORM MODAL
     });
      //https://github.com/jlmakes/scrollreveal
         
-        sr.reveal('.jumbotron', { 
-        duration: 2000,
-        origin: 'top',
-        distance: '300px'
-        });
+        
         sr.reveal('.cursos', { 
         duration: 2000,
         origin: 'left',
