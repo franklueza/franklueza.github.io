@@ -8,47 +8,59 @@ body {
     font-size: 1rem;
 }
 
-.header {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  color: #fff;
+.v-header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
 }
 
-.content {
-  max-width: 40rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: auto;
-  text-align: center;
+.container{
+  max-width:960px;
+  padding-left:1rem;
+  padding-right:1rem;
+  margin:auto;
+  text-align:center;
 }
 
-.header-video {
+.fullscreen-video-wrap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-height:100%;
+  min-width:100%;
+}
+
+.header-overlay{
+  height:100vh;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background:#225470;
+  opacity:0.3;
 }
 
-.header-video video {
-  min-width: 100%;
-  min-height: 100%;
+.header-content{
+  z-index:2;
 }
 
+/*.btn{
+  background: #34b3a0;
+  color:#fff;
+  font-size:1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}*/
 
-.header-content {
-  z-index: 2;
-}
 
-.header-content titulo {
-  margin-bottom: 0;
-}
-
-.header-content sub {
-  display: block;
-}
 
 .Jumbotrom {
     
@@ -80,8 +92,8 @@ body {
     }
 }
 @media only screen and (max-width: 600px) {
-  /*.jumbotron{
-  /* Create the parallax scrolling effect */
+  .header-content{
+  /*Create the parallax scrolling effect */
   /*background-image: url('../img/freelancer.jpg');
   background-attachment: fixed;
   background-position: center;
