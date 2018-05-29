@@ -1,473 +1,280 @@
-<!doctype html> <!-- https://hostproton.com/wordpress/utilidades-css-anadir-modificar-css-animaciones-css/-->
-<html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Francisco Lueza">
-    <meta name="description" content="Estudio Creativo de Diseño y Desarrollo Web. FIX brindamos consultoria tecnológica asequible a personas 
-    emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo."><!-- Agregar descripción del sitio web-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Francisco Lueza">
+  <meta name="description" content="Estudio Creativo de Diseño y Desarrollo Web. Brindamos consultoria tecnológica asequible a personas 
+  emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.">
+  <title>Estudio Creativo de Diseño y Desarrollo Web | Francisco Lueza</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script>
-        window.sr = ScrollReveal();
-    </script>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <script src="js/scripts.js"></script>
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N84P8XV');</script>
-    <!-- End Google Tag Manager -->
-    
-    <title>Estudio Creativo de Diseño y Desarrollo Web</title>
-  </head>
-  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
-      <!-- Nabvar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand order-1 mr-0" href="#" target="_blank">FIX Desarrollo Web</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="https://franklueza.github.io/">Inicio</a>
-                    <a class="nav-item nav-link" href="https://franklueza.github.io/Frank-Lueza/">Frank Lueza</a>
-                    <a class="nav-item nav-link" href="#schedule">Webinar</a>
-                    <!--<a class="nav-item nav-link" href="#">HTML5 & CSS3</a>
-                    <a class="nav-item nav-link" href="#">Facebook Ads</a>-->
-                    <a class="nav-item nav-link" href="https://franklueza.github.io/blog/">Blog</a>
-                </div>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N84P8XV');</script>
+      <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <div class="navbar-fixed">
+      <nav class="white" role="navigation">
+          <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo center">
+              <i class="material-icons">all_inclusive</i></a>
+            <ul class="right hide-on-med-and-down">
+              <!--<li><a href="#">Frank Lueza</a></li>-->
+            </ul><!-- navbar content here  --> 
+      
+
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="background red">
+              <!--<img src="background3.jpg">-->
             </div>
-        </div>
+            <a href="#user"><img class="circle" src="img/Lueza.jpg"></a>
+            <a href="#name"><span class="white-text name">Francisco Lueza</span></a>
+            <a href="#"><span class="white-text email">ixfanalytics@gmail.com</span></a> 
+          </div>
+        </li>
+        <!--<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </nav>
-      <!--/Nabvar-->
-        <!--<video autoplay muted loop id="myVideo">
-            <source src="img/Rocket.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-            
-        <div class="content">
-            <h1>Heading</h1>
-            <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
-            <button id="myBtn" onclick="myFunction()">Pause</button>
-        </div>-->
-    
+  </div>
 
-
-    <div class="jumbotron jumbotron-fluid bg-success text-white v-header container">
-            <div class="fullscreen-video-wrap">
-                    <video controls autoplay loop>
-                        <source src="img/video.mp4" type="video/mp4">
-                    </video>
-                </div>
-        <div class="container header-content text-center pt-5">
-            <h1 class="display-4 titulo text-center ">Estudio Creativo de Diseño y Desarrollo Web</h1>
-            <h2 class="display-5 subtitulo text-center">Web Designer / Front-End Developer</h2>
-            <h2 class="display-5 subtitulo text-center">Mobile First!</h2> <!-- lead -->
-            <button type="button" class="btn btn-danger btn-lg mr-1 cursos" data-toggle="modal" data-target="#register" onclick="ga('send', 'event', 'cursos', 'modal', '');">Cursos</button>
-            <a class="btn btn-primary btn-lg ml-1 contacto" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);">Contacto</a>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text text-darken-2">Freelancer</h1>
+        <div class="row center">
+          <h5 class="header col s12 white-text">A modern responsive front-end with WordPress  </h5><!--framework based on Material Design & Boostrap-->
         </div>
+        <div class="row center">
+          <a href="mailto:ixfanalytics@gmail.com" onclick="ga('send', 'event', 'contacto', 'email', 'gmail', 0);" target="_blank" class="btn-large waves-effect waves-light deep-orange">Contacto</a>
+        </div>
+        <br><br>
+
+      </div>
     </div>
+    <div class="parallax"><img src="img/Freelancer.png" alt="Freelancer"></div>
+  </div>
 
-     
-    <!--<header class="header content list">
-        
-        <div class="header-video ">
-            <video src="img/Rocket.mp4" autoplay loop></video>
-        </div>
-        <ul>
-            <li>F</li>
-            <li>R</li>
-            <li>A</li>
-            <li>N</li>
-            <li>K</li>
-            <li>L</li>
-            <li>U</li>
-        </ul>    
-        <div class="header-content">
-            <h1 class="display-4 titulo text-center ">Estudio Creativo de Diseño y Desarrollo Web</h1>
-            <h2 class="display-5 subtitulo text-center">Web Designer / Front-End Developer</h2>
-            <h2 class="display-5 subtitulo text-center">Mobile First!</h2> <!-- lead -->
-            <!--<button type="button" class="btn btn-danger btn-lg mr-1 cursos" data-toggle="modal" data-target="#register" onclick="ga('send', 'event', 'cursos', 'modal', '');">Cursos</button>
-            <a class="btn btn-primary btn-lg ml-1 contacto" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);">Contacto</a>-->
-        <!--</div>
-    </header>-->
-        
-    <div class="container pt-4"> <!-- Container-->
-        <!--Schedule -->
-        <h1 id="schedule" class="display-4 text-center text-muted my-5">Calendario de pláticas y talleres gratuitos</h1>
-        <h2 id="schedule1" class="display-5 text-center text-muted my-5">Hablemos de Tecnología, Marketing Digital y Redes Sociales</h2>
-        <!--Callout botton-->
-        <div class="btn-group mt-3 d-flex justify-content-center registro" role="group" aria-label="Callout bottons">
-            <a class="btn btn-primary btn-lg mb-5" href="https://goo.gl/ru8QwL" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);">No lo olvides, Registrate</a>
-        </div>
-        
-        <ul class="list-group calendar">
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Para <strong>Emprender</strong>, hay que <strong>Aprender</strong> con <strong>Facebook</strong></h5>
-                <span class="badge badge-pill badge-info p-2">19:00 - 18:00 hrs<br>Mayo 31</span>
-                </div>
-                <p class="mb-1">Francisco Lueza</p>
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Hablando de los componentes estratégicos del <strong>Marketing Digital</strong></h5>
-                <span class="badge badge-pill badge-primary p-2">19:00 - 18:00 hrs<br>Junio 15</span>
-                </div>
-                <p class="mb-1">Francisco Lueza</p>
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Cómo seleccionar un <strong>Dominio</strong> y <strong>Hosting</strong> correctamente para tu <strong>sitio web</strong></h5>
-                <span class="badge badge-pill badge-success p-2">19:00 - 18:00 hrs<br>Junio 30</span>
-                </div>
-                <p class="mb-1">Francisco Lueza</p>
-            </li>
-            <li class="list-group-item list-group-item-action active">
-                <div class="invitacion text-sm-center">
-                <h5 class="mb-1">Invitame a desayunar</h5><br>
-                <p class="mb-1">¡Trabajemos juntos!</p>
-                <!--<span class="badge badge-pill badge-info p-2">10:00pm</span>-->
-                </div>    
-            </li>
-            <!--<li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Hablemas más sobre las <strong>Redes Sociales</strong></h5>
-                <span class="badge badge-pill badge-info p-2">1:00pm</span>
-                </div>
-                <p class="mb-1">Ecma Scriptnstuff</p>
-            </li> 
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">Getting Started With Redux</h5>
-                <span class="badge badge-pill badge-info p-2">2:00pm</span>
-                </div>
-                <p class="mb-1">Robbie Redux</p>
-            </li> 
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between">
-                <h5 class="mb-1">What's Babel?</h5>
-                <span class="badge badge-pill badge-info p-2">3:00pm</span>
-                </div>
-                <p class="mb-1">Json Babel</p>
-            </li> -->          
-        </ul>
+  <div class="progress red">
+      <div class="indeterminate"></div>
+  </div>  
 
-         <!--/Schedule -->
-         <hr>
-        <div id="about" class="row"> <!-- About-->
-            <div class="col-lg col-xl-4 order-lg-2 Filosofia">
-                <h3 class="mb-4">¿Qué es la Filosofía Mobile First?</h3>
-                <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="img/bootstrap.png" alt="Bootstrap" title="Bootstrap"> 
-                <p>En corto: es un concepto pensado para la construcción y diseño de sitios web primero en versión móvil.</p>
-                <p>Creamos proyectos responsivos y de primer nivel en dispositivos móviles para la web con la biblioteca de componentes <strong>front-end</strong> más popular, <strong>Bootstrap.</strong> 
-                   <br> <strong>Bootstrap</strong> es un kit de herramientas de código abierto para desarrollar con HTML, CSS y JS.
-                </p>
-            </div>
-            <div class="col-lg order-lg-1 Desarrollador">
-                <h3 class="mb-4">¿Qué es el Desarrollo Web?</h3>
-                <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/jay.png" alt="HTML5-CSS3-JAVASCRIPT" title=""> 
-                <p>En corto: los desarrolladores web crean y mantienen sitios web.</p>
-                <p>El desarrollo web a menudo se divide en dos áreas, desarrollo de <strong>front-end</strong> y desarrollo
-                   de <strong>back-end</strong>.<br> Los desarrolladores <strong>front-end</strong> usan <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> para construir lo
-                   que ve el cliente - lo que se ejecuta en el navegador -. <br>El <strong>HTML</strong> significa <strong>Hyper Text Markup Language</strong>, es el lenguaje para la estructura, 
-                   cada página web comienza con él. Es la base sobre la cual las otras dos capas <strong>CSS</strong> y <strong>JavaScript</strong> - presentación e interactividad, respectivamente - se construyen.
-                   <br>El <strong>CSS</strong> significa <strong>Cascading Style Sheets</strong> es un lenguaje de presentación creado para estilizar el contenido
-                   <br>Y finalmente, <strong>JavaScript</strong> es el motor que impulsa el dinamismo a cada uno de los elementos del sitio.
-                   <br>Los desarrolladores de <strong>back-end</strong> son
-                   responsables de lo que se ejecuta en el servidor, usan lenguajes como <strong>Python</strong>, <strong>Ruby</strong> y <strong>Java</strong> para trabajar con bases 
-                   de datos para guardar, cambiar y recuperar datos.</p>
-            </div>
-            <div class="col-lg order-lg-3 Diseñador">
-                <h3 class="mb-4">¿Qué hace el Diseñador Web?</h3>
-                <img class="img-fluid rounded mb-4 d-none d-sm-block flash" src="./img/json.png" alt="Diseñador Web"> 
-                <p>En corto: aplica el trabajo de los diseñadores y lleva sus diseños a código.</p>
-                <p>No hay un camino a seguir y no existen procedimientos estándar de la industria.
-                   Es inexacto y está lleno de toma de decisiones. Eso significa que con cada nuevo 
-                   <strong>diseño web</strong>, lo mejor es asumir lo menos posible y aprender todo lo que pueda. <br> 
-                   Las primeras fases del <strong>diseño web</strong> tienen muchos nombres, pero a veces las personas 
-                   llaman a este primer bloque la fase de descubrimiento. Porque estamos tratando 
-                   de encontrar tanta información como podamos, antes de que comencemos a diseñar 
-                   algo que realmente no se ajusta a las necesidades correctas.
-                </p>
-            </div>
-        </div><!--/About-->        
-        <hr>
-        <!--Artículos -->
-        <h1 id="blog" class="display-4 text-center text-muted my-5">Artículos 2018</h1>
-        <div class="row blog">
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <a href="https://franklueza.github.io/blog/Buyer-Persona/"><img class="card-img-top" src="img/vivianne.png" alt="Vivianne McVue"></a>
-                    <div class="card-body">
-                        <a href="https://franklueza.github.io/blog/Buyer-Persona/"><h4 class="card-title">Buyer Persona</h4></a>
-                        <p class="card-text">El <strong>Buyer Persona</strong> es una representación semi-ficticia de tu cliente ideal, basada en 
-                        datos reales y una mezcla de especulación, sustentada en datos demográficos, comportamientos, motivaciones y metas.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <a href="https://franklueza.github.io/blog/Ecosistema-Digital/"><img class="card-img-top" src="img/nodestradamus.png" alt="NodeStradamus"></a>
-                    <div class="card-body">
-                        <a href="https://franklueza.github.io/blog/Ecosistema-Digital/"><h4 class="card-title">Ecosistema Digital</h4></a>
-                        <p class="card-text">El ecosistema digital es un conjunto de estrategias enfocadas a desarrollar una propuesta de tu persona, 
-                        negocio y empresa en el Internet, utilizando diferentes técnicas de marketing digital...</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                        <a href="https://franklueza.github.io/blog/5-Recursos-de-imagenes-para-su-sitio-web/"><img class="card-img-top" src="img/robbie.png" alt="Robbie Redux"></a>
-                    <div class="card-body">
-                            <a href="https://franklueza.github.io/blog/5-Recursos-de-imagenes-para-su-sitio-web/"><h4 class="card-title">5 Recursos de imágenes para su sitio web</h4></a>
-                        <p class="card-text">Crear o buscar imágenes para su sitio web y redes sociales puede ser una tarea complicada debido a que 
-                        debe asegurarse que esta imagen sea la adecuada para su ...</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <a href="https://franklueza.github.io/blog/Tu-negocio-en-internet/"><img class="card-img-top" src="img/ecma.png" alt="Ecma Scriptnstuff"></a>
-                    <div class="card-body">
-                        <a href="https://franklueza.github.io/blog/Tu-negocio-en-internet/"><h4 class="card-title">¿Por qué tu negocio debería tener un sitio web?</h4></a>
-                        <p class="card-text">Tu negocio debe terner un sitio web por muchas razones, la primera de ellas es porque creas 
-                        credebilidad ante tus clientes potenciales, segundo, el sitio web es la parte esencial del ecositema digital.    
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <a href="https://franklueza.github.io/blog/Presencia-de-nuestro-negocio-en-Internet/"><img class="card-img-top" src="img/jay.png" alt="Jay Query"></a>
-                    <div class="card-body">
-                        <a href="https://franklueza.github.io/blog/Presencia-de-nuestro-negocio-en-Internet/"><h4 class="card-title">¿Cómo tener una presencia de nuestro negocio en Internet?</h4></a>
-                        <p class="card-text">De acuerdo con Google, para tener una presencia del negocio en Internet y 
-                        poder crecer nuestro negocio hay que hacer un recorrido por cuatro etapas ...</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-3">
-                    <a href="https://franklueza.github.io/blog/Analitica-Web/"><img class="card-img-top" src="img/json.png" alt="Json Babel"></a>
-                    <div class="card-body">
-                        <a href="https://franklueza.github.io/blog/Analitica-Web/"><h4 class="card-title">Hablemos de Analítica Web</h4></a>
-                        <p class="card-text">Para aquellas personas que tienen un negocio y quieren o ya están en una 
-                        plataforma digital como WordPress o Facebook, etc; seguramente se hacen una serie de preguntas, por ejemplo: ¿Quien visita mi negocio? ...</p>
-                    </div>
-                </div>
-            </div>
-            <a class="btn btn-outline-danger btn-lg mx-auto my-5 Mas" href="https://franklueza.github.io/blog" onclick="ga('send', 'event', 'Blog', 'Art', 'Articulos', 0);">Más artículos</a>
-        </div> 
-       <!--/Articulos -->   
+  <div class="container">
+    <div class="section">
 
-        
-        <!-- signup form -->
-        <div class="alert alert-success alert-dismissible fade show text-sm-center" role="alert">
-            <strong>Adevertencia</strong> Este sitio utiliza cookies.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <hr>
-        <div id="pie" class="row py-4 text-muted bg-ligth">
-            <div class="col-md col-xl-5">
-                <p><strong>Acerca de FIX</strong></p>
-                <p>FIX brindamos consultoria tecnológica asequible a personas 
-                emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
-                <h5><strong>Comparte nuestro sitio</strong></h5>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fa fa-facebook-official fa-2x m-2" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fa fa-twitter-square fa-2x m-2" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fa fa-google-plus-official fa-2x m-2" aria-hidden="true"></i></a>
-            </div>
-            <div class="col-md col-xl-5 ml-auto text-md-right">
-                <p><strong>Manténgase actualizado con FIX</strong></p>
-                <a class="btn btn-primary btn-lg ml-1" href="http://bit.ly/2IGVFAp" target="_blank">Dejanos tus datos</a>
-                <a class="btn btn-danger btn-lg my-4" href="https://franklueza.github.io/aviso-de-privacidad" target="_blank">Leer "Aviso de Privacidad"</a>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <!--<img class="activator" src="background1.jpg">-->
+                <h2 class="center"><i class="large material-icons orange600">devices</i></h2>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Diseño Responsivo <i class="material-icons right">more_vert</i></span>
+                <!--<p><a href="#">This is a link</a></p>-->
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Diseño Responsivo<i class="material-icons right">close</i></span>
+                <p>Hacemos diseño web responsivo, para que su sitio se vea bien en cualquier dispositivo móvil.</p>
+              </div>
             </div>    
         </div>
-        <hr><!-- /signup form -->
-
-        <!--Footer-->    
-        <div id="copy" class="row py-3">
-            
-            <div  class="col-md text-md-right">
-                <small>&copy; 2018 Web Designer / Front-End Developer &amp; FIX</small>
-            </div>
+        <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <!--<img class="activator" src="background1.jpg">-->
+                <h2 class="center"> <i class="large material-icons blue600">laptop_chromebook</i></h2>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">WordPress<i class="material-icons right">more_vert</i></span>
+                <!--<p><a href="#">This is a link</a></p>-->
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">WordPress<i class="material-icons right">close</i></span>
+                <p>¿Necesita actualizar su sitio web fácil y rápidamente?
+                    Con WordPress como administrador de contenidos - CMS - puede hacerlo sin depender de terceros.</p>
+              </div>
+            </div>    
         </div>
-        <!--/Footer-->
-
-    </div> <!-- /Container-->
-
-    <!--=====================================
-FORM MODAL
-=====================================-->
-<!-- Modal -->
-<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                <h5 class="modal-title" id="exampleModalLabel">¡Registrate ahora!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                <!--Registration form-->
-                <form>
-                    <!--<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Hurry!</strong> Early bird registration in two days.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>-->
-                    <h5 class="mb-4">¡Proximamente!</h5>
-                    <hr class="my-4">
-                    <h5 class="mb-4">Lanzaremos los siguientes cursos muy pronto </h5>
-                    
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Introducción a HTML5 y CSS3</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                        <label class="custom-control-label" for="customCheck2">Facebook Ads</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                        <label class="custom-control-label" for="customCheck3">WhatsApp Business</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck4">
-                        <label class="custom-control-label" for="customCheck4">Introducción a WordPress</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck5">
-                        <label class="custom-control-label" for="customCheck5">Manejo del Tema Divi</label>
-                    </div>
-                    <hr my-4>
-                    <a class="btn btn-success btn-lg my-2" href="https://api.whatsapp.com/send?phone=525568895354&text=Informaci%C3%B3n%20de%20cursos" onclick="ga('send', 'event', 'RegistroCurso', 'WhatsApp', 'WhastsAppBusiness', 0);">WhatsApp</a> 
-                    <a class="btn btn-danger btn-lg" href="https://franklueza.github.io/aviso-de-privacidad" onclick="ga('send', 'event', 'privacidad', 'view', '');">Leer "Aviso de Privacidad"</a>  
-                </form>
-                <!--/Registration form-->
-                </div>
-                
-                </div>  
-            </div>
-        </div>
+        <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <!--<img class="activator" src="background1.jpg">-->
+                <h2 class="center"> <i class="large material-icons yell600">settings</i></h2>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Mantenimiento<i class="material-icons right">more_vert</i></span>
+                <!--<p><a href="#">This is a link</a></p>-->
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Mantenimiento<i class="material-icons right">close</i></span>
+                <p>Administramos su sitio web, para mantenerlo respaldado, actualizado y funcionando en cualquier momento.</p>
+              </div>
+            </div>    
+          </div>
+      </div>
     </div>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84P8XV"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  </div>
 
-    <!-- WhatsHelp.io widget -->
+  <div class="progress orange">
+      <div class="indeterminate"></div>
+  </div>
+
+      <div class="row valign-wrappe center-align ">
+         <!-- Modal Trigger -->
+        <a class="waves-effect waves-light red btn-large modal-trigger" href="#modal1">Webinars</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal bottom-sheet">
+          <div class="modal-content">
+            <h4>Calendario de Webinars</h4>
+            <h5>Para Emprender, hay que Aprender con Facebook</h5>
+            <p>Mayo 31, 19 - 20 hrs</p>
+            
+          </div>
+          <div class="modal-footer">
+            <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="modal-close waves-effect waves-green btn-flat">Quiero registrarme</a>
+          </div>
+        </div> 
+      </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Materialize & Bootstrap</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/programador.jpeg" alt="Programador"></div>
+  </div>
+
+  <!--<div class="container">
+    -<div class="section">-->
+      
+  <div class="carousel carousel-slider center">
+      <div class="carousel-fixed-item center">
+        <a class="btn-large waves-effect waves-light orange white-text darken-text-2" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);" target="_blank">Contacto</a>
+      </div>
+      <div class="carousel-item red white-text" href="#one!">
+        <h3>Desarrollo Web</h3>
+        <h5>Un sitio web es la parte principal del ecosistema digital para que tu negocio este en Internet.</h5>
+      </div>
+      <div class="carousel-item amber white-text" href="#two!">
+        <h3>Diseño Web</h3>
+        <h5>Tu sitio web es la vitrina de tu negocio y el primer contacto que tienes con los clientes potenciales que buscan lo que tu tienes.</h5>
+      </div>
+      <div class="carousel-item green white-text" href="#three!">
+        <h3>Plantillas Premium</h3>
+        <h5>Utiliza una plantilla premium para construir tu sitio web.</h5>
+      </div>
+      <div class="carousel-item blue white-text" href="#four!">
+          <h3>WordPress</h3>
+          <h5>Este CMS es fántastico para montar un sitio web autoadministrable para tu negocio y fácil de manejar.</h5>
+      </div>
+    </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/pexels.jpeg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer light-blue lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Francisco Lueza</h5>
+          <p class="grey-text text-lighten-4">Brindamos consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
+          <!-- Begin: HubSpot Academy - Inbound Badge -->
+          <div class="academy-badge"><a title="Inbound" href="http://academy.hubspot.com/certification" target="_blank">
+            <img class="responsive-img" src="http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2" />
+            </a>
+          </div>
+          <!-- End: HubSpot Academy - Inbound Badge -->
+        </div>
+        <div class="col l3 s12">
+            <h5><strong>Comparte nuestro sitio</strong></h5>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fab fa-facebook-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
+            <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fab fa-twitter-square fa-2x m-2" aria-hidden="true"  style="color:white"></i></a>
+            <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fab fa-google-plus-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">¡Proximamente!</h5>
+          <ul>
+            <li>Curso de Monitoreo</li>
+            <li>Curso de WordPress</li>
+            <li>Curso de Facebook Ads</li>
+            <li>Curso de HTML5 y CSS3</a></li>
+            <li>Curso de WhatsApp Business</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+          © 2018 <a class="white-text text-lighten-3" href="https://franklueza.github.io">Web Designer / Front-End Developer</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <!-- WhatsHelp.io widget -->
 <script type="text/javascript">
-    (function () {
-        var options = {
-            facebook: "1959498814271748", // Facebook page ID
-            whatsapp: "5568895354", // WhatsApp number
-            email: "ixfanalytics@gmail.com", // Email
-            company_logo_url: "//storage.whatshelp.io/widget/fd/fdc6/fdc661aefcb5f36f0bbd1f54516363a1/28782580_2114220858799542_9218294182744765982_n.jpg", // URL of company logo (png, jpg, gif)
-            greeting_message: "Hola, me gustaría conocerte.", // Text of greeting message
-            call_to_action: "Contáctanos", // Call to action
-            button_color: "#129BF4", // Color of button
-            position: "right", // Position may be 'right' or 'left'
-            order: "facebook,whatsapp,email", // Order of buttons
-        };
-        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
+  (function () {
+      var options = {
+          facebook: "1959498814271748", // Facebook page ID
+          whatsapp: "5568895354", // WhatsApp number
+          email: "ixfanalytics@gmail.com", // Email
+          company_logo_url: "//storage.whatshelp.io/widget/fd/fdc6/fdc661aefcb5f36f0bbd1f54516363a1/28782580_2114220858799542_9218294182744765982_n.jpg", // URL of company logo (png, jpg, gif)
+          greeting_message: "Hola,¿Cómo podemos ayudarte", // Text of greeting message
+          call_to_action: "Contáctanos", // Call to action
+          button_color: "#129BF4", // Color of button
+          position: "right", // Position may be 'right' or 'left'
+          order: "facebook,whatsapp,email", // Order of buttons
+      };
+      var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
 </script>
 <!-- /WhatsHelp.io widget -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84P8XV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <script src="js/jquery.vide.min.js"></script>
-
-    <!--Scroll Reveal-->
-
-    <script>
-    //smoth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-     //https://github.com/jlmakes/scrollreveal
-        
-    //Video de fondo w3
-    var video = document.getElementById("myVideo");
-    var btn = document.getElementById("myBtn");
-
-    function myFunction() {
-        if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-        } else {
-            video.pause();
-            btn.innerHTML = "Play";
-        }
-    }
-
-    // Termina el scrip de video de fondo
-
-
-        sr.reveal('.cursos', { 
-        duration: 2000,
-        origin: 'left',
-        delay:1000
-        });
-        sr.reveal('.contacto', { 
-        duration: 2000,
-        origin: 'right',
-        delay:1000 
-        });
-        sr.reveal('#schedule', { 
-        duration: 2000,
-        origin: 'left',
-        distance: '300px'
-        });
-    </script>
   </body>
 </html>
-
-<!-- <div class="container cobro">
-        <div class="row">
-            <div class="col-12 ">
-                <h2 class="display-4 text-center text-muted my-5">¿Cuánto cobro?</h2>
-                <p>Está pregunta tan natural, es una constante que los futuros clientes me hacen cuando me contactan, así que te voy a explicar como cobro, pero antes, ¿te has preguntado alguna vez qué estarías dispuest@ a hacer por conocer a tu artista favorito?</p>
-                <p>Seguramente habrá muchas personas que estarían dispuestas a pagar mucho dinero por ello y hacer casi cualquier cosa por conseguir estar en el concierto y conocer a su artista de cerca, ¿no es así?. Entonces cada persona va a asignar un valor especial por la
-                experiencia, lo que implica que para algunas personas seria muy valioso y para otras no.</p>
-                <p>¿Cuál crees que sería el impacto de que tu negocio este en <strong>Internet</strong>?. Seguramente tendrás muchas preguntas y no sabes por dónde empezar o qué preguntarte,
-                en el siguiente artículo <a href ="https://franklueza.github.io/blog/Tu-negocio-en-internet/">¿Por qué tu negocio debería tener un sitio web?</a> te proporciona algunas ventajas de tener un <strong>sitio web</strong> y en el siguiente artículo
-                <a href="https://franklueza.github.io/blog/Presencia-de-nuestro-negocio-en-Internet/">¿Cómo tener una presencia de nuestro negocio en Internet?</a> te hablará de la importancia de que tu negocio este en <strong>Internet</strong></p>
-                <p>Para concluir, el impacto en pesos, se mide en el beneficio que el cliente recibirá a partir de nuestro trabajo.</p>
-            </div>
-        </div>
-    </div>-->
