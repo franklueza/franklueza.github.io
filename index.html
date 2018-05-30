@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="author" content="Francisco Lueza">
   <meta name="description" content="Estudio Creativo de Diseño y Desarrollo Web. Brindamos consultoria tecnológica asequible a personas 
   emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.">
+  <meta property="og:image" content="img/spaced.png">
   <title>Estudio Creativo de Diseño y Desarrollo Web | Francisco Lueza</title>
 
   <!-- CSS  -->
@@ -29,7 +30,6 @@
       <nav class="blue-grey darken-4">
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo center"><img class="responsive-img logo" src="img/Logo.png" alt="space"></a>
-          
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <!--<ul class="right hide-on-med-and-down">
             <li><a href="sass.html">Sass</a></li>
@@ -49,12 +49,13 @@
             </div>
             <a href="#user"><img class="circle" src="img/Lueza.jpg"></a>
             <a href="#name"><span class="white-text name">Francisco Lueza</span></a>
+            <a href="https://www.facebook.com/LuezaFrank/"><i class="fab fa-facebook-square fa-2x" aria-hidden="true" style="color:white"></i></a>
             <a href="mailto:ixfanalytics@gmail.com"><i class="material-icons white0600">mail_outline</i></a>
             <a href="tel:5568895354"><i class="material-icons white0600">phone</i></a>
 
           </div>
         </li>
-        <li><a href="#">Acerce de mi</a></li>
+        <li><a href="#about">Acerce de mi</a></li>
         <li><a href="#">Resumen</a></li>
         <li><a href="#">Contacto</a></li>
         <li><a href="#">Blog</a></li>
@@ -65,7 +66,7 @@
     <div class="section no-pad-bot">
       <div class="container contacto">
         <br><br>
-        <h1 class="header white-text text-darken-2">Freelancer</h1>
+        <h1 class="header white-text text-darken-2">Web Developer</h1>
         <div class="row">
           <h5 class="header col s12 white-text">A modern responsive front-end with WordPress  </h5><!--framework based on Material Design & Boostrap-->
         </div>
@@ -83,7 +84,7 @@
       <img class="responsive-img" src="img/astronaut.jpg" alt="Freelancer">
     </div>
   </div>
-  <div class="container">
+  <div id="about" class="container">
     <div class="row">
       <div class="col s12">
           <h2>Acerca de mi</h2>
@@ -165,48 +166,48 @@
       <div class="indeterminate"></div>
   </div>
 
-      <div class="row valign-wrappe center-align">
-         <!-- Modal Trigger -->
-        <a class="waves-effect waves-light red btn-large modal-trigger webinar" href="#modal1">Webinars</a>
 
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal bottom-sheet ">
-          <div class="modal-content">
-            <h2>Calendario de Webinars</h2>
-              <i class="large material-icons">event_available</i>
-              <p>Para registrarse, sólo de clic en la fecha deseada y llene el formulario. <br>
-              Gire su dispositivo.</p>
-            <ul class="valign-wrappe left-align collection">
-              <li class="collection-item avatar">
-                <i class="material-icons circle blue">content_copy</i>
-                <span class="title">Para Emprender, hay que Aprender con Facebook</span>
-                <p>Francisco Lueza
-                </p>
-                <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Mayo 31, 19 - 20 hrs</a>
-              </li>
-              <li class="collection-item avatar">
-                  <i class="material-icons circle purple">forum</i>
-                  <span class="title">Hablando de los componentes estratégicos del Marketing Digital
-                    </span>
-                  <p>Francisco Lueza</p>
-                  <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Junio 15, 19 - 20 hrs</a>
-                </li>
-              <li class="collection-item avatar">
-                <i class="material-icons circle green">find_in_page</i>
-                <span class="title">Cómo seleccionar un Dominio y Hosting correctamente para tu sitio web
-                  </span>
-                <p>Francisco Lueza</p>
-                <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Junio 30, 19 - 20 hrs</a>
-              </li>
-            </ul>
-            
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-          </div>
-        </div> 
-      </div>
+  <!-- Modal Trigger -->
+  <div class="row valign-wrappe center-align">
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Webinars</a>
+  </div>
 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal center">
+    <div class="modal-content">
+      <h2>Calendario de Webinars</h2>
+          <i class="large material-icons">event_available</i>
+          <p>Para registrarse, sólo da clic en la fecha deseada y llena el formulario.</p>
+        <ul class="valign-wrappe left-align collection">
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">content_copy</i>
+            <span class="title">Para Emprender, hay que Aprender con Facebook</span>
+            <p>Francisco Lueza
+            </p>
+            <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Mayo 31, 19 - 20 hrs</a>
+          </li>
+          <li class="collection-item avatar">
+              <i class="material-icons circle purple">forum</i>
+              <span class="title">Hablando de los componentes estratégicos del Marketing Digital
+                </span>
+              <p>Francisco Lueza</p>
+              <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Junio 15, 19 - 20 hrs</a>
+            </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">find_in_page</i>
+            <span class="title">Cómo seleccionar un Dominio y Hosting correctamente para tu sitio web
+              </span>
+            <p>Francisco Lueza</p>
+            <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Junio 30, 19 - 20 hrs</a>
+          </li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
+  
+      
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
