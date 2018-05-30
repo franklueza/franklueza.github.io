@@ -5,10 +5,16 @@
  *
  * Made By MaterializeCSS.com
  */
-
+ @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
+html, body{
+  font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}   
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: #fff;
+}
+.logo{
+  width: 50%;
 }
 .header{
   margin-top: 20px;
@@ -28,8 +34,11 @@ p {
 .material-icons.yell600 {
   color: #ffee58;
 }
+.material-icons.white0600{
+  color: #fff;
+}
 .sidenav-trigger {
-  color: #333;
+  color: #fff;
 }
 .sidenav-overlay {
   opacity: 0 !important;
@@ -43,6 +52,12 @@ p {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+  
+}
+.parallax-container.encabezado{
+  background-image: url('../img/Background.png');
+  min-height: 480px;
+  height: auto;
 }
 .ga{
   margin-right: 10px;
@@ -50,10 +65,9 @@ p {
 .gad{
   margin-left: 10px;
 }
-  .parallax-container .section {
+.parallax-container .section {
     width: 100%;
   }
-
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -73,6 +87,9 @@ p {
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
+  }
+  .parallax-container.encabezado{
+    background-image: url('../img/cohete.jpeg');
   }
 }
 

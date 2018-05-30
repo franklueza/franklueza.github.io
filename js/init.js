@@ -1,16 +1,11 @@
-/*(function($){
+(function($){
   $(function(){
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
 
   }); // end of document ready
-})(jQuery);*/ // end of jQuery name space
-
-$(document).ready(function(){
-  $('.sidenav').sidenav();
-  $('.parallax').parallax();
-});
+})(jQuery); // end of jQuery name space
 
 $('.carousel.carousel-slider').carousel({
   fullWidth: true,
@@ -20,3 +15,6 @@ $('.carousel.carousel-slider').carousel({
 $(document).ready(function(){
   $('.modal').modal();
 });
+$(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });

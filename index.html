@@ -26,56 +26,77 @@
 </head>
 <body>
     <div class="navbar-fixed">
-      <nav class="white" role="navigation">
-          <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo center">
-             <i class="material-icons">all_inclusive</i></a>
-            <ul class="right hide-on-med-and-down">
-              <!--<li><a href="#">Frank Lueza</a></li>-->
-            </ul><!-- navbar content here  --> 
-      
-
-      <ul id="slide-out" class="sidenav">
+      <nav class="blue-grey darken-4">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo center"><img class="responsive-img logo" src="img/Logo.png" alt="space"></a>
+          
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <!--<ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+          </ul>-->
+        </div>
+      </nav>
+    </div>
+    
+      <ul id="mobile-demo" class="sidenav" >
         <li>
           <div class="user-view">
-            <div class="background red">
-              <!--<img src="background3.jpg">-->
+            <div class="background">
+              <img src="img/polygon.png">            
             </div>
             <a href="#user"><img class="circle" src="img/Lueza.jpg"></a>
             <a href="#name"><span class="white-text name">Francisco Lueza</span></a>
-            <a href="#"><span class="white-text email">ixfanalytics@gmail.com</span></a> 
+            <a href="mailto:ixfanalytics@gmail.com"><i class="material-icons white0600">mail_outline</i></a>
+            <a href="tel:5568895354"><i class="material-icons white0600">phone</i></a>
+
           </div>
         </li>
-        <!--<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+        <li><a href="#">Acerce de mi</a></li>
+        <li><a href="#">Resumen</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Blog</a></li>
       </ul>
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </nav>
-  </div>
+      
 
-  <div id="index-banner" class="parallax-container">
+  <div id="index-banner" class="valign-wrapper center-align parallax-container encabezado">
     <div class="section no-pad-bot">
-      <div class="container">
+      <div class="container contacto">
         <br><br>
-        <h1 class="header center white-text text-darken-2">Freelancer</h1>
-        <div class="row center">
+        <h1 class="header white-text text-darken-2">Freelancer</h1>
+        <div class="row">
           <h5 class="header col s12 white-text">A modern responsive front-end with WordPress  </h5><!--framework based on Material Design & Boostrap-->
         </div>
-        <div class="row center">
+        <div class="row">
           <a href="mailto:ixfanalytics@gmail.com" onclick="ga('send', 'event', 'contacto', 'email', 'gmail', 0);" target="_blank" class="btn-large waves-effect waves-light deep-orange">Contacto</a>
         </div>
-        <div class="row center">
-          <a href="https://academy.exceedlms.com/student/award/6988073" onclick="ga('send', 'event', 'certificado', 'Analytics', 'Google', 0);" target="_blank" class="btn-large waves-effect waves-light light-green accent-3 ga">Certificado Google Analytics</a>
+        <!--<div class="row center">
+          <a href="https://academy.exceedlms.com/student/award/6988073" onclick="ga('send', 'event', 'certificado', 'Analytics', 'Google', 0);" target="_blank" class="btn-large waves-effect waves-light green accent-2 ga">Certificado Google Analytics</a>
           <a href="https://academy.exceedlms.com/student/award/6988072" onclick="ga('send', 'event', 'certificado', 'Adwords', 'Google', 0);" target="_blank" class="btn-large waves-effect waves-light light-blue darken-2 gad">Certificado Red de Búsqueda</a>
-        </div>
+        </div>-->
         <br><br>
-
       </div>
     </div>
-    <div class="parallax"><img src="img/Freelancer.png" alt="Freelancer"></div>
+    <div class="parallax">
+      <img class="responsive-img" src="img/astronaut.jpg" alt="Freelancer">
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+          <h2>Acerca de mi</h2>
+          <blockquote>
+              ¡Hola! soy Francisco Lueza y soy freelance en Desarrollo Web - Front End - desde hace 1 año, 
+              con sede en Estado de México, México. Disfruto de trabajar con gente multidisciplinaria en 
+              área de marketing digital. Pertenezco al Marke Team Splash como Analista y Webmaster desde 
+              hace 12 meses. Proximamente estaré apoyando a las mujeres emprendedoras de la organización 
+              <a href="http://www.crea.org.mx/">CREA</a> Toluca, EdoMéx; brindando conocimiento sobre temas
+              relacionados con el Marketing Digital y las Redes Sociales.
+          </blockquote>
+      </div>
+    </div>
   </div>
 
   <div class="progress red">
@@ -144,20 +165,43 @@
       <div class="indeterminate"></div>
   </div>
 
-      <div class="row valign-wrappe center-align ">
+      <div class="row valign-wrappe center-align">
          <!-- Modal Trigger -->
-        <a class="waves-effect waves-light red btn-large modal-trigger" href="#modal1">Webinars</a>
+        <a class="waves-effect waves-light red btn-large modal-trigger webinar" href="#modal1">Webinars</a>
 
         <!-- Modal Structure -->
-        <div id="modal1" class="modal bottom-sheet">
+        <div id="modal1" class="modal bottom-sheet ">
           <div class="modal-content">
-            <h4>Calendario de Webinars</h4>
-            <h5>Para Emprender, hay que Aprender con Facebook</h5>
-            <p>Mayo 31, 19 - 20 hrs</p>
+            <h2>Calendario de Webinars</h2>
+              <i class="large material-icons">event_available</i>
+              <p>Para registrarse, sólo de clic en la fecha deseada y llene el formulario.</p>
+            <ul class="valign-wrappe left-align collection">
+              <li class="collection-item avatar">
+                <i class="material-icons circle blue">content_copy</i>
+                <span class="title">Para Emprender, hay que Aprender con Facebook</span>
+                <p>Francisco Lueza
+                </p>
+                <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Mayo 31, 19 - 20 hrs</a>
+              </li>
+              <li class="collection-item avatar">
+                  <i class="material-icons circle purple">forum</i>
+                  <span class="title">Hablando de los componentes estratégicos del Marketing Digital
+                    </span>
+                  <p>Francisco Lueza</p>
+                  <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Junio 15, 19 - 20 hrs</a>
+                </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle green">find_in_page</i>
+                <span class="title">Cómo seleccionar un Dominio y Hosting correctamente para tu sitio web
+                  </span>
+                <p>Francisco Lueza</p>
+                <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="secondary-content"><i class="material-icons">grade</i> Junio 30, 19 - 20 hrs</a>
+              </li>
+            </ul>
             
           </div>
           <div class="modal-footer">
-            <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);" class="modal-close waves-effect waves-green btn-flat">Quiero registrarme</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
           </div>
         </div> 
       </div>
@@ -170,7 +214,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/programador.jpeg" alt="Programador"></div>
+    <div class="parallax"><img src="img/astronaut.jpg" alt="Programador"></div>
   </div>
 
   <!--<div class="container">
@@ -196,8 +240,8 @@
           <h3>WordPress</h3>
           <h5>Este CMS es fántastico para montar un sitio web autoadministrable para tu negocio y fácil de manejar.</h5>
       </div>
-    </div>
-
+  </div>
+  
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -206,17 +250,86 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/pexels.jpeg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="img/robonaut.jpeg" alt="Unsplashed background img 3"></div>
+  </div>
+  <!--<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>-->
+
+  <div class="container center">
+      <h2>
+          <span>Nuestro proceso</span>
+      </h2>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card yellow darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Mi filosofía</span>
+            <hr>
+            <p>Siempre me concentro en el rendimiento y mi objetivo es crear sitios web fáciles de usar y atractivos para el usuario que atraigan la atención del público.
+            Leer y probar nuevas ideas es la forma en que he fomentado mis conocimientos, manteniéndome actualizado con las últimas tecnologías de la web.</p>
+          </div>
+          <!--<div class="card-action">
+            <a href="#">This is a link</a>
+            <a href="#">This is a link</a>
+          </div>-->
+        </div>
+      </div>
+      <div class="col s12 m4">
+          <div class="card red darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Mi misión</span>
+              <hr>
+              <p>Soy un desarrollador muy motivado, entusiasta y muy confiable con una actitud de 'puedo hacerlo'. Siempre estoy buscando aumentar mi conocimiento y aprender nuevas tecnologías y habilidades.
+                <br>Me encanta desarrollar y probar  nuevos Frameworks de CSS para la creación de sitios.</p>
+            </div>
+            <!--<div class="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>-->
+          </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Mi proceso</span>
+                <hr>
+                <p>Cuando realizo un proyecto, no solo lo completo, hago un esfuerzo adicional y lo hago mejor de lo solicitado.</p>
+                <ul>
+                    <li class="collection-item">Planeación</li>
+                    <li class="collection-item">Diseño</li>
+                    <li class="collection-item">Analítica</li>
+                    <li class="collection-item">Desarrollo</li>
+                    <li class="collection-item">Lanzamiento y soporte</li>
+                </ul>
+              </div>
+              <!--<div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div>-->
+            </div>
+          </div>
+    </div>
   </div>
 
-  <footer class="page-footer light-blue lighten-2">
+  <footer class="page-footer blue-grey darken-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Francisco Lueza</h5>
           <p class="grey-text text-lighten-4">Brindamos consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
           <!-- Begin: HubSpot Academy - Inbound Badge -->
-          <div class="academy-badge"><a title="Inbound" href="http://academy.hubspot.com/certification" target="_blank">
+          <div class="academy-badge"><a title="Inbound" href="https://hubspot-academy.s3.amazonaws.com/prod/certification/badges/c76081ff76034524bfb8c83a184573b2" target="_blank">
             <img class="responsive-img" src="http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2" />
             </a>
           </div>
@@ -246,7 +359,7 @@
       </div>
     </div>
   </footer>
-
+        
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -264,7 +377,7 @@
           greeting_message: "Hola,¿Cómo podemos ayudarte", // Text of greeting message
           call_to_action: "Contáctanos", // Call to action
           button_color: "#129BF4", // Color of button
-          position: "right", // Position may be 'right' or 'left'
+          position: "left", // Position may be 'right' or 'left'
           order: "facebook,whatsapp,email", // Order of buttons
       };
       var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
