@@ -8,10 +8,10 @@
  @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
 html, body{
   font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}   
+} 
 nav ul a,
 nav .brand-logo {
-  color: #fff;
+  color:#fff; 
 }
 .logo{
   width: 50%;
@@ -56,7 +56,8 @@ p {
 }
 .parallax-container.encabezado{
   background-image: url('../img/Background.png');
-  min-height: 480px;
+  background: cover;
+  min-height: 600px;
   height: auto;
 }
 .ga{
