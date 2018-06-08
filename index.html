@@ -1,317 +1,233 @@
+
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Francisco Lueza">
-  <meta name="description" content="Estudio Creativo de Diseño y Desarrollo Web. Brindamos consultoria tecnológica asequible a personas 
-  emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.">
-  <meta property="og:image" content="img/spaced.png">
-  <title>Estudio Creativo de Diseño y Desarrollo Web | Francisco Lueza</title>
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-N84P8XV');</script>
-      <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N84P8XV');</script>
+        <!-- End Google Tag Manager -->
 
 </head>
+
 <body>
-    <div class="navbar-fixed">
-      <nav class="light-blue"> <!--class="transparent" style="box-shadow: initial"-->
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo center"><img class="responsive-img logo" src="img/Logo.png" alt="space"></a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#about">Acerca de mi</a></li>
-            <li><a href="#clients">Clientes</a></li>
-            
-          </ul>
+    <nav class="amber darken-4">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo"><img src="img/Logo.png" width="50%" height="50%"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#about"><i class="material-icons white-text">face</i></a></li>
+                <li><a href="#work"><i class="material-icons blue-text">important_devices</i></a></li>
+                <li><a href="#clients"><i class="material-icons green-text">insert_emoticon</i></a></li>
+                <li><a href="#services"><i class="material-icons yellow-text">view_quilt</i></a></li>
+                <li><a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Contacto <i class="material-icons white-text right">mail_outline</i></a></li>
+            </ul>
         </div>
-      </nav>
-    </div>
-
-      <ul id="mobile-demo" class="sidenav">
-        <li>
-          <div class="user-view">
+    </nav>
+        
+    <ul class="sidenav" id="mobile-demo">
+        <li><div class="user-view">
             <div class="background">
-              <img src="img/polygon.png">            
+            <img src="img/bg10.jpg">
             </div>
             <a href="#user"><img class="circle" src="img/Lueza.jpg"></a>
             <a href="#name"><span class="white-text name">Francisco Lueza</span></a>
-            <a href="https://www.facebook.com/LuezaFrank/"><i class="fab fa-facebook-square fa-2x" aria-hidden="true" style="color:white"></i></a>
-            <a href="mailto:ixfanalytics@gmail.com"><i class="material-icons white0600">mail_outline</i></a>
-            <a href="tel:5568895354"><i class="material-icons white0600">phone</i></a>
+            <a href="mailto:ixfanalytics@gmail.com"><span class="white-text email">ixfanalytics@gmail.com</span></a>
+        </div></li>
+        <!--<li><a href="https://www.google.com"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="https://www.google.com">Second Link</a></li>
+        <li><div class="divider"></div></li>-->
+        <li><a class="subheader">Inicio</a></li>
+        <li><a href="#about"><i class="material-icons red-text">face</i></a></li>
+        <li><a href="#work"><i class="material-icons orange-text">important_devices</i></a></li>
+        <li><a href="#clients"><i class="material-icons green-text">insert_emoticon</i></a></li>
+        <li><a href="#services"><i class="material-icons yellow-text">view_quilt</i></a></li>
+        <li><a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Contacto <i class="material-icons white-text right">mail_outline</i></a></li>
+    </ul>
 
-          </div>
-        </li>
-        <li><a href="#about">Acerce de mi</a></li>
-        <li><a href="#clients">Nuestro clientes</a></li>
-        <!--<li><a href="#">Resumen</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Blog</a></li>-->
-      </ul>
-      
-
-  <div id="index-banner" class="valign-wrapper center-align parallax-container encabezado">
-    <div class="section no-pad-bot">
-      <div class="container contacto">
-        <br><br>
-        <h1 class="header white-text text-darken-2">Web Developer</h1>
-        <div class="row">
-          <h5 class="header col s12 white-text">A modern responsive front-end with WordPress  </h5><!--framework based on Material Design & Boostrap-->
-        </div>
-        <div class="row">
-          <a href="mailto:ixfanalytics@gmail.com" onclick="ga('send', 'event', 'contacto', 'email', 'gmail', 0);" class="btn-large waves-effect waves-light deep-orange">Contacto</a>
-        </div>
-        <!--<div class="row center">
-          <a href="https://academy.exceedlms.com/student/award/6988073" onclick="ga('send', 'event', 'certificado', 'Analytics', 'Google', 0);" target="_blank" class="btn-large waves-effect waves-light green accent-2 ga">Certificado Google Analytics</a>
-          <a href="https://academy.exceedlms.com/student/award/6988072" onclick="ga('send', 'event', 'certificado', 'Adwords', 'Google', 0);" target="_blank" class="btn-large waves-effect waves-light light-blue darken-2 gad">Certificado Red de Búsqueda</a>
-        </div>-->
-        <br><br>
-      </div>
-    </div>
-    <div class="parallax">
-      <img class="responsive-img" src="img/background-space.jpg" alt="Freelancer">
-    </div>
-  </div>
-  <div id="about" class="container">
-    <div class="row">
-      <div class="col s12">
-          <h2>Acerca de mi</h2>
-          <blockquote>
-              ¡Hola! soy Francisco Lueza y soy freelance en Desarrollo Web - Front End - desde hace 1 año, 
-              con sede en Estado de México, México. Disfruto de trabajar con gente multidisciplinaria en 
-              área de marketing digital. Pertenezco al Marke Team Splash como Analista y Webmaster desde 
-              hace 12 meses. Proximamente estaré apoyando a las mujeres emprendedoras de la organización 
-              <a href="http://www.crea.org.mx/">CREA</a> Toluca, EdoMéx; brindando conocimiento sobre temas
-              relacionados con el Marketing Digital y las Redes Sociales.
-          </blockquote>
-      </div>
-    </div>
-  </div>
-
-  <div class="progress red">
-      <div class="indeterminate"></div>
-  </div>  
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <!--<img class="activator" src="background1.jpg">-->
-                <h2 class="center"><i class="large material-icons orange600">devices</i></h2>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Diseño Responsivo <i class="material-icons right">more_vert</i></span>
-                <!--<p><a href="#">This is a link</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Diseño Responsivo<i class="material-icons right">close</i></span>
-                <p>Hacemos diseño web responsivo, para que su sitio se vea bien en cualquier dispositivo móvil.</p>
-              </div>
-            </div>    
-        </div>
-        <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <!--<img class="activator" src="background1.jpg">-->
-                <h2 class="center"> <i class="large material-icons blue600">laptop_chromebook</i></h2>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">WordPress<i class="material-icons right">more_vert</i></span>
-                <!--<p><a href="#">This is a link</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">WordPress<i class="material-icons right">close</i></span>
-                <p>¿Necesitas actualizar tu sitio web fácil y rápidamente?
-                    Con WordPress como administrador de contenidos - CMS - puede hacerlo sin depender de terceros.</p>
-              </div>
-            </div>    
-        </div>
-        <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <!--<img class="activator" src="background1.jpg">-->
-                <h2 class="center"> <i class="large material-icons yell600">settings</i></h2>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Mantenimiento<i class="material-icons right">more_vert</i></span>
-                <!--<p><a href="#">This is a link</a></p>-->
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Mantenimiento<i class="material-icons right">close</i></span>
-                <p>Administramos tu sitio web, para mantenerlo respaldado, actualizado y funcionando en cualquier momento.</p>
-              </div>
-            </div>    
-          </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="progress orange">
-      <div class="indeterminate"></div>
-  </div>
-
-
-  <!-- Modal Trigger -->
-  <div class="row valign-wrappe center-align">
-    <a class="waves-effect waves-light deep-orange accent-3 btn-large modal-trigger" href="#modal1">Webinars</a>
-  </div>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal center">
-    <div class="modal-content">
-      <h2>Calendario de Webinars</h2>
-          <i class="large material-icons">event_available</i>
-          <p>Para registrarse, sólo da clic en el título y llena el formulario.</p>
-        <ul class="valign-wrappe left-align collection">
-          <li class="collection-item avatar">
-            <i class="material-icons circle blue">content_copy</i>
-            <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);"><span class="title">Para Emprender, hay que Aprender con Facebook</span></a>
-            <p>Mayo 31, 19 - 20 hrs<br> 
-              Francisco Lueza
-            </p>
-          </li>
-          <li class="collection-item avatar">
-              <i class="material-icons circle purple">forum</i>
-              <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);"><span class="title">Hablando de los componentes estratégicos del Marketing Digital</span></a>
-                </span>
-              <p>Junio 15, 19 - 20 hrs<br> Francisco Lueza</p>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+            <img src="img/bg1.jpg"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>Sitios auto administrales con ¡WordPress!</h3>
+                <h5 class="light grey-text text-lighten-3">Si estás pensando en tener un sitio web, escríbenos y seguro que te podemos echar una mano.</h5>
+                <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Escríbeme <i class="material-icons white-text right">mail_outline</i></a>
+            </div>
             </li>
-          <li class="collection-item avatar">
-            <i class="material-icons circle green">find_in_page</i>
-            <a href="https://goo.gl/ru8QwL" target="_blank" onclick="ga('send', 'event', 'registro', 'enlace', 'taller', 0);"><span class="title">Cómo seleccionar un Dominio y Hosting correctamente para tu sitio web</span></a>
-            <p>Junio 30, 19 - 20 hrs<br> Francisco Lueza</p>
-          </li>
+            <li>
+            <img src="img/bg2.jpg"> <!-- random image -->
+            <div class="caption left-align">
+                <h3>Revolución digital</h3>
+                <h5 class="light grey-text text-lighten-3">¡Es momento de subir tu negocio a Intenet!</h5>
+                <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Pregunatame ¿cómo?<i class="material-icons white-text right">mail_outline</i></a>
+            </div>
+            </li>
+            <li>
+            <img src="img/bg9.jpg"> <!-- random image -->
+            <div class="caption right-align">
+                <h3>Responsive design</h3>
+                <h5 class="light grey-text text-lighten-3">Muestrale al mundo tu negocio a través de tu sitio web. </h5>
+                <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Contacto <i class="material-icons white-text right">mail_outline</i></a>
+            </div>
+            </li>
+            <li>
+            <img src="img/bg8.jpg"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>Frameworks CSS</h3>
+                <h5 class="light grey-text text-lighten-3">Utilizamos tecnología CSS como Bootstrap, Foundation, Materialize, Bulma y Material Design.</h5>
+            </div>
+            </li>
         </ul>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-    </div>
-  </div>
-  
-      
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Materialize & Bootstrap</h5>
+    
+    <div id="about" class="row teal lighten-2 white-text about">
+        <div class="col s12 center-align"><h2 class="light">Acerca de</h2></div>
+        <div class="col s12 m4 l2"></div>
+        <div class="col s12 m4 l8"><h6 class="light">¡Hola! soy Francisco Lueza y soy freelance en Desarrollo Web - Front End - desde hace 1 año, con sede en Estado de México, México. <br> <br>Disfruto de trabajar con gente multidisciplinaria en área de marketing digital. <br><br> Pertenezco al Marke Team Splash como Analista y Webmaster desde hace 12 meses. Proximamente estaré apoyando a las mujeres emprendedoras de la organización CREA Toluca, EdoMéx; brindando conocimiento sobre temas relacionados con el Marketing Digital y las Redes Sociales.</h6>
         </div>
-      </div>
+        <div class="col s12 m4 l2"></div>
     </div>
-    <div class="parallax"><img src="img/space.jpg" alt="Programador"></div>
-  </div>
+    <div id="work" class="container">
+        <div class="row white dark-text">
+            <div class="col s12 m6 l4">
+                <div class="icon-block hoverable">
+                    <h2 class="center green-text"><i class="material-icons">all_inclusive</i></h2>
+                    <h5 class="center">Mi filosofia</h5>
+        
+                    <p class="light">Siempre me concentro en el rendimiento, mi objetivo es crear sitios web fáciles de usar y atractivos para el usuario que atraigan la atención del público. Leer y probar nuevas ideas es la forma en que he fomentado mis conocimientos, manteniéndome actualizado con las últimas tecnologías de la web.</p>
+                    <br>
+                </div> 
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="icon-block hoverable">
+                    <h2 class="center orange-text"><i class="material-icons">apps</i></h2>
+                    <h5 class="center">Mi misión</h5>
+        
+                    <p class="light">Soy un desarrollador muy motivado, entusiasta y muy confiable con una actitud de 'puedo hacerlo'. Siempre estoy buscando aumentar mi conocimiento y aprender nuevas tecnologías y habilidades. 
+                    Me encanta desarrollar y probar nuevos Frameworks de CSS para la creación de sitios.</p>
+                    <br>
+                </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="icon-block hoverable">
+                    <h2 class="center red-text"><i class="material-icons">code</i></h2>
+                    <h5 class="center">Mi proceso</h5>
+        
+                    <p class="light">Cuando realizo un proyecto, no solo lo completo, hago un esfuerzo adicional y lo hago mejor de lo solicitado.</p>
+                    <ol class="light">
+                        <li>Planeación</li>
+                        <li>Diseño</li>
+                        <li>Analítica</li>
+                        <li>Desarrollo</li>
+                        <li>Lanzamiento y soporte</li>
+                    </ol>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="clients" class="carousel grey">
+        <a class="carousel-item" href="#one!"><img src="img/Francisco-Olguín.png"></a>
+        <a class="carousel-item" href="#two!"><img src="img/Forma-Vital.png"></a>
+        <a class="carousel-item" href="#three!"><img src="img/monica-venzor.png"></a>
+        <a class="carousel-item" href="#four!"><img src="img/logo-steak-and-grills.png"></a>
+        <a class="carousel-item" href="#five!"><img src="img/logo-ktastrofe.png"></a>
+    </div> 
+    
+    <div id="services" class="container">
+        <div class="row dark-text">
+            <div class="col s12 m6 l4">
+                <div class="icon-block hoverable">
+                    <h2 class="center blue-text"><i class="material-icons">computer</i></h2>
+                    <h5 class="center">WorPress</h5>
+        
+                    <p class="light">Diseñamos y desarrollamos sitios autoadministrables con diseño responsivo, 
+                    para que tu sitio se vea bien en cualquier dspositivo.</p>
+                    <br> <br> 
+                    <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn"><i class="material-icons right">cloud</i>Cotización</a>
+                    <br> <br> <br>
+                </div> 
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="icon-block hoverable">
+                    <h2 class="center orange-text"><i class="material-icons">find_in_page</i></h2>
+                    <h5 class="center">Administración y mantenimiento</h5>
+        
+                    <p class="light">Administramos y damos mantenimiento a tu sitio web, para mantenerlo respaldado, actualizado y 
+                    funcionando en cualquier momento.</p>
+                    <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn"><i class="material-icons right">cloud</i>Cotización</a>
+                    <br> <br> <br>
+                </div> 
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="icon-block hoverable">
+                    <h2 class="center yellow-text"><i class="material-icons">free_breakfast</i></h2>
+                    <h5 class="center">Consultoria y entrenamiento</h5>
+        
+                    <p class="light">Si te encuentras perdido y no sabes cómo subirte a la revolución digital de los negocios, 
+                    ¡no te preocupes!, platiquemos.</p> <br> 
+                    <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn"><i class="material-icons right">cloud</i>Quiero que me llamen</a>
+                    <br> <br> <br>
+                </div> 
+            </div>
+        </div>
+    </div>
 
-  <div class="container center">
-      <h2>
-          <span>Nuestro proceso</span>
-      </h2>
-  </div>
-  <div class="container">
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card yellow darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Mi filosofía</span>
-              <hr>
-              <p>Siempre me concentro en el rendimiento y mi objetivo es crear sitios web fáciles de usar y atractivos para el usuario que atraigan la atención del público.
-              Leer y probar nuevas ideas es la forma en que he fomentado mis conocimientos, manteniéndome actualizado con las últimas tecnologías de la web.</p>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Francisco Lueza</h5>
+                <p class="grey-text text-lighten-4">Brindamos consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
+                <!-- Begin: HubSpot Academy - Inbound Badge -->
+                <div class="academy-badge"><a title="Inbound" href="https://hubspot-academy.s3.amazonaws.com/prod/certification/badges/c76081ff76034524bfb8c83a184573b2" target="_blank">
+                <img class="responsive-img" src="http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2" />
+                </a>
+                </div>
+                <!-- End: HubSpot Academy - Inbound Badge -->
             </div>
-            <!--<div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>-->
-          </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="card red darken-1">
-              <div class="card-content white-text">
-                <span class="card-title">Mi misión</span>
-                <hr>
-                <p>Soy un desarrollador muy motivado, entusiasta y muy confiable con una actitud de 'puedo hacerlo'. Siempre estoy buscando aumentar mi conocimiento y aprender nuevas tecnologías y habilidades.
-                  <br>Me encanta desarrollar y probar  nuevos Frameworks de CSS para la creación de sitios.</p>
-              </div>
-              <!--<div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div>-->
+            <div class="col l3 s12">
+                <h5><strong>Comparte nuestro sitio</strong></h5>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fab fa-facebook-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
+                <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fab fa-twitter-square fa-2x m-2" aria-hidden="true"  style="color:white"></i></a>
+                <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fab fa-google-plus-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
             </div>
-          </div>
-        <div class="col s12 m4">
-            <div class="card blue darken-1">
-              <div class="card-content white-text">
-                <span class="card-title">Mi proceso</span>
-                <hr>
-                <p>Cuando realizo un proyecto, no solo lo completo, hago un esfuerzo adicional y lo hago mejor de lo solicitado.</p>
+            <div class="col l3 s12">
+                <h5 class="white-text">¡Proximamente!</h5>
                 <ul>
-                    <li class="collection-item">Planeación</li>
-                    <li class="collection-item">Diseño</li>
-                    <li class="collection-item">Analítica</li>
-                    <li class="collection-item">Desarrollo</li>
-                    <li class="collection-item">Lanzamiento y soporte</li>
+                <li>Curso de Monitoreo</li>
+                <li>Curso de WordPress</li>
+                <li>Curso de Facebook Ads</li>
+                <li>Curso de HTML5 y CSS3</a></li>
+                <li>Curso de WhatsApp Business</a></li>
                 </ul>
-              </div>
-              <!--<div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div>-->
             </div>
-          </div>
-    </div>
-</div>
-
-  <!--<div class="container">
-    -<div class="section">-->
-      
-  <!--<div class="carousel carousel-slider center">
-      <div class="carousel-fixed-item center"> 
-        <!--<a class="btn-large waves-effect waves-light orange white-text darken-text-2" href="https://api.whatsapp.com/send?phone=525568895354&text=contacto" onclick="ga('send', 'event', 'contacto', 'WhatsApp', 'WhastsAppBusiness', 0);" target="_blank">Contacto</a>-->
-        <!--<a class="btn-large waves-effect waves-light orange white-text darken-text-2" href="mailto:ixfanalytics@gmail.com" onclick="ga('send', 'event', 'contacto', 'email', 'gmail', 0);">Contacto</a>
-      </div>
-      <div class="carousel-item red white-text" href="#one!">
-        <h3>Desarrollo Web</h3>
-        <h5>Un sitio web es la parte principal del ecosistema digital para que tu negocio este en Internet.</h5>
-      </div>
-      <div class="carousel-item amber white-text" href="#two!">
-        <h3>Diseño Web</h3>
-        <h5>Tu sitio web es la vitrina de tu negocio y el primer contacto que tienes con los clientes potenciales que buscan lo que tu tienes.</h5>
-      </div>
-      <div class="carousel-item green white-text" href="#three!">
-        <h3>Plantillas Premium</h3>
-        <h5>Utiliza una plantilla premium para construir tu sitio web.</h5>
-      </div>
-      <div class="carousel-item blue white-text" href="#four!">
-          <h3>WordPress</h3>  
-          <h5>Este CMS es fántastico para montar un sitio web autoadministrable para tu negocio y fácil de manejar.</h5>
-      </div>
-  </div>-->
-  
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/space-planets.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-  <!--<div class="fixed-action-btn">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 <a class="white-text text-lighten-3" href="https://franklueza.github.io">Web Designer & Developer</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--<div class="fixed-action-btn">
     <a class="btn-floating btn-large red">
       <i class="large material-icons">mode_edit</i>
     </a>
@@ -322,92 +238,37 @@
       <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
     </ul>
   </div>-->
-  
-  <div class="conatiner slider">
-    <div class="row">
-      <div id="clients" class="col s12 center">
-        <h2>Nuestros clientes</h2>
-        <div class="carousel">
-          <a class="carousel-item purple accent-1" href="#one!"><img src="img/Forma-Vital.png"></a>
-          <a class="carousel-item brown lighten-4" href="#two!"><img src="img/steak and grills.jpg"></a>
-          <a class="carousel-item pink accent-1" href="#three!"><img src="img/TDeTamal.png"></a>
-          <a class="carousel-item teal darken-1" href="#four!"><img src="img/Francisco Olguín.png"></a>
-          <a class="carousel-item green accent-3" href="#four!"><img src="img/monica-ortega-venzor.png"></a>
-          <a class="carousel-item deep-orange accent-3" href="#five!"><img src="img/ktastrofe.png"></a>
-      </div>
-    </div>
-  </div>
 
-  <footer class="page-footer light-blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Francisco Lueza</h5>
-          <p class="grey-text text-lighten-4">Brindamos consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
-          <!-- Begin: HubSpot Academy - Inbound Badge -->
-          <div class="academy-badge"><a title="Inbound" href="https://hubspot-academy.s3.amazonaws.com/prod/certification/badges/c76081ff76034524bfb8c83a184573b2" target="_blank">
-            <img class="responsive-img" src="http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2" />
-            </a>
-          </div>
-          <!-- End: HubSpot Academy - Inbound Badge -->
-        </div>
-        <div class="col l3 s12">
-            <h5><strong>Comparte nuestro sitio</strong></h5>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fab fa-facebook-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
-            <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fab fa-twitter-square fa-2x m-2" aria-hidden="true"  style="color:white"></i></a>
-            <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fab fa-google-plus-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">¡Proximamente!</h5>
-          <ul>
-            <li>Curso de Monitoreo</li>
-            <li>Curso de WordPress</li>
-            <li>Curso de Facebook Ads</li>
-            <li>Curso de HTML5 y CSS3</a></li>
-            <li>Curso de WhatsApp Business</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-          © 2018 <a class="white-text text-lighten-3" href="https://franklueza.github.io">Web Designer / Front-End Developer</a>
-      </div>
-    </div>
-  </footer>
-        
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+ <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84P8XV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <!-- WhatsHelp.io widget -->
-<script type="text/javascript">
-  (function () {
-      var options = {
-          facebook: "1959498814271748", // Facebook page ID
-          whatsapp: "5568895354", // WhatsApp number
-          email: "ixfanalytics@gmail.com", // Email
-          company_logo_url: "//storage.whatshelp.io/widget/fd/fdc6/fdc661aefcb5f36f0bbd1f54516363a1/28782580_2114220858799542_9218294182744765982_n.jpg", // URL of company logo (png, jpg, gif)
-          greeting_message: "Hola,¿Cómo podemos ayudarte?", // Text of greeting message
-          call_to_action: "Contáctanos", // Call to action
-          button_color: "#129BF4", // Color of button
-          position: "left", // Position may be 'right' or 'left'
-          order: "facebook,whatsapp,email", // Order of buttons
-      };
-      var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-  })();
-</script>
-<!-- /WhatsHelp.io widget -->
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84P8XV"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  </body>
+  <script type="text/javascript">
+    (function () {
+        var options = {
+            facebook: "1959498814271748", // Facebook page ID
+            whatsapp: "5568895354", // WhatsApp number
+            email: "ixfanalytics@gmail.com", // Email
+            company_logo_url: "//storage.whatshelp.io/widget/fd/fdc6/fdc661aefcb5f36f0bbd1f54516363a1/28782580_2114220858799542_9218294182744765982_n.jpg", // URL of company logo (png, jpg, gif)
+            greeting_message: "Hola,¿Cómo podemos ayudarte?", // Text of greeting message
+            call_to_action: "Contáctanos", // Call to action
+            button_color: "#129BF4", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "facebook,whatsapp,email", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /WhatsHelp.io widget -->
+</body>
 </html>

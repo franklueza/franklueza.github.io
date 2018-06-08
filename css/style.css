@@ -4,11 +4,20 @@
  * the core Materialize files in the future
  *
  * Made By MaterializeCSS.com
- */
- @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch");
-html, body{
-  font-family: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-} 
+ */ 
+
+body{
+  font-family: 'Nunito', sans-serif;
+ }
+ .sidenav-trigger {
+  color: #FFF !important;
+}
+.sidenav-overlay {
+  opacity: 0 !important;
+}
+.about{
+  padding: 0 5% 5% 0;
+}
 nav ul a,
 nav .brand-logo {
   color:#fff; 
@@ -22,81 +31,12 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
-.progress{
-  color: red;
-}
-.material-icons.orange600 { 
-  color: #ff5722 ; 
-}
-.material-icons.blue600 { 
-  color: #3d5afe ;
-}
-.material-icons.yell600 {
-  color: #ffee58;
-}
-.material-icons.white0600{
-  color: #fff;
-}
-.sidenav-trigger {
-  color: #fff;
-}
+
+
 .sidenav-overlay {
   opacity: 0 !important;
 }
 
-.carousel-item {
-  padding: 30px;
-}
-.parallax-container {
-  min-height: 450px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-  
-}
-.parallax-container.encabezado{
-  background: cover;
-  min-height: 600px;
-  height: auto;
-}
-.ga{
-  margin-right: 10px;
-}
-.gad{
-  margin-left: 10px;
-}
-.parallax-container .section {
-    width: 100%;
-  }
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-  .ga{
-    margin-bottom: 10px;
-  }
-  .gad{
-    margin-top: 10px;
-  }
-}
-footer{
-  background-image: url('../img/moon.jpg');
-}
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-  .parallax-container.encabezado{
-    min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-  }
-}
 
 .icon-block {
   padding: 0 15px;
@@ -105,6 +45,9 @@ footer{
   font-size: inherit;
 }
 
+footer{
+  background-image: url('../img/bg9.jpg');
+}
 footer.page-footer {
   margin: 0;
 }
