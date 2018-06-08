@@ -5,10 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */ 
-
 body{
   font-family: 'Nunito', sans-serif;
- }
+}
  .sidenav-trigger {
   color: #FFF !important;
 }
@@ -31,12 +30,9 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
-
-
 .sidenav-overlay {
   opacity: 0 !important;
 }
-
 
 .icon-block {
   padding: 0 15px;
@@ -44,7 +40,6 @@ p {
 .icon-block .material-icons {
   font-size: inherit;
 }
-
 footer{
   background-image: url('../img/bg9.jpg');
 }

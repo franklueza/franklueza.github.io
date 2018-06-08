@@ -1,8 +1,4 @@
 
-$(function(){
-  $('.scrollspy').scrollSpy();
-});
-
 $('.carousel.carousel-slider').carousel({
   fullWidth: true,
   indicators: true
@@ -35,7 +31,6 @@ $(document).ready(function(){
   $('.carousel').carousel({
     duration: 200,
     dist: -200,
-    shift: 100
-    
+    shift: 100  
   });
 });
