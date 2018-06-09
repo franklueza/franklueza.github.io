@@ -78,6 +78,7 @@ $(window).scroll(function(){
             facebook: "1959498814271748", // Facebook page ID
             whatsapp: "5568895354", // WhatsApp number
             email: "ixfanalytics@gmail.com", // Email
+            company_logo_url: "//storage.whatshelp.io/widget/fd/fdc6/fdc661aefcb5f36f0bbd1f54516363a1/28782580_2114220858799542_9218294182744765982_n.jpg", // URL of company logo (png, jpg, gif)
             greeting_message: "Hola,¿Cómo podemos ayudarte?", // Text of greeting message
             call_to_action: "Contact", // Call to action
             button_color: "#FF6550", // Color of button
