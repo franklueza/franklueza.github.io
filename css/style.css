@@ -8,6 +8,9 @@
 body{
   font-family: 'Nunito', sans-serif;
 }
+.cursos{
+  color:#000;
+}
  .sidenav-trigger {
   color: #FFF !important;
 }
@@ -15,12 +18,12 @@ body{
   opacity: 0 !important;
 }
 .about{
-  padding: 0 5% 5% 0;
+  padding:5% 5%;
 }
-nav ul a,
+/*nav ul a,
 nav .brand-logo {
   color:#fff; 
-}
+}*/
 .logo{
   width: 50%;
 }
@@ -41,7 +44,7 @@ p {
   font-size: inherit;
 }
 footer{
-  background-image: url('../img/bg9.jpg');
+  background-image: url('../img/bg1.jpg');
 }
 footer.page-footer {
   margin: 0;

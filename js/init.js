@@ -34,3 +34,6 @@ $(document).ready(function(){
     shift: 100  
   });
 });
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
