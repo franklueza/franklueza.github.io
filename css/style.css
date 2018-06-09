@@ -52,3 +52,15 @@ footer{
 footer.page-footer {
   margin: 0;
 }
+.ir-arriba {
+	display:none;
+	padding:10px;
+  background:#ff9800;
+  opacity: 0.6;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}

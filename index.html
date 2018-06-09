@@ -15,10 +15,12 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="fonts.css" />
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
       <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script>
           window.sr = ScrollReveal();
       </script>
@@ -71,7 +73,7 @@
         <li><a href="#services"><i class="material-icons yellow-text">view_quilt</i>Servicios</a></li>
         <li><a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Contacto <i class="material-icons white-text right">mail_outline</i></a></li>
     </ul>
-
+    <span class="ir-arriba icon-ctrl"></span>
     <div id="home" class="slider">
         <ul class="slides">
             <li>
@@ -355,7 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             greeting_message: "Hola,¿Cómo podemos ayudarte?", // Text of greeting message
             call_to_action: "Contáctanos", // Call to action
             button_color: "#129BF4", // Color of button
-            position: "right", // Position may be 'right' or 'left'
+            position: "left", // Position may be 'right' or 'left'
             order: "facebook,whatsapp,email", // Order of buttons
         };
         var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
@@ -379,6 +381,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     });
                 });
             });
+        
+            JavaScript
+
+$(document).ready(function(){
+
+	$('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.ir-arriba').slideDown(300);
+		} else {
+			$('.ir-arriba').slideUp(300);
+		}
+	});
+
+});
   </script>
 </body>
 </html>
