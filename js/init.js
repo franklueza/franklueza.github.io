@@ -72,7 +72,7 @@ $(window).scroll(function(){
 
 
 <!-- WhatsHelp.io widget -->
-<script type="text/javascript">
+
     (function () {
         var options = {
             facebook: "1959498814271748", // Facebook page ID
@@ -89,7 +89,7 @@ $(window).scroll(function(){
         s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
-</script>
+
 <!-- /WhatsHelp.io widget -->
 
 
