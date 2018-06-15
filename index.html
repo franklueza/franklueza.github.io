@@ -1,390 +1,677 @@
-
 <!DOCTYPE html>
 <html lang="es">
-    <head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudio Creativo de Diseño y Desarrollo Web.En Spaced brindamos consultoria tecnológica asequible a personas 
+    emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.">
+    <meta name="author" content="Francisco Israel Lueza Martínez">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta charset="UTF-8">
-      <meta name="author" content="Francisco Lueza">
-      <meta name="description" content="Estudio Creativo de Diseño y Desarrollo Web. FIX brindamos consultoria tecnológica asequible a personas 
-      emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo."> <!-- Agregar descripción del sitio web-->
+    <title>Spaced | Estudio creativo de desarrollo web</title>
 
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Lato Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-      <script>
-          window.sr = ScrollReveal();
-      </script>
+    <!-- Stylesheet -->
+    <link href="css/gallery-materialize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Iconos fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-N84P8XV');</script>
-        <!-- End Google Tag Manager -->
-        
-        <title>SPACED | Estudio creativo de desarrollo web</title>
-    </head>
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N84P8XV');</script>
+    <!-- End Google Tag Manager -->
+  </head>
 
-<body>
-        <div class="navbar-fixed">
-    <nav class="amber darken-4">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="https://franklueza.github.io" class="brand-logo"><img src="img/Logo.png" width="50%" height="50%"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="btn-floating blue pulse" href="#home"><i class="material-icons">home</i></a></li>
-                <li><a class="btn-floating red pulse" href="#about"><i class="material-icons">face</i></a></li>
-                <li><a class="btn-floating orange pulse" href="#work"><i class="material-icons">important_devices</i></a></li>
-                <li><a class="btn-floating green pulse" href="#clients"><i class="material-icons">insert_emoticon</i></a></li>
-                <li><a class="btn-floating yellow pulse" href="#services"><i class="material-icons">view_quilt</i></a></li>
-                <li><a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Contacto <i class="material-icons white-text right">mail_outline</i></a></li>
-            </ul>
-        </div>
-    </nav>
-</div>        
-    <ul class="sidenav" id="mobile-demo">
-        <li><div class="user-view">
-            <div class="background">
-            <img src="img/bg10.jpg">
+  <body>
+
+    <!-- Navbar and Header -->
+    <nav class="nav-extended nav-full-header red lighten-1">
+      <div class="nav-background">
+        <img class="active" src="img/bg8.jpg" alt="cityscape">
+        <img src="img/bg8.jpg" alt="cityscape"> <!--http://placehold.it/1400x700-->
+        <img src="img/bg8.jpg" alt="cityscape">
+      </div>
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo"><img class="responsive-img" src="img/Logo.png" width="50%" height="50%"></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="https://franklueza.github.io/">Inicio</a></li>
+          <li><a href="https://franklueza.github.io/blog.html">Blog</a></li>
+          <li><a href="https://franklueza.github.io/entrenamientos/">Entrenamientos</a></li>
+          <li>Share</li>
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/" target="_blank"><i class="fab fa-facebook-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a></li>
+          <li><a href="https://twitter.com/home?status=https%3A//franklueza.github.io/" target="_blank"><i class="fab fa-twitter-square fa-2x m-2" aria-hidden="true"  style="color:white"></i></a></li>
+          <li><a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/" target="_blank"><i class="fab fa-google-plus-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a></li>
+          <!--<li class="active"><a class='dropdown-button' href='#' data-activates='feature-dropdown' data-belowOrigin="true" data-constrainWidth="false">Features<i class="material-icons right">arrow_drop_down</i></a></li>-->
+        </ul>
+        <!-- Dropdown Structure -->
+        <!--<ul id='feature-dropdown' class='dropdown-content'>
+          <li><a href="full-header.html">Fullscreen Header</a></li>
+          <li><a href="horizontal.html">Horizontal Style</a></li>
+          <li><a href="no-image.html">No Image Expand</a></li>
+        </ul>-->
+
+      </div>
+      <div class="nav-header valign-wrapper">
+        <div class="carousel carousel-slider center" data-indicators="true">
+          <div class="carousel-item white-text" href="#one!">
+            <div class="container valign-wrapper">
+              <h1>RESPONSIVE DESIGN</h1>
+              <div class="tagline">Frameworks CSS</div>
+              <a class="waves-effect waves-light btn-large deep-purple accent-2" href="tel:5568895354"><i class="material-icons left">phone</i>Contactar</a>
             </div>
-            <a href="#user"><img class="circle" src="img/Lueza.jpg"></a>
-            <a href="#name"><span class="white-text name">Francisco Lueza</span></a>
-            <a href="mailto:ixfanalytics@gmail.com"><span class="white-text email">ixfanalytics@gmail.com</span></a>
-        </div></li>
-        <!--<li><a href="https://www.google.com"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="https://www.google.com">Second Link</a></li>-->
-        <li><img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics"></li>
-        <li><div class="divider"></div></li>
-        <li><a href="#home"><i class="material-icons blue-text">home</i>Inicio</a></li>
-        <li><a href="#about"><i class="material-icons red-text">face</i>Acerca de mi</a></li>
-        <li><a href="#work"><i class="material-icons orange-text">important_devices</i>Proceso de trabajo</a></li>
-        <li><a href="#clients"><i class="material-icons green-text">insert_emoticon</i>Clientes</a></li>
-        <li><a href="#services"><i class="material-icons yellow-text">view_quilt</i>Servicios</a></li>
-        <li><a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn">Contacto <i class="material-icons white-text right">mail_outline</i></a></li>
+          </div>
+          <div class="carousel-item white-text" href="#two!">
+            <div class="container valign-wrapper">
+              <h1>PROFESSIONAL DESIGN</h1>
+              <div class="tagline">Dedicated to you</div>
+              <a class="waves-effect waves-light btn-large deep-purple accent-2" href="tel:5568895354"><i class="material-icons left">phone</i>Contactar</a>
+            </div>
+          </div>
+          <div class="carousel-item white-text" href="#three!">
+            <div class="container valign-wrapper">
+              <h1>LETS MAKE SOMETHING</h1>
+              <div class="tagline">together</div>
+              <a class="waves-effect waves-light btn-large deep-purple accent-2" href="tel:5568895354"><i class="material-icons left">phone</i>Contactar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fixed Masonry Filters -->
+      <div class="categories-wrapper  red darken-1">
+        <div class="categories-container">
+          <ul class="categories container">
+            <li class="active"><a href="#all">Todo</a></li>
+            <li><a href="#about">Acerca</a></li>
+            <li><a href="#service">Servicio</a></li>
+            <li><a href="#course">Entrenamiento</a></li>
+            <li><a href="#contact">contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <ul class="side-nav red lighten-1" id="nav-mobile">
+      <li><a class="white-text" href="https://franklueza.github.io/"><i class="material-icons white-text">home</i>Inicio</a></li>
+      <li class="active"><a class="white-text" href="https://franklueza.github.io/blog"><i class="material-icons white-text">edit</i>Blog</a></li>
+      <li class="active"><a class="white-text" href="https://franklueza.github.io/entrenamientos/"><i class="material-icons white-text">school</i>Entrnamientos</a></li>
+      <li class="active"><a class="white-text" href="#"><i class="material-icons white-text">share</i>Comparte nuestro sitio en:</a></li>
+      <li><a class="white-text" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/" target="_blank"><i class="fab fa-facebook-square fa-2x m-2" aria-hidden="true" style="color:white"></i>Facebook</a></li>
+      <li><a class="white-text" href="https://twitter.com/home?status=https%3A//franklueza.github.io/" target="_blank"><i class="fab fa-twitter-square fa-2x m-2" aria-hidden="true"  style="color:white"></i>Twitter</a></li>
+      <li><a class="white-text" href="https://plus.google.com/share?url=https%3A//franklueza.github.io/" target="_blank"><i class="fab fa-google-plus-square fa-2x m-2" aria-hidden="true" style="color:white"></i>Google Plus</a></li>    
     </ul>
+
     <a class="ir-arriba"  href="#" title="Volver arriba">
         <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
         </span>
     </a>
-    <div id="home" class="slider">
-        <ul class="slides">
-            <li>
-            <img src="img/bg1.jpg"> <!-- random image -->
-            <div class="caption left-align">
-                <h1>Tu sitio web con ¡WordPress!</h1>
-                <h4 class="light grey-text text-lighten-3">Si estás pensando en tener un sitio web, escríbenos y seguro que te podemos echar una mano.</h4>
-                <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn-large">Escríbeme <i class="material-icons white-text right">mail_outline</i></a>
-            </div>
-            </li>
-            <li>
-            <img src="img/bg2.jpg"> <!-- random image -->
-            <div class="caption right-align">
-                <h2>Revolución digital</h2>
-                <h4 class="light grey-text text-lighten-3">¡Es momento de subir tu negocio a Intenet!</h4>
-                <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn-large">Pregunatame ¿cómo?<i class="material-icons white-text right">mail_outline</i></a>
-            </div>
-            </li>
-            <li>
-            <img src="img/bg9.jpg"> <!-- random image -->
-            <div class="caption left-align">
-                <h2>Responsive design</h2>
-                <h4 class="light grey-text text-lighten-3">Muestrale al mundo tu negocio a través de tu sitio web. </h4>
-                <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn-large">Contacto <i class="material-icons white-text right">mail_outline</i></a>
-            </div>
-            </li>
-            <li>
-            <img src="img/bg8.jpg"> <!-- random image -->
-            <div class="caption right-align">
-                <h2>Frameworks CSS</h2>
-                <h4 class="light grey-text text-lighten-3">Utilizamos tecnología CSS como Bootstrap, Foundation, Materialize, Bulma y Material Design.</h4>
-            </div>
-            </li>
-        </ul>
-    </div>
-    
-    <div id="about" class="row valign-wrapper about">
-        <div class="col s12 m12">
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                <div class="col s4 m2">
-                    <img src="img/Lueza.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+  
+    <!-- Gallery -->
+    <div id="portfolio" class="section gray">
+      <div class="container">
+        <div class="gallery row">
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter  about">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/blue.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Acerca de Francisco Lueza</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Francisco Lueza</h3>
+                  <span class="price">Web Developer</span>
                 </div>
-                <div class="col s8 m10">
-                    <span class="black-text">
-                        ¡Hola! soy Francisco Lueza y soy freelance en Desarrollo Web
-                        desde hace 1 año, con sede en Estado de México, México. 
-                        Disfruto de trabajar con gente multidisciplinaria en área de marketing
-                        digital. 
-                    </span>
+                <img class="responsive-img" src="img/Lueza.jpg" alt="placeholder">
+                <p class="description">
+                ¡Hola! soy Francisco Lueza y soy freelance
+                en Desarrollo Web desde hace 1 año, con sede en Estado de México, México. 
+                Disfruto de trabajar con gente multidisciplinaria en el área de marketing digital.</p>
+                <p class="description">
+                Actualmente pertenezco al equipo Splash, dónde me desenvuelvo como Webmaster desde hace un año y desarrollador
+                de sitios web en la plataforma de WordPress, algunos de estos sitios los puedes ver en la tarjeta de 
+                "Proyectos en curso" del sitio.</p>
+                <p class="description">
+                Siempre me intereso la programación, durante la licenciatura lleve varios cursos dirigidos a programar en 
+                lenguajes como C, C++, Phyton y software especializado en matemáticas como Matlab o Mathematica. Así que he 
+                corrido el riesgo de surmergirme en las tecnologías de la web, y comence a aprender <strong>HTML, CSS y JavaScript</strong> en 
+                la <strong>University of California, Davis</strong> en su plataforma en linea.
+                </p>
+                <p class="description">
+                No he permitido que el "miedo" a programar se interponga y cada vez que me acerco más a la programación con una 
+                intensa disposición para aprender, entonces sucedarán cosas increíbles.
+                </p>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/class-header-performance.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/class-header-connectivity.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/class-header-semantics.jpg"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/class-header-css3.jpg"></a>
+                  </div>
                 </div>
-                </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">tag_faces</i></a>
+              </div>
             </div>
-        </div>
-        <div class="col s12 hide-on-med-and-down center-align">
-            <img class="responsive-img" src="img/class-header-performance.jpg">
-        </div>
-    </div>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter about">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img src="img/green.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Filosofia</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Filosofia</h3>
+                  <!--<span class="price">?</span>-->
+                </div>
+                <p class="description">
+                Siempre me concentro en el rendimiento, mi objetivo es crear sitios web fáciles de usar 
+                y atractivos para el usuario que atraigan la atención del público.
+                <p class="description">
+                Leer y probar nuevas ideas en mi día a día, es la forma en que he fomentado mis conocimientos, 
+                manteniéndome actualizado con 
+                las últimas tecnologías de la web.</p>
+                <p class="description">
+                Me gusta brindar consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr 
+                sus sueños y cambiar el mundo.
+                </p>
 
-   <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-            <br><br><br><br>
-            <h2 class="header center white-text text-lighten-2">Nuestra filosofia</h2>
-            <div class="row center">
-                <h5 class="header col s12 white-text light">A modern responsive front-end framework based on Material Design</h5>
-            </div>
-            <div class="row center">
-                <a href="tel:5568895354" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Llámame</a>
-            </div>
-            <br><br>
-    
-            </div>
-        </div>
-        <div class="parallax"><img src="img/bg5.jpg" alt="Unsplashed background img 1" style="transform: translate3d(-50%, 228.543px, 0px); opacity: 1;"></div>
-    </div>
-
-    <div id="work" class="container about">
-        <div class="row white dark-text">
-            <div class="col s12 m6 l4 ">
-                <div class="icon-block hoverable z-depth-1"><br>
-                    <h2 class="center green-text"><i class="material-icons">all_inclusive</i></h2>
-                    <h5 class="center">Mi filosofia</h5>
-        
-                    <p class="light">Siempre me concentro en el rendimiento, mi objetivo es crear sitios web fáciles de usar y atractivos para el usuario que atraigan la atención del público. Leer y probar nuevas ideas es la forma en que he fomentado mis conocimientos, manteniéndome actualizado con las últimas tecnologías de la web.</p>
-                    <br>
-                </div> 
-            </div>
-            <div class="col s12 m6 l4">
-                <div class="icon-block hoverable z-depth-1"><br>
-                    <h2 class="center orange-text"><i class="material-icons">apps</i></h2>
-                    <h5 class="center">Mi misión</h5>
-        
-                    <p class="light">Soy un desarrollador muy motivado, entusiasta y muy confiable con una actitud de 'puedo hacerlo'. Siempre estoy buscando aumentar mi conocimiento y aprender nuevas tecnologías y habilidades. 
-                    Me encanta desarrollar y probar nuevos Frameworks de CSS para la creación de sitios.</p>
-                    <br>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/Tecnologia web.png"></a>
+                    <a class="carousel-item" href="#one!"><img src="img/HTML5.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/CSS3.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/javascript.png"></a>
+                  </div>
                 </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">sentiment_very_satisfied</i></a>
+              </div>
             </div>
-            <div class="col s12 m6 l4">
-                <div class="icon-block hoverable z-depth-1"><br>
-                    <h2 class="center red-text"><i class="material-icons">code</i></h2>
-                    <h5 class="center">Mi proceso</h5>
-        
-                    <p class="light">Cuando realizo un proyecto, no solo lo completo, hago un esfuerzo adicional y lo hago mejor de lo solicitado.</p>
-                    <ol class="light">
-                        <li>Planeación</li>
-                        <li>Diseño</li>
-                        <li>Analítica</li>
-                        <li>Desarrollo</li>
-                        <li>Lanzamiento y soporte</li>
-                    </ol>
-                    <br><br><br>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter about">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/orange.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Mi misión</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Mi misión</h3>
+                  <!--<span class="price"></span>-->
                 </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-            <br><br><br><br>
-            <h2 class="header center white-text text-lighten-2">Proyectos en curso</h2>
-            <div class="row center">
-                <h5 class="header col s12 white-text light">A modern responsive front-end based on WorPress</h5>
-            </div>
-            <div class="row center">
-                <a href="tel:5568895354" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Llámame</a>
-            </div>
-            <br><br>
-    
-            </div>
-        </div>
-        <div class="parallax"><img src="img/blue-sky.jpg" alt="Stars" style="transform: translate3d(-50%, 228.543px, 0px); opacity: 1;"></div>
-    </div>
-    
-    <div id="clients" class="carousel">
-        <a class="carousel-item" href="#one!"><img src="img/forma-vital mobile.png"></a>
-        <a class="carousel-item" href="#two!"><img src="img/steak-and-grills mobile.png"></a>
-        <a class="carousel-item" href="#three!"><img src="img/Oftalmologo mobile.png"></a>
-        <a class="carousel-item" href="#four!"><img src="img/tdtamal mobile.png"></a>
-        <a class="carousel-item" href="#five!"><img src="img/ktastrofe mobile.png"></a>
-    </div>
-    
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-            <br><br><br><br>
-            <h2 class="header center white-text text-lighten-2">Servicios</h2>
-            <div class="row center">
-                <h5 class="header col s12 white-text light">A modern responsive front-end based on WorPress</h5>
-            </div>
-            <div class="row center">
-                <a href="tel:556895354" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Llámame</a>
-            </div>
-            <br><br>
-    
-            </div>
-        </div>
-        <div class="parallax"><img src="img/spaced.jpg" alt="Stars" style="transform: translate3d(-50%, 228.543px, 0px); opacity: 1;"></div>
-    </div>
-
-    <div id="services" class="container about">
-        <div class="row dark-text">
-            <div class="col s12 m6 l4">
-                <div class="icon-block hoverable z-depth-1"><br>
-                    <h2 class="center blue-text"><i class="material-icons">computer</i></h2>
-                    <h5 class="center">WorPress</h5>
-                    <p class="light">Diseñamos y desarrollamos sitios autoadministrables con diseño responsivo, 
-                    para que tu sitio se vea bien en cualquier dspositivo.</p>
-                    <br> <br> 
-                    <div class="center-align">
-                        <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn"><i class="material-icons right">cloud</i>Cotización</a>
-                    </div><br> <br> 
-                </div> 
-            </div>
-            <div class="col s12 m6 l4">
-                <div class="icon-block hoverable z-depth-1"><br>
-                    <h2 class="center orange-text"><i class="material-icons">find_in_page</i></h2>
-                    <h5 class="center">Administración y mantenimiento</h5>
-                    <p class="light">Administramos y damos mantenimiento a tu sitio web, para mantenerlo respaldado, actualizado y 
-                    funcionando en cualquier momento.</p>
-                    <div class="center-align">
-                        <a href="mailto:ixfanalytics@gmail.com" class="waves-effect waves-light red btn"><i class="material-icons right">cloud</i>Cotización</a>
-                    </div><br> <br>
-                </div> 
-            </div>
-            <div class="col s12 m6 l4">
-                <div class="icon-block hoverable z-depth-1"><br>
-                    <h2 class="center yellow-text"><i class="material-icons">free_breakfast</i></h2>
-                    <h5 class="center">Consultoria y entrenamiento</h5>
-                    <p class="light">Si te encuentras perdido y no sabes cómo subirte a la revolución digital de los negocios, 
-                    ¡no te preocupes!, platiquemos.</p> <br>
-                    <div class="center-align">
-                        <a href="mailto:ixfanalytics@gmail.com" class=" waves-effect waves-light red btn"><i class="material-icons right">cloud</i>Quiero que me llamen</a>
-                    </div>
-                    <br> <br>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-    <footer class="page-footer about1">
-        <div class="container">
-            <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Francisco Lueza</h5>
-                <p class="grey-text text-lighten-4">Brindamos consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</p>
-                <!-- Begin: HubSpot Academy - Inbound Badge -->
-                <div class="academy-badge"><a title="Inbound" href="https://hubspot-academy.s3.amazonaws.com/prod/certification/badges/c76081ff76034524bfb8c83a184573b2" target="_blank">
-                <img class="responsive-img" src="http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2" />
-                </a>
+                <p class="description">
+                Soy un desarrollador muy motivado, entusiasta y muy confiable con una actitud de 
+                ¡puedo hacerlo!. Siempre estoy buscando aumentar mi conocimiento y aprender nuevas 
+                tecnologías y habilidades. Me encanta desarrollar y probar nuevos <strong>Frameworks CSS</strong> 
+                para la creación de sitios</p>
+                <p class="description">
+                Los Frameworks CSS que más gustan son:
+                </p>
+                <ol class="description">
+                  <li>Material Design</li>
+                  <li>Materialize</li>
+                  <li>Bootstrap</li>
+                  <li>Foundation</li>
+                  <li>Bulma</li>
+                </ol>
+                <p class="description">
+                También estoy enfocado a desarrollar sitios en <strong>WordPress</strong>, implementando en las plantillas 
+                <strong>HTML, CSS y JavaScript</strong> para la personalización del <strong>sitio web.</strong>
+                </p>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/Material-Design.png"></a>
+                    <a class="carousel-item" href="#one!"><img src="img/bootstrap.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/Materialize.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/Zurb-Foundation-6.png"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/Bulma.png"></a>                  </div>
                 </div>
-                <!-- End: HubSpot Academy - Inbound Badge -->
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">settings_applications</i></a>
+              </div>
             </div>
-            <div class="col l3 s12">
-                <h5><strong>Comparte nuestro sitio</strong></h5>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//franklueza.github.io/"><i class="fab fa-facebook-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
-                <a href="https://twitter.com/home?status=https%3A//franklueza.github.io/"><i class="fab fa-twitter-square fa-2x m-2" aria-hidden="true"  style="color:white"></i></a>
-                <a href="https://plus.google.com/share?url=https%3A//franklueza.github.io/"><i class="fab fa-google-plus-square fa-2x m-2" aria-hidden="true" style="color:white"></i></a>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter about">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img src="img/red.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Mi proceso de trabajo</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Proceso de trabajo</h3>
+                  <span class="price"></span>
+                </div>
+                <p class="description">
+                    Cuando realizo un proyecto, no solo lo completo, 
+                    hago un esfuerzo adicional y lo hago mejor de lo solicitado.</p>
+                <p class="description">
+                El proceso que sigo es el siguiente:
+                </p>
+                <ol class="description">
+                  <li>Auditoria web</li>
+                  <li>Instalación y configuración del CMS</li>
+                  <li>Instalación y configuración de la plantilla</li>
+                  <li>Diseño y desarrollo web</li>
+                  <li>Aplicación de SEO Onpage</li>
+                  <li>Instalación básica del código de segumiento de datos de Analytics</li>
+                  <li>Instalación del Pixel de Facebook</li>
+                  <li>Lanzamiento del sitio</li>
+                  <li>Indexación del sitio</li>
+                  <li>Creación del Sitemap</li>
+                  <li>Alta en Google Maps</li>
+                  <li>Soporte</li>
+                </ol>
+
+                <!--<div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#two!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#three!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#four!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#five!"><img src="http://placehold.it/300x200"></a>
+                  </div>
+                </div>-->
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">settings</i></a>
+              </div>
             </div>
-            <div class="col l3 s12">
-                <ul class="collapsible expandable">
-                    <li class="active cursos">
-                        <div class="collapsible-header"><i class="material-icons">fingerprint</i>Próximamente</div>
-                        <div class="collapsible-body white-text"><span>Curso de Monitoreo.</span></div>
-                    </li>
-                    <li class="cursos">
-                        <div class="collapsible-header"><i class="material-icons">devices</i>Próximamente</div>
-                        <div class="collapsible-body white-text"><span>Curso de WordPress.</span></div>
-                    </li>
-                    <li class="cursos">
-                        <div class="collapsible-header"><i class="material-icons">face</i>Próximamente</div>
-                        <div class="collapsible-body white-text"><span>Curso de Facebook Ads</span></div>
-                    </li>
-                    <li class="cursos">
-                        <div class="collapsible-header"><i class="material-icons">person_pin</i>Próximamente</div>
-                        <div class="collapsible-body white-text"><span>Curso de WhatsApp Business</span></div>
-                    </li>
-                </ul>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter service">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img src="img/blue1.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>WordPress</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>WordPress</h3>
+                  <span class="price">Software libre</span>
+                </div>
+                <p class="description">Diseñamos y desarrollamos sitios autoadministrables 
+                con diseño responsivo, para que tu sitio se vea bien en cualquier dspositivo.</p>
+                <p class="description">
+                  Utilizamos <strong>WordPress</strong> por su fácil curva de aprendizaje para la administración 
+                  de contenido y es software libre de código abierto - Open Source -, el cual esta 
+                  bajo la licencia General Public License (GPLv2 o Posterior) que brinda 4 principales 
+                  libertades:
+                </p>
+                <ol class="description">
+                  <li>Correr el programa para cualquier porpósito</li>
+                  <li>Estudiar cómo funciona el programa y cambiarlo para que haga lo que desee.</li>
+                  <li>Redistribuirlo</li>
+                  <li>Distribuir copias de sus versiones modificadas a otros</li>
+                </ol>
+                <p class="description">
+                <strong>WordPress</strong> es muy flexible debido a las extemciones llamados Plugins y actualmente a nivel 
+                mundial el 25% de las páginas están hechas con este gestor de contenido - CMS - y cuenta 
+                con miles de temas gratuitos para comenzar a construir, sin embargo es importante adquirir un 
+                tema de pago para permitir un mejor desarrollo del sitio web.</p>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/WordPress_logo.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/red.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/blue1.png"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/WordPress_logo.jpg"></a>
+                    <a class="carousel-item" href="#five!"><img src="img/yellow.png"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter service">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img src="img/green1.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Administración y mantenimiento</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Administración y mantenimiento</h3>
+                  <span class="price"></span>
+                </div>
+                <p class="description">Administramos y damos mantenimiento a tu sitio web, 
+                para mantenerlo respaldado, actualizado y funcionando en cualquier momento.</p>
+                <p class="description">
+                Las siguiente acciones concretas son las que realizamos:
+                </p>
+                <ol class="description">
+                  <li>Backup mensual del sitio web</li>
+                  <li>Actualización de la plantilla</li>
+                  <li>Actualizaciones de plugins</li>
+                  <li>Gestión de problemas con WordPress, Hosting, Plantilla y Plugins</li>
+                  <li>Creación de nuevas secciones o páginas</li>
+                  <li>Administarción de usuarios de perfiles de acceso al CMS</li>
+                  <li>Implementación carrito de compra en caso de no contar con ello</li>
+                  <li>Configuración de métodos de pago</li>
+                </ol>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#two!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#three!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#four!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#five!"><img src="http://placehold.it/300x200"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter service">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img src="img/yellow.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Consultoria y entrenamiento</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Consultoria y entrenamiento</h3>
+                  <span class="price"></span>
+                </div>
+
+                <p class="description">
+                Si te encuentras perdido y no sabes cómo 
+                subirte a la revolución digital de los negocios, ¡no te preocupes!, 
+                platiquemos.</p>
+                <p class="description">
+                Una parte importante que me gusta, es poder ayudar a los emprendedores,  
+                educándolos a través del Ecosistema Digital, el cual comprende como parte 
+                central el Sitio Web, Branding, Content Marketing, Email Marketing y las 
+                Redes Sociales, asi éstos podrán ir generando ideas alrededor de su negocio e 
+                impulsarlo en el Internet. 
+                </p>
+                <p class="description">
+                Es por ello que me doy a la tarea de capacitar en el área digital a las 
+                mujeres emprendedoras del CREA (Comunidades de Emprendedores Sociales) en la 
+                sede Toluca.
+                </p>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/Asesoria.jpeg"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/Negocios.jpeg"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/Concultoria.jpeg"></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter course">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/red1.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Cursos</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Cursos</h3>
+                  <span class="price">consultar precio</span>
+                </div>
+                <p class="description">
+                Actualmente se esta trabajando en el temario, los quiz y las prácticas propuestas en cada curso 
+                con la finalidad de que estas sean un instrumento de evaluación de conocimientos y sea de calidad.
+                </p>
+                <p class="description">Los curso son:</p>
+                <ol class="description">
+                  <li>Ténicas de Monitoreo en la Web y Redes Sociales</li>
+                  <li>Introducción a WordPress</li>
+                  <li>Anuncios de paga en la plataforma de Facebook Ads</li>
+                  <li>Marketing con WhatsApp Business</li>
+                </ol>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/Monitoreo.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/Wordpress.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/Facebook-Ads.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="img/WhatsApp.png"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter about">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/purple.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Certificaciones</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Certificaciones</h3>
+                  <span class="price">Google & Hubspot Academy</span>
+                </div>
+                <p class="description">He obtenido las certificaciones de Google en Analytics y REd de Búsqueda y 
+                por Hubspot de Inbound Marketing.
+                </p>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#three!"><img src="img/Certified Analytics.PNG"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/Certified Adwords.PNG"></a>
+                    <a class="carousel-item" href="#one!"><img src="img/Google Analytics Principiante 2017.PNG"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/Google Analytics Avazando 2017.PNG"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/Inbound.JPG"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter contact">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/gray darken.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Contacto</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Contacto</h3>
+                  <span class="price">Comunicate conmigo</span>
+                </div>
                 
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd0EjziMRiW7Wc3-yaZxPaPYm6wYP5amTx5GflhFFcg9SJcig/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+                <p class="description">
+                Ing. Francisco Israel Lueza Martínez <br>
+                Cel: 5568895354 <br>
+                Email: ixfanalytics@gmail.com
+                </p>
+                <!--<div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#two!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#three!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#four!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#five!"><img src="http://placehold.it/300x200"></a>
+                  </div>
+                </div>-->
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
             </div>
+          </div>
+
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter about">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/green darken.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Proyectos en curso</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Proyectos en curso</h3>
+                  <span class="price"></span>
+                </div>
+                <p class="description">
+                Aqui están algunos de los proyectos que actualmente estoy llevando
+                </p>
+                <ol class="description">
+                  <li><a href="https://www.formavital.com">Forma Vital</a></li>
+                  <li><a href="https://steakandgrills@.com.mx">Steak & Grills</a></li>
+                  <li><a href="http://www.tdetamal.mx/">TdeTamal</a></li>
+                  <li>Oftalmólogo Francsico Olguín</li>
+                  <li>Ktastrofe</li> 
+                  <li>Conferencista Mónica Venzor</li> 
+                </ol>
+                <div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="img/forma-vital.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/steak-and-grills.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/TdeTamal.png"></a>
+                    <a class="carousel-item" href="#four!"><img src="img/Oftalmologo-retina.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="img/Ktastrofe.png"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
             </div>
+          </div>
+
+          <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter contact">
+            <div class="gallery-curve-wrapper">
+              <a class="gallery-cover gray">
+                <img class="responsive-img" src="img/red.png" alt="placeholder">
+              </a>
+              <div class="gallery-header">
+                <span>Aviso de privacidad y Cookies</span>
+              </div>
+              <div class="gallery-body">
+                <div class="title-wrapper">
+                  <h3>Aviso de privacidad y Cookies</h3>
+                  <span class="price">Protección de datos</span>
+                </div>
+                <p class="description">
+                    El Aviso de Privacidad forma parte del uso del sitio web https://franklu.com.mx
+                    El presente Aviso de Privacidad rige la prestación de los servicios que brinda FRANCISCO ISRAEL LUEZA MARTÍNEZ ubicadO en Calle Mariano Matamoros 104, Tenango del Valle, Estado de México, México, teléfono +52 (55) 5689 5354, mail: hola@franklu.com.mx, como Responsable de sus Datos Personales y la protección que brinda al usuario del sitio de internet https://franklu.com.mx, en lo sucesivo “FRANKLU”, así como para establecer las condiciones bajo las cuales se maneja la información proporcionada y/o gestionada a través de los servicios y productos que ofrece FRANKLU.
+                    
+                    Nuestro Responsable de Protección de Datos es el Área de Administración General, la cual dará atención a las solicitudes, procedimientos, requisitos, plazos y se ubica en el mismo domicilio antes mencionado. Usted podrá contactarlo en el correo electrónico: hola@franklu.com.mx
+                    
+                    En FRANKLU la información es tratada de forma estrictamente confidencial por lo que se realiza un esfuerzo permanente para salvaguardarla y particularmente tratándose del tratamiento de datos personales y toda información que deba tratarse con ese carácter en lo sucesivo INFORMACIÓN CONFIDENCIAL, de conformidad con lo establecido en el presente documento y en la legislación aplicable en la materia.
+                    
+                    1. Información Recabada. Al hablar de INFORMACIÓN CONFIDENCIAL, se hace referencia a toda aquella información de carácter personal. La información que solicitamos desde https://franklu.com.mx es: Nombre, teléfono, correo electrónico y datos de facturación.
+                    2. Finalidad de la Información. La INFORMACIÓN CONFIDENCIAL es utilizada para proveer al usuario un servicio personalizado y acorde a sus necesidades, por lo cual el usuario acepta que FRANKLU utilice la INFORMACION CONFIDENCIAL para: Promocionar los servicios ofrecidos por nuestro portal, almacenamiento en el sistema de pagos, facturación y cobranza, envío de correos promocionales e informativos de los servicios recibidos, establecer contacto vía telefónica, soporte técnico y otras actividades relacionadas.
+                    3. Limitación de Uso y Divulgación de la Información. Si usted desea dejar de recibir mensajes promocionales de nuestra parte puede solicitarlo a través del teléfono +52 (55) 5689 5354 o bien en el correo electrónico hola@franklu.com.mx de conformidad con la Ley Federal de Protección al Consumidor.
+                    4. Protección de LA INFORMACIÓN CONFIDENCIAL. A partir de que el usuario proporcione la INFORMACION CONFIDENCIAL, FRANKLU se compromete a que todo su personal y los mecanismos del sitio web cumplan con los estándares de seguridad y confidencialidad necesarios para procurar la seguridad, integridad y privacidad de la información recabada y protegerla contra daño, pérdida, alteración, destrucción, así como por el uso, acceso o tratamiento no autorizado. Asimismo, FRANKLU tiene políticas y procedimientos para la seguridad de la INFORMACIÓN CONFIDENCIAL y sus terceros proveedores de servicios están comprometidos a respetarlas. Sin embargo, y a pesar de contar cada día con herramientas más seguras, la protección de los datos enviados a través de internet no se puede garantizar al 100%; por lo que una vez recibidos se hará todo lo posible para salvaguardar dicha información.
+                    5. Declaración de Privacidad.FRANKLU realiza transferencias a sus sociedades subsidiarias, afiliadas o relacionadas y realiza remisiones a sus distribuidores autorizados y/o sus terceros proveedores de servicio con quienes tiene una relación jurídica para la prestación de servicios, así como en su caso, por autoridades competentes. FRANKLU no procesará ni transferirá a terceros la INFORMACIÓN CONFIDENCIAL.
+                    6. Confidencialidad de la Información. No obstante lo señalado en el numeral 5 del presente Aviso de Privacidad, FRANKLU podrá divulgar dicha información cuando: i) FRANKLU considere dicha información necesaria para identificar, comunicarse con, o emprender una acción legal en contra de alguien que pudiera estar perjudicando u obstaculizando la prestación de los servicios o los derechos de los que es titular FRANKLU ; ii) sea indispensable para el cumplimiento de los Términos y Condiciones de Uso; iii) por disposición legal y/o lo requiera alguna autoridad competente. De acuerdo a lo anterior, el usuario entiende y acepta que el presente Aviso de Privacidad no aplica a la información que el propio usuario proporcione voluntariamente al comunicarse vía, chats o cualquier otra actividad similar. Es responsabilidad del usuario conducirse con prudencia en relación al tipo de información que entrega. FRANKLU no es responsable por los avisos de privacidad y la recabación de cualquier tipo de información realizada por terceros, proveedores de servicios y productos, así como del uso que éstos le den a la misma.
+                    7. Derechos ARCO y Revocación al Consentimiento del Tratamiento de Datos. Usted tiene derecho de acceder, rectificar y cancelar sus datos personales, así como de oponerse al tratamiento de los mismos o revocar el consentimiento que para tal fin nos haya otorgado, a través de los procedimientos que hemos implementado. Dicha solicitud la podrá enviar al correo electrónico: hola@franklu.com.mx y deberá contener:
+                    a) Nombre del titular.
+                    b) Domicilio u otro medio por el cual notificarle la respuesta, en caso de no cumplir con este requisito, la solicitud se tendrá por no presentada.
+                    c) Acreditar con documentos idóneos la identidad del titular. En caso de tratarse de representante legal, acreditar identidad del titular, identidad del propio representante legal, así como la existencia de la representación (a través de instrumento público, carta poder otorgada ante dos testigos o bien por declaración en comparecencia del titular); tratándose de menores de edad o incapaces se estará a lo dispuesto por el Código Civil Federal.
+                    d) La descripción clara y precisa de los datos personales respecto de los que se solicita ejercer alguno de los derechos ARCO o la revocación al consentimiento otorgado para el tratamiento de sus datos personales.
+                    e) Cualquier otro elemento que facilite la localización de los datos personales. Una vez presentada la solicitud y a partir del momento de su recepción, FRANKLU en un término de 20 días emitirá y notificará la respuesta a la misma. Dicho plazo se tendrá por interrumpido en caso de que FRANKLU solicite información adicional al titular, para lo que deberá realizar el requerimiento en un término de 5 días siguientes a la recepción de la solicitud; realizado dicho requerimiento el titular tendrá 10 días para atender el requerimiento, de no hacerlo la solicitud se tendrá por no interpuesta. En caso de ser procedente dicha solicitud, FRANKLU ejecutará el ejercicio del derecho procedente en un término de 15 días contados a partir de que se emitió respuesta a la solicitud. De no ser procedente la misma, de conformidad con el artículo 34 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares, se notificará al titular o a su representante, según sea el caso, el motivo de la decisión acompañando las pruebas pertinentes.En caso de cancelación de datos personales se dará lugar a un periodo de bloqueo tras el cual se procederá a la supresión del dato de conformidad a lo establecido al artículo 27 de la Ley Federal de Protección de Datos Personales en Posesión de Particulares.Los plazos antes referidos podrán ser ampliados una sola vez por un periodo igual, siempre y cuando así lo justifiquen las circunstancias del caso.Cuando soliciten la entrega de los datos personales esta será gratuita, debiendo cubrir el titular únicamente los gastos justificados de envío o el costo de reproducción en copias u otros formatos. Dicho derecho se ejercerá por el titular en forma gratuita, previa acreditación de su identidad ante el responsable.En el supuesto de que exista alguna vulneración al derecho de protección de datos personales inherente al presente, una vez agotado el procedimiento ARCO anteriormente descrito, el usuario tendrá la facultad de recurrir al Instituto Federal de Acceso a la Información y Protección de Datos (IFAI) para ejercer la acción correspondiente.
+                    8. Uso de Cookies y Google Analytics. El portal y los servicios que brinda FRANKLU utilizan “cookies” que se instalan en el disco duro para permitirnos identificar las preferencias que haya seleccionado el usuario y mejorar su experiencia con el portal y el servicio. Cuando los usuarios visitan el sitio web https://franklu.com.mx, FRANKLU podrá recabar y almacenarse información relativa a una visita, este registro es anónimo a través de la tecnología denominada “cookie”. Una “cookie” es un elemento informático que una página de internet puede enviar al navegador de internet del usuario. Las “cookies” nos proporcionan la hora y duración de su estadía en el sitio. El acceso a la información por medio de las cookies, permite ofrecer al usuario un servicio personalizado, ya que almacenan no solo su información sino también la frecuencia de utilización del sitio web. Los usuarios pueden en todo momento bloquear las cookies modificando la configuración de su navegador de internet, sin embargo FRANKLU no se responsabiliza si de la desactivación de las mismas afecta el buen funcionamiento del sitio y sus servicios. FRANKLU utiliza la función de Google AdWords y las listas de remarketing para anunciantes de la Red de Display de Google. FRANKLU y Google usan las cookies de origen (como la cookie de Google Analytics) y las cookies de terceros (como la cookie de DoubleClick) combinadas para informar, optimizar y publicar anuncios basándose en las visitas anteriores de los usuarios de nuestro sitio web. Esto significa que proveedores, incluido Google, mostrarán material promocional de PRIMERA POSICIÓN en otros sitios web que visite en internet. Usted puede inhabilitar los anuncios personalizados de la Red de Display de Google accediendo al Administrador de preferencias de anuncios en el siguiente portal de internet: https://www.google.com/settings/u/0/ads. Para proporcionar a usuarios de internet más control sobre cómo su información es recopilada por Google Analytics, Google ha creado el complemento de inhabilitación para navegadores de Google Analytics, con el cual es posible inhabilitar Google Analytics.
+                    9. Aceptación de los Términos. El presente Aviso de Privacidad constituye un acuerdo válido entre el usuario y FRANKLU; si el usuario utiliza los servicios de FRANKLU significa que ha leído, entendido, aceptado y consecuentemente acordado con FRANKLU los términos anteriormente expuestos.
+                    10. Cambios en el Aviso de Privacidad. Cualquier modificación a este aviso de privacidad podrá consultarla en https://franklu.com.mx, sección Aviso de Privacidad.
+                    11. Última actualización. El presente Aviso de Privacidad fue actualizado el 5 de enero de 2018.
+                </p>
+
+                <!--<div class="carousel-wrapper">
+                  <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#two!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#three!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#four!"><img src="http://placehold.it/300x200"></a>
+                    <a class="carousel-item" href="#five!"><img src="http://placehold.it/300x200"></a>
+                  </div>
+                </div>-->
+              </div>
+              <div class="gallery-action">
+                <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2018 <a class="white-text text-lighten-3" href="https://franklueza.github.io">Web Designer & Developer</a>
-            </div>
+      </div>
+
+    </div><!-- /.container -->
+<footer class="page-footer red lighten-1">
+    <div class="container valign-wrapper">
+        <div class="row center-align">
+          <div class="col s12 m12">
+              <h5 class="grey-text text-lighten-4">Brindamos consultoria tecnológica asequible a personas emprendedoras para ayudarlos a lograr sus sueños y cambiar el mundo.</h5>
+              <!-- Begin: HubSpot Academy - Inbound Badge -->
+              <div class="academy-badge"><a title="Inbound" href="https://hubspot-academy.s3.amazonaws.com/prod/certification/badges/c76081ff76034524bfb8c83a184573b2" target="_blank">
+              <img class="responsive-img" src="http://api.hubapi.com/academy/v1/badge-image/c76081ff76034524bfb8c83a184573b2" />
+              </a>
+              </div>
+              <!-- End: HubSpot Academy - Inbound Badge -->
+          </div>
         </div>
-    </footer>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 <a class="white-text text-lighten-3" href="https://franklueza.github.io">Web Designer & Developer</a>
+        </div>
+    </div>
+</footer>
 
-    <!--<div class="fixed-action-btn">
-    <a class="btn-floating btn-large red">
-      <i class="large material-icons">mode_edit</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
-  </div>-->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84P8XV"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-<!--JavaScript at end of body for optimized loading-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+    <!-- Core Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="js/color-thief.min.js"></script>
+    <script src="js/galleryExpand.js"></script>
+    <script src="js/init.js"></script>
 
- <!-- Google Tag Manager (noscript) -->
- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84P8XV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <script>
-      window.sr = ScrollReveal();
-
-
-        //Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                    });
-                });
-            });
-  </script>
- <!-- WhatsHelp.io widget -->
- <!--<script type="text/javascript">
-    (function () {
-        var options = {
-            facebook: "1959498814271748", // Facebook page ID
-            whatsapp: "5568895354", // WhatsApp number
-            email: "ixfanalytics@gmail.com", // Email
-            company_logo_url: "//storage.whatshelp.io/widget/fd/fdc6/fdc661aefcb5f36f0bbd1f54516363a1/28782580_2114220858799542_9218294182744765982_n.jpg", // URL of company logo (png, jpg, gif)
-            greeting_message: "Hola,¿Cómo podemos ayudarte?", // Text of greeting message
-            call_to_action: "Contáctanos", // Call to action
-            button_color: "#129BF4", // Color of button
-            position: "left", // Position may be 'right' or 'left'
-            order: "facebook,whatsapp,email", // Order of buttons
-        };
-        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    });
-  </script>-->
-  <!-- /WhatsHelp.io widget -->
-
-
-</body>
+  </body>
 </html>

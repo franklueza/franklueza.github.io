@@ -1,67 +1,13 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */ 
-body{
-  font-family: 'Nunito', sans-serif;
-}
-.cursos{
-  color:#000;
-}
- .sidenav-trigger {
-  color: #FFF !important;
-}
-.sidenav-overlay {
-  opacity: 0 !important;
-}
-.about{
-  padding:5% 5%;
-}
-.about1{
-  padding-top: 5%;
-}
-/*nav ul a,
-nav .brand-logo {
-  color:#fff; 
-}*/
-.logo{
-  width: 50%;
-}
-.header{
-  margin-top: 20px;
-}
-p {
-  line-height: 2rem;
-}
-.sidenav-overlay {
-  opacity: 0 !important;
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-footer{
-  background-image: url('../img/bg1.jpg');
-}
-footer.page-footer {
-  margin: 0;
-}
 .ir-arriba {
-  display:none;
-  padding:30px;
-  background-repeat: no-repeat;
-  font-size:20px;
-  color:black;
-  opacity: 0.5;
-  cursor:pointer;
-  position: fixed;
-  bottom:20px;
-  right:20px;
-  z-index: 2;
-}
+    display:none;
+    padding:30px;
+    background-repeat: no-repeat;
+    font-size:20px;
+    color:black;
+    opacity: 0.5;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    z-index: 2;
+  }
