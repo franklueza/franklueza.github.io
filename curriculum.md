@@ -11,7 +11,7 @@
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas; también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y emprender mis ideas e inquietudes. 
 He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi compañera Yadira Muñoz, la cual conocí en el diplomado de Inbound Marketing, quien me invito a coloborar en la empresa Forma Vital - CEO Jorge Fernández - como programador - Webmaster - y con quien actualmente llevo en conjunto la construcción de otros sitios que se encuentran aún en producción, tales como TdeTamal, Ktastrofe y Oftalmólogo Retina. Por mi parte sigue en producción el sitio personal de Mónica Ortega Venzor y actualmente cuento con otro cliente Enrique Martínez al que le he terminado el sitio web para la empresa para la cual trabaja llamada Steak & Grills y también creare su sitio personal próximamente.
 ## Educación actual
-* Carrera de Marketing Digital y Desarrollo Web en Next University
+* Aotodidacta en internet y plataformas de aprendizaje
 ## Educación Profesional
 * Ing. Físico UAM-A, Unidad Azcapotzalco
 ## Idiomas
@@ -20,18 +20,18 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 ## Habilidades y aprendizajes
 * Autodidacta
 * Control de Versiones - GitHub -.  
-* Manejo del CMS WordPress 90%
-* Manejo de FTP 100%
-* Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes 80%
-* Facebook Ads 80%
-* Google Analytics 85%
+* Manejo del CMS WordPress
+* Manejo de FTP
+* Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes
+* Facebook Ads 
+* Google Analytics
 * Publicidad en la Red de búsqueda (AdWords) 85%
-* HTML5 y CSS3 85%
-* Bootstrap 4 70%
-* Foundation 70%
-* JQuery 35% y aumentando
-* JavaScript 30% y aumentando
-* React 10% y aumentando
+* HTML5 y CSS3
+* Bootstrap 4
+* Foundation
+* Materialize
+* JQuery 
+* JavaScript 
 ## Certificaciones Internacionales
 * Inbound by HubSpot
 * Analytics by Google
@@ -45,7 +45,7 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 4. Administración del sitio web
 5. Subida de contenido al Blog y creación de nuevas páginas
 6. Análisis SEO y SEO OnPage
-### Proyectos en curso de desarrollo del sitio web:
+### Proyectos actualmente en curso de desarrollo:
 1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
 2. [TDeTamal](http://www.tdetamal.mx/)
 3. [Dr. Francisco Olgín](http://oftalfrancisco.esy.es/)
