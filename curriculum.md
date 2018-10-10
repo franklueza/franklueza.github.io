@@ -11,7 +11,8 @@
 Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas; también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y emprender mis ideas e inquietudes. 
 He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi compañera Yadira Muñoz, la cual conocí en el diplomado de Inbound Marketing, quien me invito a coloborar en la empresa Forma Vital - CEO Jorge Fernández - como programador - Webmaster - y con quien actualmente llevo en conjunto la construcción de otros sitios que se encuentran aún en producción, tales como TdeTamal, Ktastrofe y Oftalmólogo Retina. Por mi parte sigue en producción el sitio personal de Mónica Ortega Venzor y actualmente cuento con otro cliente Enrique Martínez al que le he terminado el sitio web para la empresa para la cual trabaja llamada Steak & Grills y también creare su sitio personal próximamente.
 ## Educación actual
-* Aotodidacta en internet y plataformas de aprendizaje
+* Bootcamp White Coder en Kodemia
+* Autodidacta en internet y plataformas de aprendizaje como W3, Edx, Coursera y Mirada X
 ## Educación Profesional
 * Ing. Físico UAM-A, Unidad Azcapotzalco
 ## Idiomas
@@ -25,7 +26,7 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 * Monitorización de datos públicos en Google y Redes Sociales para detección de fraudes
 * Facebook Ads 
 * Google Analytics
-* Publicidad en la Red de búsqueda (AdWords) 85%
+* Publicidad en la Red de búsqueda (AdWords)
 * HTML5 y CSS3
 * Bootstrap 4
 * Foundation
@@ -39,7 +40,7 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 ### Colaboración actual en [Forma Vital USA](https://www.formavital.com)
 *Ingreso: Julio de 2017 a la fecha.
 * Actividades:
-1. Rediseño del sitio web
+1. Rediseño del sitio web en Wordpress
 2. Etiquetado del sitio con código JavaScript de Google y Facebook para la obtención de datos en el sitio web
 3. Análisis de datos del sitio web y de la página de Facebook
 4. Administración del sitio web
@@ -47,7 +48,7 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 6. Análisis SEO y SEO OnPage
 ### Proyectos actualmente en curso de desarrollo:
 1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
-2. [TDeTamal](http://www.tdetamal.mx/)
+2. [Bannyazcandy](http://bannyazcandy.com/)
 3. [Dr. Francisco Olgín](http://oftalfrancisco.esy.es/)
 4. [Monica Venzor](https://monicavenzor.com/)
 5. [Steak and Grills](https://steakandgrills.com.mx/)
