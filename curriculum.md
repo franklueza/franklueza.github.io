@@ -1,6 +1,6 @@
 # franklueza.github.io
 # Francisco Israel Lueza Martínez
-![FrankLu Lueza](https://franklueza.github.io/img/Lueza.jpg)
+![FrankLu Lueza](https://franklueza.github.io/assets/img/faces/Lueza.jpg)
 ## Contacto
 * email: ixfanalytics@gmail.com
 * Sitio Web:[https://franklueza.github.io](https://franklueza.github.io/)
