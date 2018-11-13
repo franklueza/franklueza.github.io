@@ -16,6 +16,13 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>    
     <link rel="stylesheet" href="./css/main.css">
 
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+    
+
     <!-- Google Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100852356-2"></script>
@@ -25,37 +32,47 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-100852356-2');
+    gtag('config', 'UA-100852356-22');
     </script>
     <!-- /Google Analytics -->
     
 </head>
 <body>
-    <nav role='navigation' id="mainnav">
-        <br><br><br>
-        <ul class="gap">
-            <li><a href="#top">Home</a></li>
-            <!--li><a href="#?">GALLERY</a></li>
-            <li><a href="#?">CLIENTS</a></li>
-            <li><a href="#?">SERVICES</a></li>
-            <li><a href="#?">TEAMS</a></li>
-            <li><a href="#?">LOCATION</a></li-->
-        </ul>
-    </nav>   
-    <div class="hamb">
-        <a href="#"><i class="fa fa-bars"></i></a>
-    </div>
+        <nav class="navbar navbar-expand-lg bg-white fixed-top headline">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-easing="easeInQuart" class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-easing="easeInQuart" class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-easing="easeInQuart" class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-easing="easeInQuart" class="nav-link" href="#work">My Work</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     <div class="jumbotron jumbotron-fluid">
         <div class="container text-center">
-            <h1 class="display-4 title">Front-end Developer Jr. & Mentor</h1>
-            <h2 class="display-5">I love what I do.</h2>
+            <h1 class="display-4 title headline mt-3">Front-end Developer Jr. & Mentor</h1>
+            <h2 class="display-5 tagline">I love what I do.</h2>
             
-            <img src="./img/Lueza.jpg" class="img-fluid iam" alt="Francisco Lueza">
+            <img src="./img/Lueza.jpg" class="img-fluid iam punchline" alt="Francisco Lueza">
             <h2 class="subtitle text-warning pt-3">
-            <span class="word" id="word"></span></h2>
+            <span class="word typing" id="word"></span></h2>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="about">
         <div class="row">
                 <!--div class="col-md-2 mt-3 mb-3 d-flex justify-content-center align-items-center">
                     <div class="loader d-flex justify-content-center align-items-center">
@@ -65,50 +82,50 @@
                         <span></span>
                     </div>
                 </div-->
-            <div class="col-12 text-justify">
-                <h2 class="display-4 text-left">¡Hola! soy Francisco Lueza.</h2>
-                <p class="lead">Comencé mi carrera como <span class="words">Freelance</span> apenas hace 2 años personalizando temas de sitios web 
+            <div class="col-12 text-justify ">
+                <h2 class="display-4 text-left headline">¡Hola! soy Francisco Lueza.</h2>
+                <p class="lead tagline">Comencé mi carrera como <span class="words">Freelance</span> apenas hace 2 años personalizando temas de sitios web 
                 en <span class="words">Wordpress</span>. Actualmente realizo trabajos a distancia para <span class="words">Emprendedores</span>, <span class="words">Profesionistas</span>, 
                 <span class="words">Escuelas</span> y <span class="words">Pymes</span>. Colaboro con personas talentosas en el área de <span class="words">Marketing</span> <span class="words">Digital</span>. Estoy mejorando constantemente mis habilidades de programación en organismos y plataformas como:
                 <span class="words">W3C</span>, <span class="words">Google</span>, <span class="words">IBM</span> y <span class="words">Microsoft</span>.</p>
             </div>
         </div>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-5" id="services">
         <div class="row">
             <div class="col-12 text-justify">
-                <h2 class="display-4">Principales servicios</h2>
-                <h3 class="text-warning">Administración y mantenimiento</h3>
-                <p class="lead ">Administramos y damos mantenimiento a tu sitio web, para que este respaldado, actualizado y funcionando en cualquier momento los 365 días del año.</p>
-                <h3 class="text-warning">Desarrollo de sitios en Wordpress</h3>
-                <p class="lead">Diseñamos y desarrollamos sitios autoadministrables en <span class="words">Wordpress</span> ya sea <span class="words">personales</span>, de <span class="words">negocio</span> o  <span class="words">tienda en linea</span> con diseño responsivo, para que tu sitio se vea bien en cualquier dspositivo.</p>
-                <h3 class="text-warning">Desarrollo de sitios desde cero.</h3>
-                <p class="lead ">Construyo sitios web interactivos utilizando los componentes visuales utilizando <span class="words">HTML5</span>, <span class="words">CSS3</span> y <span class="words">Javascript</span>.</p>
-                <h3 class="text-warning">Mentoria</h3>
-                <p class="lead ">Si te encuentras perdido en temas relacionados con la <span class="words">tecnología web</span> y de <span class="words">mercadeo digital</span>, ¡no te preocupes!, te podemos guiar.</p>
-                <h3 class="text-warning">Cursos</h3>
-                <p class="lead ">Impartimos cursos presenciales introductorios de <span class="words">HTML5</span>, <span class="words">CSS3</span>, <span class="words">Frameworks CSS</span> y <span class="words">Wordpress</span>.</p>
+                <h2 class="display-4 headline">Principales servicios</h2>
+                <h3 class="text-warning tagline">Administración y mantenimiento</h3>
+                <p class="lead tagline">Administramos y damos mantenimiento a tu sitio web, para que este respaldado, actualizado y funcionando en cualquier momento los 365 días del año.</p>
+                <h3 class="text-warning tagline">Desarrollo de sitios en Wordpress</h3>
+                <p class="lead tagline">Diseñamos y desarrollamos sitios autoadministrables en <span class="words">Wordpress</span> ya sea <span class="words">personales</span>, de <span class="words">negocio</span> o  <span class="words">tienda en linea</span> con diseño responsivo, para que tu sitio se vea bien en cualquier dspositivo.</p>
+                <h3 class="text-warning tagline">Desarrollo de sitios desde cero.</h3>
+                <p class="lead tagline">Construyo sitios web interactivos utilizando los componentes visuales utilizando <span class="words">HTML5</span>, <span class="words">CSS3</span> y <span class="words">Javascript</span>.</p>
+                <h3 class="text-warning tagline">Mentoria</h3>
+                <p class="lead tagline">Si te encuentras perdido en temas relacionados con la <span class="words">tecnología web</span> y de <span class="words">mercadeo digital</span>, ¡no te preocupes!, te podemos guiar.</p>
+                <h3 class="text-warning tagline">Cursos</h3>
+                <p class="lead tagline">Impartimos cursos presenciales introductorios de <span class="words">HTML5</span>, <span class="words">CSS3</span>, <span class="words">Frameworks CSS</span> y <span class="words">Wordpress</span>.</p>
             </div>
         </div>
     </div>
     <div class="container-fluid text-center mt-5 bg-warning pt-5 pb-5">
         <div class="row">
             <div class="col-12 text-white">
-                <h2 class="text-white">¿Interesado en hacer un proyecto juntos?</h2>
-                <p class="lead">Siempre estoy abierto a discutir el trabajo de diseño de productos digitales o las oportunidades de asociación.</p>
-                <a href="tel:5568895354" class="btn btn-outline-light" role="button">Whatsapp</a>
+                <h2 class="text-white headline">¿Interesado en hacer un proyecto juntos?</h2>
+                <p class="lead tagline">Siempre estoy abierto a discutir el trabajo de diseño de productos digitales o las oportunidades de asociación.</p>
+                <a href="tel:5568895354" class="btn btn-outline-light tagline" role="button">Whatsapp</a>
             </div>
         </div>
     </div>
-    <div class="container-fluid testimonials text-center mt-5">
+    <div class="container-fluid testimonials text-center mt-5" id="testimonials">
         <div class="row">
             <div class="col-12">
-                <h2 class="display-4">Lo que la gente piensa</h2>
-                <p class="lead">Las personas con las que he trabajado han dicho algunas cosas bonitas ...</p>
+                <h2 class="display-4 headline">Lo que la gente piensa</h2>
+                <p class="lead tagline">Las personas con las que he trabajado han dicho algunas cosas bonitas ...</p>
             </div>
         </div>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide pt-5 pb-5 text-white" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide pt-5 pb-5 text-white tagline" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -236,39 +253,39 @@
     </div>
     
 
-    <div class="container text-center mt-5">
+    <div class="container text-center mt-5" id="work">
         <div class="row">
             <div class="col-12">
-                <h2 class="display-4">Mi trabajo</h2>
-                <p class="lead">Aquí hay algunos proyectos de diseño recientes.</p>
+                <h2 class="display-4 headline">Mi trabajo</h2>
+                <p class="lead tagline">Aquí hay algunos proyectos de diseño recientes.</p>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row no-gutters">
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 widget">
                 <a href="https://axecapoeiracdmx.com.mx/" target="_blank"><img class="img-fluid works" src="img/Axe-Capoeira.JPG" alt="Card image"></a>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 widget">
                 <a href="https://steakandgrills.com.mx/" target="_blank"><img class="img-fluid works" src="img/SteakandGrills.JPG" alt="Card image"></a>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 widget">
                 <a href="https://monicavenzor.com/" target="_blank"><img class="img-fluid works" src="img/Mónica-Venzor.JPG" alt="Card image"></a>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 widget">
                 <a href="https://www.formavital.com" target="_blank"><img class="img-fluid works" src="img/Forma-Vital.JPG" alt="Card image"></a>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 widget">
                 <a href="http://oftalmologoretina.com/" target="_blank"><img class="img-fluid works" src="img/Oftalmologo-Retina.JPG" alt="Card image"></a>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 widget">
                 <a href="https://bannyazcandy.com/" target="_blank"><img class="img-fluid works" src="img/Bannyazcandy.JPG" alt="Card image"></a>
             </div>
         </div>
     </div>
     
 
-<footer class="container">
+<footer>
     <p>© Nextilistli 2018</p>
 </footer>
 
@@ -279,13 +296,17 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 
-<canvas id="bubble"></canvas>
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
-<script src="js/particles.js"></script> 
-    
-
+<script>
+    //https://github.com/cferdinandi/smooth-scroll
+    var easeInQuart = new SmoothScroll('[data-easing="easeInQuart"]', {easing: 'easeInQuart'});
+</script>
+<script>
+    ScrollReveal().reveal('.headline')
+    ScrollReveal().reveal('.tagline', { delay: 500 })
+    ScrollReveal().reveal('.punchline', { delay: 1000 })
+    ScrollReveal().reveal('.typing', { delay: 1250 })
+    ScrollReveal().reveal('.widget', { interval: 500 });
+</script>
 </body>
 </html>
 
