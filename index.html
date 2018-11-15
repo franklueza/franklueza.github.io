@@ -55,7 +55,7 @@
             <a class="nav-link" href="#work">My Work</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./wordpress/index.html">Taller de Wordpress</a></li>
+            <a class="nav-link" href="./wordpress">Taller de Wordpress</a></li>
         </ul>   
     </div>
 </nav>
@@ -66,7 +66,7 @@
             <img src="./img/Lueza.jpg" class="img-fluid iam punchline" alt="Francisco Lueza">
             <h2 class="subtitle text-warning pt-3">
             <span class="word typing" id="word"></span></h2>
-            <a href="./wordpress/index.html"  class="btn btn-outline-danger">¡El Buen Fin llego!</a>
+            <a href="./wordpress"  class="btn btn-outline-danger">¡El Buen Fin llego!</a>
 
         </div>
     </div>
@@ -288,6 +288,24 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/animatereveal.js"></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="1959498814271748"
+  logged_in_greeting="¡Hola!, ¿Como podemos ayudarte?"
+  logged_out_greeting="¡Hola!, ¿Como podemos ayudarte?">
+</div>
     
 </body>
 </html>
