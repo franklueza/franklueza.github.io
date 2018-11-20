@@ -16,6 +16,7 @@
 .navbar-toggler:not(:disabled):not(.disabled){
     border:none;
 }
+
 .jumbotron{
     background-color: #fff;
     background-attachment: fixed;
@@ -1252,4 +1253,3 @@ img.works:hover {
     margin: 0;
   }
 }
-  
