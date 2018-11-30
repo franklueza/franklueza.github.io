@@ -3,15 +3,15 @@
     color: #333;
 }
 .navbar-brand{
-  color: #ff0266 !important;
+  color: #005CB2 !important;
 }
 .navbar-nav .nav-link{
-    border-bottom: 5px solid #ff0266;
+    border-bottom: 5px solid #005CB2;
     margin: 0 10px 0 10px;
 }
 .navbar-nav a:hover{
   color:white !important;
-    background: #ff0266;
+    background: #005CB2;
 }
 .navbar-toggler:not(:disabled):not(.disabled){
     border:none;
@@ -30,17 +30,17 @@ h1,h2, h3, h4,h5,h6{
 }
 .warning{
     font-weight: 800;
-    color:#ff0266;
+    color:#005CB2;
 }
 .container-fluid.bg-cta{
-  background-color:#ff0266; 
+  background-color:#005CB2; 
 }
 span.words{
-    box-shadow: inset 0 -4px 0 #ff0266;
+    box-shadow: inset 0 -4px 0 #005CB2;
 }
 span.words:hover{
   color: white;
-    background: #ff0266;
+    background: #005CB2;
 }
 .iam {
     width: 150px;
@@ -51,7 +51,6 @@ span.words:hover{
 }
 .container.layers{
   overflow: hidden;
-  background: #ff0266;
 }
 .box{
   position: relative;
