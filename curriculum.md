@@ -1,6 +1,6 @@
 # Francisco Israel Lueza Martínez
-CEO en Nextilistli y Socio en Rebel Productions
 ![FrankLu Lueza](https://franklueza.github.io/assets/img/Lueza.jpg)
+CEO en Nextilistli y Socio en Rebel Productions
 ## Contacto
 * email: ixfanalytics@gmail.com
 * Sitio Web:[https://franklueza.github.io](https://franklueza.github.io/)
