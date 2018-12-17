@@ -1,25 +1,39 @@
-# franklueza.github.io
 # Francisco Israel Lueza Martínez
-![FrankLu Lueza](https://franklueza.github.io/assets/img/faces/Lueza.jpg)
+CEO en Nextilistli y Socio en Rebel Productions
+![FrankLu Lueza](https://franklueza.github.io/assets/img/Lueza.jpg)
 ## Contacto
 * email: ixfanalytics@gmail.com
 * Sitio Web:[https://franklueza.github.io](https://franklueza.github.io/)
-* Cel: 55 68 89 53 54
 * Tel casa: (01) 717 144 40 26
 * Domicilio: Insurgente No 145, Colonia La Soya, C.P. 523000, Tenango del Valle, Estado de México.
-## Resumen
-Soy una persona que le gusta estar aprendiendo nuevas cosas constantemente y sobre todo compartirlas. Hoy en día me apasiona el analísis de datos, el marketing digital y la programación. Siempre estoy dispuesto a ayudar a las personas; también la enseñanza es otra de mis pasiones. He decidido moverme de mi zona de confort y emprender mis ideas e inquietudes. 
-He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi compañera Yadira Muñoz, la cual conocí en el diplomado de Inbound Marketing, quien me invito a coloborar en la empresa Forma Vital - CEO Jorge Fernández - como programador - Webmaster - y con quien actualmente llevo en conjunto la construcción de otros sitios que se encuentran aún en producción, tales como TdeTamal, Ktastrofe y Oftalmólogo Retina. Por mi parte sigue en producción el sitio personal de Mónica Ortega Venzor y actualmente cuento con otro cliente Enrique Martínez al que le he terminado el sitio web para la empresa para la cual trabaja llamada Steak & Grills y también creare su sitio personal próximamente.
+## Objetivo
+Lograr la transmisión del conocimiento de manera constructiva en áreas de matemáticas y programacón.
 ## Educación actual
 * Bootcamp White Coder en Kodemia
-* Autodidacta en internet y plataformas de aprendizaje como W3, Edx, Coursera y Mirada X
+* Autodidacta en internet y plataformas de aprendizaje como W3, IBM, Google Developers, Edx, Coursera y Mirada X.
 ## Educación Profesional
 * Ing. Físico UAM-A, Unidad Azcapotzalco
+* Proyecto de Tesis (UAM - CINVESTAV): “Determinación de la dosis absorbida de rayos X de una Biopsia a través de la automatización de una cámara de ionización“, utilizando la programación en LabVIEW 8.0, Versión estudiantil.
+* Promedio: 8.12
+### Posiciones académicas
+* Profesor Titular, Área de Física, CECyTEM Cuautlitlan Izcalli, 2015.
+* Docente en Línea, Universidad Abierta y a Distancia México, 2015.
+* Profesor del sistema Semi-Escolarizado, Área de Matemáticas, Instituto de Educación Media Superior IEMS, 2012-2014.
+* Profesor de Asignatura "A", Instituto Tecnológico de Tláhuac III, 2012.
+* Profesor Titular "B" de Matemáticas, Centro de Bachillerato Tecnológico, CBT Jaime Keller Torres, 2010.
+* Profesor Titular "A" de Tiempo Parcial, Área de Matemáticas, Universidad Autónoma Metropolitana Unidad Azcapotzalco, 2010-2011.
+* Ayudante Nivel "A", Área de Matemáticas, Universidad Autónoma Metropolitana Unidad Azcapotzalco, 2005-2008.
 ## Idiomas
 * Español: Nativo
 * Inglés: Comprensión de textos técnicos y científicos
+## Intereses
+* Educación
+* Matemáticas Aplicadas
+* Ciencia de Datos
+* Machine Learning
+* Inteligencia Artificial
 ## Habilidades y aprendizajes
-* Autodidacta
+* 100% Autodidacta
 * Control de Versiones - GitHub -.  
 * Manejo del CMS WordPress
 * Manejo de FTP
@@ -45,18 +59,12 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 3. Análisis de datos del sitio web y de la página de Facebook
 4. Administración del sitio web
 5. Subida de contenido al Blog y creación de nuevas páginas
-6. Análisis SEO y SEO OnPage
-### Proyectos actualmente en curso de desarrollo:
-1. [Ktastrofe](http://ktastrofe.com.mx/ktastrofe/)
-2. [Bannyazcandy](http://bannyazcandy.com/)
-3. [Dr. Francisco Olgín](http://oftalfrancisco.esy.es/)
-4. [Monica Venzor](https://monicavenzor.com/)
-5. [Steak and Grills](https://steakandgrills.com.mx/)
+6. Análisis SEO OffPage y OnPage
 ### Proyectos personales a corto plazo
-* Capacitación a emprendedores
+* Creación de dos plataforma de aprendizaje con pequeñas capsulas de información de valor para el aprendizaje de las matemáticas y el desarrollo Front-end
+* Capacitación a emprendedores en áreas de Marketing Digital
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
-* Creación de aplicaciones en React Native y Ruby on Rails
-* Desarrollarme como Front-End
+* Creación de aplicaciones en React Native, Angular y Ruby on Rails
 ### Cursos de formación
 * Diplomado en Inbound Marketing con Certificación Internacional en Inbound por Hubspot, Marzo 25 a Junio 03 2017. Digital Business Academy
 * Creación de una web profesional con WordPress, 2017. Domestika.
@@ -66,13 +74,17 @@ He trabajado desde casa como Freelance desde mediados de 2017 en compañia de mi
 * Introducción al Marketing Digital, 26 de Mayo 2017. Platzi.
 * Uso de Redes Sociales en la Investigación de Fraudes, 28 de Abril 2017. Association of Certified Fraud Examiners ACFE - Capítulo México.
 * Validación de Ideas de Negocios. 12 y 13 de Diciembre 2016. Universidad Autónoma Metropolitana, Unidad Cuajimalpa.
-* Modelo de Negocios con la Metodología Canvas. 5y 6 de Diciembre 2016. Universidad Autónoma Metropolitana, Unidad Cuajimalpa.
+* Modelo de Negocios con la Metodología Canvas. 5 y 6 de Diciembre 2016. Universidad Autónoma Metropolitana, Unidad Cuajimalpa.
 * Analítica Web y Herramientas de Medición online Google Analytics I, II y III 2016. Internet Academi iAi (ISDI).
 * Profesional de Google Analytics, 2016. Platzi.
 * Introducción al Marketing y Estrategias Digitales, 2016. Platzi.
 * SEO Posicionamiento en Buscadores, 2016. Platzi.
 * Email Marketing, 2016. Platzi
 * Introducción a Machine Learning, 2017. Miriada X
+* Analítica Web Online, EOI(Escuela de Organización Industria, España) 01 – 31 /12/2015
+* Marketing Digital Online,  IAB Spain (Interactive Advertising Bureau), 01 – 31 /12/2015
+* Comercio Electrónico Online, EOI (Escuela de Organización Industria, España), 01 – 31 /12/2015
+* Introducción a Business Intelligence con SAP, La Salle BCN, Barcelona,09/2015
 ### Otros cursos, ponencias y conferencias académicas
 * Cartel: Caracterización de una red neuronal recurrente
 bidimensional, UAM-CUA, VII Semana de Computación y
@@ -106,11 +118,4 @@ Diciembre. 2008
 de Óxido de Circonio ZrO2 para Dosimetría de Electrones
 en Radioterapia". Pag 17. CICATA-IPN, Junio.2008
 Los resúmenes aparecen en la página: http://www.repositoriodigital.ipn.mx/handle/123456789/10882
-### Posiciones académicas
-* Profesor Titular, Área de Física, CECyTEM Cuautlitlan Izcalli, 2015.
-* Docente en Línea, Universidad Abierta y a Distancia México, 2015.
-* Profesor del sistema Semi-Escolarizado, Instituto de Educación Media Superior IEMS, 2012-2014.
-* Profesor de Asignatura "A", Instituto Tecnológico de Tláhuac III, 2012.
-* Profesor Titular "B" de Matemáticas, Centro de Bachillerato Tecnológico, CBT Jaime Keller Torres, 2010.
-* Profesor Titular "A" de Tiempo Parcial, Área de Matemáticas, Universidad Autónoma Metropolitana Unidad Azcapotzalco, 2010-2011.
-* Ayudante Nivel "A", Área de Matemáticas, Universidad Autónoma Metropolitana Unidad Azcapotzalco, 2005-2008.
+
