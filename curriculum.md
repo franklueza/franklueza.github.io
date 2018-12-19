@@ -7,7 +7,7 @@ CEO en Nextilistli y Socio en Rebel Productions
 * email: ixfanalytics@gmail.com
 * Sitio Web:[https://franklueza.github.io](https://franklueza.github.io/)
 * Tel casa: (01) 717 144 40 26
-* Domicilio: Insurgente No 145, Colonia La Soya, C.P. 523000, Tenango del Valle, Estado de México.
+* Domicilio: Insurgentes No 145, Colonia La Soya, C.P. 523000, Tenango del Valle, Estado de México.
 ## Objetivo
 Lograr la transmisión del conocimiento de manera constructiva en áreas de matemáticas y programacón.
 ## Educación actual
