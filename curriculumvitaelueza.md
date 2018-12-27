@@ -13,10 +13,6 @@ Trabajar con gente interdisciplinaria en áreas del Marketing Digital, Ventas y 
 ## Educación actual
 * Bootcamp White Coder en Kodemia
 * Autodidacta en internet y plataformas de aprendizaje como W3, IBM, Google Developers, Edx, Coursera y Mirada X.
-## Experiencia Laboral en tecnología
-* Especialista en Retail de la marca HUAWEI MASTACHE BTL CONSULTANS, S.A DE C.V.
-Fecha de inicio: 27/Noviembre/2015 al 29/Febrero/2016
-Teléfono: 01 (55) 52030346/52030252
 ### Colaboración actual en [Forma Vital USA](https://www.formavital.com)
 * Ingreso: Julio de 2017 a la fecha.
 * Actividades:
