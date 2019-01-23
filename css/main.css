@@ -20,13 +20,16 @@
     border:none;
 }
 
-.jumbotron{
+.jumbotron-fluid{
+    background: url('../assets/img/paisaje.jpeg');
     background-color: #fff;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 600px;
 }
+
 h1,h2, h3, h4,h5,h6{
     font-family: 'Indie Flower', cursive;
     color: #414345;
@@ -112,7 +115,7 @@ h2.word{
     font-size: 2em;
   }
   .word { 
-    background-color: #333;
+    
     font-family: 'Indie Flower', cursive;
     color: #fff;
     line-height: 1.4em;
@@ -125,7 +128,7 @@ h2.word{
   
   .word:before {
     content: '';
-    background-color: #000;
+    background-color: #fff;
     width: 1px;
     position: absolute;
     top: 5px;
