@@ -1,3 +1,6 @@
+body{
+  background: #000;
+}
 .navbar a{
   font-family: 'Indie Flower', cursive;
   color: #333;
@@ -30,26 +33,31 @@
     height: 600px;
 }
 
-h1,h2, h3, h4,h5,h6{
+h1,h2, h3, h4,h5,h6,p{
     font-family: 'Indie Flower', cursive;
-    color: #414345;
+    color: #fff;
 }
 .warning{
     font-weight: 800;
-    color:#414345;
+    color:#fff;
 }
 .container-fluid.bg-cta{
-  background-color: transparent !important;
-  background-image: linear-gradient(to bottom, rgba(172, 246, 153, 1), rgba(172, 246, 153, 1)); 
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 span.words{
-  background-color: transparent !important;
-  background-image: linear-gradient(to bottom, rgba(222, 250, 211, 1), rgba(222, 250, 211, 1));
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 span.words:hover{
-  color: #000;
-  background-color: transparent !important;
-  background-image: linear-gradient(to bottom, rgba(172, 246, 153, 1), rgba(172, 246, 153, 1));
+  background: #FF416C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .iam {
     width: 150px;
