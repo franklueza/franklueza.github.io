@@ -25,7 +25,9 @@ body{
 
 .jumbotron-fluid{
   background: linear-gradient(rgba(100,181,246 ,1), rgba(0,0,0,0.8)), url('../assets/img/code.jpg') 0% 0%/cover;
-
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1,h2, h3, h4,h5,h6,p{
