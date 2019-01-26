@@ -1,0 +1,24 @@
+.img-responsive {
+    margin: 0 auto;
+}
+
+#test {
+  margin-top:20px;
+
+}
+
+h1 {
+  font-family: 'Exo', sans-serif;
+  font-size:17vw;
+  text-align:center;
+  padding:0px;
+  margin:0px;
+}
+
+h2 {
+  text-align:center;
+  padding:0px;
+  margin:0px;
+  font-family: 'Anonymous Pro', monospace;
+}
+

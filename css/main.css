@@ -1,39 +1,199 @@
-body{
-  background: #000;
-}
-.navbar a{
-  font-family: 'Indie Flower', cursive;
+body {
+	font-family: "Century Gothic",
+                Helvetica,
+                Arial,
+                sans-serif,
+                "cwTeXHei";
+  /*background: #1c3056;*/
+  background: #fff;
+
   color: #333;
 }
-.navbar-brand{
-  color: red !important;
+
+h3 {
+  padding-top: 100px;
 }
-.navbar-nav .nav-link{
-  background-color: transparent !important;
-  background-image: linear-gradient(to bottom, rgba(222, 250, 211, 1), rgba(222, 250, 211, 1));
-  /*border-bottom: 5px solid #005CB2;*/
-  margin: 0 10px 0 10px;
+
+/* 控制內文段落的上間距 */
+p {
+  margin-top: 40px; 
 }
-.navbar-nav a:hover{
-  color:#000;
-  background-color: transparent !important;
-  background-image: linear-gradient(to bottom, rgba(172, 246, 153, 1), rgba(172, 246, 153, 1));
+
+/* 使手機螢幕的選項居中 */
+.navbar-dark .navbar-toggler .navbar-toggler-icon{
+  background-color: rgba(51, 51, 51, 0.144);
 }
-.navbar-toggler:not(:disabled):not(.disabled){
-    border:none;
+.navbar-collapse ul li a {
+  text-align: center;
 }
+
+/* 次選單初始狀態按鍵間距 */
+.sub-navi-link {
+  padding: .5em ;
+}
+
+/* 次選單初始狀態連結 */
+.sub-navi-link a {
+	margin: 0em .5em;
+	padding: 0.5em 1.5em;
+	border-radius: 25px;
+	border: 2px solid rgba(0, 0, 0, 0.5);
+  text-decoration:none;
+	color: #333;
+	font-size: .9em;
+}
+
+/* 次選單初始狀態連結移上 */
+.sub-navi-link a:hover {
+	border: 2px solid red;
+	color: red;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+「往下滑動」次選單固定頂端相關設定
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+.navbar {
+/*   transition: top .8s; */
+  padding: 1rem;
+}
+
+/* 導行列往上移動 */
+.nav-move-up {
+  top: -72px;
+  transition: top .8s;
+}
+
+/* 次選單容器 */
+.sub-navi-container {
+  display: block;
+  position: absolute;
+	padding: 96px 0 20px 0;
+	z-index: 999;
+/*   transition: 3s; */
+}
+
+/* 次選單的固定列 */
+.sub-navi-container.sub-navi-fixed {
+	position: fixed;
+	top: -1px;
+	right: 0;
+	left: 0;
+	padding: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+  transition: all .8s;
+}
+
+/* 次選單的固定列的連結 */
+.sub-navi-container.sub-navi-fixed a {
+	margin: 0em .5em;
+	padding: .5em 1.5em;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	color: #fff;
+	font-size: .9em;
+}
+
+/* 次選單的固定列的連結移上 */
+.sub-navi-container.sub-navi-fixed  a:hover {
+  border: 2px solid red;
+  color: rgb(197, 20, 20);
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+「往下滑動」次選單固定頂端相關設定
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+「往上滑動」次選單固定頂端相關設定
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+/* 次選單的固定列往下移動 */
+.sub-navi-container.sub-navi-fixed-down {
+  top: 72px;
+	padding: 0em 2em;
+  transition: all .8s;
+}
+
+/* 次選單的固定列往下移動後出現細線 */
+.line-appear {
+  margin: auto;
+  padding: 0em;
+  border-top-style:solid; 
+  border-top-width: thin;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  max-width: 1120px;
+  text-align: center;
+}
+
+/* ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+「往上滑動」次選單固定頂端相關設定
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/*背景設定*/
+.article {
+	/*background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0.2) 5%, 
+    rgba(0, 0, 0, 0.8) 100%
+  );*/
+  
+  /* change by BC - 20171120 ↓↓↓ */
+	padding-top: 12em; 
+  /* change by BC - 20171120 ↑↑↑ */
+  
+	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);*/
+}
+
+/*@media screen and (max-width:991px) {
+	.article {
+		background: linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0) 0%, 
+      rgba(0, 0, 0, 0.2) 2%, 
+      rgba(0, 0, 0, 0.4) 5%, 
+      rgba(0, 0, 0, 0.8) 100%
+    );
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	}*/
+  
+  
+  
+  
+   
+/* a 的 margin 和 padding 值直接影響手機螢幕的顯示 ( 橫列與直列的差異 ) */
+  
+/* js 中，.navbar 的 padding .2em 影響手機螢幕的顯示 ( 太靠邊 ) */
+  
+/* 不同狀態下的 a 的值，後者會覆蓋前者，在 css 終需注意順序。 */
+  
+/* 下移 .sub-navi-fixed-down 的 top 到 72px，使線正常顯示。在此前提下，不需再調動其 z-undex 值。 */
+  
+  /* 手機尺寸導行列展開判斷的關鍵語句
+  var _opened = $("#navbar-link").hasClass("navbar-collapse collapse show");
+  var scrollTop = $(document).scrollTop();
+  if (_opened !== true) {
+    $(".navbar").css({
+      'background-color': 'rgba(0, 0, 0, 0.8)',
+    });
+  */
+  
+/* 改變原生 navbar 上下間距
+.navbar {
+  padding: 1rem;
+}  */
+  
+/* 未改變往下拖曳行為時，點擊連結，導行列不會上收。 */
 
 .jumbotron-fluid{
   background: linear-gradient(rgba(100,181,246 ,1), rgba(0,0,0,0.8)), url('../assets/img/code.jpg') 0% 0%/cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
-h1,h2, h3, h4,h5,h6,p{
-    font-family: 'Indie Flower', cursive;
-    color: #fff;
-}
+
 .warning{
     font-weight: 800;
     color:#fff;
