@@ -1434,7 +1434,7 @@ hr{
   margin-left: auto;
   margin-right: auto;
   border-style: inset;
-  border-width: 1px;
+  border-width: 2px;
 }
 .codepen{
   height: 600px;
