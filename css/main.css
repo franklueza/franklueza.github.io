@@ -1426,16 +1426,27 @@ img.works:hover {
     margin: 0;
   }
 }
-hr{
-  display: block;
-  width: 80%;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 2px;
-}
+
 .codepen{
   height: 600px;
+}
+p.shinning{
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: -300%;
+  }
+  100% {
+    background-position: 300%;
+  }
 }
