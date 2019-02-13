@@ -25,7 +25,10 @@ p {
 .navbar-collapse ul li a {
   text-align: center;
 }
-
+.nav-item a:hover {
+	border: 2px solid #ff0266;
+	color: #ff0266;
+}
 /* 次選單初始狀態按鍵間距 */
 .sub-navi-link {
   padding: .5em ;
@@ -47,7 +50,6 @@ p {
 	border: 2px solid #ff0266;
 	color: #ff0266;
 }
-
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 「往下滑動」次選單固定頂端相關設定
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
