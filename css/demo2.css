@@ -366,6 +366,6 @@ a:hover{
 }
 @media (max-width: 767.98px) {
 	.content__title {
-		font-size: 7em;
+		font-size: 5em;
 	}
 }
