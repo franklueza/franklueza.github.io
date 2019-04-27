@@ -2,17 +2,17 @@
 ![FrankLu Lueza](https://franklueza.github.io/assets/img/Lueza.jpg)
 
 
-CEO en Nextilistli y Socio en Rebel Productions
+Web developer en entranamiento
 ## Contacto
 * email: ixfanalytics@gmail.com
 * Sitio Web:[https://franklueza.github.io](https://franklueza.github.io/)
-* Tel casa: (01) 717 144 40 26
+* Cel: 7291656567
 * Domicilio: Insurgentes No 145, Colonia La Soya, C.P. 523000, Tenango del Valle, Estado de México.
 ## Objetivo
 Trabajar con gente interdisciplinaria en áreas del Marketing Digital, Ventas y Diseño Web
 ## Educación actual
-* Bootcamp White Coder en Kodemia
 * Autodidacta en internet y plataformas de aprendizaje como W3, IBM, Google Developers, Edx, Coursera y Mirada X.
+* Inicio de curso como Full Stack en ACAMICA, Junio de 2019
 ### Colaboración actual en [Forma Vital USA](https://www.formavital.com)
 * Ingreso: Julio de 2017 a la fecha.
 * Actividades:
@@ -73,7 +73,7 @@ Trabajar con gente interdisciplinaria en áreas del Marketing Digital, Ventas y 
 * Comercio Electrónico Online, EOI (Escuela de Organización Industria, España), 01 – 31 /12/2015
 * Introducción a Business Intelligence con SAP, La Salle BCN, Barcelona,09/2015
 ### Proyectos personales a corto plazo
-* Creación de dos plataforma de aprendizaje con pequeñas capsulas de información de valor para el aprendizaje de las matemáticas y el desarrollo Front-end
+* Creación de una plataforma de aprendizaje con pequeñas capsulas de información de valor para el aprendizaje de desarrollo Front-end
 * Capacitación a emprendedores en áreas de Marketing Digital
 * Formación de una consultoria de Marketing Digital y Desarrollo Web
 * Creación de aplicaciones en React Native, Angular y Ruby on Rails
