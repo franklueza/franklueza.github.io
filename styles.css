@@ -7355,7 +7355,7 @@ section[class*=projects-wrap] ul li [class|=image]:before {
 section[class*=projects-wrap] ul li [class|=image][class*=look] {
     width: 444px;
     height: 640px;
-    background-image: url(../img/look-hover.jpg)
+    background-image: url(assets/images/Monica-Ortega-Venzor.jpg)
 }
 @media screen and (max-width:576px) {
     section[class*=projects-wrap] ul li [class|=image][class*=look] {
@@ -7365,13 +7365,13 @@ section[class*=projects-wrap] ul li [class|=image][class*=look] {
 }
 @media (-webkit-min-device-pixel-ratio:2) {
     section[class*=projects-wrap] ul li [class|=image][class*=look] {
-        background-image: url(../img/look-hover@2x.jpg)
+        background-image: url(assets/images/Monica-Ortega-Venzor.jpg)
     }
 }
 section[class*=projects-wrap] ul li [class|=image][class*=microsoft] {
     width: 444px;
     height: 640px;
-    background-image: url(assets/img/Forma-Vital.JPG)
+    background-image: url(assets/images/Monica-Ortega-Venzor)
 }
 @media screen and (max-width:576px) {
     section[class*=projects-wrap] ul li [class|=image][class*=microsoft] {

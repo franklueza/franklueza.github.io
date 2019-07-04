@@ -1,0 +1,219 @@
+/*
+CSS RESPONSIVE
+*/
+
+
+@media only screen and (min-width: 1366px) {
+    
+
+
+}
+
+@media only screen and (max-width: 1270px) {
+ 
+.top_about_title .nome {font-size: 60px !important; line-height: 50px !important; padding-left: 20px !important;}	
+
+	
+}
+
+
+@media only screen and (max-width: 1064px) {
+    
+
+.top_about_foto {width:100%; height:400px;max-height: 400px; float:none;position: absolute;}
+.top_about_title  {width:100%; height: auto; float:none; position: relative; bottom: -100px; padding-left: 30px;}
+.top_about_title .nome {color: white;}	
+}
+
+@media only screen and (max-width: 1024px) {
+    
+.boxgallery .itemm {width: 48% !important;margin:1%;}
+.prod_wrapper_search h4 {font-weight: 400;}
+.gallery_payoff h3 {font-size: 36px; line-height:38px;}
+	
+}
+
+@media only screen and (max-width: 980px) {
+    
+.vai_left, .vai_right {font-size: 12px;}
+.desc_feat h3 {font-size: 14px;}
+.desc_feat h2 {font-size: 40px;}
+.desc_feat_left h3 {font-size: 14px;}
+.desc_feat_left h2 {font-size: 36px;}
+.about_foto3 {background-position: center right;}
+	
+}
+
+@media only screen and (max-width: 962px) {
+    
+.nav_menu li a {font-size: 32px;letter-spacing: 0px;}
+.nav_menu ul {padding-top: 12px;}
+.vai_left {left: 50px !important;}	
+.vai_right {right: 50px !important;}
+.desc_feat h3 {padding: 0 50px;}
+.desc_feat h2 {padding-left: 50px;}
+.desc_feat h4 {padding-left: 50px;}
+.desc_feat_left h3 {padding: 0 50px;}
+.desc_feat_left h2 {padding-right: 50px;}	
+.desc_feat_left h4 {padding-right: 50px;}
+.about_foto, .about_foto3 {min-height: 380px;width: 100%;float:none;}
+.boxtesto_left {width: 100%;min-height: 400px; float:none;	}
+.boxtesto_left {width:100%; padding-left: 30px;padding-right: 30px; padding-bottom: 50px}
+.top_about {height: 400px; margin-top:90px;}
+.text_about {padding: 50px 20px;margin-bottom:0;}
+.rev_about {display:flex !important; flex-direction:column-reverse !important;}
+.text_about_full {margin-bottom: 0}
+.boxtesto p {font-size: 18px; padding: 0 20px;}
+.boxtesto_left h2 {font-size: 40px;}
+.boxtesto h2 {font-size: 40px;}
+.contatti_right {padding-left: 30px;}
+	
+}
+
+@media only screen and (max-width: 872px) {
+ 
+.top_about_title .nome {font-size: 55px !important; line-height: 50px !important; padding-left: 30px !important;}
+.top_about_title .nome {padding-left: 20px !important;color: white;}
+.cta_about {padding: 50px 0;}
+.cta_about p {font-size: 24px;}
+.mynav_page {position: fixed; background: white;}
+.cta_social p {font-size: 18px;}	
+.contatti_left {display:none}
+.contatti_right {width:100%;padding-right:50px; position:unset;}
+.contatti_right h2 {font-size: 50px;}
+.box_form {padding-bottom: 10px;}
+.filters_container li a {font-size: 16px;}
+.filters_container li {padding: 10px 15px;}
+.contatti_right {padding-left: 50px;}
+}
+	
+@media only screen and (max-width: 830px) {
+ 
+.footer {font-size: 10px;}
+.footer a {font-size: 10px;}
+
+}
+	
+
+@media only screen and (max-width: 800px) {
+ 
+.nav_menu li a {font-size: 28px;}
+.nav_menu ul {padding-top: 16px;}
+.featured {margin: 50px 0;}
+.vai_left {left: 35px !important;}	
+.vai_right {right: 35px !important;}
+.desc_feat h3 {padding: 0 35px;}
+.desc_feat h2 {padding-left: 35px;}
+.desc_feat h4 {padding-left: 35px; margin-bottom: 10px;}
+.desc_feat_left h3 {padding: 0 35px;}
+.desc_feat_left h2 {padding-right: 35px;}	
+.desc_feat_left h4 {padding-right: 35px;margin-bottom: 10px;}
+.nero{background-color: white !important;}
+	
+}
+
+@media only screen and (max-width: 768px) {
+
+/*.logo_home {top: 25%;}
+.owl-carousel .owl-stage-outer {height: 50% !important;}
+#demos .owl-carousel .item {height: 50vh !important;}
+.scroll {display:none;}*/
+	
+	
+.menu_button {width: auto; padding-right: 30px; right: 0px;}
+.logo {width: auto;padding-left: 30px;}
+.featured {margin:0;} 
+.foto1, .foto2, .foto3 {width: 100%; min-height: 400px; float: none;}
+.reverse {display:flex !important; flex-direction:column-reverse !important; margin-bottom: 50px;}
+.desc_feat, .desc_feat_left {width: 100%; min-height: 300px;float: none; padding: 0 25px;}
+.vai_left, .vai_right {margin: 0 auto; position:unset;}
+.desc_feat h3 {padding: 0px; text-align:center;}
+.desc_feat h2 {padding-left: 0px;text-align:center;}
+.desc_feat h4 {padding-left: 0px;text-align:center;}
+.desc_feat_left h3 {padding: 0px;text-align:center;}
+.desc_feat_left h2 {padding-right: 0px;text-align:center;}	
+.desc_feat_left h4 {padding-right: 0px;text-align:center;}
+.showmore {display: none;}
+.boxgallery .itemm {width: 48% !important; margin:1%;}
+.boxgallery {padding: 0;}
+.gallery_payoff h3 {font-size: 32px;}
+.gallery_payoff {margin-top: 90px;}
+.filters_container ul {margin: 0;padding-bottom: 40px; padding-right:0; text-align:center;}
+.filters_container li {display: block;}
+.filters_container {margin:0; padding:0;}
+.contatti_right {padding-left: 30px;}
+.top_about_title .nome {padding-left: 0px !important;color: white;}
+	
+}
+
+
+
+@media only screen and (max-width: 719px) {
+ 
+
+.nav_menu li a {font-size: 24px;}
+.nav_menu ul {padding-top: 20px;}
+	
+	
+}
+
+
+
+@media only screen and (max-width: 708px) {
+ 
+.rev {display:flex !important; flex-direction:column-reverse !important;}	
+.footer_left {width: 100%;float: none;text-align: center; padding: 20px 0 40px;}
+.footer_right {width: 100%;text-align: center;float: none; padding: 40px 0 0;}	
+	
+}
+
+
+
+@media only screen and (max-width: 637px) {
+ 
+.box_navoverlay {
+    width: 60%;
+    min-height: 400px;
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -30%;
+    margin-top: -200px;
+    text-align: center;
+}
+
+.nav_menu ul {margin: 0; height: auto; border-bottom: 1px solid #2b2b2b; padding-bottom: 20px;}	
+.nav_menu li {list-style: none; display: block; margin-right: 0px;}
+.nav_menu li a {font-size: 32px;}
+.copy {font-size: 6px;}
+.overlay_foot {bottom: 20px;}
+.logo_home h1 {font-size: 42px;}
+.logo_home h2 {font-size: 7px;}
+.boxgallery .itemm {width: 98% !important; margin:1%;}
+	
+.menu_button_close {top: 38px;right: 5px;}
+	
+}
+
+
+
+@media only screen and (max-width: 484px) {
+ 
+.nav_social ul {min-height: 70px;padding-top: 20px;}
+.nav_social li {display: block;margin-right: 0px;}
+
+}
+
+
+@media only screen and (max-width: 436px) {
+	
+.logo_home h1 {font-size: 38px;}
+.logo_home h2 {font-size: 6px;}
+.top_about_title .nome {font-size: 45px !important; line-height: 38px !important; }
+.foto1, .foto2, .foto3 {min-height: 250px;}
+.contatti_right {width:100%;padding-left:30px;padding-right:50px; position:unset;}
+.about_foto, .about_foto3 {min-height: 300px;}
+	
+}
+
