@@ -7403,7 +7403,7 @@ section[class*=projects-wrap] ul li [class|=image][class*=toscano] {
 section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
     width: 444px;
     height: 640px;
-    background-image: url(../img/userbot-hover.jpg)
+    background-image: url(assets/images/Logo\ Digital\ Advertising\ Team.svg)
 }
 @media screen and (max-width:576px) {
     section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
@@ -7413,7 +7413,7 @@ section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
 }
 @media (-webkit-min-device-pixel-ratio:2) {
     section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
-        background-image: url(../img/userbot-hover@2x.jpg)
+        background-image: url(assets/images/Logo\ Digital\ Advertising\ Team.svg)
     }
 }
 section[class*=projects-wrap] ul li [class|=image][class*=food] {
