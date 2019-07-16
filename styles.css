@@ -7387,7 +7387,7 @@ section[class*=projects-wrap] ul li [class|=image][class*=microsoft] {
 section[class*=projects-wrap] ul li [class|=image][class*=toscano] {
     width: 444px;
     height: 640px;
-    background-image: url(./assets/img/Axé\ CdMx.png)
+    background-image: url(./assets/images/The\ Mexican\ Art.JPG)
 }
 @media screen and (max-width:576px) {
     section[class*=projects-wrap] ul li [class|=image][class*=toscano] {
@@ -7397,13 +7397,13 @@ section[class*=projects-wrap] ul li [class|=image][class*=toscano] {
 }
 @media (-webkit-min-device-pixel-ratio:2) {
     section[class*=projects-wrap] ul li [class|=image][class*=toscano] {
-        background-image: url(../img/toscano-hover@2x.jpg)
+        background-image: url(./assets/images/The\ Mexican\ Art.JPG)
     }
 }
 section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
     width: 444px;
     height: 640px;
-    background-image: url(assets/images/Logo\ Digital\ Advertising\ Team.svg)
+    background-image: url(./assets/images/Digital\ Advertising\ Team.JPG)
 }
 @media screen and (max-width:576px) {
     section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
@@ -7413,7 +7413,7 @@ section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
 }
 @media (-webkit-min-device-pixel-ratio:2) {
     section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
-        background-image: url(assets/images/Logo\ Digital\ Advertising\ Team.svg)
+        background-image: url(./assets/images/Digital\ Advertising\ Team.JPG)
     }
 }
 section[class*=projects-wrap] ul li [class|=image][class*=food] {
