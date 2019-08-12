@@ -240,12 +240,12 @@
 }
 .wp-block-cover-image.has-parallax,
 .wp-block-cover.has-parallax {
-    background-attachment: fixed
+    background-attachment: fixed;
 }
 @supports (-webkit-overflow-scrolling:touch) {
     .wp-block-cover-image.has-parallax,
     .wp-block-cover.has-parallax {
-        background-attachment: scroll
+        background-attachment: scroll;
     }
 }
 .wp-block-cover-image.has-background-dim::before,
@@ -9297,7 +9297,8 @@ a.text-warning:hover {
     color: #d39e00!important
 }
 .text-danger {
-    color: #dc3545!important
+    /*color: #dc3545!important*/
+    color: #f15a29!important;
 }
 a.text-danger:focus,
 a.text-danger:hover {
@@ -9403,7 +9404,7 @@ a.text-dark:hover {
 
 
 /*# sourceMappingURL=navigation.css.map */
-
+/*
 @font-face {
     font-family: 'AvenirLTStd-Book';
     src: url(//www.caroselling.it/wp-content/themes/caroselling/css/../webfonts/389B1A_0_0.eot);
@@ -9428,6 +9429,20 @@ a.text-dark:hover {
     font-family: 'AvenirLTStd-Heavy';
     src: url(//www.caroselling.it/wp-content/themes/caroselling/css/../webfonts/389B1A_4_0.eot);
     src: url(//www.caroselling.it/wp-content/themes/caroselling/css/../webfonts/389B1A_4_0.eot?#iefix) format("embedded-opentype"), url(//www.caroselling.it/wp-content/themes/caroselling/css/../webfonts/389B1A_4_0.woff2) format("woff2"), url(//www.caroselling.it/wp-content/themes/caroselling/css/../webfonts/389B1A_4_0.woff) format("woff"), url(//www.caroselling.it/wp-content/themes/caroselling/css/../webfonts/389B1A_4_0.ttf) format("truetype")
+}*/
+@font-face {
+    font-family: 'MinionPro-Bold';
+    font-family: 'MinionPro-Semibold';
+    font-family: 'MyriadPro-Bold';
+    font-family: 'MyriadPro-Light';
+    font-family: 'MyriadPro-Regular';
+    font-family: 'MyriadPro-Semibold';
+    src: url(assets/Fonts/MinionPro-Bold.otf);
+    src: url(assets/Fonts/MinionPro-Semibold.otf);
+    src: url(assets/Fonts/MyriadPro-Bold.otf);
+    src: url(assets/Fonts/MyriadPro-Light.otf);
+    src: url(assets/Fonts/MyriadPro-Regular.otf);
+    src: url(assets/Fonts/MyriadPro-Semibold.otf);
 }
 html,
 body {
@@ -9436,13 +9451,13 @@ body {
 body {
     font-size: 20px;
     color: #1d1d1d;
-    font-family: AvenirLTStd-Roman;
+    font-family: MyriadPro-Regular, serif;
     overflow-x: hidden
 }
 b,
 strong,
 .font-weight-bold {
-    font-family: AvenirLTStd-Heavy
+    font-family: MyriadPro-Semibold;
 }
 * {
     box-sizing: border-box;
@@ -9616,14 +9631,14 @@ h6 {
 .AvenirLTStd-Black {
     font-family: AvenirLTStd-Black
 }
-.AvenirLTStd-Light {
-    font-family: AvenirLTStd-Light
+.MyriadPro-Light {
+    font-family: MyriadPro-Light;
 }
 .AvenirLTStd-Roman {
     font-family: AvenirLTStd-Roman
 }
-.AvenirLTStd-Heavy {
-    font-family: AvenirLTStd-Heavy
+.MinionPro-Bold {
+    font-family: MinionPro-Bold;
 }
 .text-underline {
     text-decoration: underline !important
@@ -10267,7 +10282,7 @@ body.hambon #navigation #cut_navigation_box {
 #main_footer .footer-newsletter form textarea {
     display: block;
     width: 100%;
-    border: 1px solid #1d1d1d
+    border: 1px solid #1d1d1d;
 }
 #main_footer .footer-newsletter form input[type=submit] {
     display: inline-block;
@@ -10493,6 +10508,9 @@ body.hambon #navigation #cut_navigation_box {
     -ms-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0)
+}
+#home_header p{
+    color: #f15a29;
 }
 #home_intro {
     margin-top: 7.8vw
@@ -13604,7 +13622,7 @@ main.main-service-parent .main-text .entry-content p:last-child.animate-on {
         font-size: 2.3vw;
         line-height: 2.6vw;
         margin-bottom: 10.4vw;
-        max-width: 30.2vw
+        /*max-width: 30.2vw*/
     }
     #home_team a.arrow {
         font-size: 1vw;
@@ -14342,7 +14360,7 @@ button#responsive-menu-pro-button,
     #responsive-menu-pro-container #responsive-menu-pro ul.responsive-menu-pro-submenu li.responsive-menu-pro-item a:hover .responsive-menu-pro-subarrow.responsive-menu-pro-subarrow-active {
         color: rgba(255, 255, 255, 1);
         border-color: rgba(0, 0, 0, 1);
-        background-color: rgba(0, 0, 0, 1)
+        background-color: rgba(0, 0, 0, 1);
     }
     #responsive-menu-pro-container #responsive-menu-pro ul.responsive-menu-pro-submenu li.responsive-menu-pro-item a .responsive-menu-pro-subarrow {
         right: 0;
@@ -14524,18 +14542,18 @@ button#responsive-menu-pro-button,
     }
 }
 #home_team .bg {
-    background-image: url('https://www.caroselling.it/wp-content/uploads/2019/03/ilcollettivo-768x432.jpg')
+    background-image: url('assets/img/adult-blond-blur.jpg')
 }
 @media (min-width:1200px) {
     #home_team .bg {
-        background-image: url('https://www.caroselling.it/wp-content/uploads/2019/03/ilcollettivo-1024x576.jpg')
+        background-image: url('assets/img/adult-blond-blur.jpg')
     }
 }
 #home_portfolio .image .bg {
-    background-image: url('https://www.caroselling.it/wp-content/uploads/2019/04/2018-11-07-05.53.59-1-768x512.jpg')
+    background-image: url('assets/img/diagram-direction-electronics.jpg')
 }
 @media (min-width:1200px) {
     #home_portfolio .image .bg {
-        background-image: url('https://www.caroselling.it/wp-content/uploads/2019/04/2018-11-07-05.53.59-1-1024x682.jpg')
+        background-image: url('assets/img/diagram-direction-electronics.jpg')
     }
 }
