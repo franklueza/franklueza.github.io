@@ -9756,7 +9756,7 @@ p:last-child {
     }
     .nav-links a:hover,
     .text-pink-1-hover:hover {
-        color: #1d1d1d !important
+        color: #f51515 !important;
     }
     #navigation a:hover {
         background-size: 100% 5px !important
@@ -11464,7 +11464,7 @@ main.single-main .vc-theme-social-share h3 {
     text-transform: uppercase;
     display: inline;
     font-size: inherit;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 main.single-main .vc-theme-social-share .social-share {
     margin-left: 15px
@@ -14556,4 +14556,13 @@ button#responsive-menu-pro-button,
     #home_portfolio .image .bg {
         background-image: url('assets/img/diagram-direction-electronics.jpg')
     }
+}
+.single-service-childrens>header .post-thumbnail .image .brand {
+    background-image: url('assets/img/advertising-brand-branding.jpg');
+}
+.single-service-childrens>header .post-thumbnail .image .marketing {
+    background-image: url('assets/img/marketing\ digital.jpg');
+}
+.single-service-childrens>header .post-thumbnail .image .design {
+    background-image: url('assets/img/JS\ design.jpg');
 }

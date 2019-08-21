@@ -7419,7 +7419,7 @@ section[class*=projects-wrap] ul li [class|=image][class*=userbot] {
 section[class*=projects-wrap] ul li [class|=image][class*=food] {
     width: 444px;
     height: 640px;
-    background-image: url(../img/food-hover.jpg)
+    background-image: url(./assets/images/drone.jpg)
 }
 @media screen and (max-width:576px) {
     section[class*=projects-wrap] ul li [class|=image][class*=food] {
