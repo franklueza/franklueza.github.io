@@ -623,3 +623,8 @@
     display: none !important;
   }
 }
+.card-profile .card-avatar{
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 0px;
+}
