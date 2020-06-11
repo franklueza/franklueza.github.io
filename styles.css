@@ -8515,3 +8515,6 @@ footer.dark .bottom [class|=img][class*=comunicatica] {
         background-position: -1282px 1px;
     }
 }
+body{
+    background: red;
+}
