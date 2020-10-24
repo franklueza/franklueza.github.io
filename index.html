@@ -1,199 +1,368 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Frank Lueza | Freelance</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Noto+Sans&display=block" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<html lang="en-US">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+        <!--meta name="google-site-verification" content="xMzk8IfSuehFHkzzqda9Zny3FtOGn34G7s-oJEgj1nI" /-->
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="stage">
-    <header class="header">
-        <div class="logo">Frank Lueza</div>
-        <a href="#" class="nav-btn">
-            <svg class="nav-btn__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 30">
-                <rect class="nav-rect" width="40" height="2" x="8" y="8" fill="#242423"/>
-                <rect class="nav-rect" width="40" height="2" x="8" y="14" fill="#242423"/>
-                <rect width="40" height="2" x="8" y="20" fill="#242423"/>
-            </svg>
-        </a>
-    </header>
-    
-    <section class="intro slide--0" id="slide-0">
-        <div class="intro__content">
-            <h1 class="intro__title">Lueza</h1>
-            <p class="intro__txt">I am an independent professional en Design & Web Development with a creative agency specializing in WordPress. We are different, because we are like you. We do not follow all customers , but only those who have chosen to be unique, to differentiate themselves from anyone else.</p>
-        </div>
-        <img class="intro__img intro__img--1" src="assets/images/coaching-plus-1000x880.jpg" />
-        <img class="intro__img intro__img--2" src="assets/images/navigation-pro-1000x880.jpg">
-    </section>
+        <title>Francisco Lueza | Creative Freelancer </title>
 
-    <!--section class="slide-testimonials slide--1">
-        <h2 class="intro__title__testimonilas"><span class="line__inner"><span class="line__inner">Testimonios</span></h2>
-    </section--> 
-    
-    <section class="slide slide--1" id="slide-1">
-        <div class="col col--1">
-            <div class="col__content col__content--1">
-                <h2 class="col__content-title"><span class="line__inner">Yadira</span><br /><span class="line__inner">Muñoz</span></h2>
-                <div class="col__content-wrap">
-                    <p class="col__content-txt">Frank ha colaborado con Splash MarkeTeam desde junio de 2017. Ha 
-                    mostrado un gran profesionalismo, excelente actitud y disponibilidad, gran capacidad para resolución de problemas, investigación 
-                    rápida de soluciones alternas y habilidad para trabajar bajo presión.</p>
-                    <a href="#" class="slide-link">
-                        <div class="slide-link__circ"></div>
-                        <div class="slide-link__line"></div>
-                    </a>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="theme-color" content="#131313">
+        
+        <meta name="description" content="Francisco Lueza is a development & design, build and operate solutions and integrated digital strategies, tailored and for all needs.">
+        <meta name="robots" content="noodp"/>
+        <meta name="author" content="Francisco Lueza">
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/png">
+        <!--
+        <link rel="icon shortcut" href="favicon-16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
+        <link rel="icon" href="assets/img/favicon-62.png" sizes="62x62" type="image/png">
+        <link rel="icon" href="assets/img/favicon-96.png" sizes="96x96" type="image/png">
+        -->
+        <!-- Canonical -->
+        <link rel="canonical" href="https://franklueza.github.io">
+        
+        <!-- Open Graph -->
+        <!--
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Francisco Lueza Creative Freelance | Websites, App, Marketing" />
+        <meta property="og:description" content="Francisco Lueza Agency design, build and operate solutions and integrated digital strategies, tailored and for all needs." />
+        <meta property="og:url" content="https://franklueza.github.io" />
+        <meta property="og:site_name" content="Francisco Lueza Creative Freelance" />
+        <meta property="og:image" content="https://franklueza.github.io/assets/img/cover-share.jpg" />-->
+        
+        <!-- Twitter -->
+        <!--
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="Francisco Lueza design, build and operate solutions and integrated digital strategies, tailored and for all needs." />
+        <meta name="twitter:title" content="Francisco Lueza Creative Agency | Websites, App, Marketing" />
+        <meta name="twitter:site" content="@FrankLueza" />
+        <meta name="twitter:image" content="https://franklueza.github.ioassets/img/cover-share.jpg" />
+        <meta name="twitter:creator" content="@FrankLueza" />
+        -->
+                
+        <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/franklueza.github.io\/","name":"Francisco Lueza Creative Agency","potentialAction":{"@type":"SearchAction","target":"https:\/\/franklueza.github.io\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+                
+        <!-- Custom css -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Google Analytics -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100852356-2"></script>
+
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-100852356-2');
+		</script>
+		<!-- /Google Analytics -->
+    </head>
+    <body class="dark">
+        <!--  Main Wrap  -->
+        <div id="main-wrapper">
+            <div class="main-container dark">
+                <!--  Header & Menu  -->
+                <header itemscope itemtype="http://schema.org/WPHeader" id="header" role="banner" data-animation="top">
+                    <div class="header-wrap">
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="main-navigation">
+                            <!--  Header Logo  -->
+                            <div id="logo" class="vertical">
+                                <a class="navbar-brand" href="/">
+                                    <img src="assets/img/Lueza.jpg" alt="" width="100%">
+                                    <!--div class="logo-img"></div-->
+                                </a>
+                            </div>
+                            <div id="main-title">
+                                <h1>Francisco Lueza. We make any dream come true</h1>
+                            </div>
+                            <!--  Button for Responsive Menu  -->
+                            <div id="menu-responsive">
+                                <div class="mobile-holder">
+                                    <a href="javascript:void(0)">menu</a>
+                                </div>
+                            </div>
+                            <!--  END Button for Responsive Menu  -->
+                            <!--  END Header Logo  -->
+                            <!--  Menu  -->
+                            <div id="main-menu">
+                                <div class="menu-holder">
+                                    <ul>
+                                        <li>
+                                            <a href="agency.html">agency</a>
+                                        </li>
+                                        <li>
+                                            <a href="portfolio.html">portfolio</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="overlay-menu-mobile"></div>
+                            <div id="mobile-menu">
+                                <div class="mobile-wrap">
+                                    <ul>
+                                        <li>
+                                            <a href="agency.html">agency</a>
+                                        </li>
+                                        <li>
+                                            <a href="portfolio.html">portfolio</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--  END Menu  -->
+                        </nav>
+                    </div>
+                </header>
+                <!--  END Header & Menu  -->
+
+                <!--  Page Content  -->
+                <div id="page-header" class="light" data-animation="top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--h2><strong>Impulsamos un cambio
+                                        positivo para las personas</strong>,
+                                        <em>las empresas y
+                                                las organizaciones</em>.</h2-->
+                                <h2><strong>I am an independent professional with a creative agency</strong> specializing in Marketing, Communication, Design & web development.<em> We are different, because we are like you. We do not follow all customers </em>, but only those who have chosen to be unique, to differentiate themselves from anyone else.</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-link">
+                        <a href="#page-content" data-title="scroll-down"></a>
+                    </div>
                 </div>
-                <p>Splash Marke Team</p>
-            </div>
-            <a href="#slide-2" class="slide__scroll-link">
-                <div class="slide__scroll-line"></div>
-            </a>
-        </div>
-        <div class="col col--2">
-            <div class="col__image-wrap">
-                <img class="img img--1" src="assets/images/Yadira Muñoz.jpeg" />
-            </div>
-        </div>
-    </section>   
-    
-    <section class="slide slide--2" id="slide-2">
-        <div class="col col--1">
-            <div class="col__content col__content--2">
-                <h2 class="col__content-title"><span class="line__inner">Monica</span><br /><span class="line__inner">Venzor</span></h2>
-                <div class="col__content-wrap">
-                    <p class="col__content-txt">El Ing. Francisco Lueza siempre se mostró atento y abierto a explicarme los cambios 
-                    realizados al proyecto, hasta llegar a la conformidad con el diseño de mi página web.</p>
-                    <a href="#" class="slide-link">
-                        <div class="slide-link__circ"></div>
-                        <div class="slide-link__line"></div>
-                    </a>
+                <div id="page-content" class="home">
+                    <section class="services-wrap">
+                       <div class="container">
+                            <div class="row">
+                                <div class="offset-xl-2 col-xl-10">
+                                    <div itemscope itemtype="http://schema.org/Service" class="service" data-animation="bottom">
+                                        <div itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness" class="title-wrap">
+                                            <h3 itemprop="name" class="title">design</h3>
+                                        </div>
+                                        <div class="description">
+                                            <p>If something is useful, but it is not also beautiful and usable, we do not like it. We think to the perfect outfit to introduce you to your customers: that it's your brand or the right interface to reach them.</p>
+                                        </div>
+                                        <div class="cta">
+                                            <a href="https://api.whatsapp.com/send?phone=527291656567&text=Quiero%20una%20cotizaci%C3%B3n" target="_blank" class="btn-line">price quote</a>
+                                        </div>
+                                    </div>
+                                    <div itemscope itemtype="http://schema.org/Service" class="service" data-animation="bottom">
+                                        <div itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness" class="title-wrap">
+                                            <h3 itemprop="name" class="title">development</h3>
+                                        </div>
+                                        <div class="description">
+                                            <p>There is no idea that we can not make digital. We design, build and manage all-in-one solutions with a technological mind and a creative heart.</p>
+                                        </div>
+                                        <div class="cta">
+                                            <a href="https://api.whatsapp.com/send?phone=527291656567&text=Quiero%20una%20cotizaci%C3%B3n" target="_blank" class="btn-line">price quote</a>
+                                        </div>
+                                    </div>
+                                    <div itemscope itemtype="http://schema.org/Service" class="service" data-animation="bottom">
+                                        <div itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness" class="title-wrap">
+                                            <h3 itemprop="name" class="title">marketing</h3>
+                                        </div>
+                                        <div class="description">
+                                            <p>We know how to get to the people who are already looking for you. If there is a target for your idea, we can reach it. We will define together goals, strategy and the budget to get where you’ve dreamed.</p>
+                                        </div>
+                                        <div class="cta">
+                                            <a href="https://api.whatsapp.com/send?phone=527291656567&text=Quiero%20una%20cotizaci%C3%B3n" target="_blank" class="btn-line">price quote</a>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </section>
+                    <section class="projects-wrap" data-animation="bottom">
+                         <div class="container" id="projects">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" data-clicks itemprop="name">Tenorio Abogados TASC</a><sup>2019</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" data-clicks itemprop="name">Escuela del Rebozo</a><sup>2019</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" data-clicks itemprop="name">Universidad de Celaya</a><sup>2019</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" itemprop="name">Banny y Yaz</a><sup>2018</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" data-clicks itemprop="name">Steak & Grills</a><sup>2018</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" data-clicks itemprop="name">Axé Capoeira</a><sup>2018</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" data-clicks itemprop="name">Energy Dance Studio</a><sup>2018</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" itemprop="name">Forma Vital</a><sup>2017</sup></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="#" itemprop="name">Ktastrofe</a><sup>2017</sup></div>
+                                            </div>
+                                        </li>
+                                        <!--li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="emmearredo.html" data-clicks itemprop="name">EmmeArredo</a><sup>2016</sup></div>
+                                                <div class="image-emmearredo"></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="oleomec.html" data-clicks itemprop="name">Oleomec</a><sup>2016</sup></div>
+                                                <div class="image-oleomec"></div>
+                                            </div>
+                                        </li>
+                                        <li itemscope itemtype="http://schema.org/CreativeWork">
+                                            <div class="project">
+                                                <div class="title"><a href="panevino-architettura.html" data-clicks itemprop="name">Pane Vino Architettura</a><sup>2016</sup></div>
+                                                <div class="image-panevino"></div>
+                                            </div>
+                                        </li-->
+                                    </ul>
+                                    <div class="section-title">
+                                        <h3 class="title">Projects</h3>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </section>
+                    <section class="about-wrap" data-animation="bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-lg-3 col-lg-9">
+                                    <div class="content">
+                                        <p class="big">Francisco Lueza is not the usual creative freelance. It's yours. I started to learn web development autonomously in the World Wide Web Consortium (W3C). Currently I am studying Full Stack Web Development in Platzi. We design, build and operate solutions and integrated digital strategies, tailored and for all needs.</p>
+                                    </div>
+                                    <div class="section-title">
+                                        <h3 class="title">who I am</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <p>Tribu de Impacto</p>
-            </div>
-            <a href="#slide-3" class="slide__scroll-link">
-                <div class="slide__scroll-line"></div>
-            </a>
-        </div>
-        <div class="col col--2">
-            <div class="col__image-wrap">
-                <img class="img img--1" src="assets/images/Monica Venzor- Tribu de Impacto.jpg" />
-            </div>
-        </div>
-    </section>   
-    
-    <section class="slide slide--3" id="slide-3">
-        <div class="col col--1">
-            <div class="col__content col__content--3">
-                <h2 class="col__content-title"><span class="line__inner">Klaudia</span><br /><span class="line__inner">Muñoz</span></h2>
-                <div class="col__content-wrap">
-                    <p class="col__content-txt">Extraordinario servicio del Ing. Francisco Lueza . Siempre dispuesto a resolver cualquier 
-                    situación que se presente. Un extraordinario profesionalismo. Engrandeser está agradecido por su trabajo y dedicación. 
-                    Lo recomiendo ampliamente.</p>
-                    <a href="#" class="slide-link">
-                        <div class="slide-link__circ"></div>
-                        <div class="slide-link__line"></div>
-                    </a>
-                </div>
-                <p>EngrandeSer</p>
-            </div>
-            <a href="#slide-4" class="slide__scroll-link">
-                <div class="slide__scroll-line"></div>
-            </a>
-        </div>
-        <div class="col col--2">
-            <div class="col__image-wrap">
-                <img class="img img--1" src="assets/images/Klaudia Muñoz.jpg" />
-            </div>
-        </div>
-    </section>   
-    
-    <section class="slide slide--4" id="slide-4">
-        <div class="col col--1">
-            <div class="col__content col__content--4">
-                <h2 class="col__content-title"><span class="line__inner">Cristina</span><br /><span class="line__inner">Ambrosio</span></h2>
-                <div class="col__content-wrap">
-                    <p class="col__content-txt">CAPACI-VISION se desarrolla gracias a la asesoría, creación del sitio web y excelente servicio
-                        del Ing. Francisco Lueza… sigamos profesionalizándonos juntos.</p>
-                    <a href="#" class="slide-link">
-                        <div class="slide-link__circ"></div>
-                        <div class="slide-link__line"></div>
-                    </a>
-                </div>
-                <p>Capaci-Vision</p>
-            </div>
-            <a href="#slide-5" class="slide__scroll-link">
-                <div class="slide__scroll-line"></div>
-            </a>
-        </div>
-        <div class="col col--2">
-            <div class="col__image-wrap">
-                <img class="img img--1" src="assets/images/Cristina Ambrosio.jpeg" />
+                
+                <!--  Footer  -->
+                <footer itemscope itemtype="http://schema.org/WPFooter" data-animation="bottom">
+                     <div class="container" id="contact">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="top">
+                                    <!--div class="awards">
+                                        <h3>Awards</h3>
+                                        <div class="single-award">
+                                            <div class="img-awwwards"></div>
+                                            <p>4x</p>
+                                        </div>
+                                    </div>
+                                    <div class="awards">
+                                        <div class="single-award">
+                                            <div class="img-cssda"></div>
+                                            <p>17x</p>
+                                        </div>
+                                    </div-->
+                                    <div class="info">
+                                        <h3>Start a project?</h3>
+                                        <a href="mailto:contacto@digitaladvertisingteam.com.mx?subject=Start new project" class="mail">contacto@digitaladvertisingteam.com.mx</a>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="copy">
+                                        <h3>Francisco Lueza</h3>
+                                        <h4>Creative Freelancer</h4>
+                                        <h4>WhatsApp 72916.56567</h4>
+                                        <!--ul itemscope itemtype="http://schema.org/Organization">
+                                            <li><a itemprop="sameAs" href="#" target="_blank">Fb</a></li>
+                                            <li><a itemprop="sameAs" href="#"  target="_blank">Tw</a></li>
+                                            <li><a itemprop="sameAs" href="#" target="_blank">In</a></li>
+                                        </ul-->
+                                    </div>
+                                    <div class="info" itemscope itemtype="http://schema.org/LocalBusiness">
+                                        <h3 itemprop="addressRegion">Mexico</h3>
+                                        <h4 itemprop="addressLocality">Tenango del Valle</h4>
+                                        <h4 itemprop="streetAddress">C.P. 52300</h4>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Tell us about your project</h3>
+                                        <a href="https://www.digitaladvertisingteam.com.mx/" target="_blank">Our agency</a>
+                                        <!--a href="privacy-policy.html">Privacy Policy</a-->
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!--  END Footer. Class fixed for fixed footer  -->
+                
             </div>
         </div>
-    </section>
-    
-    <!--section class="slide slide--5" id="slide-5">
-        <div class="col col--1">
-            <div class="col__content col__content--5">
-                <h2 class="col__content-title"><span class="line__inner">Exit</span><br /><span class="line__inner">No. 5</span></h2>
-                <div class="col__content-wrap">
-                    <p class="col__content-txt">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
-                    <a href="#" class="slide-link">
-                        <div class="slide-link__circ"></div>
-                        <div class="slide-link__line"></div>
-                    </a>
-                </div>
-            </div>
-            <a href="#slide-6" class="slide__scroll-link">
-                <div class="slide__scroll-line"></div>
-            </a>
-        </div>
-        <div class="col col--2">
-            <div class="col__image-wrap">
-                <img class="img img--1" src="https://assets.codepen.io/61488/duda-5.jpg" />
-            </div>
-        </div>
-    </section>   
-    
-    <section class="slide slide--6" id="slide-6">
-        <div class="col col--1">
-            <div class="col__content col__content--6">
-                <h2 class="col__content-title"><span class="line__inner">Smart</span><br /><span class="line__inner">No. 6</span></h2>
-                <div class="col__content-wrap">
-                    <p class="col__content-txt">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod.</p>
-                    <a href="#" class="slide-link">
-                        <div class="slide-link__circ"></div>
-                        <div class="slide-link__line"></div>
-                    </a>
-                </div>
-            </div>
-            <a href="#slide-7" class="slide__scroll-link">
-                <div class="slide__scroll-line"></div>
-            </a>
-        </div>
-        <div class="col col--2">
-            <div class="col__image-wrap">
-                <img class="img img--1" src="https://assets.codepen.io/61488/duda-6.jpg" />
-            </div>
-        </div>
-    </section-->   
-    
-    <footer class="footer" id="slide-7">
-        <a class="footer__link" href="http://www.duda.ie/" target="_blank">Frank Lueza</a>
-        <a class="footer__link-top" href="#slide-0">Top<span class="footer__link-top-line"></span></a>
-        <p class="footer__copyright">WP México © 2020 Frank Lueza</p>
-    </footer>
+        <!--  Main Wrap  -->
+
+        <script src="master-dist.js"></script>
+        <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="390669248156590"
+  theme_color="#f15a29"
+  logged_in_greeting="¡Hola! ¿En que podemos ayudarte?"
+  logged_out_greeting="¡Hola! ¿En que podemos ayudarte?">
 </div>
-<!-- partial -->
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js'></script>
-<!--script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js'></script-->
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script><script  src="./script.js"></script>
-
-</body>
+    </body>
 </html>
