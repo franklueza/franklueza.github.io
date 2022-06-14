@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura y Petrarch</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="content-wrapper">
+            <div class="header-title">
+                <h1 class="title">A model of Laura and Petrarch</h1>
+            </div>
+            <nav class="nav-primary">
+                <div class="nav-list">
+                    <a href="#introduction">Introduction</a>
+                    <a href="Petrarch's-emotional-cycle.html">Petrarch's emotional cycle</a>
+                    <a href="A-model-of-Laura-and-Petrarch.html">A model of Laura and Petrarch</a>
+                    <a href="The-L-P-cycle.html">The L-P cycle</a>
+                    <a href="Slow-fast-limit-cycles.html">Slow-fast limit cycles</a>
+                    <a href="Concluding-remarks.html">Concluding remarks</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        
+        <article>
+            <div class="hero">
+                <figure>
+                    <img src="assets/images/Portraits-of-Laura-and-Petrarch-from-Internet-resources.png" alt="Laura & Petrarch">
+                    <figcaption>
+                        Portraits of Laura and Petrarch (Biblioteca Medicea Laurenziana, Mns. Plut. cc. VIIIv-
+                        IX, Florence, Italy; courtesy of Ministero per i Bene Culturali e Ambientali).
+                    </figcaption>
+                </figure>
+            </div>
+            <h2>A model of Laura and Petrarch</h2>
+            <p>A model of Laura and Petrarch. The emotions of Laura and Petrarch are
+                now modeled by means of three ordinary differential equations. Laura is described by
+                a single variable L(t), representing her love for the poet at time t. Positive and high
+                values of L mean warm friendship, while negative values should be associated with
+                coldness and antagonism. The personality of Petrarch is more complex; its description
+                requires two variables: P(t), love for Laura, and Z(t), poetic inspiration. High values
+                of P indicate ecstatic love, while negative values stand for despair.</p>
+            <p>The model is the following:</p>
+            <div class="hero">
+                <img src="assets/images/Model-Laura-and-Petrarch.PNG" alt="Model Laura and Petrach">
+            </div>
+            <p>where R<sub>L</sub>(.) and R<sub>P</sub>(.) are reaction functions specified below, A<sub>P</sub> [A<sub>L</sub>] is the appeal
+                (physical, as well as social and intellectual) of Petrarch [Laura], and all greek letters  are positive constant parameters 
+                (this means that variations in the personalities of
+                Laura and Petrarch due to aging or other external factors are not considered).</p>
+            <p>The rate of change of the love of Laura (eq. (1)) is the sum of three terms.
+                The first, negative for positive L, describes the <em>forgetting process</em> characterizing individual. 
+                The second, namely R<sub>L</sub> (P), is the reaction of Laura to the love of Petrarch,
+                while the third is her response to his appeal. Equation (2) is similar to (1) with one
+                relevant exception: the response of Petrarch to the appeal of Laura depends also upon
+                his inspiration Z. This takes into account the well-established fact that high moral
+                tensions, like those associated with artistic inspiration, attenuate the role of the most
+                basic instincts. And there is no doubt that the tensions between Petrarch and Laura
+                are of a passionate nature. For example, in sestina XXII, he says</p>
+            <blockquote>
+                Con lei foss'io da che si parte il sole, <br>
+                et non ci vedess' altri che le stelle, <br>
+                sol una- nocte, et mai non fosse l'alba; <br>
+                [Would I were with her when first sets the sun, <br>
+                and no one else could see us but the stars, <br>
+                one night alone, and it were never dawn;]
+            </blockquote>
+            <p>while in his Posteritati he confesses (in Latin): "Libidem me prorsus expertem dicere
+                posse optarem quidem, sed si dicat mentiar" [I would truly like to say absolutely
+                that I was without libidinousness, but if I said so I would be lying]. Finally, (3)
+                simply says that the love of Petrarch sustains his inspiration which, otherwise, would
+                exponentially decay with a time constant 1/&alpha;<sub>3</sub>. In other words, poetic inspiration is
+                an exponentially weighted integral of the passion of the poet for his mistress.</p>
+            <p>The two reaction functions R<sub>L</sub>(P) and R<sub>P</sub>(L) must now be specified. Since most
+                individuals love to be loved and hate to be hated, the most simplistic choice (see [1])
+                would be to assume that the reaction functions are linear. The linearity of R<sub>P</sub>(L)
+                is undoubtedly acceptable (at least for L < 0) since in his poems the poet has very
+                intense reactions to the most relevant signs of antagonism from Laura. Thus, we
+                assume</p>
+            <img src="assets/images/eq-4.PNG" alt="Equation 4">
+            <p> It is to be noted that the use of the proportionality coefficient 32, already employed
+                in (2) to specify the response of Petrarch to the appeal of Laura, is always possible
+                by measuring AL in suitable units.</p>
+            <p> On the other hand, a linear reaction function is not appropriate for Laura. In
+                fact, only close to the origin can RL(P) be assumed to be linear, thus interpreting the
+                natural inclination of a beautiful high-society lady to stimulate harmless flirtations.
+                But Laura never goes too far beyond gestures of pure courtesy: she smiles and glances.
+                However, when Petrarch becomes more demanding and puts pressure on her, even
+                indirectly when his poems are sung in public, she reacts very promptly and rebuffs
+                him, as described explicitly in a number of poems, like sonnet XXI:</p>
+            <blockquote>
+                Mille fiate, o dolce mia guerrera, <br>
+                per aver co' begli occhi vostri pace <br>
+                v' aggio proferto il cor; ma voi non piace <br>
+                mirar si basso colla mente altera. <br>
+                [A thousand times, o my sweet enemy, <br>
+                to come to terms with your enchanting eyes <br>
+                I've offered you my heart, yet you despise <br>
+                aiming so low with mind both proud and free.]
+            </blockquote>
+            <p> This suggests the use of a reaction function R<sub>L</sub>(P) which, for P > 0, first increases
+                and then decreases. But the behavior of Laura is also nonlinear for negative values
+                of P. In fact, when P << 0, i.e., when the poet despairs, Laura feels very sorry for
+                him. Following her genuine Catholic ethic she arrives at the point of overcoming
+                her antagonism by strong feelings of pity, thus reversing her reaction to the passion
+                of the poet. This behavioral characteristic of Laura is repeatedly described in the
+                Canzoniere. For example, in sonnet LXIII the poet says
+               </p>
+            <blockquote>
+                Volgendo gli occhi al mio novo colore <br>
+                che fa di morte rimembrar la gente, <br>
+                pieta vi mosse; onde, benignamente <br>
+                salutando, teneste in vita il core. <br>
+                [Casting your eyes upon my pallor new, <br>
+                which thoughts of death recalls to all mankind, <br>
+                pity in you I've stirred; whence, by your kind <br>
+                greetings, my heart to life's kept true.]
+            </blockquote>
+            <p>The above is equivalent to saying that the function R<sub>L</sub>(P), besides having a positive
+                maximum for P > 0, has a negative minimum for P < 0.</p>
+            <p>In the following, Laura's reaction function RL(P) is assumed to be a cubic function, i.e.,</p>
+            <img src="assets/images/Eq-5.PNG" alt="Equation 5">
+            <p> where &beta;<sub>1</sub> in this equation is justified  as &beta;<sub>2</sub> in (4). Thus, for P = &upsih; flattery compensastes
+                for antagonism (so that R<sub>L</sub> (&upsih;) = 0), while for P = -&upsih; antagonism is compensated
+                for by pity. Moreover, the value of P for which the reaction is maximum [minimum]
+                is &upsih;/&#8730;3 [-,&upsih;/&#8730;3]. Obviously, in no way can one support, from the <em>Canzoniere</em> and its
+                related historical information, the specific choice (5) for Laura's reaction function. It
+                is better to confess that this choice is due to convenience, since it allows one to derive
+                analytically a number of interesting results. Nevertheless, these results are robust, in
+                the sense that they also hold for other reaction functions, obtained from (5) through
+                reasonable perturbations. This point will be discussed later.</p>
+            <p>In conclusion, if one takes into account (4), (5), the Laura and Petrarch model
+                (1)-(3) becomes</p>
+            <img src="assets/images/eq 1-3.PNG" alt="MLaura and Petrarch model (1)-(3)">
+            <p>This is the model to be discussed in what follows. It is important to notice that
+                this model encapsulates the personalities of Laura and Petrarch as they emerge from
+                all the poems of the Canzonriere, and not from the particular 23 poems analyzed by Jones. Thus, the model and the conclusions one can draw from it are "independent"
+                from those (see Fig. 1) obtained empirically by Jones.
+               </p>
+            <section>
+                <h3>References</h3>
+                <ol>
+                    <li>S. H. STROGATZ, Love affairs and differential equations, Math. Magazine, 61 (1988), p. 35.</li>
+                    <li>M. J. RADZICKI, Dyadic processes, tempestuous relationships, and system dynamics, System
+                        Dynamics Review, 9 (1993), pp. 79-94.</li>
+                    <li>S. H. STROGATZ, Nonlinear Dynamics and Chaos with Applications to Physics, Biology, Chem-
+                        istry and Engineering, Addison-Wesley, Reading, MA, 1994.
+                       </li>
+                    <li>F. J. JONES, The Structure of Petrarch's Canzoniere, Brewer, Cambridge, UK, 1995.</li>
+                    <li>A. I. KHIBNIK, Y. A. KUZNETSOV, V. V. LEVITIN, AND E. V. NIKOLAEV, Continuation tech-
+                        niques and interactive software for bifurcation analysis of ODEs and iterated maps, Phys.
+                        D, 62 (1993), pp. 360-371.</li>
+                    <li>F. HOPPENSTEADT, Asymptotic stability in singular perturbation problems, J. Differential Equa-
+                        tions, 15 (1974), pp. 510-521</li>
+                    <li>R. E. O'MALLEY, JR., Introduction to Singular Perturbations, Academic Press, New York,
+                        1974</li>
+                    <li>A. N. TIKHONOV, Systems of differential equations containing small parameters at derivatives,
+                        Mat. Sb., 31 (1952), pp. 575-586 (in Russian).</li>
+                    <li>L. C. PONIRYAGIN, Asymptotic behavior of solutions of systems of differential e a small parameter at higher derivatives, Izv. Akad. Nauk. SSSR Ser. Math., 21 (1957),
+                        pp. 605-626 (in Russian).</li>
+                    <li>S. MURATORI AND S. RINALDI, Remarks on competitive coexistence, SIAM J. Appl. Math., 49
+                        (1989), pp. 1462-1472</li>
+                    <li>S. MURATORI AND S. RINALDI, A separation condition for the existence of limit cycles in slow-
+                        fast systems, Appl. Math. Modelling, 15 (1991), pp. 312-318.</li>
+                    <li>D. LUDWIG, D. D. JONES, AND C. S. HOLLING, Qualitaive analysis of insect outbreak systems:
+                        The spruce budworm and forest, J. Anim. Ecol., 47 (1978), pp. 315-332.
+                       </li>
+                    <li> S. MURATORI AND S. RINALDI, Low- and high-frequency oscillations in three-dimensional food
+                        chain systems, SIAM J. Appl. Math., 52 (1992), pp. 1688-1706.
+                       </li>
+                    <li> S. RINALDI AND S. MURATORI, Limit cycles in slow-fast forest-pest models, Theor. Popul. Biol.,
+                        41 (1992), pp. 26-43.
+                       </li>
+                </ol>
+            </section>
+            <section>
+                <h3>To understand more about nonlinear systems you can consult the following books</h3>
+                <table summary="Books dinamic non linear" class="table__books">
+                    <caption>Books on nonlinear dynamics</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Books</th>
+                        <th scope="col">Authors</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Nonlinear Dynamics and Chaos</th>
+                        <td>Steven Strogatz</td> 
+                      </tr>
+                      <tr>
+                        <th scope="row">The Physics of Phase Space</th>
+                        <td>Young S Kim</td>
+                        <td>Woodford W Zachary </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Chaos, Complexity and Leadership 2020</th>
+                        <td>Şefika Şule Erçetin </td>
+                        <td>Şuay Nilhan Açıkalın </td>
+                        <td>Emir Vajzovic</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th scope="row">Dynamics with Chaos and Fractals</th>
+                        <td>Marat Akhmet </td>
+                        <td>Mehmet Onur Fen</td>
+                        <td>Ejaily Milad Alejaily </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+            </section>
+            <div class="nextprev">
+                <a href="Petrarch's-emotional-cycle.html" class="button-nav">Previous</a>
+                <a href="The-L-P-cycle.html" class="button-nav">Next</a>
+            </div>
+        </article>
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container">
+                    <div class="footer__name">
+                        <h1 class="footer__title">Frank Lueza</h1>
+                        <span class="footer__subtitle">Front End Developer</span>
+                        <a  class="contact" href="contact.html">Contact</a>
+                    </div>
+                    <div class="audio">
+                        <audio controls autoplay>
+                            <source src="assets/audio/The-Cure.mpeg" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                          </audio>
+                    </div>
+                    <p class="footer__copy">©Frank Lueza. ALL right reserved</p>
+                    
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
