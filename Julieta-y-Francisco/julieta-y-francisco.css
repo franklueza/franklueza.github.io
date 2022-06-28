@@ -1,0 +1,206 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "George X";
+    src: url("./Fonts/George\ X.otf");
+}
+@font-face {
+    font-family: "SuisseBPrint-Regular";
+    src: url("./Fonts/SuisseBPIntl-Regular.otf");
+}
+@font-face {
+    font-family: "boogy-brut-poster-regular";
+    font-display:swap;
+    src: url("./Fonts/boogy-brut-poster-regular.woff2");
+}
+@font-face {
+    font-family: "boogy-brut-wild-black";
+    font-display:swap;
+    src: url("./Fonts/boogy-brut-wild-black.woff2");
+}
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #CC1B34;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+h2{
+    font-family:boogy-brut-poster-regular;
+}
+h3{
+    font-family:boogy-brut-poster-regular;
+    font-weight: 600;
+    line-height: 1.8em;
+}
+h1 {
+    font-family:boogy-brut-poster-regular;
+    font-size: 6em;
+    line-height: 1.2em;
+    margin-bottom: 15px;
+    color: #CC1B34;
+}
+h2{
+    font-size: 4em;
+    color: #CC1B34;
+}
+h3{
+    font-size: 2.5em;
+}
+
+
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) url(https://traversymedia.com/downloads/cover.jpg) no-repeat center/cover;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    z-index: 10;
+}
+figure{
+    text-align: center;
+    margin: 0;
+}
+figcaption{
+    font-size: 17.6px;
+    margin-top: 1.5em;
+    line-height: 1.5em;
+}
+p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 33px;
+}
+pre{
+    font-size: 1.8em;
+    line-height: 1.8em;
+}
+sub, sup{
+    font-size: 15px;
+}
+span{
+    font-weight: 600;
+}
+/*p:first-child{
+    font-size: 27.5px;
+    color: lime;
+}*/
+blockquote{
+    font-size: 22px;
+    line-height: 1.8em;
+    padding: 0 1.5em;
+    border-left: 4px solid #000;
+}
+/* 
+La propiedad width (anchura) define el ancho de la imagen. Si no especificas un valor, el navegador utilizará el tamaño original de la imagen. En el ejemplo de arriba, nosotros le dimos 100% de valor, pero aún no aparece de pared a pared. Arreglaremos esto en un momento.
+
+La propiedad height(altura) determina la altura de la imagen. El valor auto le dice al navegador que no conocemos exactamente la altura pero deseamos que sea proporcional.
+*/
+
+/*Artículo*/
+.content-article{
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 70px 50px 0;
+}
+a{
+    color: #0a0a23;
+}
+a:hover{
+    text-decoration: none;
+}
+article figure{
+    margin: 33px 0 66px;
+}
+.song{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
