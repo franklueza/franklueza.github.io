@@ -48,10 +48,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-    background-color: #CC1B34;
-}
+html, body {
+    height: 100%;
+  }
+
 ol, ul {
 	list-style: none;
 }
@@ -71,6 +71,9 @@ img{
     width: 100%;
     height: auto;
 }
+h1, h2, h3{
+    color:#CC1B34;
+}
 h2{
     font-family:boogy-brut-poster-regular;
 }
@@ -78,68 +81,19 @@ h3{
     font-family:boogy-brut-poster-regular;
     font-weight: 600;
     line-height: 1.8em;
+    font-size: 2.5em;
 }
 h1 {
     font-family:boogy-brut-poster-regular;
-    font-size: 5.5em;
+    font-size: 6em;
     line-height: 1.2em;
     margin-bottom: 15px;
-    color: #CC1B34;
+  
 }
-h2{
-    font-size: 4em;
-    color: #CC1B34;
-}
-h3{
-    font-size: 2.5em;
+sub{
+    font-size: 12px;
 }
 
-
-.showcase {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    color: white;
-}
-
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: var(--primary-color) url(https://traversymedia.com/downloads/cover.jpg) no-repeat center/cover;
-}
-
-.video-container video {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.video-container:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.content {
-    z-index: 10;
-}
 figure{
     text-align: center;
     margin: 0;
@@ -156,25 +110,15 @@ p{
     margin-top: 0;
     margin-bottom: 33px;
 }
-pre{
-    font-size: 1.8em;
-    line-height: 1.8em;
-}
-sub, sup{
-    font-size: 15px;
-}
+
 span{
     font-weight: 600;
 }
-/*p:first-child{
-    font-size: 27.5px;
-    color: lime;
-}*/
 blockquote{
     font-size: 22px;
     line-height: 1.8em;
     padding: 0 1.5em;
-    border-left: 4px solid #000;
+    border-left: 4px solid #fff;
 }
 /* 
 La propiedad width (anchura) define el ancho de la imagen. Si no especificas un valor, el navegador utilizará el tamaño original de la imagen. En el ejemplo de arriba, nosotros le dimos 100% de valor, pero aún no aparece de pared a pared. Arreglaremos esto en un momento.
@@ -204,3 +148,50 @@ article figure{
 }
 
 
+
+  
+ 
+
+
+
+
+  
+  main {
+    background: rgba(black, 0.66);
+    color: white;
+    position: relative;
+    padding: 1rem;
+    p {
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+  }
+  .img-EF{
+    width: 70%;
+  }
+  h1 {
+    text-align: center;
+    span {
+      display: block;
+      font-size: 10vw;
+      letter-spacing: -1.3vw;
+    }
+  }
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+
+  .viewport-header {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
