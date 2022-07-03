@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,37 +10,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <section class="showcase">
+  <video src="https://cms.steve-edge.com/wp-content/uploads/2021/10/sed-video.mp4" autoplay loop playsinline muted></video>
+
+<header class="viewport-header">
+  <h1>
+    Julieta & Francisco <br>
+    <span>Love / affairs</span>
+  </h1>
+</header>
+
+<main>
+  
+  
+    <!--section class="showcase">
         <div class="video-container">
           <video src="https://cms.steve-edge.com/wp-content/uploads/2021/10/sed-video.mp4" autoplay muted loop></video>
         </div>
         <div class="content">
           <h1 data-aos="fade">JULIETA Y FRANCISCO</h1>
           <h2 data-aos="fade">LOVE / AFFAIRS</h2>
-          <!--a href="#about" class="btn">Sign Up</a-->
          
         </div>
-      </section>
+      </section-->
     <article class="content-article">
-        <div class="song">
-            <audio controls autoplay loop>
-                <source src="assets/audio/Que Soy Yo Para Ti.mp3" type="audio/mpeg">
-              Your browser does not support the audio element.
-              </audio>
-        </div>
-        <br>
-        <br>
-        <br>
-
-        
+              
         <h3 data-aos="fade">RESUMEN</h3>
         <p data-aos="fade" data-aos-delay="600">Se proponen tres ecuaciones diferenciales ordinarias para modelar la <span>Dinámica del Amor entre Julieta y Francisco</span>. 
           Las ecuaciones son no-lineales, pero se pueden estudiar mediante el enfoque de perturbación de los parámetros de 
           comportamiento que implican un ciclo emocional de Francisco hacia lo que Julieta le hace sentir en el tiempo.</p>
-  
-      
     
         <h3 data-aos="fade">INTRODUCCIÓN</h3>
         <p data-aos="fade" data-aos-delay="600">Desde que Newton introdujo el cálculo diferencial, los fenómenos dinámicos en la física, la biología, la economía y 
@@ -122,11 +122,11 @@
            valores negativos representan desesperación.
         </p>
         <p data-aos="fade" data-aos-delay="600">El modelo es el siguiente:</p>
-        <pre data-aos="fade" data-aos-delay="600">
-          (1)     dJ/dt = -&#x03B1;<sub>1</sub>J(t) + R<sub>J</sub>(F(t)) + &#x03B2;<sub>1</sub>A<sub>F</sub> ,
-          (2)     dF/dt = -&#x03B1;<sub>2</sub>J(t) + R<sub>F</sub>(J(t)) + &#x03B2;<sub>2</sub> &#8226; A<sub>J</sub>/(1+&#x03B4;Z(t)) ,
-          (3)     dZ/dt = -&#x03B1;<sub>3</sub>Z(t) + &#x03B2;<sub>3</sub>F(t) ,
-        </pre>
+        <p data-aos="fade" data-aos-delay="600" class="eq">
+         <img src="assets/img/Julieta.png" alt="Ecuación de Julieta">
+         <img src="assets/img/Francisco.png" alt="Ecuación de Francisco">
+         <img src="assets/img/Emotions Francisco.png" alt="Ecuación de Emoción de Francisco" class="img-EF">
+        </p>
         <p data-aos="fade" data-aos-delay="600">donde R<sub>J</sub>(.) y R<sub>F</sub>(.) son funciones de reacción especificadas, a continuación A<sub>F</sub>[A<sub>J</sub>] es el 
           atractivo (tanto físico como social e intelectual) de Francisco[Julieta], y todas las letras griegas son parámetros constantes positivos 
           (esto significa que no se consideran variaciones en las personalidades de Julieta y Francisco debidas a otros factores externos).
@@ -157,9 +157,9 @@
             y odian ser odiadas, la opción más simple sería asumir que las funciones de reacción son lineales. La linealidad de R<sub>F</sub>(L) es sin duda 
             aceptable (al menos para J < 0) ya que en sus poemas el poeta tiene reacciones muy intensas ante las señales de antagonismo más relevantes de Julieta.
             Así, suponemos</p>
-          <pre data-aos="fade" data-aos-delay="600">
-            (4)     R<sub>F</sub>(J) = &#x03B2;<sub>2</sub>J 
-          </pre>
+          <p data-aos="fade" data-aos-delay="600" class="eq">
+            <img src="assets/img/RF.png" alt="Reacción de Francisco" class="img-EF">
+          </p>
           <p data-aos="fade" data-aos-delay="600">Cabe señalar que el uso del coeficiente de proporcionalidad &#x03B2;<sub>2</sub>, ya empleado en (2) para especificar la respuesta de Francisco 
             al llamado de Julieta, siempre es posible midiendo A<sub>J</sub> en unidades adecuadas.</p>
           <p data-aos="fade" data-aos-delay="600">Por otro lado, una función de reacción lineal no es apropiada para Julieta. De hecho, sólo cerca del origen se puede suponer que R<sub>J</sub>(F) 
@@ -185,17 +185,17 @@
           </blockquote> <br>
           <p data-aos="fade" data-aos-delay="600">Lo anterior equivale a decir que la función R<sub>J</sub>(F), además de tener un máximo positivo para F > 0, tiene un mínimo negativo para F < 0.</p>
           <p data-aos="fade" data-aos-delay="600">A continuación, se supone que la función de reacción de Julieta R<sub>J</sub>(F) es una función cúbica, es decir,</p>
-          <pre>
-            (5)     R<sub>J</sub>(F) = &#x03B2;<sub>1</sub>F (1 - (F/&#x03B3;)<sup>2</sup>) ,
-          </pre>
+          <img src="assets/img/RJ.png" alt="Reacción de Julieta" class="img-EF">
+
           <p data-aos="fade" data-aos-delay="600">donde &#x03B2;<sub>1</sub> en esta ecuación se justifica como &#x03B2;<sub>2</sub> en (ec. (4)). Así, para F = &#x03B3;, la adulación compensa el antagonismo 
             (de manera que R<sup>J</sup>(ϒ) = 0), mientras que para F = -&#x03B3; el antagonismo se compensa con la lástima.</p>
           <p data-aos="fade" data-aos-delay="600">En conclusión, si se tiene en cuenta (ec (4) y (5)), el modelo de Julieta y Francisco (ec´s (1), (2) y (3)) se convierte en:</p>
-          <pre data-aos="fade" data-aos-delay="600">
-            (6)     dJ/dt = -&#x03B1;<sub>1</sub>J(t) + &#x03B2;<sub>1</sub> [F(1 - (F/&#x03B3;)<sup>2</sup>) + A<sub>F</sub>] ,
-            (7)     dF/dt = -&#x03B1;<sub>2</sub>J(t) + &#x03B2;<sub>2</sub> [J + A<sub>J</sub>/(1+&#x03B4;Z(t))] ,
-            (8)     dZ/dt = -&#x03B1;<sub>3</sub>Z(t) + &#x03B2;<sub>3</sub>F(t) ,
-          </pre>
+          <p data-aos="fade" data-aos-delay="600" class="eq">
+            <img src="assets/img/dt.png" alt="Ecuación de Julieta">
+            <img src="assets/img/df.png" alt="Ecuación de Francisco">
+            <img src="assets/img/dz.png" alt="Ecuación de Francisco Z(t)">
+            
+          </p>
           <p data-aos="fade" data-aos-delay="600">Este modelo es más complejo, e intenta encapsular las personalidades de Julieta y Francisco, tal cual emergen de las prosas hechas por él.</p>
 
 
@@ -207,9 +207,7 @@
         </p>
         <p data-aos="fade" data-aos-delay="600">Comencemos con los parámetros &#x03B1;<sub>i</sub> = 1, 2, 3, que describen el proceso de olvido. En cuanto a &#x03B1;<sub>1</sub> y &#x03B1;<sub>2</sub> 
           no hay duda de que </p>
-        <pre data-aos="fade" data-aos-delay="600">
-                &#x03B1;<sub>1</sub> > &#x03B1;<sub>2</sub> ,
-        </pre>
+          <img src="assets/img/alfa.png" alt="Ecuación alfa" class="img-EF">
         <p data-aos="fade" data-aos-delay="600">Es decir, Julieta parece no estar muy involucrada, mientras que Francsico definitivamente tiene un apego tenaz. Esto se describe numerosas prosas, por ejemplo:</p>
         <blockquote>
           Sólo y perdido en mis pensamientos, lento voy a cada paso <br>
@@ -219,9 +217,7 @@
           voy comulgando conmigo, como yo lo hago con él.
         </blockquote><br>
         <p data-aos="fade" data-aos-delay="600">Por otra parte,</p>
-        <pre data-aos="fade" data-aos-delay="600">
-                &#x03B1;<sub>2</sub> > &#x03B1;<sub>3</sub> ,
-        </pre>
+        <img src="assets/img/alfa3.png" alt="Ecuación alfa" class="img-EF">
         <p data-aos="fade" data-aos-delay="600">Ya que la inspiración de Francisco decae muy lentamente, en efecto, continúa escribiendo todo el tiempo, incluso cuando Julieta ya no este.</p>
         <p data-aos="fade" data-aos-delay="600">Él escribe:</p>
         <blockquote data-aos="fade" data-aos-delay="600">
@@ -266,9 +262,31 @@
         <h3 data-aos="fade">Agradecimientos</h3>
         <p data-aos="fade" data-aos-delay="600">Agradezco profundamente a <span>Julieta Dávila Mota</span> ("la más bella casualidad"), por la inspiración otorgada en su presencia y ausencia, 
             por todo aquello que nos falto vivir y que en mis sueños perseguía junto a ella. </p>
+        <div class="song">
+          <audio controls autoplay="true">
+              <source src="assets/audio/Que Soy Yo Para Ti.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+        </div>
+        <br><br>
         <h4>¡Siempre tuyo, <span>Francisco Israel Lueza Martínez</span>!</h4> <br><br>
         
     </article>
+  </main>
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+      
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init();
