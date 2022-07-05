@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-svg.js"></script>
+
 
 </head>
 <body>
@@ -23,19 +29,8 @@
 </header>
 
 <main>
-  
-  
-    <!--section class="showcase">
-        <div class="video-container">
-          <video src="https://cms.steve-edge.com/wp-content/uploads/2021/10/sed-video.mp4" autoplay muted loop></video>
-        </div>
-        <div class="content">
-          <h1 data-aos="fade">JULIETA Y FRANCISCO</h1>
-          <h2 data-aos="fade">LOVE / AFFAIRS</h2>
-         
-        </div>
-      </section-->
-    <article class="content-article">
+    
+  <article class="content-article">
               
         <h3 data-aos="fade">RESUMEN</h3>
         <p data-aos="fade" data-aos-delay="600">Se proponen tres ecuaciones diferenciales ordinarias para modelar la <span>Dinámica del Amor entre Julieta y Francisco</span>. 
@@ -123,10 +118,19 @@
         </p>
         <p data-aos="fade" data-aos-delay="600">El modelo es el siguiente:</p>
         <p data-aos="fade" data-aos-delay="600" class="eq">
-         <img src="assets/img/Julieta.png" alt="Ecuación de Julieta">
-         <img src="assets/img/Francisco.png" alt="Ecuación de Francisco">
-         <img src="assets/img/Emotions Francisco.png" alt="Ecuación de Emoción de Francisco" class="img-EF">
-        </p>
+          <p class="eqs">\[(1)...
+            \frac{dJ(t)}{dt} = - &#x03B1;_1 J(t) + R_J(F(t)) + &#x03B2;_1 A_F
+        
+            \]</p>
+          <p class="eqs">\[(2)...
+            \frac{dF(t)}{dt} = - &#x03B1;_2 F(t) + R_F(J(t)) + &#x03B2;_2 \frac{A_J}{1+&#x03B4;Z(t)}
+        
+            \]</p>
+         
+            <p class="eqs">\[(3)...
+            \frac{dZ(t)}{dt} = - &#x03B1;_3Z(t) + &#x03B2;_3F(t)
+        
+            \]</p>
         <p data-aos="fade" data-aos-delay="600">donde R<sub>J</sub>(.) y R<sub>F</sub>(.) son funciones de reacción especificadas, a continuación A<sub>F</sub>[A<sub>J</sub>] es el 
           atractivo (tanto físico como social e intelectual) de Francisco[Julieta], y todas las letras griegas son parámetros constantes positivos 
           (esto significa que no se consideran variaciones en las personalidades de Julieta y Francisco debidas a otros factores externos).
@@ -158,7 +162,10 @@
             aceptable (al menos para J < 0) ya que en sus poemas el poeta tiene reacciones muy intensas ante las señales de antagonismo más relevantes de Julieta.
             Así, suponemos</p>
           <p data-aos="fade" data-aos-delay="600" class="eq">
-            <img src="assets/img/RF.png" alt="Reacción de Francisco" class="img-EF">
+            <p class="eqs">\[(4)...
+              R_F(J) =  &#x03B2;_2 J
+          
+              \]</p>
           </p>
           <p data-aos="fade" data-aos-delay="600">Cabe señalar que el uso del coeficiente de proporcionalidad &#x03B2;<sub>2</sub>, ya empleado en (2) para especificar la respuesta de Francisco 
             al llamado de Julieta, siempre es posible midiendo A<sub>J</sub> en unidades adecuadas.</p>
@@ -185,15 +192,31 @@
           </blockquote> <br>
           <p data-aos="fade" data-aos-delay="600">Lo anterior equivale a decir que la función R<sub>J</sub>(F), además de tener un máximo positivo para F > 0, tiene un mínimo negativo para F < 0.</p>
           <p data-aos="fade" data-aos-delay="600">A continuación, se supone que la función de reacción de Julieta R<sub>J</sub>(F) es una función cúbica, es decir,</p>
-          <img src="assets/img/RJ.png" alt="Reacción de Julieta" class="img-EF">
+          <p class="eqs">\[(5)...
+            R_J(F) =  &#x03B2;_1 F (1- (\frac{F}{&#x03B3;} )^2)
+        
+            \]</p>
 
           <p data-aos="fade" data-aos-delay="600">donde &#x03B2;<sub>1</sub> en esta ecuación se justifica como &#x03B2;<sub>2</sub> en (ec. (4)). Así, para F = &#x03B3;, la adulación compensa el antagonismo 
-            (de manera que R<sup>J</sup>(ϒ) = 0), mientras que para F = -&#x03B3; el antagonismo se compensa con la lástima.</p>
+            (de manera que R<sub>J</sub>(ϒ) = 0), mientras que para F = -&#x03B3; el antagonismo se compensa con la lástima.</p>
           <p data-aos="fade" data-aos-delay="600">En conclusión, si se tiene en cuenta (ec (4) y (5)), el modelo de Julieta y Francisco (ec´s (1), (2) y (3)) se convierte en:</p>
           <p data-aos="fade" data-aos-delay="600" class="eq">
-            <img src="assets/img/dt.png" alt="Ecuación de Julieta">
-            <img src="assets/img/df.png" alt="Ecuación de Francisco">
-            <img src="assets/img/dz.png" alt="Ecuación de Francisco Z(t)">
+          <p class="eqs">\[(6)...
+            \frac{dJ}{dt} = - &#x03B1;_1J + &#x03B2;_1[F(1-( \frac{F}{&#x03B3;} )^2)+A_F]
+        
+            \]</p>
+          <p>
+          <p class="eqs">\[(7)...
+            \frac{dF}{dt} = - &#x03B1;_2F + &#x03B2;_2[J + \frac{A_J}{1+&#x03B4;Z(t)}]
+        
+            \]</p>
+          <p class="eqs">\[(8)...
+            \frac{dZ}{dt} = - &#x03B1;_3Z + &#x03B2;_3F
+        
+            \]</p>
+
+           <p>
+         
             
           </p>
           <p data-aos="fade" data-aos-delay="600">Este modelo es más complejo, e intenta encapsular las personalidades de Julieta y Francisco, tal cual emergen de las prosas hechas por él.</p>
@@ -207,7 +230,9 @@
         </p>
         <p data-aos="fade" data-aos-delay="600">Comencemos con los parámetros &#x03B1;<sub>i</sub> = 1, 2, 3, que describen el proceso de olvido. En cuanto a &#x03B1;<sub>1</sub> y &#x03B1;<sub>2</sub> 
           no hay duda de que </p>
-          <img src="assets/img/alfa.png" alt="Ecuación alfa" class="img-EF">
+          <p class="eqs">\[
+            &#x03B1; _1 > &#x03B1;_2 
+             \]</p>
         <p data-aos="fade" data-aos-delay="600">Es decir, Julieta parece no estar muy involucrada, mientras que Francsico definitivamente tiene un apego tenaz. Esto se describe numerosas prosas, por ejemplo:</p>
         <blockquote>
           Sólo y perdido en mis pensamientos, lento voy a cada paso <br>
@@ -217,8 +242,9 @@
           voy comulgando conmigo, como yo lo hago con él.
         </blockquote><br>
         <p data-aos="fade" data-aos-delay="600">Por otra parte,</p>
-        <img src="assets/img/alfa3.png" alt="Ecuación alfa" class="img-EF">
-        <p data-aos="fade" data-aos-delay="600">Ya que la inspiración de Francisco decae muy lentamente, en efecto, continúa escribiendo todo el tiempo, incluso cuando Julieta ya no este.</p>
+        <p class="eqs">\[
+          &#x03B1; _2 > &#x03B1;_3
+           \]</p>        <p data-aos="fade" data-aos-delay="600">Ya que la inspiración de Francisco decae muy lentamente, en efecto, continúa escribiendo todo el tiempo, incluso cuando Julieta ya no este.</p>
         <p data-aos="fade" data-aos-delay="600">Él escribe:</p>
         <blockquote data-aos="fade" data-aos-delay="600">
           Es hora de morir, <br>
@@ -273,6 +299,17 @@
         
     </article>
   </main>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        packages: ['base', 'newcommand', 'configMacros']
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
     <script>
       var video = document.getElementById("myVideo");
       var btn = document.getElementById("myBtn");
