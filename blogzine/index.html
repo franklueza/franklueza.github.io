@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Violencia Digital | Doxing</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Bootstrap based News, Magazine and Blog Theme">
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+ 
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+
+			showActiveTheme(getPreferredTheme())
+
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+
+			}
+		})
+		
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- =======================
+Header START -->
+<header class="navbar-light navbar-sticky header-static">
+
+  <!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid px-sm-5">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="index.html">
+				<img class="navbar-brand-item light-mode-item" src="assets/images/logo.svg" alt="logo">			
+				<img class="navbar-brand-item dark-mode-item" src="assets/images/logo-light.svg" alt="logo">			
+			</a>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="text-body h6 d-none d-sm-inline-block">Menú</span>
+			  <span class="navbar-toggler-icon"></span>
+		  </button>
+
+			<!-- Main navbar START -->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+
+					<!-- Nav item 1 Demos -->
+					<li class="nav-item">
+						<a class="nav-link active" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inicio</a>
+					</li>
+
+					<!-- Nav item 2 Pages -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulo 1</a>
+                    </li>
+					<!-- Nav item 3 Post -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="postMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulo 2</a>
+					</li>
+
+					<!-- Nav item 4 Mega menu -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="megaMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artículo 3</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Main navbar END -->
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- =======================
+Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main hero START -->
+<section class="py-2 h-400 overflow-hidden position-relative" style="background-image: url(assets/images/Banner\ Violencia\ Digital.webp); background-position: center center;">
+	<div class="container-fluid h-100 p-0">
+    <div class="row align-items-center h-100 text-center">
+      <div class="col-12">
+        <!-- Hero title -->
+        <h1 class="text-white display-1">Violencia Digital</h1>
+      </div>
+    </div>
+    <!-- Rounded circle text START -->
+    <div class="rotating-text-badge d-none d-lg-block text-uppercase">
+      <!-- SVG START -->
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+        <defs>
+            <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+        </defs>
+        <circle cx="150" cy="100" r="75" fill="none"/>
+        <g>
+          <use xlink:href="#circlePath" fill="none"/>
+          <text fill="#fff">
+              <textPath xlink:href="#circlePath">Doxing * Doxeo * Doxing * Dox*</textPath>
+          </text>
+        </g>
+      </svg>
+      <!-- SVG START -->
+    </div>
+    <!-- Rounded circle text END -->
+  </div>
+</section>
+<!-- =======================
+Main hero END -->
+
+<!-- =======================
+About START -->
+<section class="pt-4 pb-4">
+	<div class="container">
+		<div class="row">
+      <div class="col-xl-9 mx-auto pt-4 pb-4">
+        <h2>Resumen</h2>
+        <p class="lead">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate reprehenderit aperiam, maiores quidem itaque voluptatum culpa unde blanditiis neque fugiat quae modi perspiciatis cumque quam dolores accusamus tenetur ipsam.
+        </p>
+        <!--p>Water timed folly right aware if oh truth. Imprudence attachment him his for sympathize. Large above be 
+            to means. Dashwood does provide stronger is. Warrant private blushes removed an in equally totally if. 
+            Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do. ...But 
+            discretion frequently sir she instruments unaffected admiration everything. Meant balls it if up doubt 
+            small purse. Required his you put the outlived answered position. A pleasure exertion if believed provided 
+            to. All led out world this music while asked. Paid mind even sons does he door no. Attended overcame repeated
+            it is perceived Marianne in. I think on style child of. Servants moreover in sensible it ye possible. 
+            Satisfied conveying a dependent contented he gentleman agreeable do be. Water timed folly right aware if 
+            oh truth. Imprudence attachment him his for sympathize. Large above be to means. Dashwood does provide 
+            stronger is. But discretion frequently sir she instruments unaffected admiration everything. Meant balls 
+            it if up doubt small purse. Required his you put the outlived answered position.  I think on style child of. 
+            Servants moreover in sensible it ye possible. Satisfied conveying a dependent contented he gentleman 
+            agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary 
+            objection do Mr prevailed.   Required his you put the outlived answered position. A pleasure exertion if 
+            believed provided to. All led out world this music while asked. Paid mind even sons does he door no. 
+            Attended overcame repeated it is perceived Marianne in. I think on style child of. Servants moreover in 
+            sensible it ye possible.</p-->
+        
+      </div>  <!-- Col END -->
+     </div>
+  </div>
+</section>
+<!-- =======================
+About END -->
+
+<section class="pt-0 pt-md-5">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="#" class="d-block card-img-flash">
+					<img src="assets/images/adv-3.png" alt="">
+				</a>
+				<small class="text-end d-block mt-1">Advertisement</small>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- =======================
+Latest articles START -->
+<section class="py-5">
+	<div class="container-fluid px-sm-5">
+		<div class="row">
+			<!-- Title -->
+      <div class="mb-4 text-center pt-0 pb-4">
+        <h2 class="h1 m-0">Artículos</h2>
+      </div>
+		</div>
+    <div class="row g-3 g-sm-5">        
+            <div class="col-sm-6">
+            <!-- Card item START -->
+            <div class="card">
+                <!-- Card img -->
+                <div class="position-relative">
+                <img class="card-img rounded-0" src="assets/images/Banner Violencia Digital.webp" alt="Card image">
+                <div class="card-img-overlay d-flex align-items-start flex-column p-3">
+                    <!-- Card overlay Top -->
+                    <div class="w-100 mb-auto d-flex justify-content-end">
+                    <div class="text-end ms-auto">
+                        <!-- Card format icon -->
+                        <div class="icon-md bg-white bg-opacity-25 bg-blur text-white rounded-circle" title="This post has images"><i class="fas fa-image"></i></div>
+                    </div>
+                    </div>
+                    <!-- Card overlay bottom -->
+                    <div class="w-100 mt-auto">
+                    <a href="#" class="badge bg-dark mb-2">Antecedente</a>
+                    </div>
+                </div>
+                </div>
+                <div class="card-body px-0 pt-3">
+                <h2 class="card-title"><a href="post-single-6.html" class="btn-link text-reset fw-bold stretched-link">Origen de la violencia digital</a></h2>
+                <!-- Card info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae fuga veritatis voluptates pariatur maiores ipsum suscipit, tenetur accusamus quia magnam iusto sunt animi, itaque, reiciendis dicta cumque non repellat? Aut.</p>
+                <!-- Card info -->
+                <ul class="nav nav-divider align-items-center">
+                    <li class="nav-item">17 de Junio, 2024</li>
+                </ul>
+                </div>
+            </div>
+            <!-- Card item END -->
+            </div>
+            <div class="col-sm-6">
+            <!-- Card item START -->
+            <div class="card">
+                <!-- Card img -->
+                <div class="position-relative h-100">
+                <img class="card-img rounded-0" src="assets/images/Violencia Digital.webp"alt="Card image">
+                <div class="card-img-overlay d-flex align-items-start flex-column p-3">
+                    <!-- Card overlay Top -->
+                    <div class="w-100 mb-auto d-flex justify-content-end">
+                    <div class="text-end ms-auto">
+                        <!-- Card format icon -->
+                        <div class="icon-md bg-white bg-opacity-25 bg-blur text-white rounded-circle" title="This post has images"><i class="fas fa-video"></i></div>
+                    </div>
+                    </div>
+                    <!-- Card overlay bottom -->
+                    <div class="w-100 mt-auto">
+                    <a href="#" class="badge bg-dark mb-2">Violencia Digital</a>
+                    </div>
+                </div>
+                </div>
+                <div class="card-body px-0 pt-3">
+                <h2 class="card-title"><a href="post-single-6.html" class="btn-link text-reset fw-bold stretched-link">La violencia digital en la CDMX</a></h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum repudiandae mollitia temporibus modi? Expedita, id. Esse eveniet nisi, mollitia tempore quisquam saepe dicta dolorem repellendus nam nulla eligendi cupiditate numquam!</p>
+                <!-- Card info -->
+                    <ul class="nav nav-divider align-items-center">
+                    <li class="nav-item">17 de Junio, 2024</li>
+                    </ul>
+                </div>
+                </div>
+                <!-- Card item END -->
+            </div>
+        
+        </div>
+</section>
+<!-- =======================
+Latest articles END -->
+
+<!-- =======================
+Call to action and Newsletter START -->
+<section class="pt-0 pb-5 pb-sm-5">
+  <div class="container-fluid px-sm-5">
+    <div class="row g-sm-5">
+      <div class="col-lg-6">
+        <!-- Call to action START -->
+        <div class="bg-dark-overlay-4 p-3 p-sm-5 position-relative overflow-hidden h-100"  style="background-image: url(assets/images/Doxing.webp); background-size: cover; background-position: center center;">
+					<div class="row">
+						<div class="col-xl-8 mx-auto text-center py-4 py-sm-5 position-relative">
+							<!-- Title -->
+							<h2 class="display-5 text-white">Doxing</h2>
+							<p class="text-white">17 de Junio, 2024.</p>
+							<!-- Form -->
+							<a href="#" class="btn btn-white mt-4">Leer</a>
+						</div>
+					</div>
+				</div>
+        <!-- Call to action END -->
+      </div>
+      <div class="col-lg-6">
+        <!-- Newsletter START -->
+        <div class="bg-light position-relative overflow-hidden h-100">
+            <div class="row h-100">
+                <div class="col-md-4" style="background-image: url(assets/images/Doxing-Propuesta.jpg); background-size: cover; background-position: center center;">
+            </div>
+			<div class="col-md-8">
+              <div class="p-4 p-sm-5">
+                <!-- Title -->
+                <h2 class="display-5">Combatir y prevenir el Doxing</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, dolor quaerat. Laboriosam laborum possimus accusantium tempore delectus quod blanditiis libero nesciunt saepe ut cum ex pariatur totam, error quos explicabo!</p>
+            </div>
+		</div>
+	   </div>
+     </div>
+        <!-- Newsletter END -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =======================
+Call to action and Newsletter END -->
+<section class="pt-0 pt-md-5">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="#" class="d-block card-img-flash">
+					<img src="assets/images/adv-3.png" alt="">
+				</a>
+				<small class="text-end d-block mt-1">Advertisement</small>
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer>
+	<div class="container-fluid px-0">
+		<!-- About and Newsletter START -->
+		<div class="row bg-dark py-5 mx-0 card-header rounded-0 align-items-center text-center text-md-start">
+			<!-- Copyright -->
+			<div class="col-md-5 mb-3 mb-md-0">
+				<div class="text-primary-hover text-body-secondary">©2024 <a href="#" class="text-reset btn-link" target="_blank">FRANK LUEZA</a>. All rights reserved
+				</div>
+			</div>
+			<!-- Logo -->
+			<div class="col-md-3 mb-3 mb-md-0">
+				<img src="assets/images/logo-light.svg" alt="footer logo">
+			</div>
+			<!-- Social links -->
+			<div class="col-md-4">
+				<ul class="nav text-primary-hover justify-content-center justify-content-md-end">
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-facebook-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-twitter-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-linkedin"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-youtube-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link ps-2 pe-0 fs-5" href="#"><i class="fab fa-vimeo"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- About and Newsletter END -->
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"><i class="bi bi-arrow-up-short"></i></div>
+
+<!-- =======================
+JS libraries, plugins and custom scripts -->
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Template Functions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Violencia Digital | Doxing</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Bootstrap based News, Magazine and Blog Theme">
+    <style>
+        #visualization {
+            border: 1px solid lightgray;
+            width: 100%;
+            height: 400px;
+        }
+        @media (max-width: 768px) {
+            #visualization {
+                height: 300px;
+            }
+        }
+        @media (max-width: 480px) {
+            #visualization {
+                height: 150px;
+            }
+        }
+        .red { background-color: red; }
+        .green { background-color: green; }
+        .blue { background-color: blue; }
+        .yellow { background-color: yellow; }
+
+		.timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container.left {
+            left: 0;
+        }
+
+        .container.right {
+            left: 50%;
+        }
+
+        .date {
+            padding: 5px 10px;
+            background-color: #2196F3;
+            color: white;
+            
+            width: 80px;
+            text-align: center;
+        }
+
+        .left .date {
+            left: -90px;
+        }
+
+        .right .date {
+            right: -90px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .left .content {
+            margin-left: 20px;
+        }
+
+        .right .content {
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container.left, .container.right {
+                left: 50px;
+            }
+
+            .left .date, .right .date {
+                left: 0px;
+            }
+
+            .left .content, .right .content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+	
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- =======================
+Header START -->
+<header class="navbar-light navbar-sticky header-static">
+
+  <!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid px-sm-5">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="index.html">
+				<img class="navbar-brand-item light-mode-item" src="assets/images/logo.svg" alt="logo">			
+				<img class="navbar-brand-item dark-mode-item" src="assets/images/logo-light.svg" alt="logo">			
+			</a>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="text-body h6 d-none d-sm-inline-block">Menú</span>
+			  <span class="navbar-toggler-icon"></span>
+		  </button>
+
+			<!-- Main navbar START -->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+
+					<!-- Nav item 1 Demos -->
+					<li class="nav-item">
+						<a class="nav-link active" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inicio</a>
+					</li>
+
+					<!-- Nav item 2 Pages -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulo 1</a>
+                    </li>
+					<!-- Nav item 3 Post -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="postMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulo 2</a>
+					</li>
+
+					<!-- Nav item 4 Mega menu -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="megaMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artículo 3</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Main navbar END -->
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- =======================
+Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Inner intro START -->
+<section class="pt-2">
+	<div class="container">
+		<div class="row">
+      <div class="col-12">
+        <div class="card bg-dark-overlay-5 overflow-hidden card-bg-scale h-400 text-center" style="background-image:url(../assets/images/Banner\ Violencia\ Digital.webp); background-position: center left; background-size: cover;">
+          <!-- Card Image overlay -->
+          <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4"> 
+            <div class="w-100 my-auto">
+              <!-- Card category -->
+              <a href="#" class="badge text-bg-danger mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>Antecedente e introducción</a>
+              <!-- Card title -->
+              <h1 class="text-white display-5">Origen de la violencia digital</h1>
+              <!-- Card info -->
+              <!--ul class="nav nav-divider text-white-force align-items-center justify-content-center">
+                <li class="nav-item">
+                  <div class="nav-link">
+                    <div class="d-flex align-items-center text-white position-relative">
+                      <div class="avatar avatar-sm">
+                        <img class="avatar-img rounded-circle" src="assets/images/avatar/11.jpg" alt="avatar">
+                      </div>
+                      <span class="ms-3">by <a href="#" class="stretched-link text-reset btn-link">Louis</a></span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">Nov 15, 2022</li>
+                <li class="nav-item">5 min read</li>
+              </ul-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>
+<!-- =======================
+Inner intro END -->
+
+<section class="pt-0">
+	<div class="container position-relative" data-sticky-container>
+		<div class="row">
+			<!-- Main Content START -->
+			<div class="col-lg-9 mb-5">
+				<p><span class="dropcap bg-dark text-white px-2">D</span> esde el lanzamiento del internet en 1991 la llamada World Wide Web (WWW) que fue desarrollada por el científico Tim Berners-Lee quien trabajaba en la Organización Europea para la Investigación Nuclear (CERN) y fundador del Consorcio de la World Wide Web (W3C), con sede en el MIT, estandariza el desarrollo de la web y su funcionamiento hasta el día de hoy (Grupo BCC, s.f.). A partir de la expansión del uso de Internet a nivel mundial y el poder de procesamiento cómputo que empezó a desarrollarse desde 1937-1953 - 1ra generación - hasta 1984-1990 con la 5ta generación de las computadoras (TESUVA, s.f.), nos ha llevado a un gran avance tecnológico, el cuál ha tenido un gran impacto en la sociedad. </p>
+
+				<p>Con las nuevas interfaces de usuario más amigables en esa época y la interconexión global de documentos de hipertexto se podía compartir información de manera rápida con cualquier persona del mundo. </p>				
+        
+				<p>La forma de comunicación cotidiana empezó a cambiar con la aparición de las distintas plataformas en la web como MSN(1990), MySpace (2003), LinkedIn (2002), Facebook (2004), YouTube(2005), Twitter(2006), Instagram(2010), Snapchat(2011), Tik Tok(2016), Whatsapp (2009), etc;  y a la par el desarrollo tecnológico de la telefonía celular, lo que en la actualidad hace que la comunicación y la transferencia de información sea casi instantánea.</p>
+				
+				<div class="timeline col-lg-9 mt-5 mb-5">
+					<div class="container left">
+						<div class="date">1989</div>
+						<div class="content">
+							<h2>World Wide Web</h2>
+							<p>El primer sitio web</p>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="date">1990</div>
+						<div class="content">
+							<h2>MSN</h2>
+						</div>
+					</div>
+					<div class="container left">
+						<div class="date">2002</div>
+						<div class="content">
+							<h2>LinkedIn</h2>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="date">2003</div>
+						<div class="content">
+							<h2>MySpace</h2>
+						</div>
+					</div>
+					<div class="container left">
+						<div class="date">2004</div>
+						<div class="content">
+							<h2>Facebook</h2>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="date">2005</div>
+						<div class="content">
+							<h2>YouTube</h2>
+						</div>
+					</div>
+					<div class="container left">
+						<div class="date">2006</div>
+						<div class="content">
+							<h2>Twitter (X)</h2>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="date">2009</div>
+						<div class="content">
+							<h2>WhatsApp</h2>
+						</div>
+					</div>
+					<div class="container left">
+						<div class="date">2010</div>
+						<div class="content">
+							<h2>Instagram</h2>
+						</div>
+					</div>
+					<div class="container right">
+						<div class="date">2011</div>
+						<div class="content">
+							<h2>Snapchat</h2>
+						</div>
+					</div>
+					<div class="container left">
+						<div class="date">2016</div>
+						<div class="content">
+							<h2>TikTok</h2>
+						</div>
+					</div>
+				</div>
+			
+          <!--div id="visualization"></div>
+		  <script>
+			// Datos para la línea de tiempo con clases CSS
+			var items = new vis.DataSet([
+				{id: 1, content: 'World Wide Web', start: '1989', className: 'red'},
+				{id: 2, content: 'MSN', start: '1990', className: 'green'},
+				{id: 3, content: 'LinkedIn', start: '2002', className: 'blue'},
+				{id: 4, content: 'MySpace', start: '2003', className: 'yellow'},
+				{id: 5, content: 'Facebook', start: '2004', className: 'red'},
+				{id: 6, content: 'YouTube', start: '2005', className: 'green'},
+				{id: 7, content: 'Twitter', start: '2006', className: 'blue'},
+				{id: 8, content: 'WhatsApp', start: '2009', className: 'yellow'},
+				{id: 9, content: 'Instagram', start: '2010', className: 'red'},
+				{id: 10, content: 'Snapchat', start: '2011', className: 'green'},
+				{id: 11, content: 'TikTok', start: '2016', className: 'blue'}
+			]);
+	
+			// Configuración de la línea de tiempo
+			var options = {
+				width: '100%',
+				height: '100%',
+				margin: {
+					item: 20
+				},
+				start: '1985',
+				end: '2020',
+				cluster: true // Agrupar elementos para mejorar rendimiento
+			};
+	
+			// Crear la línea de tiempo
+			var container = document.getElementById('visualization');
+			var timeline = new vis.Timeline(container, items, options);
+	
+			// Aplicar debounce a los eventos de redimensionamiento
+			function debounce(func, wait) {
+				let timeout;
+				return function() {
+					const context = this, args = arguments;
+					clearTimeout(timeout);
+					timeout = setTimeout(() => func.apply(context, args), wait);
+				};
+			}
+	
+			window.addEventListener('resize', debounce(() => {
+				timeline.redraw();
+			}, 100));
+	
+			// Redibujar la línea de tiempo en caso de cambios de orientación
+			window.addEventListener('orientationchange', () => {
+				setTimeout(() => {
+					timeline.redraw();
+				}, 500);
+			});
+		</script-->
+		<!-- Divider -->
+		<div class="text-center h5 mb-4">. . .</div>
+
+
+			<p>Esta nueva forma de interacción social en internet ha dado lugar a diferentes tipos de comportamiento en las redes sociales; 
+				si bien estas plataformas han facilitado la comunicación y el intercambio de información, también han dado lugar a nuevos 
+				tipos de comportamiento dañino y delictivo que no existían anteriormente. Este fenómeno ha dado lugar a lo que hoy conocemos 
+				como violencia digital.</p>
+			<p>La violencia digital incluye una variedad de comportamientos abusivos y perjudiciales que ocurren en el entorno digital. Estos 
+				comportamientos incluyen el ciberacoso, la difusión de contenido sexual no consensuado, la suplantación de identidad en línea, 
+				y el doxxing entre otras más. Estas formas de violencia pueden tener consecuencias graves para las víctimas, afectando su 
+				bienestar emocional, psicológico y físico.</p>
+
+			<h2 class="mt-5">La violencia digital</h2>
+			<p>La violencia digital se define como:</p>
+			<figure class="my-5">
+				<blockquote class="blockquote">
+				  <p>Toda acción dolosa realizada mediante el uso de tecnologías de la información y la comunicación, por la que se exponga, 
+					distribuya, difunda, exhiba, transmite; comercialice, oferte, intercambie o comparta imágenes, audios, o videos reales o 
+					simulados de contenido íntimo sexual de una persona sin su consentimiento, sin su aprobación o sin su autorización y que 
+					le cause daño psicológico, emocional, en cualquier ámbito de su vida privada o en su imagen propia. Así como aquellos actos 
+					dolosos que causen daño a la intimidad, privacidad y/o dignidad de las mujeres, que se cometan por medio de las tecnologías 
+					de la información y de la comunicación.</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+				  INFOBAE
+				</figcaption>
+			  </figure>
+			  <figure class="my-5">
+				<blockquote class="blockquote">
+				  <p>Toda acción dolosa realizada mediante el uso de tecnologías de la información y la comunicación, por la que se exponga, 
+					distribuya, difunda, exhiba, transmita, comercialice, oferte, intercambie o comparta imágenes, audios o videos reales o 
+					simulados de contenido íntimo sexual de una persona sin su consentimiento, sin su aprobación o sin su autorización y que 
+					le cause daño psicológico, emocional, en cualquier ámbito de su vida privada o en su imagen propia. Así como aquellos actos 
+					dolosos que causen daño a la intimidad, privacidad y/o dignidad de las mujeres, que se cometan por medio de las tecnologías 
+					de la información y la comunicación. Para efectos del presente Capítulo se entenderá por Tecnologías de la Información y la 
+					Comunicación aquellos recursos, herramientas y programas que se utilizan para procesar, administrar y compartir la 
+					información mediante diversos soportes tecnológicos. La violencia digital será sancionada en la forma y términos que 
+					establezca el Código Penal Federal.</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+				  INE
+				</figcaption>
+			  </figure>
+			  <figure class="my-5">
+				<blockquote class="blockquote">
+				  <p>Violencia mediática es todo acto a través de cualquier medio de comunicación, que de manera directa o indirecta promueva 
+					estereotipos sexistas, haga apología de la violencia contra las mujeres y las niñas, produzca o permita la producción y 
+					difusión de discurso de odio sexista, discriminación de género o desigualdad entre mujeres y hombres, que cause daño a las 
+					mujeres y niñas de tipo psicológico, sexual, físico, económico, patrimonial o feminicida. La violencia mediática se ejerce 
+					por cualquier persona física o moral que utilice un medio de comunicación para producir y difundir contenidos que atentan 
+					contra la autoestima, salud, integridad, libertad y seguridad de las mujeres y niñas, que impide su desarrollo y que atenta 
+					contra la igualdad.</p>
+				</blockquote>
+				<figcaption class="blockquote-footer">
+				  INE
+				</figcaption>
+			  </figure>
+			  <p>La violencia digital se da principalmente en las redes sociales, aplicaciones de mensajería, foros y sitios web. Se manifiesta 
+				a través de ciberacoso, suplantación de identidad, difusión no consensuada de contenido íntimo, doxxing, y otras formas de 
+				hostigamiento y abuso en entornos digitales. Afecta a personas de todas las edades, pero especialmente a mujeres y jóvenes. Las 
+				interacciones digitales amplían el alcance y la rapidez con que se puede difundir la información, aumentando el impacto y las 
+				consecuencias de estos actos (INE).</p>
+				<p></p>
+
+		</div>
+			<!-- Main Content END -->
+			
+			<!-- Right sidebar START -->
+			<div class="col-lg-3">
+				<div data-sticky data-margin-top="80" data-sticky-for="991">
+					<!-- Advertisement -->
+					<div class="mt-4">
+						<a href="#" class="d-block card-img-flash">
+							<img src="../assets/images/adv.png" alt="">
+						</a>
+					</div>
+                    <div class="mt-4">
+						<a href="#" class="d-block card-img-flash">
+							<img src="../assets/images/adv.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- Right sidebar END -->
+		</div>
+	</div>
+</section>
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer>
+	<div class="container-fluid px-0">
+		<!-- About and Newsletter START -->
+		<div class="row bg-dark py-5 mx-0 card-header rounded-0 align-items-center text-center text-md-start">
+			<!-- Copyright -->
+			<div class="col-md-5 mb-3 mb-md-0">
+				<div class="text-primary-hover text-body-secondary">©2024 <a href="#" class="text-reset btn-link" target="_blank">FRANK LUEZA</a>. All rights reserved
+				</div>
+			</div>
+			<!-- Logo -->
+			<div class="col-md-3 mb-3 mb-md-0">
+				<img src="../assets/images/logo-light.svg" alt="footer logo">
+			</div>
+			<!-- Social links -->
+			<div class="col-md-4">
+				<ul class="nav text-primary-hover justify-content-center justify-content-md-end">
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-facebook-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-twitter-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-linkedin"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-youtube-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link ps-2 pe-0 fs-5" href="#"><i class="fab fa-vimeo"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- About and Newsletter END -->
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"><i class="bi bi-arrow-up-short"></i></div>
+
+<!-- =======================
+JS libraries, plugins and custom scripts -->
+
+<!-- Bootstrap JS -->
+<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Template Functions -->
+<script src="../assets/vendor/sticky-js/sticky.min.js"></script>
+
+<!--script src="script.js"></script-->
+</body>
+</html>
