@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Violencia Digital | Doxing</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Bootstrap based News, Magazine and Blog Theme">
+	
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- =======================
+Header START -->
+<header class="navbar-light navbar-sticky header-static">
+
+  <!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid px-sm-5">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="index.html">
+				<img class="navbar-brand-item light-mode-item" src="../assets/images/logo.svg" alt="logo">			
+				<img class="navbar-brand-item dark-mode-item" src="../assets/images/logo-light.svg" alt="logo">			
+			</a>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="text-body h6 d-none d-sm-inline-block">Menú</span>
+			  <span class="navbar-toggler-icon"></span>
+		  </button>
+
+			<!-- Main navbar START -->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+
+					<!-- Nav item 1 Demos -->
+					<li class="nav-item">
+						<a class="nav-link active" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inicio</a>
+					</li>
+
+					<!-- Nav item 2 Pages -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulo 1</a>
+                    </li>
+					<!-- Nav item 3 Post -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="postMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulo 2</a>
+					</li>
+
+					<!-- Nav item 4 Mega menu -->
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="megaMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artículo 3</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Main navbar END -->
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- =======================
+Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Inner intro START -->
+<section class="pt-2">
+	<div class="container">
+		<div class="row">
+      <div class="col-12">
+        <div class="card bg-dark-overlay-5 overflow-hidden card-bg-scale h-400 text-center" style="background-image:url(../assets/images/Violencia\ Digital.webp); background-position: center left; background-size: cover;">
+          <!-- Card Image overlay -->
+          <div class="card-img-overlay d-flex align-items-center p-3 p-sm-4"> 
+            <div class="w-100 my-auto">
+              <!-- Card category -->
+              <a href="#" class="badge text-bg-danger mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>Ciudad de México</a>
+              <!-- Card title -->
+              <h2 class="text-white display-5">La violencia digital</h2>
+              </ul-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>
+<!-- =======================
+Inner intro END -->
+
+<section class="pt-0">
+	<div class="container position-relative" data-sticky-container>
+		<div class="row">
+			<!-- Main Content START -->
+			<div class="col-lg-9 mb-5">
+				<nav class="d-flex justify-content-center" aria-label="breadcrumb">
+					<ol class="breadcrumb breadcrumb-dots mb-0">
+						<li class="breadcrumb-item"><a href="../index.html"><i class="bi bi-house me-1"></i> Home</a></li>
+						<li class="breadcrumb-item active">Test de violencia Digital</li>
+					</ol>
+				</nav>
+				<br>
+				
+    <div id="questionnaire"></div>
+    <br>
+    <button class="btn btn-primary-soft" onclick="showResults()">Ver Resultados</button>
+    <div id="results"></div>
+	<br>
+    
+    <script>
+        const questions = [
+            "1.- ¿UTILIZO REDES SOCIALES FRECUENTEMENTE (FACEBOOK, FACEBOOK PAREJAS, TWITTER, INSTAGRAM, TIK TOK, WHATS APP, ONLY FANS, TINDER)?",
+            "2.- ¿CONOZCO PERSONALMENTE A TODA MI LISTA DE CONTACTOS AGREGADOS EN REDES SOCIALES?",
+            "3.- ¿HE TENIDO CONTACTO A TRAVÉS DE REDES SOCIALES, CON GENTE QUE NO CONOZCO PERSONALMENTE?",
+            "4.- ¿COMPARTO DATOS PERSONALES, UBICACIÓN, E INFORMACIÓN DE MI VIDA PERSONAL, DIRECCIÓN, ESCUELA Y/0 TRABAJO DE FORMA PÚBLICA EN MIS REDES SOCIALES O CON PERSONAS DESCONOCIDAS EN REDES SOCIALES?",
+            "5.- ¿HE COMPARTIDO MIS CONTRASEÑAS, CUENTAS, CORREOS O MI DISPOSITIVO MÓVIL CON OTRAS PERSONAS?",
+            "6.- ¿HE SALIDO CON ALGUNA PERSONA, O MANTENIDO UNA RELACIÓN SENTIMENTAL O SEXUAL CON ALGUIEN QUE CONOCÍ POR ALGUNA RED SOCIAL?",
+            "7.- ¿HE REVISADO DE FORMA PERIÓDICA Y CONSTANTE LA CONFIGURACIÓN DE PRIVACIDAD Y PERFILES PÚBLICO DE MIS REDES SOCIALES, O HE REALIZADO CAMBIO DE CONTRASEÑAS EN LOS ÚLTIMOS MESES?",
+            "8.- ¿HE REALIZADO PRÁCTICAS SEXUALES (SEXTING) UTILIZANDO REDES SOCIALES, O ALGÚN DISPOSITIVO DE CÁMARA O VIDEO?",
+            "9.- ¿HE COMPARTIDO FOTOS, Y/O VIDEOS MÍOS EN ROPA INTERIOR O DESNUDA CON ALGUNA PERSONA?",
+            "10.- ¿HE DETECTADO QUE LAS FOTOS, VIDEOS, O/Y AUDIOS QUE COMPARTÍ CON ALGUNA PERSONA O QUE FUERON TOMADOS SIN MI CONSENTIMIENTO, CIRCULAN EN ALGUNA RED SOCIAL SIN MI PERMISO?",
+            "11.- ¿ME HAN OBLIGADO A REALIZAR PRÁCTICAS SEXUALES A TRAVÉS DE MEDIOS DIGITALES SIN MI CONSENTIMIENTO, O POR MEDIO DE AMENAZAS?",
+            "12.- ¿ME HAN AMENAZADO CON COMPARTIR MIS FOTOS, VIDEOS, ETC, SI NO HAGO ALGO QUE NO QUIERO?",
+            "13.- ¿ME HAN INTIMIDADO CON FRASES, INSULTOS O CONDUCTAS DE CARÁCTER SEXUAL, O ME HAN OFRECIDO DINERO A CAMBIO DE ALGUNA PRÁCTICA SEXUAL A TRAVÉS DE INTERNET O REDES SOCIALES?",
+            "14.- ¿HE IDENTIFICADO VIDEOS O FOTOGRAFÍAS ÍNTIMAS MÍAS, QUE SE ENCUENTRAN EN PÁGINAS PORNOGRÁFICAS, DE SERVICIOS SEXUALES, O EN PERFILES FALSOS?",
+            "15.- ¿ME HAN CULPADO DE VIDEOGRABARME, FOTOGRAFIARME, O REALIZAR PRÁCTICAS SEXUALES (SEXTING), AUN CUANDO NO EXISTIÓ MI CONSENTIMIENTO PARA DIFUNDIR EL CONTENIDO CON OTRAS PERSONAS?",
+            "16.- ¿MI PAREJA SENTIMENTAL, NOVIO(A), AMIGO, ESPOSO O CONOCIDO HA COMPARTIDO, O ME HA AMENAZADO DE COMPARTIR MI CONTENIDO ÍNTIMO COMO FOTOS Y VIDEOS CON OTRAS PERSONAS O EN REDES SOCIALES?",
+            "17.- ¿HE HABLADO MI SITUACIÓN CON ALGÚN FAMILIAR O PERSONA DE MI CONFIANZA?"
+        ];
+
+        const questionnaireDiv = document.getElementById('questionnaire');
+
+        questions.forEach((question, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML = `
+                <p>${question}</p>
+                <label><input type="radio" name="question${index}" value="SI"> Sí</label>
+                <label><input type="radio" name="question${index}" value="NO"> No</label>
+            `;
+            questionnaireDiv.appendChild(questionDiv);
+        });
+
+        function showResults() {
+            let riesgoBajo = 0, riesgoMedio = 0, riesgoAlto = 0;
+
+            questions.forEach((question, index) => {
+                const response = document.querySelector(`input[name="question${index}"]:checked`);
+                if (response && response.value === "SI") {
+                    if (index <= 3) {
+                        riesgoBajo++;
+                    } else if (index <= 8) {
+                        riesgoMedio++;
+                    } else {
+                        riesgoAlto++;
+                    }
+                }
+            });
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = "";
+
+            if (riesgoAlto > 0) {
+                resultsDiv.innerHTML = `
+                    <p>ALERTA EXTREMA: Tu nivel de riesgo es ALTO. Estás ante una situación de violencia digital y tienes derecho a denunciar estas conductas. Te sugerimos entrar a las páginas siguientes: <a href="https://www.semujeres.cdmx.gob.mx/servicios/servicio/lunas">LUNAS</a> y/o <a href="https://semujeres.cdmx.gob.mx/storage/app/media/Directorio_Abogadas_MP.pdf">Directorio Abogadas MP</a> para orientación y acompañamiento jurídico y/o atención psicológica.</p>
+                `;
+            } else if (riesgoMedio > 0) {
+                resultsDiv.innerHTML = `
+                    <p>ALERTA: Tu nivel de riesgo es MEDIO. Es parte de tus derechos sexuales decidir compartir o realizar prácticas sexuales de forma segura y consentida. Asegúrate de hacerlo con personas de confianza y mantener la confidencialidad de tus contenidos.</p>
+                `;
+            } else if (riesgoBajo > 0) {
+                resultsDiv.innerHTML = `
+                    <p>MANTENTE ALERTA: Tu nivel de riesgo es BAJO. Te sugerimos revisar la privacidad, contraseñas y controles de tus redes sociales. Revisa periódicamente tu lista de contactos y la información personal que compartes.</p>
+                `;
+            } else {
+                resultsDiv.innerHTML = `
+                    <p>Parece que no has indicado ninguna situación de riesgo. Aun así, es importante mantenerse informado y tomar precauciones para proteger tu privacidad y seguridad en línea.</p>
+                `;
+            }
+        }
+    </script>
+
+
+
+		    </div>
+			<!-- Main Content END -->
+			
+			<!-- Right sidebar START -->
+			<div class="col-lg-3">
+				<div data-sticky data-margin-top="80" data-sticky-for="991">
+					<!-- Advertisement -->
+					<div class="mt-4">
+						<a href="#" class="d-block card-img-flash">
+							<img src="../assets/images/adv.png" alt="">
+						</a>
+					</div>
+                    <div class="mt-4">
+						<a href="#" class="d-block card-img-flash">
+							<img src="../assets/images/adv.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- Right sidebar END -->
+		</div>
+	</div>
+</section>
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer>
+	<div class="container-fluid px-0">
+		<!-- About and Newsletter START -->
+		<div class="row bg-dark py-5 mx-0 card-header rounded-0 align-items-center text-center text-md-start">
+			<!-- Copyright -->
+			<div class="col-md-5 mb-3 mb-md-0">
+				<div class="text-primary-hover text-body-secondary">©2024 <a href="#" class="text-reset btn-link" target="_blank">FRANK LUEZA</a>. All rights reserved
+				</div>
+			</div>
+			<!-- Logo -->
+			<div class="col-md-3 mb-3 mb-md-0">
+				<img src="../assets/images/logo-light.svg" alt="footer logo">
+			</div>
+			<!-- Social links -->
+			<div class="col-md-4">
+				<ul class="nav text-primary-hover justify-content-center justify-content-md-end">
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-facebook-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-twitter-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-linkedin"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-youtube-square"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link ps-2 pe-0 fs-5" href="#"><i class="fab fa-vimeo"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- About and Newsletter END -->
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"><i class="bi bi-arrow-up-short"></i></div>
+
+<!-- =======================
+JS libraries, plugins and custom scripts -->
+
+<!-- Bootstrap JS -->
+<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Template Functions -->
+<script src="../assets/vendor/sticky-js/sticky.min.js"></script>
+
+<!--script src="script.js"></script-->
+</body>
+</html>
