@@ -1,0 +1,546 @@
+Fecha,Ingreso,Gastos,Categoría
+2023-01-01,11805,,Trabajo Medio Tiempo
+2023-01-05,500,,Freelance Admin Web
+2023-01-01,,2100,Vivienda
+2023-01-01,,99,Netflix
+2023-01-01,,219,Disney Plus
+2023-01-01,,2730,Educación Curso de Ingles
+2023-01-01,,1500,Deuda
+2023-01-01,,599,Telcel
+2023-01-01,,200,Comida
+2023-01-02,,200,Comida
+2023-01-03,,200,Comida
+2023-01-04,,200,Comida
+2023-01-05,,200,Comida
+2023-01-06,,200,Comida
+2023-01-07,,200,Comida
+2023-01-08,,200,Comida
+2023-01-09,,200,Comida
+2023-01-10,,200,Comida
+2023-01-11,,200,Comida
+2023-01-12,,200,Comida
+2023-01-13,,200,Comida
+2023-01-14,,200,Comida
+2023-01-15,,200,Comida
+2023-01-16,,200,Comida
+2023-01-17,,200,Comida
+2023-01-18,,200,Comida
+2023-01-19,,200,Comida
+2023-01-20,,200,Comida
+2023-01-21,,200,Comida
+2023-01-22,,200,Comida
+2023-01-23,,200,Comida
+2023-01-24,,200,Comida
+2023-01-25,,200,Comida
+2023-01-26,,200,Comida
+2023-01-27,,200,Comida
+2023-01-28,,200,Comida
+2023-01-29,,200,Comida
+2023-01-30,,200,Comida
+2023-01-31,,200,Comida
+2023-01-02,,350,Gasolina
+2023-01-13,,350,Gasolina
+2023-01-15,,350,Gasolina
+2023-01-24,,350,Gasolina
+2023-01-27,,620,Servicio Italika
+2023-01-19,,1000,Entretenimiento
+2023-01-05,,3000,Emergencias
+2023-01-12,,1000,Salud
+2023-01-17,,500,Gastos personales
+2023-02-01,13886,,Trabajo Medio Tiempo
+2023-02-05,500,,Freelance Admin Web
+2023-02-01,,2100,Vivienda
+2023-02-01,,99,Netflix
+2023-02-01,,219,Disney Plus
+2023-02-01,,2730,Educación Curso de Ingles
+2023-02-01,,1500,Deuda
+2023-02-01,,599,Telcel
+2023-02-01,,200,Comida
+2023-02-02,,200,Comida
+2023-02-03,,200,Comida
+2023-02-04,,200,Comida
+2023-02-05,,200,Comida
+2023-02-06,,200,Comida
+2023-02-07,,200,Comida
+2023-02-08,,200,Comida
+2023-02-09,,200,Comida
+2023-02-10,,200,Comida
+2023-02-11,,200,Comida
+2023-02-12,,200,Comida
+2023-02-13,,200,Comida
+2023-02-14,,200,Comida
+2023-02-15,,200,Comida
+2023-02-16,,200,Comida
+2023-02-17,,200,Comida
+2023-02-18,,200,Comida
+2023-02-19,,200,Comida
+2023-02-20,,200,Comida
+2023-02-21,,200,Comida
+2023-02-22,,200,Comida
+2023-02-23,,200,Comida
+2023-02-24,,200,Comida
+2023-02-25,,200,Comida
+2023-02-26,,200,Comida
+2023-02-27,,200,Comida
+2023-02-28,,200,Comida
+2023-02-06,,350,Gasolina
+2023-02-13,,350,Gasolina
+2023-02-16,,350,Gasolina
+2023-02-22,,350,Gasolina
+2023-02-19,,620,Servicio Italika
+2023-02-15,,1000,Entretenimiento
+2023-02-12,,500,Gastos personales
+2023-03-01,11678,,Trabajo Medio Tiempo
+2023-03-05,500,,Freelance Admin Web
+2023-03-01,,2100,Vivienda
+2023-03-01,,99,Netflix
+2023-03-01,,219,Disney Plus
+2023-03-01,,2730,Educación Curso de Ingles
+2023-03-01,,1500,Deuda
+2023-03-01,,599,Telcel
+2023-03-01,,200,Comida
+2023-03-02,,200,Comida
+2023-03-03,,200,Comida
+2023-03-04,,200,Comida
+2023-03-05,,200,Comida
+2023-03-06,,200,Comida
+2023-03-07,,200,Comida
+2023-03-08,,200,Comida
+2023-03-09,,200,Comida
+2023-03-10,,200,Comida
+2023-03-11,,200,Comida
+2023-03-12,,200,Comida
+2023-03-13,,200,Comida
+2023-03-14,,200,Comida
+2023-03-15,,200,Comida
+2023-03-16,,200,Comida
+2023-03-17,,200,Comida
+2023-03-18,,200,Comida
+2023-03-19,,200,Comida
+2023-03-20,,200,Comida
+2023-03-21,,200,Comida
+2023-03-22,,200,Comida
+2023-03-23,,200,Comida
+2023-03-24,,200,Comida
+2023-03-25,,200,Comida
+2023-03-26,,200,Comida
+2023-03-27,,200,Comida
+2023-03-28,,200,Comida
+2023-03-29,,200,Comida
+2023-03-30,,200,Comida
+2023-03-31,,200,Comida
+2023-03-02,,350,Gasolina
+2023-03-11,,350,Gasolina
+2023-03-16,,350,Gasolina
+2023-03-27,,350,Gasolina
+2023-03-26,,620,Servicio Italika
+2023-03-07,,1000,Entretenimiento
+2023-03-29,,500,Gastos personales
+2023-04-01,8856,,Trabajo Medio Tiempo
+2023-04-05,500,,Freelance Admin Web
+2023-04-01,,2100,Vivienda
+2023-04-01,,99,Netflix
+2023-04-01,,219,Disney Plus
+2023-04-01,,2730,Educación Curso de Ingles
+2023-04-01,,1500,Deuda
+2023-04-01,,599,Telcel
+2023-04-01,,200,Comida
+2023-04-02,,200,Comida
+2023-04-03,,200,Comida
+2023-04-04,,200,Comida
+2023-04-05,,200,Comida
+2023-04-06,,200,Comida
+2023-04-07,,200,Comida
+2023-04-08,,200,Comida
+2023-04-09,,200,Comida
+2023-04-10,,200,Comida
+2023-04-11,,200,Comida
+2023-04-12,,200,Comida
+2023-04-13,,200,Comida
+2023-04-14,,200,Comida
+2023-04-15,,200,Comida
+2023-04-16,,200,Comida
+2023-04-17,,200,Comida
+2023-04-18,,200,Comida
+2023-04-19,,200,Comida
+2023-04-20,,200,Comida
+2023-04-21,,200,Comida
+2023-04-22,,200,Comida
+2023-04-23,,200,Comida
+2023-04-24,,200,Comida
+2023-04-25,,200,Comida
+2023-04-26,,200,Comida
+2023-04-27,,200,Comida
+2023-04-28,,200,Comida
+2023-04-29,,200,Comida
+2023-04-30,,200,Comida
+2023-04-05,,350,Gasolina
+2023-04-11,,350,Gasolina
+2023-04-19,,350,Gasolina
+2023-04-23,,350,Gasolina
+2023-04-24,,620,Servicio Italika
+2023-04-18,,1000,Entretenimiento
+2023-04-09,,500,Gastos personales
+2023-05-01,10554,,Trabajo Medio Tiempo
+2023-05-05,500,,Freelance Admin Web
+2023-05-01,,2100,Vivienda
+2023-05-01,,99,Netflix
+2023-05-01,,219,Disney Plus
+2023-05-01,,2730,Educación Curso de Ingles
+2023-05-01,,1500,Deuda
+2023-05-01,,599,Telcel
+2023-05-01,,200,Comida
+2023-05-02,,200,Comida
+2023-05-03,,200,Comida
+2023-05-04,,200,Comida
+2023-05-05,,200,Comida
+2023-05-06,,200,Comida
+2023-05-07,,200,Comida
+2023-05-08,,200,Comida
+2023-05-09,,200,Comida
+2023-05-10,,200,Comida
+2023-05-11,,200,Comida
+2023-05-12,,200,Comida
+2023-05-13,,200,Comida
+2023-05-14,,200,Comida
+2023-05-15,,200,Comida
+2023-05-16,,200,Comida
+2023-05-17,,200,Comida
+2023-05-18,,200,Comida
+2023-05-19,,200,Comida
+2023-05-20,,200,Comida
+2023-05-21,,200,Comida
+2023-05-22,,200,Comida
+2023-05-23,,200,Comida
+2023-05-24,,200,Comida
+2023-05-25,,200,Comida
+2023-05-26,,200,Comida
+2023-05-27,,200,Comida
+2023-05-28,,200,Comida
+2023-05-29,,200,Comida
+2023-05-30,,200,Comida
+2023-05-31,,200,Comida
+2023-05-09,,350,Gasolina
+2023-05-17,,350,Gasolina
+2023-05-25,,350,Gasolina
+2023-05-03,,620,Servicio Italika
+2023-05-01,,1000,Entretenimiento
+2023-05-25,,500,Gastos personales
+2023-06-01,10964,,Trabajo Medio Tiempo
+2023-06-05,500,,Freelance Admin Web
+2023-06-01,,2100,Vivienda
+2023-06-01,,99,Netflix
+2023-06-01,,219,Disney Plus
+2023-06-01,,2730,Educación Curso de Ingles
+2023-06-01,,1500,Deuda
+2023-06-01,,599,Telcel
+2023-06-01,,200,Comida
+2023-06-02,,200,Comida
+2023-06-03,,200,Comida
+2023-06-04,,200,Comida
+2023-06-05,,200,Comida
+2023-06-06,,200,Comida
+2023-06-07,,200,Comida
+2023-06-08,,200,Comida
+2023-06-09,,200,Comida
+2023-06-10,,200,Comida
+2023-06-11,,200,Comida
+2023-06-12,,200,Comida
+2023-06-13,,200,Comida
+2023-06-14,,200,Comida
+2023-06-15,,200,Comida
+2023-06-16,,200,Comida
+2023-06-17,,200,Comida
+2023-06-18,,200,Comida
+2023-06-19,,200,Comida
+2023-06-20,,200,Comida
+2023-06-21,,200,Comida
+2023-06-22,,200,Comida
+2023-06-23,,200,Comida
+2023-06-24,,200,Comida
+2023-06-25,,200,Comida
+2023-06-26,,200,Comida
+2023-06-27,,200,Comida
+2023-06-28,,200,Comida
+2023-06-29,,200,Comida
+2023-06-30,,200,Comida
+2023-06-04,,350,Gasolina
+2023-06-10,,350,Gasolina
+2023-06-19,,350,Gasolina
+2023-06-24,,350,Gasolina
+2023-06-04,,620,Servicio Italika
+2023-06-14,,1000,Entretenimiento
+2023-06-05,,500,Gastos personales
+2023-07-01,13898,,Trabajo Medio Tiempo
+2023-07-05,500,,Freelance Admin Web
+2023-07-01,,2100,Vivienda
+2023-07-01,,99,Netflix
+2023-07-01,,219,Disney Plus
+2023-07-01,,2730,Educación Curso de Ingles
+2023-07-01,,1500,Deuda
+2023-07-01,,599,Telcel
+2023-07-01,,200,Comida
+2023-07-02,,200,Comida
+2023-07-03,,200,Comida
+2023-07-04,,200,Comida
+2023-07-05,,200,Comida
+2023-07-06,,200,Comida
+2023-07-07,,200,Comida
+2023-07-08,,200,Comida
+2023-07-09,,200,Comida
+2023-07-10,,200,Comida
+2023-07-11,,200,Comida
+2023-07-12,,200,Comida
+2023-07-13,,200,Comida
+2023-07-14,,200,Comida
+2023-07-15,,200,Comida
+2023-07-16,,200,Comida
+2023-07-17,,200,Comida
+2023-07-18,,200,Comida
+2023-07-19,,200,Comida
+2023-07-20,,200,Comida
+2023-07-21,,200,Comida
+2023-07-22,,200,Comida
+2023-07-23,,200,Comida
+2023-07-24,,200,Comida
+2023-07-25,,200,Comida
+2023-07-26,,200,Comida
+2023-07-27,,200,Comida
+2023-07-28,,200,Comida
+2023-07-29,,200,Comida
+2023-07-30,,200,Comida
+2023-07-31,,200,Comida
+2023-07-11,,350,Gasolina
+2023-07-20,,350,Gasolina
+2023-07-25,,350,Gasolina
+2023-07-08,,620,Servicio Italika
+2023-07-28,,1000,Entretenimiento
+2023-07-21,,1000,Salud
+2023-07-24,,500,Gastos personales
+2023-08-01,11753,,Trabajo Medio Tiempo
+2023-08-05,500,,Freelance Admin Web
+2023-08-01,,2100,Vivienda
+2023-08-01,,99,Netflix
+2023-08-01,,219,Disney Plus
+2023-08-01,,2730,Educación Curso de Ingles
+2023-08-01,,1500,Deuda
+2023-08-01,,599,Telcel
+2023-08-01,,200,Comida
+2023-08-02,,200,Comida
+2023-08-03,,200,Comida
+2023-08-04,,200,Comida
+2023-08-05,,200,Comida
+2023-08-06,,200,Comida
+2023-08-07,,200,Comida
+2023-08-08,,200,Comida
+2023-08-09,,200,Comida
+2023-08-10,,200,Comida
+2023-08-11,,200,Comida
+2023-08-12,,200,Comida
+2023-08-13,,200,Comida
+2023-08-14,,200,Comida
+2023-08-15,,200,Comida
+2023-08-16,,200,Comida
+2023-08-17,,200,Comida
+2023-08-18,,200,Comida
+2023-08-19,,200,Comida
+2023-08-20,,200,Comida
+2023-08-21,,200,Comida
+2023-08-22,,200,Comida
+2023-08-23,,200,Comida
+2023-08-24,,200,Comida
+2023-08-25,,200,Comida
+2023-08-26,,200,Comida
+2023-08-27,,200,Comida
+2023-08-28,,200,Comida
+2023-08-29,,200,Comida
+2023-08-30,,200,Comida
+2023-08-31,,200,Comida
+2023-08-02,,350,Gasolina
+2023-08-10,,350,Gasolina
+2023-08-20,,350,Gasolina
+2023-08-27,,350,Gasolina
+2023-08-24,,620,Servicio Italika
+2023-08-20,,1000,Entretenimiento
+2023-08-03,,500,Gastos personales
+2023-09-01,8957,,Trabajo Medio Tiempo
+2023-09-05,500,,Freelance Admin Web
+2023-09-01,,2100,Vivienda
+2023-09-01,,99,Netflix
+2023-09-01,,219,Disney Plus
+2023-09-01,,2730,Educación Curso de Ingles
+2023-09-01,,1500,Deuda
+2023-09-01,,599,Telcel
+2023-09-01,,200,Comida
+2023-09-02,,200,Comida
+2023-09-03,,200,Comida
+2023-09-04,,200,Comida
+2023-09-05,,200,Comida
+2023-09-06,,200,Comida
+2023-09-07,,200,Comida
+2023-09-08,,200,Comida
+2023-09-09,,200,Comida
+2023-09-10,,200,Comida
+2023-09-11,,200,Comida
+2023-09-12,,200,Comida
+2023-09-13,,200,Comida
+2023-09-14,,200,Comida
+2023-09-15,,200,Comida
+2023-09-16,,200,Comida
+2023-09-17,,200,Comida
+2023-09-18,,200,Comida
+2023-09-19,,200,Comida
+2023-09-20,,200,Comida
+2023-09-21,,200,Comida
+2023-09-22,,200,Comida
+2023-09-23,,200,Comida
+2023-09-24,,200,Comida
+2023-09-25,,200,Comida
+2023-09-26,,200,Comida
+2023-09-27,,200,Comida
+2023-09-28,,200,Comida
+2023-09-29,,200,Comida
+2023-09-30,,200,Comida
+2023-09-06,,350,Gasolina
+2023-09-11,,350,Gasolina
+2023-09-20,,350,Gasolina
+2023-09-26,,350,Gasolina
+2023-09-11,,620,Servicio Italika
+2023-09-10,,1000,Entretenimiento
+2023-09-29,,500,Gastos personales
+2023-10-01,9266,,Trabajo Medio Tiempo
+2023-10-05,500,,Freelance Admin Web
+2023-10-01,,2100,Vivienda
+2023-10-01,,99,Netflix
+2023-10-01,,219,Disney Plus
+2023-10-01,,2730,Educación Curso de Ingles
+2023-10-01,,1500,Deuda
+2023-10-01,,599,Telcel
+2023-10-01,,200,Comida
+2023-10-02,,200,Comida
+2023-10-03,,200,Comida
+2023-10-04,,200,Comida
+2023-10-05,,200,Comida
+2023-10-06,,200,Comida
+2023-10-07,,200,Comida
+2023-10-08,,200,Comida
+2023-10-09,,200,Comida
+2023-10-10,,200,Comida
+2023-10-11,,200,Comida
+2023-10-12,,200,Comida
+2023-10-13,,200,Comida
+2023-10-14,,200,Comida
+2023-10-15,,200,Comida
+2023-10-16,,200,Comida
+2023-10-17,,200,Comida
+2023-10-18,,200,Comida
+2023-10-19,,200,Comida
+2023-10-20,,200,Comida
+2023-10-21,,200,Comida
+2023-10-22,,200,Comida
+2023-10-23,,200,Comida
+2023-10-24,,200,Comida
+2023-10-25,,200,Comida
+2023-10-26,,200,Comida
+2023-10-27,,200,Comida
+2023-10-28,,200,Comida
+2023-10-29,,200,Comida
+2023-10-30,,200,Comida
+2023-10-31,,200,Comida
+2023-10-05,,350,Gasolina
+2023-10-07,,350,Gasolina
+2023-10-18,,350,Gasolina
+2023-10-25,,350,Gasolina
+2023-10-27,,620,Servicio Italika
+2023-10-03,,1000,Entretenimiento
+2023-10-17,,500,Gastos personales
+2023-11-01,8045,,Trabajo Medio Tiempo
+2023-11-05,500,,Freelance Admin Web
+2023-11-01,,2100,Vivienda
+2023-11-01,,99,Netflix
+2023-11-01,,219,Disney Plus
+2023-11-01,,2730,Educación Curso de Ingles
+2023-11-01,,1500,Deuda
+2023-11-01,,599,Telcel
+2023-11-01,,200,Comida
+2023-11-02,,200,Comida
+2023-11-03,,200,Comida
+2023-11-04,,200,Comida
+2023-11-05,,200,Comida
+2023-11-06,,200,Comida
+2023-11-07,,200,Comida
+2023-11-08,,200,Comida
+2023-11-09,,200,Comida
+2023-11-10,,200,Comida
+2023-11-11,,200,Comida
+2023-11-12,,200,Comida
+2023-11-13,,200,Comida
+2023-11-14,,200,Comida
+2023-11-15,,200,Comida
+2023-11-16,,200,Comida
+2023-11-17,,200,Comida
+2023-11-18,,200,Comida
+2023-11-19,,200,Comida
+2023-11-20,,200,Comida
+2023-11-21,,200,Comida
+2023-11-22,,200,Comida
+2023-11-23,,200,Comida
+2023-11-24,,200,Comida
+2023-11-25,,200,Comida
+2023-11-26,,200,Comida
+2023-11-27,,200,Comida
+2023-11-28,,200,Comida
+2023-11-29,,200,Comida
+2023-11-30,,200,Comida
+2023-11-02,,350,Gasolina
+2023-11-08,,350,Gasolina
+2023-11-14,,350,Gasolina
+2023-11-21,,350,Gasolina
+2023-11-19,,620,Servicio Italika
+2023-11-03,,1000,Entretenimiento
+2023-11-19,,500,Gastos personales
+2023-12-01,11759,,Trabajo Medio Tiempo
+2023-12-05,500,,Freelance Admin Web
+2023-12-01,,2100,Vivienda
+2023-12-01,,99,Netflix
+2023-12-01,,219,Disney Plus
+2023-12-01,,2730,Educación Curso de Ingles
+2023-12-01,,1500,Deuda
+2023-12-01,,599,Telcel
+2023-12-01,,200,Comida
+2023-12-02,,200,Comida
+2023-12-03,,200,Comida
+2023-12-04,,200,Comida
+2023-12-05,,200,Comida
+2023-12-06,,200,Comida
+2023-12-07,,200,Comida
+2023-12-08,,200,Comida
+2023-12-09,,200,Comida
+2023-12-10,,200,Comida
+2023-12-11,,200,Comida
+2023-12-12,,200,Comida
+2023-12-13,,200,Comida
+2023-12-14,,200,Comida
+2023-12-15,,200,Comida
+2023-12-16,,200,Comida
+2023-12-17,,200,Comida
+2023-12-18,,200,Comida
+2023-12-19,,200,Comida
+2023-12-20,,200,Comida
+2023-12-21,,200,Comida
+2023-12-22,,200,Comida
+2023-12-23,,200,Comida
+2023-12-24,,200,Comida
+2023-12-25,,200,Comida
+2023-12-26,,200,Comida
+2023-12-27,,200,Comida
+2023-12-28,,200,Comida
+2023-12-29,,200,Comida
+2023-12-30,,200,Comida
+2023-12-31,,200,Comida
+2023-12-10,,350,Gasolina
+2023-12-18,,350,Gasolina
+2023-12-27,,350,Gasolina
+2023-12-11,,620,Servicio Italika
+2023-12-22,,1000,Entretenimiento
+2023-12-13,,500,Gastos personales

@@ -1,0 +1,119 @@
+/* styles.css */
+body{
+    font-family: "Parkinsans", sans-serif;
+    
+}
+.hero{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+}
+/* Estilo para el título principal */
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #C0622C;
+    text-align: center;
+}
+
+/* Personalización para las alertas */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Estilo para las tablas */
+.table-ingreso{
+    --bs-table-bg: #2B4159;
+    --bs-table-color: #fff;
+}
+.table-gasto{
+    --bs-table-bg: #F38430;
+    --bs-table-color: #fff;
+}
+/*
+.table {
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: #f4f4f4;
+    color: #333;
+}*/
+
+/* Botones personalizados */
+.btn-unic{
+    background-color: #212B45;
+    color:#fff;
+}
+#home-tab{
+    color:#4EB9B1;
+    font-weight: 600;
+}
+
+
+#transacciones-tab{
+    color:#FAAB46;
+    font-weight: 600;
+}
+#graficos-tab{
+    color:#2C415C;
+    font-weight: 600;
+}
+#procesar-tab{
+    color: #7A1034;
+    font-weight: 600;
+}
+.btn-unic:hover{
+    background-color: #0E757E;
+    color:#fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #0056b3;
+    font-weight: bold;
+}
+/* Personalización del menú de categorías */
+select.form-select optgroup {
+    font-weight: bold;
+    color: #0E757E; /* Color para los grupos */
+}
+
+select.form-select option {
+    color: #212529; /* Color para las opciones */
+}
+
+/* Cambiar colores al seleccionar */
+select.form-select:focus {
+    border-color: #0E757E;
+    box-shadow: 0 0 0 0.25rem rgba(178, 192, 212, 0.25);
+}
+footer{
+    padding-right: 20px;
+    padding-left: 20px;;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.copy, .film{
+    text-decoration: none;
+    color: #fff;
+} 
+.nav-tabs{
+    border: none;
+}
+.formagr, .formproc{
+    max-width: 800px;
+}

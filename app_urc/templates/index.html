@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Finanzas</title>
+    <!-- Enlace a Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="px-4 py-5 text-center hero">
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/UniMoneyUp.png') }}" alt="Logo UniMoneyUp" width="72" height="57">
+            <h1 class="display-5 fw-bold">UniMoneyUp</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Tu app para dominar las finanzas universitarias! 🚀 Toma el control de tu dinero, 
+                    ahorra para tus metas y construye un futuro financiero sólido. ¡Dile adiós a las 
+                    preocupaciones y hola a la libertad financiera con UniMoneyUp! 🎓💰</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+
+        <div class="container py-5">
+            <!-- Nav Tabs -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                        Formulario
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="transacciones-tab" data-bs-toggle="tab" data-bs-target="#transacciones" type="button" role="tab" aria-controls="transacciones" aria-selected="false">
+                        Transacciones
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="graficos-tab" data-bs-toggle="tab" data-bs-target="#graficos" type="button" role="tab" aria-controls="graficos" aria-selected="false">
+                        Gráficos
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="procesar-tab" data-bs-toggle="tab" data-bs-target="#procesar" type="button" role="tab" aria-controls="procesar" aria-selected="false">
+                        Procesar
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-4" id="myTabContent">    
+                <!-- Formulario de Agregar Transacciones -->
+                <section class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="display-6 py-2">Agrega tus transacciones</h3>
+                    <div class="row formagr">
+                        <form action="/agregar" method="post">
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo</label>
+                                <select class="form-select" id="tipo" name="tipo" required>
+                                    <option value="ingreso">Ingreso</option>
+                                    <option value="gasto">Gasto</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="monto" class="form-label">Monto</label>
+                                <input type="number" class="form-control" id="monto" name="monto" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoría</label>
+                                <select class="form-select" name="categoria" id="categoria" required>
+                                    <option value="" disabled selected>Selecciona una categoría</option>
+                                    <!-- Categorías de ingreso -->
+                                    <optgroup label="Ingresos">
+                                        <option value="beca">Beca</option>
+                                        <option value="apoyo familiar">Apoyo Familiar</option>
+                                        <option value="trabajo de medio tiempo">Trabajo de Medio Tiempo</option>
+                                        <option value="freelance">Freelance</option>
+                                        <option value="venta de productos">Venta de Productos</option>
+                                        <option value="premios">Premios</option>
+                                        <option value="inversiones">Inversiones</option>
+                                    </optgroup>
+                                    <!-- Categorías de gasto -->
+                                    <optgroup label="Gastos">
+                                        <option value="educación">Educación</option>
+                                        <option value="vivienda">Vivienda</option>
+                                        <option value="transporte">Transporte</option>
+                                        <option value="comida">Comida</option>
+                                        <option value="salud">Salud</option>
+                                        <option value="entretenimiento">Entretenimiento</option>
+                                        <option value="tecnología">Tecnología</option>
+                                        <option value="gastos personales">Gastos Personales</option>
+                                        <option value="deudas">Deudas</option>
+                                        <option value="emergencias">Emergencias</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-unic">Agregar</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Transacciones -->
+                <section class="tab-pane fade" id="transacciones" role="tabpanel" aria-labelledby="transacciones-tab">
+                    <h3>Mis Transacciones</h3>
+                    <!-- Balance en Transacciones -->
+                    <p class="fw-bold">Balance actual: ${{ balance }}</p>
+                    <p class="alert {% if balance|default(0) > 0 %}alert-success{% elif balance < 0 %}alert-danger{% else %}alert-warning{% endif %}">
+                        {% if balance > 0 %}
+                            ¡Felicidades! Tu balance es positivo. Sigue ahorrando y gestionando bien tus finanzas.
+                        {% elif balance < 0 %}
+                            Tu balance es negativo. Considera reducir tus gastos y revisar tu presupuesto. <br>
+                            Te recomendamos revisar el articulo siguiente: <br>
+                            <a class="link" href='https://www.wtwco.com/es-mx/insights/2023/08/la-regla-50-30-20' target='_blank'>Regla 50-30-20</a>
+                        {% else %}
+                            Estas en ceros!!!, comienza a agregar tus transacciones diarias.
+                        {% endif %}
+                    </p>
+                    <br>
+                    <p>¡Descarga tus transacciones en cualquier momento!</p>
+                    <a href="/descargar_transacciones" class="btn">Descargar transacciones</a>
+
+                    <div class="row">
+                        <!-- Tabla de Ingresos -->
+                        <div class="col-md-6">
+                            <h4>Ingresos</h4>
+                            <table class="table table-hover table-bordered">
+                                <thead class="table-ingreso">
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Monto</th>
+                                        <th>Categoría</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for transaccion in transacciones %}
+                                    {% if transaccion[1] == 'ingreso' %}
+                                    <tr>
+                                        <td>{{ transaccion[0] }}</td>
+                                        <td>{{ transaccion[2] }}</td>
+                                        <td>{{ transaccion[3] }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Tabla de Gastos -->
+                        <div class="col-md-6">
+                            <h4>Gastos</h4>
+                            <table class="table table-hover table-bordered">
+                                <thead class="table-gasto">
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Monto</th>
+                                        <th>Categoría</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for transaccion in transacciones %}
+                                    {% if transaccion[1] == 'gasto' %}
+                                    <tr>
+                                        <td>{{ transaccion[0] }}</td>
+                                        <td>{{ transaccion[2] }}</td>
+                                        <td>{{ transaccion[3] }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gráficos -->
+                <section class="tab-pane fade" id="graficos" role="tabpanel" aria-labelledby="graficos-tab">
+                    <h3>Gráficos de Finanzas</h3>
+                    <!-- Gráfico de Ingresos y Gastos -->
+                    <div>
+                        <h5 class="fw-bold">Distribución de Ingresos vs Gastos</h5>
+                        <!-- Balance en Transacciones -->
+                    <p class="fw-bold">Balance actual: ${{ balance }} MNX</p>
+                    <p class="alert {% if balance|default(0) > 0 %}alert-success{% elif balance < 0 %}alert-danger{% else %}alert-warning{% endif %}">
+                        {% if balance > 0 %}
+                            ¡Felicidades! Tu balance es positivo. Sigue ahorrando y gestionando bien tus finanzas.
+                        {% elif balance < 0 %}
+                            Tu balance es negativo. Considera reducir tus gastos y revisar tu presupuesto. <br>
+                            Te recomendamos revisar el articulo siguiente: <br>>
+                            <a class="link" href='https://www.wtwco.com/es-mx/insights/2023/08/la-regla-50-30-20' target='_blank'>Regla 50-30-20</a>
+                        {% else %}
+                            Estas en ceros!!!, comienza a agregar tus transacciones diarias.
+                        {% endif %}
+                    </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                {{ img_finanzas|safe }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ img_categorias|safe }}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Procesar -->
+                <section class="tab-pane fade" id="procesar" role="tabpanel" aria-labelledby="procesar-tab">
+                    <h3>Análisis financiero</h3>
+                    <div class="alert alert-info" role="alert">
+                        <h5>Instrucciones para cargar tu archivo CSV:</h5>
+                        <ul>
+                            <li>Asegúrate de que el archivo tenga el formato <strong>.csv</strong>.</li>
+                            <li>Debe contener las siguientes columnas:
+                                <ul>
+                                    <li><strong>Fecha:</strong> Formato YYYY-MM-DD (Ejemplo: 2024-01-01).</li>
+                                    <li><strong>Ingreso</strong> Cantidad numérica sin símbolos ($).</li>
+                                    <li><strong>Gasto</strong> Cantidad numérica sin símbolos ($).</li>
+                                    <li><strong>Categoría:</strong> (Opcional) Puedes incluir una descripción como 'Alimentación' o 'Transporte'.</li>
+                                </ul>
+                            </li>
+                            <li>No dejes celdas vacías en las columnas obligatorias.</li>
+                        </ul>
+                        <a href="{{ url_for('descargar_ejemplo') }}" class="btn btn-secondary">Descargar archivo de ejemplo</a>
+                    </div>
+                    <!-- Aquí podrías añadir gráficos o funciones de procesamiento de datos -->
+                    <div class="row formproc" >
+                        <!-- Formulario para subir el archivo CSV -->
+                        <h2 class="display-6 my-4">Subir archivo CSV</h2>
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <div class="input-group">
+                                <input class="form-control" type="file" name="file" accept=".csv" required>
+                                <button class="btn btn-unic" type="submit">Subir y Procesar</button>
+                            </div>
+                        </form>       
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3  border-top">
+            <p class="col-md-4 mb-0 copy">© 2024 FILM</p>
+        
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/UniMoneyUp.png') }}" alt="Logo UniMoneyUp" width="72" height="57">
+            </a>
+        
+            <a class="nav film col-md-4 justify-content-end">
+              hello@franklueza.com
+            </a>
+          </footer>
+    </main>
+   
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+
+</html>
