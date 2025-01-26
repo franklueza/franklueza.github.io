@@ -20303,7 +20303,7 @@ small,
           transform: translateY(50%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: var(--bs-primary);
+  background: #DA4E2D;
   color: var(--bs-white);
   padding: 20px 0 15px 0;
   width: 40px;
@@ -21944,11 +21944,26 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endCo
 
 }
 .navbar.personal .container .navbar-brand .navbar-brand-item{
- width: 50%;
- height: 50%;
+ width: 40%;
+ height: 40%;
 }
 .nav-item a{
   color:#fff;
+}
+h1,h2,h3,h4,h5,h6{
+  color: #000;
+}
+p, ul, ol{
+  color: #000;
+}
+.art{
+  padding-top: 15rem;
+}
+@media (max-width: 767.98px) {
+  section.art {
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+  }
 }
 .subtitle{
   color:#DA4E2D;
@@ -21969,6 +21984,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endCo
   height: 50%;
   margin: 0 auto;
 }
-footer{
+footer, .bg-orange{
   background-color: #DA4E2D;
 }
