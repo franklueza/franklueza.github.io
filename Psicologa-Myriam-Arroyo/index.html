@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Psicoterapeuta - Myr</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="webestica.com">
+	<meta name="description" content="multipurpose bootstrap theme">
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+ 
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+
+			showActiveTheme(getPreferredTheme())
+
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+
+			}
+		})
+		
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+</head>
+
+<body>
+	
+<!-- Header START -->
+<header class="header-sticky header-absolute">
+	<!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-xl">
+		<div class="container">
+			<!-- Logo START -->
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item" src="assets/img/logo_amor.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/img/logo_blanco_myr.png" alt="logo">
+			</a>
+			<!-- Logo END -->
+
+			<!-- Main navbar START -->
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+
+					<!-- Nav item -->
+					
+					<!-- Nav item -->
+					
+					<!-- Nav item -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+						<div class="dropdown-menu dropdown-menu-size-xl dropdown-menu-center p-xl-3">
+							<div class="row row-cols-1 row-cols-md-2 pt-2">
+								<!-- Doc menu -->
+								<div class="col">
+									<div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+										<div class="d-flex">
+											<!-- Icon -->
+											<div class="icon-md bg-primary bg-opacity-15 text-primary rounded flex-shrink-0">👩🏻‍🦰</div>
+											<!-- Content -->
+											<div class="mx-3">
+												<p class="stretched-link heading-color fw-bold mb-0">Terapía idividual</p>
+											</div>
+										</div>
+										<!-- Button -->
+										<a class="icon-link icon-link-hover text-primary-hover stretched-link" href="docs/index.html" target="_blank"><i class="bi bi-chevron-right"></i> </a>
+									</div>
+								</div>
+
+								<!-- Doc menu -->
+								<div class="col">
+									<div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+										<div class="d-flex">
+											<!-- Icon -->
+											<div class="icon-md bg-pink bg-opacity-15 text-pink rounded flex-shrink-0">👩🏻‍❤️‍👨🏻</div>
+											<!-- Content -->
+											<div class="mx-3">
+												<p class="stretched-link heading-color fw-bold mb-0">Terapía de Pareja</p>
+											</div>
+										</div>
+										<!-- Button -->
+										<a class="icon-link icon-link-hover text-primary-hover stretched-link" href="docs/index.html" target="_blank"><i class="bi bi-chevron-right"></i> </a>
+									</div>
+								</div>
+
+								<!-- Doc menu -->
+								<div class="col">
+									<div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+										<div class="d-flex">
+											<!-- Icon -->
+											<div class="icon-md bg-success bg-opacity-15 text-success rounded flex-shrink-0">👨🏻‍👨🏻‍👦🏻‍👦🏻</div>
+											<!-- Content -->
+											<div class="mx-3">
+												<p class="stretched-link heading-color fw-bold mb-0">Terapía Familiar</p>
+											</div>
+										</div>
+										<!-- Button -->
+										<a class="icon-link icon-link-hover text-primary-hover stretched-link" href="docs/changelog.html" target="_blank"><i class="bi bi-chevron-right"></i> </a>
+									</div>
+								</div>
+
+								<!-- Doc menu -->
+								<div class="col">
+									<div class="dropdown-item bg-secondary-hover d-flex align-items-center justify-content-between position-relative text-wrap py-3">
+										<div class="d-flex">
+											<!-- Icon -->
+											<div class="icon-md bg-warning bg-opacity-15 text-warning rounded flex-shrink-0">👩🏼‍🦳</div>
+											<!-- Content -->
+											<div class="mx-3">
+												<p class="stretched-link heading-color fw-bold mb-0">Terapía Adulto Mayor</p>
+											</div>
+										</div>
+										<!-- Button -->
+										<a class="icon-link icon-link-hover text-primary-hover stretched-link" href="#" target="_blank"><i class="bi bi-chevron-right"></i> </a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</li>
+
+					<!-- Nav item -->
+					<li class="nav-item"> <a class="nav-link" href="contact-us-v1.html">Registrar una consulta</a> </li>
+				</ul>
+			</div>
+			<!-- Main navbar END -->
+
+			<!-- Buttons -->
+			<ul class="nav align-items-center dropdown-hover ms-sm-2">
+				<!-- Dark mode option START -->
+				<!--li class="nav-item dropdown dropdown-animation">
+					<button class="btn btn-link mb-0 px-2 lh-1" id="bd-theme"
+					type="button"
+					aria-expanded="false"
+					data-bs-toggle="dropdown"
+					data-bs-display="static">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-circle-half theme-icon-active fill-mode fa-fw" viewBox="0 0 16 16">
+						<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+						<use href="#"></use>
+					</svg>
+					</button>
+
+					<ul class="dropdown-menu min-w-auto dropdown-menu-end" aria-labelledby="bd-theme">
+						<li class="mb-1">
+							<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+								<svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+									<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+									<use href="#"></use>
+								</svg>Light
+							</button>
+						</li>
+						<li class="mb-1">
+							<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
+									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+									<use href="#"></use>
+								</svg>Dark
+							</button>
+						</li>
+						<li>
+							<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch me-1" viewBox="0 0 16 16">
+									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+									<use href="#"></use>
+								</svg>Auto
+							</button>
+						</li>
+					</ul>
+				</li-->
+				<!-- Dark mode option END -->
+
+				<!-- Sign up button -->
+				<li class="nav-item ms-2 d-none d-sm-block">
+					<a href="#" class="btn btn-sm bg-pastel1 text-white mb-0">Cita Online</a>
+				</li>
+				<!-- Responsive navbar toggler -->
+				<li class="nav-item">
+					<button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-animation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</button>
+				</li>	
+			</ul>
+
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Hero START -->
+<section class="pt-8 pb-0 overflow-hidden">
+	<div class="container" data-sticky-container>
+		<div class="row align-items-stretch">
+			<!-- Image -->
+			<div class="col-lg-5 offset-lg-1 order-2 mb-5 mb-lg-0">
+				<div data-sticky data-margin-top="100" data-sticky-for="992">
+					<div class="position-relative h-500px h-md-750px w-lg-50vw">
+						<div class="w-100 h-500px h-md-750px rounded-4 bg-pastel" style="background-image: url(assets/img/m.jpg); background-size:cover; background-position:top center;"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contents -->
+			<div class="col-lg-6 order-1 mb-5 mb-lg-0">
+				<div class="pb-lg-7 pt-lg-5">
+					<!-- Pre title -->
+					<h5 class="mb-lg-4"><span class="hand-wave-animate">👋🏻</span> Hello!</h5>
+						
+					<!-- Title -->
+					<h1 class="display-1 position-relative mb-6 mb-sm-5">
+						Myriam Arroyo
+						<span class="h5 bg-pastel1 text-white rounded-3 rotate-350 position-absolute bottom-0 end-0 mb-n5 mb-sm-n3 mb-lg-n1 px-4 py-3">Psicoterapeuta</span>
+					</h1>
+					<br>
+					<p class="lead mb-4 text-white">Cada persona tiene una historia única; aquí encontrarás apoyo y herramientas personalizadas para afrontar los desafíos de la vida.</p>
+					<p class="lead mb-4 text-white">"Recuerda: No estás solo/a en este camino. Estoy aquí para acompañarte."</p>
+					<!-- Buttons -->
+					<a href="#" class="btn btn-secondary icon-link icon-link-hover">¡Agenda una consulta! <i class="bi bi-arrow-right"></i></a>
+				</div>
+			</div>
+
+			<!-- Skills -->
+			<div class="col-xl-6 order-3">
+				<!-- Title -->
+				<h2 class="mb-4 mb-lg-5">Mi expertise</h2>
+
+				<div class="row g-4">
+					<!-- Skill item -->
+					<div class="col-md-6">
+						<div class="card bg-pastel6 rounded-4 p-4 h-100">
+							<!-- Icon -->
+							<div class="card-header bg-transparent p-0 pb-4">
+								<div class="icon-lg bg-pastel1 text-white rounded-circle">
+									<i class="bi bi-person-circle fa-lg"></i>
+								</div>
+							</div>
+		
+							<!-- Content -->
+							<div class="card-body p-0">
+								<h6>Terapia individual</h6>
+								<p class="text-white mb-3">Especialista en trabajar con ansiedad, estrés, depresión y autoestima, ayudando a las personas a construir herramientas emocionales para una vida equilibrada y significativa.</p>
+							</div>
+							
+							<!-- Link -->
+							<div class="card-footer bg-transparent p-0">
+								<a href="#" class="link-primary-grad icon-link icon-link-hover">Conoce más <i class="bi bi-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Skill item -->
+					<div class="col-md-6">
+						<div class="card bg-pink rounded-4 p-4 h-100">
+							<!-- Icon -->
+							<div class="card-header bg-transparent p-0 pb-4">
+								<div class="icon-lg bg-pastel5 text-white rounded-circle">
+									<i class="bi bi-person-heart fa-lg"></i>
+								</div>
+							</div>
+		
+							<!-- Content -->
+							<div class="card-body p-0">
+								<h6>Terapia de Pareja</h6>
+								<p class="text-white mb-3">Con enfoque en comunicación, resolución de conflictos y crecimiento mutuo, ayudo a las parejas a fortalecer su relación desde el respeto y la empatía.</p>
+							</div>
+		
+							<!-- Link -->
+							<div class="card-footer bg-transparent p-0">
+								<a href="#" class="link-primary-grad icon-link icon-link-hover">Descubre como <i class="bi bi-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Skill item -->
+					<div class="col-md-6">
+						<div class="card bg-pastel7 bg-opacity-15 rounded-4 p-4 h-100">
+							<!-- Icon -->
+							<div class="card-header bg-transparent p-0 pb-4">
+								<div class="icon-lg bg-pastel8 text-white rounded-circle">
+									<i class="bi bi-person-hearts fa-lg"></i>
+								</div>
+							</div>
+		
+							<!-- Content -->
+							<div class="card-body p-0">
+								<h6>Terapia Familiar</h6>
+								<p class="text-white mb-3">Apoyo en la resolución de conflictos familiares y en la mejora de las dinámicas entre los miembros, promoviendo relaciones más armoniosas.</p>
+							</div>
+		
+							<!-- Link -->
+							<div class="card-footer bg-transparent p-0">
+								<a href="#" class="link-primary-grad icon-link icon-link-hover">Explora más <i class="bi bi-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Skill item -->
+					<div class="col-md-6">
+						<div class="card bg-pastel9 bg-opacity-15 rounded-4 p-4 h-100">
+							<!-- Icon -->
+							<div class="card-header bg-transparent p-0 pb-4">
+								<div class="icon-lg bg-pastel10 text-white rounded-circle">
+									<i class="bi bi-suit-heart fa-lg"></i>
+								</div>
+							</div>
+		
+							<!-- Content -->
+							<div class="card-body p-0">
+								<h6>Terapía Adultos mayores</h6>
+								<p class="text-white mb-3">Especializada en acompañar a los adultos mayores en procesos de adaptación, fortalecimiento emocional y enfrentamiento de los cambios en esta etapa de vida.</p>
+							</div>
+		
+							<!-- Link -->
+							<div class="card-footer bg-transparent p-0">
+								<a href="#" class="link-primary-grad icon-link icon-link-hover">Más información<i class="bi bi-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- Row END -->
+			</div>
+		</div> <!-- Row END -->
+	</div>
+</section>
+<!-- =======================
+Hero END -->
+
+<!-- =======================
+Projects START -->
+<section>
+	<div class="container">
+
+		<!-- Title and button -->
+		 <div class="row align-items-center">
+			<div class="col-md-5 text-center text-md-start">
+				<h2 class="mb-3 mb-md-0">Terapía y Acompañamiento</h2>
+				<p class="lead mb-4 text-white">Ofrezco una amplia gama de servicios diseñados para adaptarse a tus necesidades, brindando atención profesional y personalizada, tanto en sesiones presenciales como en línea.</p>
+			</div>
+			<div class="col-md-5 ms-auto text-center text-md-end">
+				<a href="#" class="btn bg-pastel1 text-white mb-0">Haz una cita</a>
+			</div>
+		 </div>
+
+		 <div class="row justify-content-center mb-6">
+			<!-- Project item -->
+			<div class="col-md-6 d-flex align-items-center mt-4">
+				<div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+					<div class="card-img-scale-wrapper rounded-4">
+						<!-- Card Image -->              
+						<img src="assets/img/1.jpg" class="img-scale rounded-4" alt="portfolio-img">
+						<!-- Arrow button -->
+						<div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5"> 
+							<div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
+						</div>
+					</div>
+					<!-- Card body -->
+					<div class="card-body d-flex justify-content-between px-0 pb-0">
+						<div>
+							<h6 class="mb-0"><a href="#" class="heading-color stretched-link">Terapía de Individual</a></h6>
+							<p class="text-white">Para quienes enfrentan ansiedad, depresión, estrés, problemas de autoestima o necesitan apoyo para superar momentos difíciles en su vida.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project item -->
+			<div class="col-md-6 d-flex align-items-center">
+				<div class="row justify-content-center mt-4">
+					<div class="col-md-11 col-lg-9">
+						<div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+							<div class="card-img-scale-wrapper rounded-4">
+								<!-- Card Image -->              
+								<img src="assets/img/Terapia_de_pareja.jpg" class="img-scale rounded-4" alt="portfolio-img">
+								<!-- Arrow button -->
+								<div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5"> 
+									<div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
+								</div>
+							</div>
+							<!-- Card body -->
+							<div class="card-body d-flex justify-content-between px-0 pb-0">
+								<div>
+									<h6 class="mb-0"><a href="#" class="heading-color stretched-link">Terapia de Pareja</a></h6>
+									<p class="text-white">Dirigida a parejas que enfrentan problemas de comunicación, conflictos recurrentes, desconfianza o buscan fortalecer su vínculo emocional.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project item -->
+			<div class="col-md-6 d-flex align-items-center">
+				<div class="row justify-content-center mt-4">
+					<div class="col-md-11 col-lg-9">
+						<div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+							<div class="card-img-scale-wrapper rounded-4">
+								<!-- Card Image -->              
+								<img src="assets/img/4.jpg" class="img-scale rounded-4" alt="portfolio-img">
+								<!-- Arrow button -->
+								<div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5"> 
+									<div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
+								</div>
+							</div>
+							<!-- Card body -->
+							<div class="card-body d-flex justify-content-between px-0 pb-0">
+								<div>
+									<h6 class="mb-0"><a href="portfolio-case-study-v2.html" class="heading-color stretched-link">Terapía Familiar</a></h6>
+									<p class="text-white">Enfocada en familias que experimentan conflictos, problemas de convivencia, dificultades generacionales o dinámicas disfuncionales.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project item -->
+			<div class="col-md-6 d-flex align-items-center mt-4">
+				<div class="card card-img-scale card-content-hover rounded-0 bg-transparent overflow-hidden">
+					<div class="card-img-scale-wrapper rounded-4">
+						<!-- Card Image -->              
+						<img src="assets/img/6.jpg" class="img-scale rounded-4" alt="portfolio-img">
+						<!-- Arrow button -->
+						<div class="card-img-overlay hover-content d-flex flex-column align-items-center justify-content-center p-5"> 
+							<div class="icon-xl bg-dark text-white rounded-circle"><i class="bi bi-arrow-up-right"></i></div>
+						</div>
+					</div>
+					<!-- Card body -->
+					<div class="card-body d-flex justify-content-between px-0 pb-0">
+						<div>
+							<h6 class="mb-0"><a href="portfolio-case-study-v2.html" class="heading-color stretched-link">Terapía Adultos Mayores</a></h6>
+							<p class="text-white">Para personas mayores que atraviesan etapas de soledad, duelo, cambios significativos en su vida o buscan mantener su bienestar emocional.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Small CTA -->
+		<!--div class="d-inline-flex justify-content-center mx-auto w-100">
+			<p class="bg-dark rounded-3 text-white text-center px-5 py-3 mb-0">✌️ Let's create a modern, engaging website for your business.
+				<a href="#" class="fw-semibold hover-underline-animation text-white">Hire me</a>
+			</p>
+		</div-->
+
+	</div>
+</section>
+<!-- =======================
+Projects END -->
+
+<!-- =======================
+About me START -->
+<section class="position-relative z-index-2 py-0">
+	<div class="container-fluid position-relative">
+		<div class="max-width-1550 bg-lila bg-opacity-50 position-relative rounded-4 overflow-hidden px-3 py-4 py-sm-6 py-lg-8">
+			<!-- Grad blur -->
+			<div class="position-absolute top-0 end-0 mt-n6">
+				<img src="assets/images/elements/grad-shape/blur-decoration.svg" class="rotate-270 blur-8 opacity-2" alt="Grad shape">
+			</div>
+			
+			<div class="container">
+				<!-- Title and content -->
+				<div class="row g-4">
+					<div class="col-lg-7">
+						<span class="text-white fw-semibold">Psicoterapeuta</span>
+						<h2 class="my-3">Acerca de mi</h2>
+						<p class="text-white mb-4">Soy Myriam Xochitl Arroyo Nava, psicoterapeuta con una profunda pasión por acompañar a las  personas, parejas, 
+							adolescentes, adultos mayores y familias en su proceso de autoconocimiento, sanación emocional y transformación personal. A través de 
+							un enfoque empático y profesional, acompañando a mis pacientes a comprender y modificar patrones de pensamiento y comportamiento 
+							que afectan su bienestar.</p>
+						<h2 class="my-3">Mi Enfoque Terapéutico</h2>
+						<p class="text-white mb-4">Mi labor como psicoterapeuta se basa en el respeto, la confidencialidad y el compromiso con el bienestar de mis pacientes. Utilizo diversas 
+							metodologías terapéuticas para adaptarme a las necesidades individuales de cada persona, acompañándolas a desarrollar herramientas para afrontar 
+							los desafíos de la vida con resiliencia y equilibrio emocional.</p>
+							<p class="text-white mb-4">Si buscas un espacio seguro para trabajar en tu bienestar, estoy aquí para acompañarte en este proceso.</p>
+
+						<!-- Social links -->
+						<ul class="list-inline d-flex flex-wrap gap-2 align-items-center mb-0">
+							<li class="list-inline-item heading-color fw-semibold me-sm-3">Follow me:</li>
+							<li class="list-inline-item"> <a class="btn btn-sm bg-facebook mb-0" href="#"><i class="bi bi-facebook lh-base"></i> Facebook</a> </li>
+							<li class="list-inline-item"> <a class="btn btn-sm bg-instagram-gradient mb-0" href="#"><i class="bi bi-instagram lh-base"></i> Instagram</a> </li>
+						</ul>
+					</div>
+
+					<!-- Counter -->
+					<div class="col-lg-4 ms-auto ">
+						<div class="row">
+							<a href="assets/img/Myr_Consultorio1.jpg" data-glightbox="" data-gallery="image-popup">
+								<img src="assets/img/Myr_Consultorio1.jpg" class="rounded" alt="portfolio-img">
+							</a>
+						</div> <!-- Row END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+About me END -->
+<!-- =======================
+Testimonials START -->
+<section class="position-relative pt-0 pb-0">
+	<div class="container-fluid">
+		<div class="max-width-1550  bg-blur position-relative rounded-4 overflow-hidden py-6 py-lg-8">	
+			<div class="container">
+				<!-- Title -->
+				<div class="inner-container text-center mb-lg-6">
+					<h2>Testimonios 😍</h2>
+				</div>
+	
+				<!-- Slider contents START -->
+				<div class="row">
+					<div class="col-md-8 mx-auto">
+						<!-- Slider START -->
+						<div class="swiper mt-2 mt-md-4" data-swiper-options='{
+							"spaceBetween": 30,
+							"autoplay":{
+								"delay": 4000, 
+								"disableOnInteraction": false,
+								"pauseOnMouseEnter": true
+							},
+							"pagination":{
+								"el":".swiper-pagination",
+								"clickable":"true"
+							}}'>
+							
+							<div class="swiper-wrapper mb-5">
+								<!-- Testimonials item -->
+								<div class="swiper-slide">
+									<div class="text-center">
+										<!-- Image -->
+										<div class="avatar avatar-lg mx-auto flex-shrink-0 mb-4">
+											<h2 class="emoji">👧</h2>
+										</div>
+										<!-- Testimonials text -->
+										<blockquote class="mb-4">
+											<p class="lead heading-color mb-0">Antes de empezar terapia, sentía que mis pensamientos me sobrepasaban. 
+												Con la ayuda de Myriam, aprendí a gestionar mi ansiedad y a ver la vida desde una perspectiva más 
+												equilibrada. Hoy me siento más segura de mí misma y con herramientas para enfrentar mis retos diarios.</p>
+										</blockquote>	
+										<!-- Rating star -->
+										<ul class="list-inline mb-4">
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-half text-warning"></i></li>
+										</ul>
+										<!-- Testimonials info -->
+										<div>
+											<h6 class="mb-0">María G.</h6>
+											<small class="text-white">Terapia Individual</small>
+										</div>
+									</div>
+								</div>
+	
+								<!-- Testimonials item -->
+								<div class="swiper-slide">
+									<div class="text-center">
+										<!-- Image -->
+										<div class="avatar avatar-lg mx-auto flex-shrink-0 mb-4">
+										<h2 class="emoji">👩🏻‍❤️‍👨🏻</h2>		<!--👩‍🦰-->								
+										</div>
+										<!-- Testimonials text -->
+										<blockquote class="mb-4">
+											<p class="lead heading-color mb-0">Nuestra relación estaba en crisis, sentíamos que ya no nos 
+												entendíamos. Gracias a las sesiones de terapia con Myriam, aprendimos a comunicarnos mejor 
+												y a reencontrarnos como pareja. Ahora nos sentimos más conectados y fuertes juntos</p>
+										</blockquote>	
+										<!-- Rating star -->
+										<ul class="list-inline mb-4">
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+										</ul>
+										<!-- Testimonials info -->
+										<div>
+											<h6 class="mb-0">Carlos y Sofía</h6>
+											<small class="text-white">Terapia de Pareja</small>
+										</div>
+									</div>
+								</div>
+	
+								<!-- Testimonials item -->
+								<div class="swiper-slide">
+									<div class="text-center">
+										<!-- Image -->
+										<div class="avatar avatar-lg mx-auto flex-shrink-0 mb-4">
+											<h2 class="emoji">👨🏻‍👨🏻‍👦🏻‍👦🏻</h2>										
+										</div>
+										<!-- Testimonials text -->
+										<blockquote class="mb-4">
+											<p class="lead heading-color mb-0">Como padres, nos costaba conectar con nuestros hijos adolescentes. 
+												La terapia nos ayudó a mejorar nuestra relación familiar y a entendernos mejor. Ahora en casa hay 
+												más diálogo y menos conflictos.</p>
+										</blockquote>	
+										<!-- Rating star -->
+										<ul class="list-inline mb-4">
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-half text-warning"></i></li>
+										</ul>
+										<!-- Testimonials info -->
+										<div>
+											<h6 class="mb-0">Familia Ramírez</h6>
+											<small class="text-white">Terapia familiar</small>
+										</div>
+									</div>
+								</div>
+								<!-- Testimonials item -->
+								<div class="swiper-slide">
+									<div class="text-center">
+										<!-- Image -->
+										<div class="avatar avatar-lg mx-auto flex-shrink-0 mb-4">
+											<h2 class="emoji">👩‍🦳</h2>										
+										</div>
+										<!-- Testimonials text -->
+										<blockquote class="mb-4">
+											<p class="lead heading-color mb-0">Después de la jubilación, sentí un gran vacío y soledad. 
+												Las sesiones con Myriam me ayudaron a redescubrirme, a valorar mi historia de vida y a 
+												encontrar nuevas formas de disfrutar esta etapa.</p>
+										</blockquote>	
+										<!-- Rating star -->
+										<ul class="list-inline mb-4">
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-fill text-warning"></i></li>
+											<li class="list-inline-item fs-6 me-0"><i class="bi bi-star-half text-warning"></i></li>
+										</ul>
+										<!-- Testimonials info -->
+										<div>
+											<h6 class="mb-0">Rosa M.</h6>
+											<small class="text-white">Terapia para Adultos Mayores</small>
+										</div>
+									</div>
+								</div>
+							</div>
+	
+							<!-- Slider Pagination -->
+							<div class="swiper-pagination swiper-pagination-primary position-absolute bottom-0 mb-3"></div>
+						</div>		
+						<!-- Slider END -->
+					</div>
+				</div>
+				<!-- Slider contents END -->
+	
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+Testimonials END -->
+<section class="imgs">
+	<div class="container">
+		<div class="row g-4 g-lg-5">
+			<!-- Image -->
+			<div class="col-6 col-md-4">
+				<a href="assets/img/Consultorio1.jpg" data-glightbox="" data-gallery="image-popup">
+					<img src="assets/img/Consultorio1.jpg" class="rounded" alt="portfolio-img">
+				</a>
+			</div>
+
+			<!-- Image -->
+			<div class="col-6 col-md-4">
+				<a href="assets/img/Consultorio3.jpg" data-glightbox="" data-gallery="image-popup">
+					<img src="assets/img/Consultorio3.jpg" class="rounded" alt="portfolio-img">
+				</a>
+			</div>
+
+			<!-- Image -->
+			<div class="col-6 col-md-4">
+				<a href="assets/img/Consultorio5.jpg" data-glightbox="" data-gallery="image-popup">
+					<img src="assets/img/Consultorio5.jpg" class="rounded" alt="portfolio-img">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+Left right features accordion START -->
+<section class="pt-5">
+	<div class="container">
+		<div class="row g-4 align-items-xl-center">
+			<!-- Image -->
+			<div class="col-lg-6 col-xl-5 order-2">
+				<div class="bg-secondary-grad rounded-4 position-relative p-4">
+					<!-- Saas image -->
+					<a href="assets/img/Myr_Consultorio2.jpg" data-glightbox="" data-gallery="image-popup">
+						<img src="assets/img/Myr_Consultorio2.jpg" class="rounded" alt="portfolio-img">
+					</a>
+				</div>
+			</div>
+
+			<div class="col-lg-6 ms-auto order-1 order-lg-2">
+				<!-- Title -->
+				<h2 class="mb-4 mb-lg-5">Preguntas frecuentes</h2>
+
+				<!-- Features accordion START -->
+				<div class="accordion accordion-border-start mb-sm-5" id="accordionFaq">
+					<!-- Item -->
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-1">
+							<button class="accordion-button fw-semibold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Cómo sé si necesito terapia?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionFaq">
+							<div class="accordion-body  text-white pt-0 pt-0">
+								Si sientes que estás lidiando con emociones difíciles, conflictos persistentes o situaciones que afectan tu bienestar, 
+								la terapia puede ser una herramienta valiosa para comprender y abordar estos desafíos.							
+							</div>
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-2">
+							<button class="accordion-button fw-semibold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Cuánto duran las sesiones de terapia?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								Cada sesión tiene una duración aproximada de 50 minutos a una hora, dependiendo del tipo de terapia y las necesidades del paciente.							
+							</div>
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-3">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Las sesiones son confidenciales?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								Sí, todas las sesiones son completamente confidenciales y se manejan bajo los lineamientos éticos y legales establecidos en la práctica psicológica.							
+							</div>
+						</div>
+					</div>
+					<!-- Item -->
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-4">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Puedo asistir a terapia en línea?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								Sí, ofrezco la opción de terapia en línea para que puedas recibir apoyo desde la comodidad de tu hogar. Solo necesitas un dispositivo con conexión a internet y un espacio privado para las sesiones.						
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-5">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Qué debo esperar en la primera sesión?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								En la primera sesión nos enfocaremos en conocernos, explorar tus inquietudes y establecer objetivos claros para el proceso terapéutico.						
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-6">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Cuánto tiempo dura un proceso terapéutico?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								La duración del proceso varía según cada persona, sus objetivos y necesidades. Algunas personas pueden necesitar solo unas pocas sesiones, mientras que otras optan por un proceso más prolongado.							</div>
+						</div>
+					</div>
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-7">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Es posible agendar una consulta fuera del horario habitual?							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								En algunos casos, es posible ajustar los horarios según disponibilidad. Por favor, contáctame para evaluar opciones personalizadas.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-8">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Qué costo tienen las sesiones?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-8" class="accordion-collapse collapse" aria-labelledby="heading-8" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								Los costos pueden variar según el tipo de terapia y la modalidad (presencial o en línea). Para más información, contáctame directamente.							</div>
+						</div>
+					</div>
+					<div class="accordion-item mb-4">
+						<div class="accordion-header font-base" id="heading-9">
+							<button class="accordion-button fw-semibold collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+								<span class="heading-icon"><i class="bi bi-arrow-right-circle"></i></span>
+								¿Qué sucede si necesito cancelar una sesión?
+							</button>
+						</div>
+						<!-- Body -->
+						<div id="collapse-9" class="accordion-collapse collapse" aria-labelledby="heading-9" data-bs-parent="#accordionFaq">
+							<div class="accordion-body text-white pt-0">
+								Entiendo que pueden surgir imprevistos. Por favor, avisa con al menos 24 horas de anticipación para reprogramar o cancelar tu cita sin cargo. De lo contrario se cobrará la sesión.						</div>
+					</div>
+				<!-- Features accordion END -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- =======================
+Left right features accordion END -->
+
+
+
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer class="bg-pastel1 pt-6 pt-md-8 position-relative" data-bs-theme="dark">
+	<div class="container">
+		<div class="row g-4 justify-content-between">
+			<!-- Widget 1 START -->
+			<div class="col-lg-4">
+				<!-- logo -->
+				<a href="index.html">
+					<img class="h-100px" src="assets/img/logo_blanco_myr.png" alt="logo">
+				</a>
+
+				<p class="my-3 my-lg-4 text-white">Cedúla Profesional:</p>
+				<p class="my-3 text-white">Lic. en Psicología, UAM-Xoc: 4362732</p>
+				<p class="my-3 text-white">Maestría en Psicoterapia, IMPO: 13647879</p>
+				<p class="my-3 text-white">Maestría en Educación, UNID: 10734311</p>
+				<!-- Social icon -->
+				<ul class="list-inline mb-0">
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" href="#"><i class="bi bi-facebook lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-secondary" href="#"><i class="bi bi-instagram lh-base"></i></a> </li>
+				</ul>
+			</div>
+			<!-- Widget 1 END -->
+
+			<!-- Widget 2 START -->
+			<div class="col-lg-6 col-xxl-4">
+				<div class="row">
+					<!--h6>ReconoSerC. <br> Consultorio de Psicología y Psicoterapia Integral</h6-->
+					<div class="col-lg-5">
+						<iframe class="w-200 h-200px h-lg-500px grayscale rounded-4 d-block mb-3 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60256.11105976165!2d-99.112747327986!3d19.28206435104293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce030052ab50fd%3A0x6daf56093b89cc1d!2sReconoSerC.%20Consultorio%20de%20Psicolog%C3%ADa%20y%20Psicoterapia%20Integral!5e0!3m2!1ses!2smx!4v1738544165339!5m2!1ses!2smx" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+			<!-- Widget 2 END -->
+		</div>
+
+		<!-- Divider -->
+		<hr class="mt-xl-5 mb-0 opacity-1">
+
+		<!-- Bottom footer -->
+		<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
+			<!-- copyright text -->
+			<div class="text-body small mb-3 mb-md-0"> Copyrights ©2025 FILM. Hecho  con ❤️ </div>
+			
+			<!-- Policy link -->
+			<!--ul class="nav d-flex justify-content-center gap-1 mb-0">
+				<li class="nav-item"><a class="nav-link small py-0" href="#">Privacy policy</a></li>
+				<li class="nav-item"><a class="nav-link small py-0 pe-0" href="#">Terms &amp; conditions</a></li>
+			</ul-->
+		</div>
+	</div>
+</footer>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"></div>
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Vendors-->
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/sticky-js/sticky.min.js"></script>
+
+<!-- Theme Functions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+</html>

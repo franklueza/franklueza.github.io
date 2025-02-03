@@ -1,0 +1,68 @@
+body{
+    background-color: #FBB7E0;
+}
+.bg-pastel1{
+    background-color: #C199DF;
+}
+.bg-pastel6{
+    background-color: #cb6ce6;
+}
+.bg-pastel7{
+    background-color: #5DBDE7;
+}
+.bg-pastel8{
+    background-color: #3fa7df;
+}
+.bg-pastel2{
+    background-color: #aab9ed;
+}
+.bg-pastel3{
+    background-color: #d4d3f7;
+}
+.bg-pastel4{
+    background-color: #fbd5ef;
+}
+.bg-pastel5{
+    background-color: #FBB7E0;
+}
+.bg-pastel9{
+    background-color: #8C52FF;
+}
+.bg-pastel10{
+    background-color: #3f2d65;
+}
+.bg-lila{
+    background-color: #C199DF;
+}
+@media (min-width: 992px) {
+    .mb-lg-n1 {
+        margin-bottom: -3rem !important;
+    }
+}
+.accordion.accordion-border-start .accordion-item:has(.accordion-button[aria-expanded=true]){
+    border-left: 2.5px solid #3FA7DF;
+}
+.accordion.accordion-border-start .accordion-item {
+    border: 2.5px solid transparent;
+    background-color: #5DBDE7 !important;
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+.accordion.accordion-border-start .accordion-button .heading-icon {
+    background-color: #3FA7DF;
+}
+.emoji{
+    font-size: 4em;
+}
+@media (min-width: 992px) {
+    .py-lg-8 {
+        padding-top: 8em !important;
+        padding-bottom: 3em !important;
+    }
+}
+.imgs{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
