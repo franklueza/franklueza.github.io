@@ -34,6 +34,16 @@ body{
 .bg-lila{
     background-color: #C199DF;
 }
+.bg-pink1{
+    background-color: rgb(228 23 144) !important;
+    
+}
+.card-1{
+    background-color: #FBB7E0;
+}
+[data-bs-theme=dark] .bg-body, .btn-pink {
+    background-color: #FF6399 !important;
+}
 @media (min-width: 992px) {
     .mb-lg-n1 {
         margin-bottom: -3rem !important;
