@@ -114,7 +114,35 @@
 			</div>
 		  </div>
 		</div>
-	  </section>
+	</section>
+	<!--section class="bg-1">
+		<div>
+			<h2>Aliados estratégicos</h2>
+		</div>
+	</section-->
+	
+	<section id="propuesta" class="valor-section">
+		 <video autoplay muted loop playsinline id="videoFondo">
+			<source src="z.mp4" type="video/mp4">
+			Tu navegador no soporta el video.
+		</video>
+		<div class="valor-content">
+			<h2>Nuestra Propuesta de Valor</h2>
+			<p>En TEOCALLI, creemos que el conocimiento se construye paso a paso. Por eso, nuestro Diplomado en Principios 
+				de Análisis y Visualización de Datos está diseñado para que cada módulo sea un peldaño más en tu aprendizaje.</p>
+				<p>Aprenderás haciendo, resolviendo pequeños retos y aplicando los conceptos en ejercicios reales.</p>
+				<p>Cada módulo te permitirá analizar y comprender a fondo los temas clave, asegurando que avances con bases sólidas.</p>
+				<p>Al finalizar cada etapa, y especialmente al concluir el diplomado, tendrás una visión integral del análisis
+			Cada módulo te permitirá analizar y comprender a fondo los temas clave, asegurando que avances con bases sólidas.</li>
+			Al finalizar cada etapa, y especialmente al concluir el diplomado, tendrás una visión integral del análisis de datos y sabrás elegir y utilizar las herramientas más adecuadas para resolver problemas en tu entorno profesional.</li></p>
+			
+			<p>En TEOCALLI, no solo te damos información: te ayudamos a transformar el conocimiento en habilidades prácticas que te abrirán nuevas oportunidades.</p>
+			<p><strong>¡Únete a nosotros y conviértete en un experto en análisis y visualización de datos!</strong></p>
+		</div>
+	</section>
+
+
+
 	<section class="content-section">
 		<h2 class="gradient-title shine h" style="text-align: center;">Plan de estudio</h2>
 	</section>
@@ -131,6 +159,7 @@
 						<li>Análisis de distribuciones y correlaciones</li>
 						<li>Proyecto: Análisis estadístico de un conjunto de datos real</li>
 					</ul-->
+					<button class="btn-animated2" data-popup-target="popup" id="openPopup">Temario</button>
 				</div>
 			</div>
 		</div>
@@ -239,7 +268,7 @@
 			</div>
 		</div>  
 	<footer>
-		<p>© <img src="img/logo teocalli.png"  width="20px"> TEOCALLI 2025. ALL right reserved</p>
+		<p>© <img src="img/logo-blanco-teocalli.png"  width="20px"> TEOCALLI 2025. ALL right reserved</p>
 	  </footer>
 	<script type="x-shader/x-vertex" id="wrapVertexShader">
 		attribute float size;
@@ -262,49 +291,11 @@
 			gl_FragColor = color;
 		}
 	</script>
-	<script>
-		const openButtons = document.querySelectorAll('[data-popup-target]');
-		const closeButtons = document.querySelectorAll('.popup-close');
+	
 
-		openButtons.forEach(button => {
-			const popupId = button.getAttribute('data-popup-target');
-			const popup = document.getElementById(popupId);
-
-			button.addEventListener('click', () => {
-			popup.style.display = 'flex';
-			});
-		});
-
-		closeButtons.forEach(button => {
-			button.addEventListener('click', () => {
-			const popup = button.closest('.popup-overlay');
-			popup.style.display = 'none';
-			});
-		});
-
-		window.addEventListener('click', e => {
-			if (e.target.classList.contains('popup-overlay')) {
-			e.target.style.display = 'none';
-			}
-		});
-	</script>
-
-
-	<script>
-		const btn = document.querySelector('.btn-animated');
-
-		btn.addEventListener('mousedown', () => {
-			gsap.to(btn, { scale: 0.95, duration: 0.1 });
-		});
-
-		btn.addEventListener('mouseup', () => {
-			gsap.to(btn, { scale: 1, duration: 0.2, ease: 'elastic.out(1, 0.3)' });
-		});
-	</script>
 
 	<script type="module">
 		import * as THREE from 'https://cdn.skypack.dev/three@0.152.2';
-
 		function createPrehispanicSpiral(canvasId, size = 100, scale = 1) {
 		const canvas = document.getElementById(canvasId);
 
@@ -368,8 +359,11 @@
 		createPrehispanicSpiral("spiralCanvas2", 370);
 
 	  </script>
-		  
+
+	<script src="js/btn.js"></script>
 	<script src="js/card.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/particulas.js"></script>
 	<script src="js/three.min.js"></script>
 	<script src="js/TweenMax.min.js"></script>
 	<script src="js/header.js"></script>
