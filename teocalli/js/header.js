@@ -19,7 +19,7 @@ renderer.setSize(width, height);
 var scene = new THREE.Scene(); // <- define esto primero
 
 var loader = new THREE.ImageLoader();
-loader.load('https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', function(image) {
+loader.load('https://cocoweb-assets.s3.amazonaws.com/experiences/3-1708557192.jpg', function(image) {
     var canvas = document.createElement('canvas');
     canvas.width = image.width;
     canvas.height = image.height;
