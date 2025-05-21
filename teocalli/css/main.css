@@ -199,7 +199,7 @@ section {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px  
+  padding: 0 20px;  
 }
 
 .column {
@@ -258,7 +258,6 @@ section {
 /* Responsive styles */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
     gap: 60px;
   }
 
@@ -384,7 +383,6 @@ section.dirigido {
 
 @media (max-width: 768px) {
   .dirigido .container {
-    flex-direction: column;
     gap: 60px;
   }
 
