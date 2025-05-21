@@ -572,7 +572,7 @@ section.valor-section {
   /*background: #ac1122;
   background: -webkit-linear-gradient(to right, #000000, #ac1122); 
   background: linear-gradient(to right, #000000, #ac1122); */
-  background-image: url(../img/space.png);
+  background-image: url(../img/space.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
