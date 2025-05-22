@@ -19,7 +19,7 @@ renderer.setSize(width, height);
 var scene = new THREE.Scene(); // <- define esto primero
 
 var loader = new THREE.ImageLoader();
-loader.load('img/TEOCALLI.jpg', function(image) {
+loader.load('img/space3.jpg', function(image) {
     var canvas = document.createElement('canvas');
     canvas.width = image.width;
     canvas.height = image.height;
