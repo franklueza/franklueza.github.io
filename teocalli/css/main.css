@@ -60,6 +60,9 @@ button, a{
   font-family: 'Adieu', sans-serif;
   font-weight: 400;
 }
+strong{
+  color:#ac1122;
+}
 /*
 h1, h2, h3 {
   font-family: 'Canela', serif;
