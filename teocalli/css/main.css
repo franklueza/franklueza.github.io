@@ -31,7 +31,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
   font-weight: 400;
   font-style: normal;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 html, body {
   overflow-x: hidden;
   width: 100%;
@@ -47,8 +49,9 @@ html, body {
 .js body.render {
 	opacity: 1;
 }
+
 h1, h2, h3, h4, h5, h6{
- font-family:'Canela', sans-serif; 
+ font-family: 'Canela', sans-serif; 
 }
   
 p, ul{
@@ -60,8 +63,11 @@ button, a{
   font-family: 'Adieu', sans-serif;
   font-weight: 400;
 }
-strong{
-  color:#ac1122;
+strong{ 
+  color: #ac1122;
+}
+a.calendario{
+  color:#fff;
 }
 /*
 h1, h2, h3 {
@@ -189,11 +195,54 @@ h2{
 }
 
 /*Seciones de contenido*/
+.certificacion-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  color: #222;
+}
+
+.certificacion-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ac1122;
+}
+
+.cert-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.cert-logos img {
+  max-width: 180px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.cert-logos img:hover {
+  filter: grayscale(0%);
+}
+
+.cert-note {
+  font-size: 0.95rem;
+  color: #555;
+}
+
 
 section {
   padding: 80px 20px;
-  background-color: #f8f8f8;
-  color: #222;
+  background-color: #000;
 }
 
 .container {
@@ -221,12 +270,14 @@ section {
 .column.left h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .column.left p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 16px;
+  color: #fff;
 }
 
 .column.left .btn-animated {
@@ -255,7 +306,7 @@ section {
 
 .column.right h2 {
   font-size: 1.8rem;
-  color: #ac1122;
+  color: #fff;
 }
 
 /* Responsive styles */
@@ -300,7 +351,6 @@ section.cta {
 
 section.dirigido {
   padding: 80px 20px;
-  color: #000;
 }
 
 .dirigido .container {
@@ -327,6 +377,7 @@ section.dirigido {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 16px;
+  color: #fff;
 }
 
 .dirigido ul {
@@ -335,7 +386,7 @@ section.dirigido {
 }
 
 .dirigido .column.left ul li {
-    color:#000;
+    color:#fff;
   margin-bottom: 10px;
   line-height: 1.5;
   font-size: 1rem;
@@ -349,10 +400,16 @@ section.dirigido {
 	width: 100%;
 	height: 100%;
 	margin: auto;
-	background-image: url(../img/space-trash-signs.png);
+background: rgba( 248, 244, 244, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 2px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.3 );
+	/*background-image: url(../img/space-trash-signs.png);
 	background-repeat: no-repeat;
   	background-size: cover;		
-	background-position: center;
+	background-position: center;*/
     text-align: left;
 	color:#fff;
 	padding: 25px 30px;
@@ -382,6 +439,7 @@ section.dirigido {
 
 .plan{
     padding: 60px 20px;
+    color:#fff;
 }
 
 @media (max-width: 768px) {
@@ -400,19 +458,35 @@ section.dirigido {
 }
 
 /* propuesta de valor*/
-section.valor-section {
+
+.valor-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: justify;
   position: relative;
-  width: 100%;
+  z-index: 2;
+}
+.parallax-bg {
+  position: relative;
+  background-image: url('../img/space3.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
   min-height: 100vh;
+  padding: 0;
   overflow: hidden;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 80px 20px;
-  box-sizing: border-box;
-  z-index: 1;
 }
 
+.parallax-bg .overlay {
+  position: absolute;
+  inset: 0; /* atajo para top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.65);
+  padding: 100px 20px;
+  z-index: 1;
+}
 #videoFondo {
   position: absolute;
   top: 50%;
@@ -425,20 +499,12 @@ section.valor-section {
   filter: brightness(0.5); /*brightness(0.5) contrast(1.2);*/
 }
 
-.valor-content {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: auto;
-  text-align: justify;
-}
-
 .valor-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  background: linear-gradient(45deg, #ac1122, #96789f, #535353);
+  /*background: linear-gradient(45deg, #ac1122, #96789f, #535353);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;*/
 }
 
 .valor-content p {
@@ -528,6 +594,7 @@ section.valor-section {
 }
 .herramienta{
      padding: 50px 20px;
+     background-color: #fff;
 }
 .carousel {
 	display: flex;
@@ -575,7 +642,7 @@ section.valor-section {
   /*background: #ac1122;
   background: -webkit-linear-gradient(to right, #000000, #ac1122); 
   background: linear-gradient(to right, #000000, #ac1122); */
-  background-image: url(../img/space.webp);
+  background-image: url(../space.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -660,7 +727,7 @@ text-align: center;
 
 /* otrra opcion de boton*/
 
-.btn-outline-glow {
+.btn-outline-glow{
   position: relative;
   padding: 14px 34px;
   font-size: 1rem;
@@ -692,6 +759,11 @@ text-align: center;
   z-index: 1;
     
 }
+a.btn-outline-glow {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .btn-outline-glow::before {
   content: "";
   position: absolute;
@@ -741,4 +813,158 @@ text-align: center;
   color: #fff;
   box-shadow: 0 0 10px #ac1122, 0 0 20px #ac1122;
   transform: scale(1.05);
+}
+/*TEAM*/
+.equipo-section {
+  padding: 80px 40px;
+
+  text-align: center;
+}
+/*.section-title {}*/
+.equipo-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.equipo-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.equipo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.equipo-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(172, 17, 34, 0.85);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.equipo-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.rol {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #f1f1f1;
+}
+
+.equipo-card:hover .equipo-info {
+  opacity: 1;
+}
+
+
+
+/*Plan de estudios*/
+.plan-estudios-section {
+  position: relative;
+  padding: 40px 20px 40px;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+  color: white;
+}
+
+.wave-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+#waveCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-bottom: 300px;
+}
+
+/*.wave-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}*/
+
+.contenido-ondas {
+  position: relative;
+  z-index: 2;
+  padding: 100px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center; 
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.tarjeta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tarjeta {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 25px;
+  color: white;
+  border: 1px solid rgba( 255, 255, 255, 0.3 );
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.btn-outline-glow {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid #ac1122;
+  color: #fff;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-glow:hover {
+  background-color: #ac1122;
+  color: white;
+  box-shadow: 0 0 10px #ac1122;
 }
