@@ -1,492 +1,383 @@
-<script type="text/javascript">
-  var gk_isXlsx = false;
-  var gk_xlsxFileLookup = {};
-  var gk_fileData = {};
-  function filledCell(cell) {
-    return cell !== '' && cell != null;
-  }
-  function loadFileData(filename) {
-  if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-      try {
-          var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-          var firstSheetName = workbook.SheetNames[0];
-          var worksheet = workbook.Sheets[firstSheetName];
-
-          // Convert sheet to JSON to filter blank rows
-          var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-          // Filter out blank rows (rows where all cells are empty, null, or undefined)
-          var filteredData = jsonData.filter(row => row.some(filledCell));
-
-          // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-          var headerRowIndex = filteredData.findIndex((row, index) =>
-            row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-          );
-          // Fallback
-          if (headerRowIndex === -1 || headerRowIndex > 25) {
-            headerRowIndex = 0;
-          }
-
-          // Convert filtered JSON back to CSV
-          var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-          csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-          return csv;
-      } catch (e) {
-          console.error(e);
-          return "";
-      }
-  }
-  return gk_fileData[filename] || "";
-  }
-  </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FILM</title>
-<style>
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-@font-face {
-  font-family: 'SuisseBPIntl-Light';
-  src: url('fonts/SuisseBPIntl-Light.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-  @font-face {
-  font-family: 'George';
-  src: url('fonts/George\ X.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-  body {
-      font-family: 'SuisseBPIntl-Light', sans-serif;
-      overflow-x: hidden;
-      background: #030303;
-      color: #fff;
-  }
-  h2{
-    font-family: 'George', sans-serif;
-  }
-  .canvas-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-  }
-  .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      position: relative;
-  }
-  .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 80px;
-      height: 80px;
-  }
-  .hero-text {
-      text-align: center;
-      max-width: 100%;
-      margin: 100px 0 20px;
-  }
-  .hero-text h1 {
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-  }
-  .hero-text p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-      margin-top: 10px;
-  }
-  .hero-image {
-      width: 80%;
-      height: auto;
-  }
-  .hero-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-  }
-  .section {
-      padding: 50px 20px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
-  .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-  }
-  .card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      border-radius: 10px;
-      max-width: 100%;
-      text-align: center;
-      backdrop-filter: blur(5px);
-  }
-  .cta-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: #ff0077;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1rem;
-      transition: transform 0.3s ease;
-      font-size: 1rem;
-  }
-  .cta-button:hover {
-      transform: scale(1.1);
-  }
-  .skills-section {
-      padding: 50px 20px;
-      text-align: center;
-  }
-  .skills-section h2 {
-      margin-bottom: 2rem;
-  }
-  .carousel {
-      display: flex;
-      overflow: hidden;
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-  }
-  .carousel-inner {
-      display: flex;
-      animation: slide 15s linear infinite;
-      width: max-content;
-  }
-  .carousel-item {
-      min-width: 100px;
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 10px;
-  }
-  .carousel-item img {
-      max-width: 50px;
-      max-height: 50px;
-      object-fit: contain;
-  }
-  .portfolio-section {
-      padding: 50px 20px;
-      text-align: center;
-  }
-  .portfolio-section h2 {
-      font-size: 40px;
-      margin-bottom: 30px;
-  }
-  .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-  }
-  .project-list a {
-      font-size: 2rem;
-      text-decoration: none;
-      background: #ffffff;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: background 0.3s ease;
-  }
-  .project-list a:hover {
-      background: #ff0077;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
-  .cta-section {
-        padding: 50px 20px;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.05);
-    }
-  .cta-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-  }
-  .cta-section p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-  }
-  .contact-section {
-      padding: 30px 20px;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .contact-details {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-  }
-  .contact-details span {
-      font-size: 1rem;
-  }
-  footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #ccc;
-  }
-
-  @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-  }
-
-  @media (min-width: 768px) {
-      .hero {
-          flex-direction: row;
-          justify-content: space-between;
-          padding: 0 50px;
-      }
-      .logo {
-          width: 100px;
-          height: 100px;
-      }
-      .hero-text {
-          text-align: left;
-          max-width: 50%;
-          margin-bottom: 0;
-      }
-      .hero-text h1 {
-        font-family: 'George', sans-serif;
-          font-size: 2.5rem;
-      }
-      .hero-text p {
-          font-size: 1.5rem;
-      }
-      .hero-image {
-          width: 40%;
-      }
-      h2 {
-          font-size: 3rem;
-      }
-      .card {
-          padding: 2rem;
-          max-width: 800px;
-      }
-      .cta-button {
-          padding: 1rem 2rem;
-          font-size: 1.2rem;
-      }
-      .carousel-item {
-          min-width: 150px;
-          height: 150px;
-      }
-      .carousel-item img {
-          max-width: 50px;
-          max-height: 50px;
-      }
-      .carousel-inner {
-          animation: slide 20s linear infinite;
-      }
-      .project-list a {
-          font-size: 3rem;
-      }
-      .cta-section h2 {
-        font-size: 2.5rem;
-      }
-      .cta-section p {
-        font-size: 1.5rem;
-      }
-      .contact-details span {
-        font-size: 1.2rem;
-      }
-  }
-</style>
+<meta name="description" content="Frank Lueza | Portfolio">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/main.css">
+<title>FILM | Data Analyst and Web Developer.</title>
 </head>
 <body>
-<div class="canvas-container" id="canvas"></div>
-<section class="hero">
-  <div class="logo">
-      <!-- Replace 'logo.png' with your actual logo image path -->
-      <img src="img/logo-teocalli-blanco.png" width="100%" alt="logo-teocalli-blanco">
-  </div>
-  <div class="hero-text">
-      <h1>Data Analyst and Web Developer</h1>
-      <p>I'm Frank Lueza. I'm currently working as a Front End Developer, collaborating with colleagues 
-        and clients on various projects. I'm also training as a Data Analyst, combining design and 
-        analysis to create effective solutions.</p>
-  </div>
-  <div class="hero-image">
-      <!-- Replace 'your-image.jpg' with your actual personal image path -->
-      <img src="img/ajolote.png" alt="Ajolote FILM">
-  </div>
-</section>
-<section class="skills-section">
-  <h2>Skills</h2>
-  <div class="carousel">
-      <div class="carousel-inner">
-          <div class="carousel-item"><img src="img/python.svg" alt="Python"></div>
-          <div class="carousel-item"><img src="img/R_logo.svg" alt="R"></div>
-          <div class="carousel-item"><img src="img/power-bi.svg" alt="Tableau"></div>
-          <div class="carousel-item"><img src="img/tableau-software.svg" alt="Tableau"></div>
-          <div class="carousel-item"><img src="img/excel.svg" alt="Power BI"></div>
-          <div class="carousel-item"><img src="img/python.svg" alt="Excel"></div>
-          <div class="carousel-item"><img src="img/github-white-icon.svg" alt="HTML"></div>
-          <div class="carousel-item"><img src="img/php.svg" alt="CSS"></div>
-          <div class="carousel-item"><img src="img/vs-code.svg" alt="JavaScript"></div>
-          
-          <!-- Duplicate items for seamless looping -->
-          <div class="carousel-item"><img src="img/python.svg" alt="Python"></div>
-          <div class="carousel-item"><img src="img/R_logo.svg" alt="R"></div>
-          <div class="carousel-item"><img src="img/power-bi.svg" alt="Tableau"></div>
-          <div class="carousel-item"><img src="img/tableau-software.svg" alt="Tableau"></div>
-          <div class="carousel-item"><img src="img/excel.svg" alt="Power BI"></div>
-          <div class="carousel-item"><img src="img/python.svg" alt="Excel"></div>
-          <div class="carousel-item"><img src="img/github-white-icon.svg" alt="HTML"></div>
-          <div class="carousel-item"><img src="img/php.svg" alt="CSS"></div>
-          <div class="carousel-item"><img src="img/vs-code.svg" alt="JavaScript"></div>
-          
+  <div class="canvas-container" id="canvas"></div>
+  <header>
+    <div class="logo">
+      <img src="assets/img/logo-teocalli-blanco.png" width="100%" alt="Logo FILM">
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-label="Presentación">
+      <div class="hero-text">
+        <h1>Data Analyst & Web Developer</h1>
+        <p>
+          Soy Frank Lueza. Actualmente trabajo como Desarrollador Front End, colaborando con colegas y 
+          clientes en diversos proyectos. También me estoy formando como Analista de Datos, combinando 
+          diseño y análisis para crear soluciones efectivas.
+        </p>
       </div>
-  </div>
-</section>
-<section class="portfolio-section">
-  <h2>Portfolio</h2>
-  <div class="project-list">
-    <p><a href="#">Dominio Público</a> ,
-      <a href="#">PDII</a> ,
-      <a href="#">Musai</a> ,
-      <a href="#">DL Green</a> ,
-      <a href="#">Tenorio Abogados</a> ,
-      <a href="#">Zaira Counseling</a> ,
-      <a href="#">Menthalising</a> ,
-      <a href="#">Psicoterapeuta Myriam Arroyo</a> ,
-      <a href="#">Femmede</a> ,
-      <a href="#">Casa D Vida</a> ,
-      <a href="#">UDEC</a>
-    </p>
-      
-  </div>
-</section>
-<!--section class="section" id="about">
-  <div class="card">
-    <h2>Ready to Elevate Your Business?</h2>
-    <p>Hire me for professional web development or data analysis services!</p>
-    <a href="#" class="cta-button">Contact Me</a>
-  </div>
-</section-->
-<section class="cta-section">
-  <h2>Ready to Elevate Your Business?</h2>
-  <p>Hire me for professional web development or data analysis services!</p>
-  <a href="#" class="cta-button">Contact Me</a>
-</section>
-<section class="contact-section">
-  <div class="contact-details">
-      <span>WA: 5529033828</span>
-      <span>Location: CDMX, Tláhuac</span>
-      <span>email: ixfanalytics@gmail.com</span>
-  </div>
-</section>
-<footer>
-  <p>© FILM. ALL right reserved</p>
-</footer>
+      <div class="hero-image">
+        <img src="assets/img/ajolote.png" alt="Ajolote">
+      </div>
+    </section>
 
+    <section class="skills-section" aria-label="Habilidades">
+      <h2>Hábilidades</h2>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item"><img src="assets/img/python.svg" alt="Python"></div>
+          <div class="carousel-item"><img src="assets/img/R_logo.svg" alt="R"></div>
+          <div class="carousel-item"><img src="assets/img/power-bi.svg" alt="Power BI"></div>
+          <div class="carousel-item"><img src="assets/img/tableau-software.svg" alt="Tableau"></div>
+          <div class="carousel-item"><img src="assets/img/excel.svg" alt="Excel"></div>
+          <div class="carousel-item"><img src="assets/img/github-white-icon.svg" alt="GitHub"></div>
+          <div class="carousel-item"><img src="assets/img/php.svg" alt="PHP"></div>
+          <div class="carousel-item"><img src="assets/img/vs-code.svg" alt="VS Code"></div>
+          <!-- Duplicados para looping -->
+          <div class="carousel-item"><img src="assets/img/python.svg" alt="Python"></div>
+          <div class="carousel-item"><img src="assets/img/R_logo.svg" alt="R"></div>
+          <div class="carousel-item"><img src="assets/img/power-bi.svg" alt="Power BI"></div>
+          <div class="carousel-item"><img src="assets/img/tableau-software.svg" alt="Tableau"></div>
+          <div class="carousel-item"><img src="assets/img/excel.svg" alt="Excel"></div>
+          <div class="carousel-item"><img src="assets/img/github-white-icon.svg" alt="GitHub"></div>
+          <div class="carousel-item"><img src="assets/img/php.svg" alt="PHP"></div>
+          <div class="carousel-item"><img src="assets/img/vs-code.svg" alt="VS Code"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--section class="portfolio-section" aria-label="Portafolio">
+      <h2>Portfolio</h2>
+      <div class="project-list">
+        <a href="#">Dominio Público</a>
+        <a href="#">PDII</a>
+        <a href="#">Musai</a>
+        <a href="#">DL Green</a>
+        <a href="#">Tenorio Abogados</a>
+        <a href="#">Zaira Counseling</a>
+        <a href="#">Menthalising</a>
+        <a href="#">Psicoterapeuta Myriam Arroyo</a>
+        <a href="#">Femmede</a>
+        <a href="#">Casa D Vida</a>
+        <a href="#">UDEC</a>
+      </div>
+    </section-->
+
+    <section class="portfolio-section" aria-label="Portafolio">
+    <h2>Trabajo reciente</h2>
+    <div class="project-list">
+        <!-- Proyecto 1 -->
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/logo-teocalli-blanco.png" alt="Logo Teocalli Lab" class="project-icon">
+                <h3>Teocalli Lab</h3>
+                <p class="project-desc">
+                    Teocallo Lab es un proyecto <strong>personal</strong> dedicado a ofrece un programa de formación en habilidades
+                    de Anlálisis y Visualización de Datos enfocado en construir el conocimiento a traves de practicas guíadas con el uso de 
+                    herramientas y tecnologías esenciales del mundo laboral actual.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Mayo 2025</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: FILM</span>                                                                                                                         
+                    <!--span class="project-role">Equipo (Front End, integración de API y despliegue en producción)</span-->
+                </div>
+                <a href="https://franklueza.github.io/teocalli/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Teocalli Lab sitio.jpg" alt="Teocalli Lab">
+            </div>
+        </div>
+        <!-- Agrega más proyectos duplicando el bloque .project-showcase -->    
+         <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/logo_blanco_myr.png" alt="Logo Myriam X. Arroyo Nava" class="project-icon">
+                <h3>Psc. Myriam Arroyo</h3>
+                <p class="project-desc">
+                    El sitio web de la Psicoterapeuta Myriam X. Arroyo Nava está diseñado para ofrecer información clara y accesible 
+                    sobre servicios de psicoterapia, con un enfoque en el bienestar emocional y mental. El proyecto destaca por su diseño 
+                    amigable y funcionalidad que facilita la comunicación entre la profesional y sus pacientes.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Mayo 2025</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: Psc. Myriam</span>                                                                                                                         
+                </div>
+                <a href="https://franklueza.github.io/Psicologa-Myriam-Arroyo" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Myriam_Arroyo.jpg" alt="Myriam X. Arroyo Nava">
+            </div>
+        </div>
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/LOGO PDII naranja.png" alt="Logo PDII" class="project-icon">
+                <h3>Proyectos de Diseño de Iluminación Industrial (PDII)</h3>
+                <p class="project-desc">
+                    PDII es un proyecto enfocado en el diseño de iluminación industrial y Corporativa, ofreciendo soluciones eficientes y 
+                    sostenibles para espacios industriales y comerciales. El sitio web presenta un diseño técnico y profesional que refleja 
+                    la especialización y experiencia en el sector de iluminación.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Mayo 2025</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: Tulio Ramoni</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://disenodeiluminacionindustrial.com/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/PDII sitio.jpg" alt="Proyectos de Diseño de Iluminación Industrial y Corporativo">
+            </div>
+        </div>     
+                                                                                                                            
+    </div>
+    </section>
+
+
+
+<section class="portfolio-section" aria-label="Portafolio">
+    <h2>Otros proyectos</h2>
+    <div class="project-list">
+        <!-- Proyecto 1 -->
+         <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/Logo Zaira Miller.jpg" alt="Logo Zaira Miller" class="project-icon">
+                <h3>Psc. Zaira Miller</h3>
+                <p class="project-desc">
+                    Sitio web que presenta los servicios de asesoría psicológica y acompañamiento emocional de Zaira Miller. 
+                    El sitio está diseñado para informar y orientar a quienes buscan ayuda profesional en temas de salud mental,
+                    brindando un espacio seguro y accesible para el bienestar personal.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Marzo 2024</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: Zaira Miller</span>                                                                                                                         
+                </div>
+                <a href="https://zairamillercounseling.com/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Zaira Miller Site.png" alt="Dominio Público">
+            </div>
+        </div>
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/Logo Chris Brunell.png" alt="Logo Chris Brunelle" class="project-icon">
+                <h3>Chris Brunell</h3>
+                <p class="project-desc">
+                    Sitio web dedicado a la música sacra y el ministerio musical de Chris Brunelle, un reconocido guitarrista y 
+                    vocalista católico. El portal ofrece información sobre su trayectoria, conciertos en vivo, videos musicales y 
+                    recursos para la comunidad religiosa, facilitando la conexión con su audiencia global y promoviendo el intercambio 
+                    de experiencias a través de la música.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Dic 2023</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: Chris Brunell</span>                                                                                                                         
+                    <!--span class="project-role">Equipo (Front End, integración de API y despliegue en producción)</span-->
+                </div>
+                <a href="https://chrisbrunellemusic.com/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Chris Burnel Site.jpg" alt="Chris Brunell">
+            </div>
+        </div>  
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/logo-dominio_publico_noticias.jpg" alt="Logo Dominio Público Noticias" class="project-icon">
+                <h3>Dominio Público Noticias</h3>
+                <p class="project-desc">
+                    Diseño y desarrollo de un sitio web para un medio de comunicación de periodismo independiente, con el objetivo 
+                    de mejorar la visibilidad y el alcance de sus noticias nacionales e internacionales. Además, el sitio web cuenta con 
+                    monetización a travez Adse y donaciones de los lectores.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Junio 2021</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: Raúl García</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://www.dominiopublico.com.mx/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Dominio_Publico_Noticias.jpg" alt="Dominio Público">
+            </div>
+        </div>
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/logo femmede.jpg" alt="Logo FEMMEDE" class="project-icon">
+                <h3>Federación Mexicana de Medicina del Deporte</h3>
+                <p class="project-desc">
+                    Sitio oficial de la Federación Mexicana de Medicina y Ciencias Aplicadas al Deporte, orientado a 
+                    la promoción y profesionalización de la medicina del deporte en México. Ofrece información sobre eventos, 
+                    afiliaciones, recursos educativos y vínculos con organizaciones internacionales, dirigido a profesionales 
+                    de la salud y el deporte.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Feb 2022</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: FEMMEDE</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://femmede.com.mx/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/FEMMEDE Sitio.jpg" alt="Dominio Público">
+            </div>
+        </div>     
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/Logo-Musai.png" alt="Logo Musai IO" class="project-icon">
+                <h3>Musai IO</h3>
+                <p class="project-desc">
+                    Musai es una plataforma que potencia los insights de marcas a través de herramientas de inteligencia 
+                    artificial ética. Su tecnología permite obtener insights inmediatos para la toma de decisiones creativas, ofreciendo 
+                    soluciones predictivas. La plataforma está diseñada para agilizar 
+                    procesos creativos y reducir costos de investigación.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Sep 2021</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: MUSAI</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://musai.io/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Musai Sitio.jpg" alt="Musai IO">
+            </div>
+        </div>  
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/logo-DLGreen.png" alt="Logo DLGREEN" class="project-icon">
+                <h3>DLGREEN</h3>
+                <p class="project-desc">
+                    Empresa especializada en diseño y fabricación de sistemas de iluminación biodinámica para espacios residenciales, 
+                    comerciales y de trabajo. El sitio web destaca soluciones personalizadas que mejoran el bienestar y la productividad, 
+                    combinando innovación tecnológica y diseño estético.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Abril 2023</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: DLGREEN</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://dlgreen.mx/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/DL GREEN  sitio.jpg" alt="DLGREEN">
+            </div>
+        </div>  
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/Logo-TASC.svg" alt="Logo TASC" class="project-icon">
+                <h3>Tenorio Abogados TASC</h3>
+                <p class="project-desc">
+                    Despacho jurídico mexicano que ofrece servicios legales integrales en áreas como derecho civil, mercantil, 
+                    laboral y corporativo. El sitio web proporciona información clara sobre sus servicios, equipo profesional y 
+                    valores, orientado a empresas y particulares que buscan asesoría legal confiable.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Mayo 2019</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente:  Jorge Tenorio</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://www.tenorioabogados.mx/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/TASC sitio.jpg" alt="TASC">
+            </div>
+        </div>  
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/Logo-Hope-Rope.svg" alt="Logo TASC" class="project-icon">
+                <h3>Hope Rope</h3>
+                <p class="project-desc">
+                    Hope Rope es una empresa dedicada en brindar servicios de pintura, limpieza, mantenimiento de edificios, reparación de 
+                    fachadas y soluciones de difícil acceso para edificios comerciales, industriales y residenciales.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Julio 2022</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: F. Ramirez</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://hoperope.com.au/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/HOPE ROPE sitio.jpg" alt="Hope Rope">
+            </div>
+        </div> 
+        <div class="project-showcase">
+            <div class="project-info">
+                <img src="assets/img/logo-menthalising.png" alt="Logo Menthalising" class="project-icon">
+                <h3>Menthalising</h3>
+                <p class="project-desc">
+                    Menthalising es una iniciativa de psicólogas enfocadas en la prevención y mitigación de factores de riesgo psicosociales 
+                    y organizacionales. Su enfoque principal está en dar sentido a la existencia de las personas y mejorar el ecosistema de las organizaciones,
+                    impactando directamente en su desempeño y potenciando su nivel de forma integral.
+                </p>
+                <div class="project-meta">
+                    <span class="project-tag">Web Design & Dev</span>
+                    <span class="project-date">Oct 2023</span>
+                    <span class="project-type">Profesional</span>
+                    <span class="project-client">Cliente: Menthalising</span>                                                                                                                         
+                    <!--span class="project-role">Web Design & Developer</span-->
+                </div>
+                <a href="https://menthalising.com/" target="_blank" class="project-btn">Visitar Web</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            </div>
+            <div class="project-image">
+                <img src="assets/img/Menthalising sitio.jpg" alt="Menthalising">
+            </div>
+        </div>                                                                                                                   
+    </div>
+    </section>
+
+    <!--section class="cta-section" aria-label="Llamado a la acción">
+      <h2>Ready to Elevate Your Business?</h2>
+      <p>Hire me for professional web development or data analysis services!</p>
+      <a href="#" class="cta-button">Contact Me</a>
+    </section-->
+
+    <section class="contact-section" aria-label="Contacto">
+      <div class="contact-details">
+        <span>WA: 5529033828</span>
+        <span>Location: CDMX, Tláhuac</span>
+        <span>Email: ixfanalytics@gmail.com</span>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© FILM. ALL rights reserved</p>
+  </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-  // Three.js Scene Setup
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.getElementById('canvas').appendChild(renderer.domElement);
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/space.js"></script>
 
-  // Create a particle system
-  const particlesGeometry = new THREE.BufferGeometry();
-  const particleCount = 5000;
-  const posArray = new Float32Array(particleCount * 3);
-
-  for (let i = 0; i < particleCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 200;
-  }
-
-  particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-  const material = new THREE.PointsMaterial({
-      size: 0.5,
-      color: 0xffffff,
-      transparent: true,
-      opacity: 0.6
-  });
-  const particlesMesh = new THREE.Points(particlesGeometry, material);
-  scene.add(particlesMesh);
-
-  camera.position.z = 50;
-
-  // Animation loop
-  function animate() {
-      requestAnimationFrame(animate);
-      particlesMesh.rotation.y += 0.001;
-      renderer.render(scene, camera);
-  }
-  animate();
-
-  // Handle window resize
-  window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-  });
-
-  // GSAP Animations
-  gsap.from('.hero-text h1', {
-      y: 100,
-      opacity: 0,
-      duration: 1.5,
-      ease: 'power3.out'
-  });
-  gsap.from('.hero-text p', {
-      y: 100,
-      opacity: 0,
-      duration: 1.5,
-      delay: 0.3,
-      ease: 'power3.out'
-  });
-  gsap.from('.hero-image img', {
-      scale: 0,
-      opacity: 0,
-      duration: 1,
-      delay: 0.6,
-      ease: 'elastic.out(1, 0.3)'
-  });
-
-  // Scroll-triggered animations
-  gsap.utils.toArray('.section, .skills-section, .portfolio-section').forEach(section => {
-      gsap.from(section.querySelectorAll('h2, .card, .carousel, .project-list a'), {
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.2,
-          scrollTrigger: {
-              trigger: section,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse'
-          }
-      });
-  });
-</script>
 </body>
 </html>
 
