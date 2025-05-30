@@ -253,18 +253,17 @@ main {
 
 /* Responsive */
 @media (max-width: 900px) {
+  .project-image {
+    display: none;
+  }
   .project-showcase {
-    flex-direction: column-reverse;
+    flex-direction: column;
     min-height: 0;
     width: 98vw;
   }
   .project-info {
-    padding: 32px 18px 32px 18px;
+    padding: 32px 18px;
     text-align: left;
-  }
-  .project-image {
-    height: 240px;
-    max-height: 45vw;
   }
 }
 
