@@ -17,7 +17,7 @@
       opacity: 0,
       duration: 1,
       delay: 0.6,
-      ease: 'elastic.out(1, 0.3)'
+      ease: 'power3.out'
   });
 
   // Scroll-triggered animations
@@ -35,7 +35,6 @@
       });
   });
 
-// Asegúrate de tener GSAP y ScrollTrigger incluidos
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray('.project-showcase').forEach((card, i) => {
@@ -47,10 +46,14 @@ gsap.utils.toArray('.project-showcase').forEach((card, i) => {
     ease: 'power3.out',
     scrollTrigger: {
       trigger: card,
-      start: "top 85%",
-      toggleActions: "play none none none"
+      start: "top 90%", // Más cerca del centro para que la animación empiece antes
+      end: "top 30%",   // Termina antes de salir de la vista
+      toggleActions: "play none none none",
+      markers: false    // Solo para debug, luego quítalo
     }
   });
 });
+
+
 
 
