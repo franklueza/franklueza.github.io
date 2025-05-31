@@ -54,6 +54,24 @@ gsap.utils.toArray('.project-showcase').forEach((card, i) => {
   });
 });
 
+// Mostrar/ocultar botón al hacer scroll
+window.addEventListener('scroll', function() {
+  const upButton = document.getElementById('upButton');
+  if (window.scrollY > 300) {
+    upButton.classList.add('visible');
+  } else {
+    upButton.classList.remove('visible');
+  }
+});
+
+// Scroll suave al hacer clic
+document.getElementById('upButton').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 
 
 
