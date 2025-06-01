@@ -343,8 +343,6 @@ footer {
   max-width: 1080px;
   padding: 2rem;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5); /* Opcional: fondo semitransparente para mejor legibilidad */
-  border-radius: 10px;
 }
 
 .hero h1 {
