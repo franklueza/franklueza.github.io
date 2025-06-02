@@ -1,0 +1,348 @@
+body {
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    overflow-x: hidden;
+}
+.smooch-sans {
+    font-family: 'Smooch Sans', sans-serif;
+}
+.fira-sans-thin {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.fira-sans-extralight {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.fira-sans-light {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fira-sans-regular {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-sans-medium {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fira-sans-semibold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fira-sans-bold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fira-sans-extrabold {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.fira-sans-black {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fira-sans-thin-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.fira-sans-extralight-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.fira-sans-light-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.fira-sans-regular-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fira-sans-medium-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fira-sans-semibold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fira-sans-bold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.fira-sans-extrabold-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.fira-sans-black-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+    padding: 1rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container img {
+    height: 40px;
+    width: auto;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('../images/azcino_banner_publico.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.hero {
+    opacity: 0.5;
+    transform: scale(0.95);
+    animation: zoomFadeIn 1s ease-out forwards;
+}
+@keyframes zoomFadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.hero-content {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4rem;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0 0 1rem;
+}
+.hero-content h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+#typewriter {
+    display: inline-block;
+    position: relative;
+}
+#typewriter::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.video-section {
+    padding: 3rem 0;
+    background: #f4f4f4; /* Color de fondo opcional */
+    text-align: center;
+}
+.video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.video-side {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    text-align: center;
+}
+.video-center {
+    flex: 2;
+    min-width: 300px;
+    padding: 1rem;
+}
+.video-center iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+/* Opcional: ajusta los estilos para móvil */
+@media (max-width: 768px) {
+    .video-row {
+        flex-direction: column;
+    }
+    .video-side, .video-center {
+        width: 100%;
+    }
+    .video-center iframe {
+        width: 100%;
+    }
+}
+
+.video-center iframe {
+    max-width: 100%;
+    width: 560px; /* o el ancho que prefieras */
+    height: 315px; /* o el alto que prefieras */
+    aspect-ratio: 16/9;
+    border: 4px solid #333; /* borde sólido */
+    border-radius: 8px; /* esquinas redondeadas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* sombra */
+    background: #000; /* fondo negro (útil si el video tarda en cargar) */
+}
+.video-center iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+
+.about-section {
+  max-width: 1080px;
+  margin:0 auto;
+  padding: 60px;
+  
+}
+
+.about-label {
+  display: block;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 16px;
+  font-family: 'Fira Sans', Arial, sans-serif;
+  opacity: 0.7;
+}
+
+.about-text {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #222;
+  letter-spacing: -.02em;
+  margin: 0;
+  max-width: 1000px;
+  text-align: right;
+}
+
+.about-text strong {
+  font-weight: 700;
+  font-size: 3.3rem;
+}
+
+@media (max-width: 900px) {
+  .about-text {
+    font-size: 2.1rem;
+  }
+  .about-text strong {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-text {
+    font-size: 2.1rem;  
+ 
+  }
+  .about-text strong {
+    font-size: 2.4rem;
+  }
+}
+
+.carousel-section {
+  width: 100vw;
+  overflow: hidden;
+  background: #fff;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-carousel 10s linear infinite;
+}
+
+.carousel-track img {
+  height: 260px; /* Ajusta la altura según prefieras */
+  width: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  /* Sin gap ni borde entre imágenes */
+}
+
+@keyframes scroll-carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive: en móvil, reduce la altura */
+@media (max-width: 700px) {
+  .carousel-track img {
+    height: 140px;
+  }
+}
