@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Fira Sans', sans-serif;
@@ -212,8 +216,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    max-width: 1080px;
+    align-items: center;;
     margin: 0 auto;
 }
 .video-side {
@@ -250,16 +253,17 @@ footer {
 }
 /* Opcional: ajusta los estilos para móvil */
 @media (max-width: 768px) {
-    .video-row {
-        flex-direction: column;
-    }
-    .video-side, .video-center {
-        width: 100%;
-    }
-    .video-center iframe {
-        width: 100%;
-    }
+  .video-row {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .video-side, .video-center {
+    min-width: auto;
+    width: 100%;
+    padding: 0 0 1rem 0;
+  }
 }
+
 
 .about-section {
   max-width: 1080px;
@@ -302,6 +306,12 @@ footer {
     font-size: 2.1rem;
   }
 }
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px 12px;
+  }
+}
+
 @media (max-width: 600px) {
   .about-text {
     font-size: 2.1rem;  
@@ -340,8 +350,15 @@ footer {
 }
 
 /* Responsive: en móvil, reduce la altura */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .carousel-track {
+    width: 100%;
+    animation: scroll-carousel 10s linear infinite;
+  }
   .carousel-track img {
     height: 140px;
+    width: auto;
+    max-width: 100%;
   }
 }
+
