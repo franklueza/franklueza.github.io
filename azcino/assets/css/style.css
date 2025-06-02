@@ -314,7 +314,7 @@ footer {
 }
 
 .carousel-section {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background: #fff;
 }
