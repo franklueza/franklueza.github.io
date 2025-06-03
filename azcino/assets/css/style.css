@@ -362,3 +362,31 @@ footer {
   }
 }
 
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  column-count: 4;
+  column-gap: 16px;
+  padding: 60px 0;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gallery { column-count: 2; }
+}
+@media (max-width: 600px) {
+  .gallery { column-count: 1; padding: 30px 5px; }
+}
