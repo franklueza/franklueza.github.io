@@ -57,21 +57,18 @@ body {
   color: #d4af37;
   letter-spacing: 1px;
 }
-
-
-
-
-/* Botón hamburguesa FIJO en móvil */
+/* Botón hamburguesa FIJO en la esquina inferior derecha */
 .menu-toggle {
   position: fixed;
   top: 20px;
-  right: 50px; /* Oculto a la derecha */
+  right: 50px; /* Cambiado de 'left' a 'right' */
+  left: auto; /* Asegura que no herede 'left' */
   display: flex;
   flex-direction: column;
   cursor: pointer;
   background: none;
   border: none;
-  z-index: 1100;
+  z-index: 1100; /* Menor que el botón Up para que no se sobreponga */
   width: 50px;
   height: 50px;
   justify-content: center;
@@ -88,7 +85,7 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Animación de las líneas */
+/* Líneas del menú */
 .menu-toggle span {
   width: 28px;
   height: 3px;
@@ -96,7 +93,6 @@ body {
   margin: 4px 0;
   transition: 0.3s;
   border-radius: 2px;
-  position: relative;
 }
 
 /* Animación a "X" cuando está activo */
@@ -111,7 +107,19 @@ body {
 }
 
 
-/* =================== HERO CON CONTENIDO Y REDES AL CENTRO =================== */
+/* Ajuste para móviles pequeños */
+@media (max-width: 480px) {
+  .menu-toggle {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .menu-toggle span {
+    width: 24px;
+  }
+}/* =================== HERO CON CONTENIDO Y REDES AL CENTRO =================== */
 .hero-video {
   position: relative;
   width: 100%;
@@ -1454,3 +1462,4 @@ body {
   }
 
 }
+
