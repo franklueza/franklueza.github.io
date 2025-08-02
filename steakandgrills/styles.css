@@ -364,10 +364,6 @@ body {
     height: 250px;
   }
 
-  .welcome-content {
-    text-align: center;
-  }
-
   .welcome-content h2 {
     font-size: 2.2rem;
   }
@@ -1462,6 +1458,7 @@ body {
   }
 
 }
+
 
 
 
