@@ -111,21 +111,6 @@ body {
 }
 
 
-/* Ajuste para móviles con pantallas pequeñas */
-@media (max-width: 480px) {
-  .menu-toggle {
-    bottom: 15px;
-    left: 15px;
-    width: 45px;
-    height: 45px;
-  }
-
-  .menu-toggle span {
-    width: 24px;
-  }
-}
-
-
 /* =================== HERO CON CONTENIDO Y REDES AL CENTRO =================== */
 .hero-video {
   position: relative;
@@ -1467,4 +1452,5 @@ body {
   .btn-up i {
     font-size: 1.1rem;
   }
+
 }
