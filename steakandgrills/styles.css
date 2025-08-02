@@ -61,7 +61,7 @@ body {
 .menu-toggle {
   position: fixed;
   top: 20px;
-  right: 50px; /* Cambiado de 'left' a 'right' */
+  right: 20px; /* Cambiado de 'left' a 'right' */
   left: auto; /* Asegura que no herede 'left' */
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ body {
 /* Ajuste para móviles pequeños */
 @media (max-width: 480px) {
   .menu-toggle {
-    bottom: 15px;
+    top: 15px;
     right: 15px;
     width: 45px;
     height: 45px;
@@ -1462,4 +1462,5 @@ body {
   }
 
 }
+
 
