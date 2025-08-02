@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steak & Grills | Restaurante • Bar • Eventos en vivo</title>
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+<!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <h1 class="mozilla-headline">Steak & Grills</h1>
+    <h4 class="mozilla-headline">Restaurante • Bar • Eventos en vivo</h4>
+  </div>
+
+  <!-- Menú hamburguesa (esquina inferior izquierda) -->
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+<!--
+ MENÚ MÓVIL (LATERAL) -->
+<nav class="mobile-menu">
+  <div class="mobile-menu-header">
+    <h3 class="mozilla-headline">Menú</h3>
+    <button class="menu-close" aria-label="Cerrar menú">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <ul class="mobile-menu-list">
+    <li><a href="#hero" class="manrope-text">Inicio</a></li>
+    <li><a href="#welcome-section" class="manrope-text">Bienvenida</a></li>
+    <li><a href="#upcoming-events" class="manrope-text">Eventos</a></li>
+    <li><a href="#gallery-section" class="manrope-text">Galería</a></li>
+    <li><a href="#menu-section" class="manrope-text">Menú</a></li>
+    <li><a href="#contact-section" class="manrope-text">Contacto</a></li>
+    <li><a href="https://wa.me/5212223334444" class="manrope-text" target="_blank">Reservar (WhatsApp)</a></li>
+  </ul>
+</nav>
+
+<!-- HERO CON VIDEO -->
+<section class="hero-video">
+  <video autoplay muted loop playsinline class="hero-bg-video">
+    <source src="assets/video/file (3).mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+  <div class="hero-overlay"></div>
+
+  <!-- Contenedor principal del Hero con grid -->
+  <div class="hero-container">
+    <!-- Contenido de texto a la izquierda -->
+    <div class="hero-content">
+      <h2 class="mozilla-headline">Carne, fuego y adrenalina nocturna</h2>
+      <a href="https://wa.me/5212223334444" class="btn-reservar mozilla-headline" target="_blank">Reservaciones</a>
+    </div>
+
+    <!-- Redes sociales en vertical, centradas en el contenedor Hero -->
+    <nav class="social-vertical">
+      <a href="https://instagram.com/steakandgrills" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/steakandgrills" target="_blank" title="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </nav>
+  </div>
+</section>  
+<section class="welcome-section" id="welcome-section">
+  <div class="welcome-container">
+    <!-- Video izquierdo -->
+    <div class="welcome-video">
+      <video autoplay muted loop playsinline poster="img/video-placeholder.jpg">
+        <source src="assets/video/file (2).mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+
+    <!-- Contenido derecho -->
+    <div class="welcome-content">
+      <h2 class="mozilla-headline">Bienvenido a Steak & Grills</h2>
+      <p>
+        Donde el fuego, el sabor y el entretenimiento se unen. 
+        Desde la parrilla más intensa hasta noches inolvidables con música en vivo, 
+        pasarelas, stand up y eventos exclusivos, cada visita es una experiencia única.
+      </p>
+      <p>
+        Más que un restaurante, somos un espacio de encuentro, pasión y adrenalina nocturna. 
+        Aquí no solo comes… <strong>vives</strong>.
+      </p>
+      <a href="https://wa.me/5212223334444?text=Hola,%20quiero%20más%20información%20del%20restaurante" 
+         class="btn-primary" target="_blank">
+        Conoce más
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="upcoming-events" id="upcoming-events">
+  <div class="section-header">
+    <h2 class="mozilla-headline">Próximos Eventos</h2>
+    <p>Reserva tu mesa y vive la experiencia completa</p>
+  </div>
+
+  <div class="events-grid wide-images">
+    <!-- Evento 1: Pasarela -->
+    <article class="event-card horizontal">
+      <div class="event-image" style="background-image: url('assets/img/1.jpg');"></div>
+      <div class="event-content">
+        <div class="event-date">
+          <span class="day">12</span>
+          <span class="month">Jul</span>
+        </div>
+        <h3>Noche de Pasarela: Lencería & Fuego</h3>
+        <p>Una velada ardiente con pasarela en vivo, cocteles premium y ambiente exclusivo.</p>
+        <a href="https://wa.me/5212223334444?text=Quiero%20reservar%20para%20la%20Pasarela%20del%2012%20de%20julio" class="btn-event" target="_blank">
+          Reservar mesa
+        </a>
+      </div>
+    </article>
+
+    <!-- Evento 2: Stand Up (Destacado) -->
+    <article class="event-card horizontal featured">
+      <div class="event-image" style="background-image: url('assets/img/1.jpg');"></div>
+      <div class="event-content">
+        <div class="event-date">
+          <span class="day">19</span>
+          <span class="month">Jul</span>
+        </div>
+        <span class="event-tag">Destacado</span>
+        <h3>Stand Up Jalisco: Risa sin censura</h3>
+        <p>Los mejores comediantes locales te harán llorar de la risa. ¡No apto para sensibles!</p>
+        <a href="https://wa.me/5212223334444?text=Quiero%20reservar%20para%20Stand%20Up%20del%2019%20de%20julio" class="btn-event" target="_blank">
+          Reservar mesa
+        </a>
+      </div>
+    </article>
+
+    <!-- Evento 3: Imitadores -->
+    <article class="event-card horizontal">
+      <div class="event-image" style="background-image: url('assets/img/1.jpg');"></div>
+      <div class="event-content">
+        <div class="event-date">
+          <span class="day">26</span>
+          <span class="month">Jul</span>
+        </div>
+        <h3>Imitadores Legendarios</h3>
+        <p>¿Puedes distinguir a un imitador de Shakira o de Luis Miguel? ¡Ven y descúbrelo!</p>
+        <a href="https://wa.me/5212223334444?text=Quiero%20reservar%20para%20los%20Imitadores%20del%2026%20de%20julio" class="btn-event" target="_blank">
+          Reservar mesa
+        </a>
+      </div>
+    </article>
+
+    <!-- Evento 4: Música en Vivo -->
+    <article class="event-card horizontal featured">
+      <div class="event-image" style="background-image: url('assets/img/1.jpg');"></div>
+      <div class="event-content">
+        <div class="event-date">
+          <span class="day">02</span>
+          <span class="month">Ago</span>
+        </div>
+        <span class="event-tag">Destacado</span>
+        <h3>Noche de Rock Clásico</h3>
+        <p>Vive un tributo a Led Zeppelin, The Rolling Stones y Guns N' Roses. ¡Fuego en el escenario!</p>
+        <a href="https://wa.me/5212223334444?text=Quiero%20reservar%20para%20el%20concierto%20del%2002%20de%20agosto" class="btn-event" target="_blank">
+          Reservar mesa
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="events-cta">
+    <p>¿Quieres recibir alertas de nuevos eventos?</p>
+    <a href="https://wa.me/5212223334444?text=Quiero%20recibir%20noticias%20de%20eventos" class="btn-outline" target="_blank">
+      Suscríbete por WhatsApp
+    </a>
+  </div>
+</section>
+<section class="gallery-section" id="gallery-section">
+  <div class="section-header">
+    <h2 class="mozilla-headline">Vive la Experiencia</h2>
+    <p>Así se siente una noche en Steak & Grills</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item big" style="background-image: url('assets/img/1.jpeg');"></div>
+    <div class="gallery-item" style="background-image: url('assets/img/2.jpeg');"></div>
+    <div class="gallery-item" style="background-image: url('assets/img/3.jpeg');"></div>
+    <div class="gallery-item" style="background-image: url('assets/img/4.jpeg');"></div>
+    <div class="gallery-item" style="background-image: url('assets/img/5.jpeg');"></div>
+    <div class="gallery-item big" style="background-image: url('assets/img/6.jpeg');"></div>
+  </div>
+
+  <!-- Enlace a Instagram -->
+  <div class="gallery-cta">
+    <p>Síguenos en Instagram para más momentos</p>
+    <a href="https://instagram.com/steakandgrills" target="_blank" class="btn-instagram">
+      <i class="fab fa-instagram"></i> @steakandgrills
+    </a>
+  </div>
+</section>
+
+<section class="menu-section" id="menu-section">
+  <div class="section-header">
+    <h2 class="mozilla-headline">Nuestro Menú</h2>
+    <p>Descubre los sabores que encienden la noche</p>
+  </div>
+
+  <!-- Pestañas -->
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-tab="cortes">Cortes Premium</button>
+    <button class="tab-btn" data-tab="hamburguesas">Hamburguesas</button>
+    <button class="tab-btn" data-tab="cocteles">Coctelería</button>
+    <button class="tab-btn" data-tab="entradas">Entradas</button>
+    <button class="tab-btn" data-tab="eventos">Menú Eventos</button>
+  </div>
+
+  <!-- Contenido del Menú -->
+  <div class="menu-content">
+    <!-- Cortes Premium -->
+    <div class="menu-tab active" id="cortes">
+      <div class="menu-item">
+        <img src="https://www.steakandgrills.com.mx/wp-content/uploads/2023/02/DSC_0438_1920_1285.jpg" alt="Ribeye 12 oz" class="menu-item-img">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h3>Ribeye 12 oz</h3>
+            <span class="menu-item-price">$320</span>
+          </div>
+          <p>Asado a la parrilla con sal de mar y romero. Jugoso, intenso, inolvidable.</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://www.steakandgrills.com.mx/wp-content/uploads/2023/02/DSC_2485_1920_1285.jpg" alt="Tomahawk 30 oz" class="menu-item-img">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h3>Tomahawk 30 oz</h3>
+            <span class="menu-item-price">$890</span>
+          </div>
+          <p>El rey de la parrilla. Perfecto para 2-3 personas. Acompañado de fuego en la mesa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hamburguesas -->
+    <div class="menu-tab" id="hamburguesas">
+      <div class="menu-item">
+        <img src="https://static.wixstatic.com/media/840f66_82ec017375a443fe8b5dd906e27f9ff6~mv2.jpg/v1/crop/x_0,y_1,w_1326,h_883/fill/w_1326,h_883,al_c,q_85,enc_avif,quality_auto/texas-burger_fusion_home.jpg" alt="Hamburguesa de Trufa" class="menu-item-img">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h3>Hamburguesa de Trufa</h3>
+            <span class="menu-item-price">$240</span>
+          </div>
+          <p>Carne Angus, queso brie, reducción de trufa y cebolla caramelizada.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coctelería -->
+    <div class="menu-tab" id="cocteles">
+      <div class="menu-item">
+        <img src="https://static.wixstatic.com/media/840f66_a3a67311d0cd45468f5ac308aab6ee71~mv2.png/v1/crop/x_347,y_991,w_3285,h_4632/fill/w_404,h_604,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/img_oaxacan_fusion.png" alt="Smoke & Fire" class="menu-item-img">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h3>Smoke & Fire</h3>
+            <span class="menu-item-price">$140</span>
+          </div>
+          <p>Bourbon, jarabe de ahumado, lima y chile tajín. Servido con humo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entradas -->
+    <div class="menu-tab" id="entradas">
+      <div class="menu-item">
+        <img src="https://static.wixstatic.com/media/840f66_3a29ac1d44b64f39add064dae1f9b748~mv2.jpg/v1/crop/x_0,y_71,w_908,h_526/fill/w_784,h_454,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fusion-south-american-seafood-rice.jpg" alt="Foie Gras a la Parrilla" class="menu-item-img">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h3>Foie Gras a la Parrilla</h3>
+            <span class="menu-item-price">$280</span>
+          </div>
+          <p>Con reducción de oporto y tostada de brioche.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Eventos -->
+    <div class="menu-tab" id="eventos">
+      <div class="menu-item">
+        <img src="https://static.wixstatic.com/media/840f66_3a29ac1d44b64f39add064dae1f9b748~mv2.jpg/v1/crop/x_0,y_71,w_908,h_526/fill/w_784,h_454,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fusion-south-american-seafood-rice.jpg" alt="Menú Noche de Evento" class="menu-item-img">
+        <div class="menu-item-info">
+          <div class="menu-item-header">
+            <h3>Menú Noche de Evento</h3>
+            <span class="menu-item-price">$450</span>
+          </div>
+          <p>3 tiempos + coctel de bienvenida. Ideal para shows y pasarelas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Descargar PDF -->
+  <div class="menu-cta">
+    <a href="menu-steakandgrills.pdf" class="btn-download" target="_blank">
+      <i class="fas fa-download"></i> Descargar Menú en PDF
+    </a>
+  </div>
+</section>
+
+<section class="contact-section" id="contact-section">
+  <div class="section-header">
+    <h2 class="mozilla-headline">Nuestras Ubicaciones</h2>
+  </div>
+
+  <!-- Tarjetas de ubicaciones -->
+  <div class="locations-grid">
+    <!-- Ubicación 1: Dakota, Nápoles -->
+    <div class="location-card">
+      <div class="location-header">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Dakota, Nápoles</h3>
+      </div>
+      <p><strong>Dirección:</strong><br>
+      Dakota 178, Nápoles, Benito Juárez<br>
+      03810 Ciudad de México, CDMX</p>
+      <p><strong>Horario:</strong><br>
+      Mi–Dom: 6:00 PM – 1:00 AM</p>
+      <p><strong>Teléfono:</strong><br>
+      <a href="tel:+525512345678">(55) 1234-5678</a></p>
+      <a href="https://maps.google.com/?q=Dakota+178,+Nápoles,+CDMX" target="_blank" class="btn-map">
+        Ver en Google Maps
+      </a>
+    </div>
+
+    <!-- Ubicación 2: Gustavo Baz, Tlalnepantla -->
+    <div class="location-card">
+      <div class="location-header">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Gustavo Baz, Tlalnepantla</h3>
+      </div>
+      <p><strong>Dirección:</strong><br>
+      Av. Dr. Gustavo Baz 28-D, Xocoyahualco<br>
+      54080 Tlalnepantla, Estado de México</p>
+      <p><strong>Horario:</strong><br>
+      Mi–Dom: 6:00 PM – 1:00 AM</p>
+      <p><strong>Teléfono:</strong><br>
+      <a href="tel:+525587654321">(55) 8765-4321</a></p>
+      <a href="https://maps.google.com/?q=Av.+Dr.+Gustavo+Baz+28-D,+Tlalnepantla" target="_blank" class="btn-map">
+        Ver en Google Maps
+      </a>
+    </div>
+
+    <!-- Ubicación 3: Canoa, San Ángel -->
+    <div class="location-card">
+      <div class="location-header">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Canoa, San Ángel</h3>
+      </div>
+      <p><strong>Dirección:</strong><br>
+      Cda. Canoa 75, Tizapán San Ángel<br>
+      01080 Álvaro Obregón, CDMX</p>
+      <p><strong>Horario:</strong><br>
+      Mi–Dom: 6:00 PM – 1:00 AM</p>
+      <p><strong>Teléfono:</strong><br>
+      <a href="tel:+525511223344">(55) 1122-3344</a></p>
+      <a href="https://maps.google.com/?q=Cda.+Canoa+75,+San+Ángel,+CDMX" target="_blank" class="btn-map">
+        Ver en Google Maps
+      </a>
+    </div>
+  </div>
+
+  <!-- Mapa principal (con los 3 marcadores) -->
+  <!--div class="contact-map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37632.43218828857!2d-99.1853434!3d19.3917257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff6497e4b28d%3A0x4f74e8f71b18c6a8!2sSteak+%26+Grills+Dakota!5e0!3m2!1ses!2smx!4v1650000000000!5m2!1ses!2smx&markers=color:red%7Clabel:D%7C19.3917257,-99.1853434%7Ccolor:red%7Clabel:G%7C19.523809,-99.207062%7Ccolor:red%7Clabel:C%7C19.359436,-99.208374" 
+      width="100%" 
+      height="450" 
+      style="border:0; border-radius: 12px; margin-top: 40px;" 
+      allowfullscreen="" 
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div-->
+
+  <!-- CTA Final -->
+  <div class="contact-actions" style="text-align: center; margin-top: 50px;">
+    <a href="https://wa.me/5212223334444?text=Hola,%20quiero%20reservar%20en%20la%20sucursal%20de%20________" 
+       class="btn-primary" target="_blank">
+      <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo y descripción -->
+    <div class="footer-logo">
+      <h3>Steak & Grills</h3>
+      <p>Donde el sabor se encuentra con el espectáculo. Carnes premium, coctelería exclusiva y eventos que encienden la noche.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/steakandgrills" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/steakandgrills" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/5212223334444" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Enlaces rápidos -->
+    <div class="footer-links">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#upcoming-events">Eventos</a></li>
+        <li><a href="#menu-section">Menú</a></li>
+        <li><a href="#private-events">Eventos Privados</a></li>
+        <li><a href="#contact-section">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Horario -->
+    <div class="footer-hours">
+      <h4>Horario</h4>
+      <p><strong>Mi – Jue:</strong> 6:00 PM – 12:00 AM</p>
+      <p><strong>Vie – Sáb:</strong> 6:00 PM – 2:00 AM</p>
+      <p><strong>Dom:</strong> 1:00 PM – 10:00 PM</p>
+    </div>
+
+    <!-- Contacto rápido -->
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p>
+        <i class="fas fa-map-marker-alt"></i> 
+        Av. Patria 1234, Providencia
+      </p>
+      <p>
+        <i class="fas fa-phone-alt"></i> 
+        <a href="tel:+523312345678">(33) 1234-5678</a>
+      </p>
+      <p>
+        <i class="fab fa-whatsapp"></i> 
+        <a href="https://wa.me/5212223334444" target="_blank">WhatsApp</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Steak & Grills. Todos los derechos reservados. Hecho con fuego y pasión.</p>
+  </div>
+</footer>
+<!-- BOTÓN SUBIR AL INICIO -->
+<a href="#hero" class="btn-up" id="btnUp">
+  <i class="fas fa-arrow-up"></i>
+</a>
+  <!-- JS -->
+   <script>
+  // Botón "Subir al inicio"
+  const btnUp = document.getElementById('btnUp');
+
+  // Mostrar/ocultar botón al hacer scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btnUp.classList.add('show');
+    } else {
+      btnUp.classList.remove('show');
+    }
+  });
+
+  // Scroll suave al hacer clic
+  btnUp.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
