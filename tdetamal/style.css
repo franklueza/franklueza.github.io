@@ -1,0 +1,606 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.passion-one-regular {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.passion-one-bold {
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.passion-one-black {
+  font-family: "Passion One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+body{
+    background: #ED1E79;
+     position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+    display: inline-block;
+ position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+.nav-links a:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.social-icons-desktop {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons-desktop a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ED1E79;
+}
+
+.nav-social-mobile {
+  display: none;
+}
+
+/* MOBILE (max 768px) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #ED1E79;
+    display: none;
+    gap: 15px;
+    padding: 20px;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .social-icons-desktop {
+    display: none;
+  }
+
+  .nav-social-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+
+/* ==================== HERO ==================== */
+
+
+.hero {
+  height: 100vh;
+  background-image: url('assets/img/LogoBordado_Logo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 5% 60px 0;
+  position: relative;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  color: white;
+  text-align: right;
+  margin: 0;
+}
+
+/* Sección Sobre Nosotros */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 5%;
+  gap: 40px;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  color: #fff; /* Azul profundo */
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/*.about-content h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: #0071BC;
+  border-radius: 2px;
+}*/
+
+.about-content p {
+  color: #fff;
+  margin-bottom: 1rem;  
+  font-size: 1.2rem;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Sección Menú */
+.menu {
+  padding: 80px 5%;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+/* Categorías */
+.menu-category {
+  margin-bottom: 60px;
+}
+
+.category-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Cuadrícula de productos */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cada producto */
+.menu-item {
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Información: icono + nombre */
+.item-info{
+    display: flex;
+}
+.item-info img {
+    margin: 0 auto;
+  width: 60%;
+  height: auto;
+  
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+/* Sección Hoja de Plátano - Fondo especial */
+.hoja-section {
+  background-color: #0071BC; /* Beige cálido, como hoja de plátano */
+  padding: 80px 5%;
+  
+}
+
+.hoja-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cuadrícula (igual que el resto, para mantener consistencia) */
+.hoja-section .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Reutilizamos estilos de .menu-item si ya los tienes, o los definimos aquí */
+.hoja-section .menu-item {
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hoja-section .menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.hoja-section .menu-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hoja-section .item-info {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hoja-section .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hoja-section .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sección Atoles */
+.atole-section {
+  padding: 30px 0px;
+
+}
+
+.atole-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.atole-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.atole-item {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.atole-item img {
+  width: 100%;
+  height: auto;
+}
+/* Solo en desktop: aplica margin-top a la tercera tarjeta */
+@media (min-width: 900px) {
+  .atole-grid .atole-item:nth-child(3) {
+    margin-top: -250px;
+    /* Opcional: sube también el contenido para que no rompa el flujo */
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .atole-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .atole-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atole-text {
+    font-size: 1rem;
+  }
+}
+
+/* Sección Salsas */
+.salsas-section {
+  padding: 80px 5%;
+  background: #fff;
+  text-align: center;
+}
+
+/* Fila de imágenes (centrada) */
+.salsas-row.center {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.salsas-row.center img {
+  width: 350px;
+  height: 230px;
+}
+
+/* Fila con espacio entre lados */
+.salsas-row.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.payment-info,
+.delivery-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.payment-info p,
+.delivery-info p {
+  margin: 0 0 0.5rem 0;
+  color: #ED1E79;
+  font-size: 2.2rem;
+}
+
+.payment-info .logos,
+.delivery-info .delivery-logos {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.payment-info .logos img,
+.delivery-info .delivery-logos img {    
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Alineación: texto izquierda, logos derecha */
+.salsas-row.space-between .payment-info {
+  text-align: left;
+}
+
+.salsas-row.space-between .delivery-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.salsas-row.space-between .delivery-info .delivery-logos {
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .salsas-row.space-between {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .payment-info,
+  .delivery-info {
+    align-items: center;
+  }
+
+  .delivery-info {
+    margin-top: 30px;
+  }
+
+  .payment-info .logos,
+  .delivery-info .delivery-logos {
+    justify-content: center;
+  }
+}
+
+/* Sección de Contacto */
+.contact {
+  background: #000;
+  color: white;
+  padding: 80px 5%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-logo-column,
+.contact-info-column {
+  flex: 1;
+}
+
+.contact-logo {
+  width: 150px;
+  height: 150px;
+}
+.contact-logo-column{
+    border-right: 1px solid #ED1E79;
+}
+.contact-info-column{
+    padding-left: 50px;
+}
+.contact-info {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-info p {
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+    padding-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+/* Mapa */
+.map-container {
+  margin: 0rem;
+    padding: 0px;
+}
+.map{
+    margin: 0px;
+    padding: 0px;
+}
+.map-container iframe {
+  width: 100%;
+}
+/* Footer */
+.footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;   
+}
+
+/* Línea superior en el footer */
+.footer-line {
+  border-top: 1px solid #fff; /* Rosa vibrante */
+  width: 90%; /* Abarca el 90% del ancho */
+  margin: 0 auto 20px; /* Espaciado */
+}
