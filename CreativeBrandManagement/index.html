@@ -1,0 +1,3832 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Brand Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: #4b7e81 #1a1a1a;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            overflow-x: hidden;
+            background: #000;
+        }   
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #c7eae5, #4b7e81);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #c7eae5, #4b7e81);
+            box-shadow: 0 0 10px rgba(80, 227, 194, 0.5);
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #4b7e81 #1a1a1a;
+        }
+
+       /* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+nav.scrolled {
+    background: #4b7e81;
+    padding: 1rem 4rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled .logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #4b7e81 0%, #2a4a4d 100%);
+    z-index: 1000;
+    transition: right 0.4s ease;
+    padding-top: 100px;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-close span {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: block;
+}
+
+.mobile-close:hover span {
+    transform: rotate(90deg);
+    color: #c7eae5;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 1rem;
+    border-left: 3px solid transparent;
+}
+
+.mobile-menu ul li a:hover {
+    border-left-color: #c7eae5;
+    padding-left: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 1.5rem 2rem;
+    }
+
+    nav.scrolled {
+        padding: 1rem 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    nav.scrolled .logo img {
+        height: 35px;
+    }
+}
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: url('https://brandingmx.com/wp-content/uploads/2023/09/branding-cbm.webp') center/cover;
+            filter: brightness(0.4) contrast(1.2);
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(9, 123, 116, 0.3) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .masked-text {
+            font-size: clamp(3rem, 12vw, 4rem);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            background: url('https://images.pexels.com/photos/3137073/pexels-photo-3137073.jpeg') center/cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-attachment: fixed;
+            margin-top: 250px;
+            margin-bottom: 2rem;
+            opacity: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .cta-button:hover {
+            color: #000;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            opacity: 0;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 2px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #fff);
+            margin: 0 auto;
+            animation: scrollAnimation 2s infinite;
+        }
+
+        @keyframes scrollAnimation {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .process-section {
+            background: #fff;
+            padding: 8rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 20%, rgba(212,160,23,0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(0,102,204,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .process-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 6rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #000;
+            letter-spacing: -1px;
+        }
+
+        .process-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .process-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .process-intro {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background: #fff;
+            padding: 3rem 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                var(--card-color-light) 0%, 
+                var(--card-color) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+        }
+
+        .card:hover::before {
+            opacity: 0.08;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--card-color), var(--card-color-light));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover::after {
+            transform: scaleY(1);
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+            border-color: var(--card-color-light);
+        }
+
+        .card-number {
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--card-color), var(--card-color-light));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-number {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: #000;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--card-color), var(--card-color-light));
+            margin-top: 1rem;
+            transition: width 0.4s ease;
+        }
+
+        .card:hover .card-title::after {
+            width: 100px;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-description {
+            color: #333;
+        }
+
+        .card-footer {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--card-color);
+            position: relative;
+            z-index: 2;
+            padding-left: 1.5rem;
+        }
+
+        .card-footer::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-footer::before {
+            transform: translateX(5px);
+        }
+
+        .card:nth-child(1) { 
+            --card-color: #D4A017; 
+            --card-color-light: #FFD700;
+        }
+        .card:nth-child(2) { 
+            --card-color: #DC143C; 
+            --card-color-light: #FF6B6B;
+        }
+        .card:nth-child(3) { 
+            --card-color: #0066CC; 
+            --card-color-light: #4DA6FF;
+        }
+        .card:nth-child(4) { 
+            --card-color: #008B8B; 
+            --card-color-light: #20B2AA;
+        }
+
+        .services-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            padding: 8rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(139,0,139,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(0,102,204,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 6rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-label {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #888;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .services-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #aaa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                var(--service-color-start) 0%, 
+                var(--service-color-end) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+        }
+
+        .service-card:hover::before {
+            opacity: 0.15;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card[data-service="branding"] {
+            --service-color-start: #D4A017;
+            --service-color-end: #FFD700;
+        }
+
+        .service-card[data-service="advertising"] {
+            --service-color-start: #DC143C;
+            --service-color-end: #FF6B6B;
+        }
+
+        .service-card[data-service="marketing"] {
+            --service-color-start: #0066CC;
+            --service-color-end: #4DA6FF;
+        }
+
+        .service-card[data-service="uxui"] {
+            --service-color-start: #9B59B6;
+            --service-color-end: #E056FD;
+        }
+
+        .service-card[data-service="product"] {
+            --service-color-start: #00B894;
+            --service-color-end: #55EFC4;
+        }
+
+        .service-card[data-service="graphic"] {
+            --service-color-start: #FF6348;
+            --service-color-end: #FF9F80;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-icon svg {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            opacity: 0.9;
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover .service-icon svg {
+            transform: scale(1.1) rotate(5deg);
+            opacity: 1;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                var(--service-color-start), 
+                var(--service-color-end));
+            margin-top: 1rem;
+            transition: width 0.4s ease;
+        }
+
+        .service-card:hover .service-title::after {
+            width: 100px;
+        }
+
+        .service-list {
+            list-style: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-list li {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .service-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--service-color-start);
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-list li {
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        .service-card:hover .service-list li::before {
+            transform: translateX(5px);
+        }
+
+        .service-hover-overlay {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                rgba(0,0,0,0.3) 100%);
+            transition: top 0.6s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .service-card:hover .service-hover-overlay {
+            top: 0;
+        }
+
+        .portfolio-section {
+            background: #f8f8f8;
+            padding: 8rem 4rem;
+            position: relative;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .portfolio-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .portfolio-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            padding: 0 2rem;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 2rem;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            color: #333;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.4s ease;
+            z-index: 0;
+        }
+
+        .filter-btn:hover {
+            color: #000;
+            border-color: #4B7E81;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn:hover::before {
+            left: 0;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #A2CDC7, #4B7E81);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .filter-btn.active::before {
+            left: 0;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .portfolio-item.hide {
+            display: none;
+        }
+
+        .portfolio-item:nth-child(3n+1) {
+            grid-row: span 1;
+        }
+
+        .portfolio-item:nth-child(5n+2) {
+            grid-row: span 2;
+        }
+
+        .portfolio-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .portfolio-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .portfolio-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-image:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-image:hover .portfolio-item-title {
+            transform: translateY(0);
+        }
+
+        .immersive-section {
+            position: relative;
+            padding: 10rem 4rem;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .immersive-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://brandingmx.com/wp-content/uploads/2024/10/fondo.jpg') center/cover;
+            z-index: 1;
+        }
+
+        .immersive-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(26,26,26,0.6) 100%);
+            z-index: 2;
+        }
+
+        .immersive-container {
+            position: relative;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .immersive-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .immersive-label {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            color: #50E3C2;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .immersive-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .immersive-tagline {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .immersive-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .immersive-text {
+            color: #fff;
+        }
+
+        .immersive-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .immersive-intro strong {
+            color: #4b7e81;
+            font-weight: 700;
+        }
+
+        .immersive-question {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .immersive-question::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #A2CDC7, #4b7e81);
+        }
+
+        .immersive-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .immersive-description strong {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .immersive-image {
+            position: relative;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .cta-section {
+            position: relative;
+            padding: 10rem 4rem;
+            background: #fff;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .cta-content {
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #000 0%, #A2CDC7 50%, #4b7e81 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .cta-subtitle {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-social {
+            margin-top: 3rem;
+        }
+
+        .social-label {
+            color: #333;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            color: #333;
+        }
+
+        .social-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-8px) scale(1.1);
+        }
+
+        .social-icon.whatsapp:hover {
+            background: #25D366;
+            border-color: #25D366;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .social-icon.facebook:hover {
+            background: #1877F2;
+            border-color: #1877F2;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(24, 119, 242, 0.3);
+        }
+
+        .social-icon.linkedin:hover {
+            background: #0A66C2;
+            border-color: #0A66C2;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(10, 102, 194, 0.3);
+        }
+
+        .marketing-section {
+            background: #fff;
+            padding: 8rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marketing-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://brandingmx.com/wp-content/uploads/2023/09/cbm_agencia_de_branding_mexico_branding_marketing_diseno_web_posicionamiento_SEO.webp') center/cover;
+            z-index: 1;
+        }
+
+        .marketing-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .marketing-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .marketing-text {
+            color: #333;
+        }
+
+        .marketing-label {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: #4b7e81;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 700; 
+        }
+
+        .marketing-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .marketing-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .marketing-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .marketing-description strong {
+            color: #4b7e81;
+            font-weight: 700;
+        }
+
+        .marketing-image {
+            position: relative;
+        }
+
+        .marketing-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .marketing-image .image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .marketing-partners {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .partner-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .partner-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: fill;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .partner-image:hover img {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .partner-label {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .portfolio-item:nth-child(5n+2) {
+                grid-row: span 1;
+            }
+
+            .immersive-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .immersive-image {
+                order: -1;
+            }
+
+            .marketing-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .marketing-partners {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .masked-text {
+                font-size: 3rem;
+            }
+
+            .process-section {
+                padding: 4rem 2rem;
+            }
+
+            .process-header {
+                margin-bottom: 3rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .card {
+                padding: 2rem 1.5rem;
+            }
+
+            .services-section {
+                padding: 4rem 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card {
+                padding: 2.5rem 2rem;
+            }
+
+            .marketing-section {
+                padding: 4rem 2rem;
+            }
+
+            .marketing-content {
+                gap: 2rem;
+            }
+
+            .marketing-partners {
+                gap: 2rem;
+            }
+
+            .partner-image img {
+                height: 200px;
+            }
+
+            .cta-section {
+                padding: 6rem 2rem;
+            }
+
+            .cta-title {
+                font-size: 2.5rem;
+            }
+
+            .cta-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .social-icon {
+                width: 55px;
+                height: 55px;
+            }
+
+            .social-icon svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .immersive-section {
+                padding: 6rem 2rem;
+            }
+
+            .immersive-header {
+                margin-bottom: 3rem;
+            }
+
+            .immersive-content {
+                gap: 2rem;
+            }
+
+            .immersive-question {
+                font-size: 1.5rem;
+                padding-left: 1.5rem;
+            }
+
+            .portfolio-section {
+                padding: 4rem 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .portfolio-item:nth-child(5n+2) {
+                grid-row: span 1;
+            }
+
+            .portfolio-image {
+                min-height: 250px;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        /* BrandThink Section */
+        .brandthink-section {
+            background: #000;
+            padding: 10rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brandthink-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brandthink-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .brandthink-label {
+            font-size: 1.3rem;
+            letter-spacing: 4px;
+            color: #aaa;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .brandthink-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 4rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        /* Content Grid */
+        .brandthink-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .brandthink-text-block {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid;
+            border-image: linear-gradient(180deg, #C7EAE5, #4b7e81) 1;
+            padding: 3rem;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .brandthink-text-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .brandthink-text-block:hover::before {
+            left: 100%;
+        }
+
+        .brandthink-text-block:hover {
+            transform: translateX(10px);
+            border-color: rgba(78, 145, 130, 0.5);
+            box-shadow: -10px 0 30px rgba(23, 212, 190, 0.2);
+        }
+
+        .brandthink-paragraph {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #ddd;
+            margin-bottom: 0;
+        }
+
+        .brandthink-paragraph strong {
+            color: #4b7e81;
+            font-weight: 700;
+        }
+
+        /* Highlight Quote */
+        .brandthink-quote {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .brandthink-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8rem;
+            color: rgba(212, 160, 23, 0.2);
+            line-height: 1;
+        }
+
+        .brandthink-quote-text {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.3;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brandthink-quote-highlight {
+            background: linear-gradient(135deg, #c7eae5, #4b7e81);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Decorative Elements */
+        .brandthink-decoration {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .decoration-1 {
+            top: 10%;
+            right: -100px;
+            background: linear-gradient(135deg, #c7eae5, #4b7e81);
+        }
+
+        .decoration-2 {
+            bottom: 20%;
+            left: -100px;
+            background: linear-gradient(135deg, #c7eae5, #4b7e81);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .brandthink-section {
+                padding: 6rem 2rem;
+            }
+
+            .brandthink-badge {
+                font-size: 2.5rem;
+            }
+
+            .brandthink-text-block {
+                padding: 2rem;
+            }
+
+            .brandthink-quote {
+                padding: 3rem 1rem;
+            }
+
+            .brandthink-quote::before {
+                font-size: 5rem;
+            }
+        }
+/* Testimonials Section */
+        .testimonials-section {
+            background: #fff;
+            padding: 8rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(212, 160, 23, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .testimonials-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .testimonials-subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        /* Slider Container */
+        .testimonials-slider {
+            position: relative;
+            padding: 3rem 0;
+            overflow: hidden;
+        }
+
+        .testimonial-track {
+            position: relative;
+            min-height: 400px;
+        }
+
+        .testimonial-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .testimonial-slide.active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+
+        /* Logo */
+        .testimonial-logo {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-slide.active .testimonial-logo {
+            transform: scale(1.05);
+        }
+
+        .testimonial-logo img {
+            width: 30%;
+        }
+
+        /* Quote */
+        .testimonial-quote {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            font-size: 6rem;
+            color: rgba(36, 37, 38, 0.1);
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-position {
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Navigation Arrows */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .slider-arrow {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            color: #333;
+            user-select: none;
+        }
+
+        .slider-arrow:hover {
+            background: linear-gradient(135deg, #c7eae5, #4b7e81);
+            border-color: transparent;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .slider-arrow:active {
+            transform: scale(0.95);
+        }
+
+        /* Dots Indicator */
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: linear-gradient(135deg, #c7eae5, #4b7e81);
+            width: 40px;
+            border-radius: 6px;
+        }
+
+        .slider-dot:hover:not(.active) {
+            background:#4b7e81;
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 6rem 2rem;
+            }
+
+            .testimonials-header {
+                margin-bottom: 3rem;
+            }
+
+            .testimonial-logo {
+                width: 140px;
+                height: 80px;
+                margin-bottom: 2rem;
+            }
+
+            .testimonial-text {
+                font-size: 1.1rem;
+            }
+
+            .testimonial-quote::before {
+                font-size: 4rem;
+                top: -30px;
+                left: -10px;
+            }
+
+            .slider-arrow {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+        /* Contact Section */
+        .contact-section {
+            background: #000;
+            padding: 8rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&q=80') center/cover;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Left Column - Info */
+        .contact-info {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-badge {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(135deg,#c7eae5, #4b7e81);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .contact-question {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .contact-tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: #4b7e81;
+        }
+
+        .contact-mission {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            color: #ddd;
+        }
+
+        .contact-details {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-icon {
+            font-size: 1.5rem;
+            color: #50E3C2;
+            min-width: 30px;
+        }
+
+        .detail-content h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-content p {
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .detail-content a {
+            color: #4b7e81;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .detail-content a:hover {
+            color: #4b7e81;
+        }
+
+        .contact-logo {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-logo img {
+            max-width: 200px;
+            opacity: 0.8;
+        }
+
+        /* Right Column - Form */
+        .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .required {
+            color: #DC143C;
+            margin-left: 3px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4A90E2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #c7eae5, #4b7e81);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 6rem 2rem;
+            }
+
+            .contact-badge {
+                font-size: 2rem;
+            }
+
+            .contact-question {
+                font-size: 1.5rem;
+            }
+
+            .contact-tagline {
+                font-size: 1.2rem;
+            }
+
+            .contact-form-wrapper {
+                padding: 2rem;
+            }
+
+            .contact-details {
+                padding: 2rem;
+            }
+        }
+        /* Footer Section */
+    .footer-section {
+        background: linear-gradient(135deg, #2a3f4f 0%, #1a2530 100%);
+        padding: 6rem 4rem 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 30% 50%, rgba(75, 126, 129, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 50%, rgba(162, 205, 199, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 3rem;
+    }
+
+    .footer-column {
+        color: #fff;
+    }
+
+    /* Left Column */
+    .footer-logo {
+        margin-bottom: 2rem;
+    }
+
+    .footer-logo img {
+        max-width: 220px;
+        height: auto;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-logo img:hover {
+        opacity: 1;
+    }
+
+    .footer-hashtags {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #a0b5c0;
+        font-weight: 500;
+    }
+
+    .footer-hashtags p {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Center Column */
+    .footer-center {
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    .footer-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #c7eae5, #4b7e81);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .footer-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #d0dfe6;
+        margin-bottom: 1rem;
+    }
+
+    /* Right Column */
+    .footer-right {
+        text-align: right;
+    }
+
+    .footer-contact {
+        margin-bottom: 2rem;
+    }
+
+    .footer-email,
+    .footer-phone,
+    .footer-link,
+    .footer-location {
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .footer-email a,
+    .footer-phone a,
+    .footer-link a {
+        color: #c7eae5;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .footer-email a:hover,
+    .footer-phone a:hover,
+    .footer-link a:hover {
+        color: #4b7e81;
+        text-shadow: 0 0 10px rgba(199, 234, 229, 0.3);
+    }
+
+    .footer-phone a {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .footer-location {
+        color: #a0b5c0;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    /* Social Icons */
+    .footer-social {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+    }
+
+    .footer-social-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 1.3rem;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .footer-social-icon:hover {
+        transform: translateY(-5px) scale(1.1);
+    }
+
+    .footer-social-icon.whatsapp:hover {
+        background: #25D366;
+        border-color: #25D366;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .footer-social-icon.facebook:hover {
+        background: #1877F2;
+        border-color: #1877F2;
+        box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+    }
+
+    .footer-social-icon.linkedin:hover {
+        background: #0A66C2;
+        border-color: #0A66C2;
+        box-shadow: 0 8px 20px rgba(10, 102, 194, 0.4);
+    }
+
+    /* Bottom Bar */
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .footer-bottom p {
+        color: #8a9ba5;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .footer-right {
+            text-align: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+
+        .footer-center {
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-section {
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-container {
+            gap: 2.5rem;
+        }
+
+        .footer-logo img {
+            max-width: 180px;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+        }
+
+        .footer-social-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 1.1rem;
+        }
+    }
+    /* Scroll to Top Button */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 55px;
+        height: 55px;
+        background: linear-gradient(135deg, #c7eae5, #4b7e81);
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 999;
+        box-shadow: 0 4px 20px rgba(75, 126, 129, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .scroll-to-top:hover {
+        transform: translateY(-8px) scale(1.1);
+        box-shadow: 0 8px 30px rgba(75, 126, 129, 0.5);
+        background: linear-gradient(135deg, #4b7e81, #c7eae5);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(-4px) scale(1.05);
+    }
+
+    .scroll-to-top i {
+        transition: transform 0.3s ease;
+    }
+
+    .scroll-to-top:hover i {
+        transform: translateY(-3px);
+        animation: arrowBounce 0.6s ease infinite;
+    }
+
+    @keyframes arrowBounce {
+        0%, 100% {
+            transform: translateY(-3px);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    /* Pulse effect */
+    .scroll-to-top::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: rgba(199, 234, 229, 0.4);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+        transition: all 0.6s ease;
+    }
+
+    .scroll-to-top:hover::before {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .scroll-to-top {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+            bottom: 1.5rem;
+            right: 1.5rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">
+            <img src="https://brandingmx.com/wp-content/uploads/2022/09/cropped-CBM_creativebrandmanagement_agencia_de_branding_mexico.png" alt="CBM Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#branding">BRANDING</a></li>
+            <li><a href="#websites">WEBSITES</a></li>
+            <li><a href="#marketing">MARKETING</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-close">
+            <span>&times;</span>
+        </div>
+        <ul>
+            <li><a href="#branding">BRANDING</a></li>
+            <li><a href="#websites">WEBSITES</a></li>
+            <li><a href="#marketing">MARKETING</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="masked-text">CREATIVE BRAND <br> MANAGEMENT®</h1>
+            <!--p class="subtitle">CREATIVE BRAND MANAGEMENT®</p-->
+            <a href="#contacto" class="cta-button">CUÉNTANOS TU PROYECTO</a>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-header">
+            <p class="process-subtitle">CreativeBrandManagement®</p>
+            <h2 class="process-title">Agencia de Branding Estratégico</h2>
+            <p class="process-description">CREAMOS ESTRATEGIAS DE BRANDING QUE SEDUCEN.</p>
+            <p class="process-intro">
+                Metodología única <strong>DINAMYC PROCESS CREATIVITY</strong>, basada en el Business Model Canvas, 
+                descubre tu propuesta de valor y ADN con pensamiento sintético construimos la arquitectura de marca perfecta, 
+                acompañándote en cada etapa, para hacer tu marca irresistible.
+            </p>
+            <p class="process-intro">
+                Branding que cautiva los sentidos, escala de tu marca por etapas y objetivos a tu ritmo:
+            </p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-number">1</div>
+                <h3 class="card-title">Startup Branding</h3>
+                <p class="card-description">
+                    Inducción, CANVAS BUSSINES MODEL planeación, análisis, lineamientos y objetivos. 
+                    Diagnóstico y lineamientos de creación de marca.
+                </p>
+                <div class="card-footer">Diferenciador y Valor.</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-number">2</div>
+                <h3 class="card-title">Discovery Branding</h3>
+                <p class="card-description">
+                    Personalidad de marca STORYTELLING Y ENGAGEMENT proceso creativo y diseño de 
+                    herramientas gráficas para la marca.
+                </p>
+                <div class="card-footer">Diseño y Pautas Creativas.</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-number">3</div>
+                <h3 class="card-title">Digital Branding</h3>
+                <p class="card-description">
+                    Advertisements en redes, desarrollo web, FB ads, Google ADS, planeación de MARKETING 
+                    Y TÁCTICAS de objetivos de venta para la marca.
+                </p>
+                <div class="card-footer">Marketing Estratégico.</div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-number">4</div>
+                <h3 class="card-title">Escalamiento</h3>
+                <p class="card-description">
+                    Plan de acompañamiento en campañas, lanzamientos, nuevos productos o servicios, 
+                    plan de acción y visión del futuro de la marca.
+                </p>
+                <div class="card-footer">Posionamiento de Marca.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-header">
+            <p class="services-label">BRANDING EXPERIENCIAL</p>
+            <h2 class="services-title">CONSTRUCCIÓN DE MARCA</h2>
+            <h3 class="services-subtitle">PRINCIPALES SERVICIOS</h3>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1: Branding -->
+            <div class="service-card" data-service="branding">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="3"/>
+                        <path d="M50 25 L50 75 M25 50 L75 50" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </div>
+                <h4 class="service-title">BRANDING</h4>
+                <ul class="service-list">
+                    <li>Naming</li>
+                    <li>Diseño de logotipo e identidad corporativa</li>
+                    <li>BOOK BRAND</li>
+                    <li>Storytelling</li>
+                    <li>Periféricos de marca</li>
+                </ul>
+                <div class="service-hover-overlay"></div>
+            </div>
+
+            <!-- Service 2: Diseño Publicitario -->
+            <div class="service-card" data-service="advertising">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="30" width="60" height="40" stroke="currentColor" stroke-width="3"/>
+                        <path d="M35 45 L50 55 L65 45" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+                <h4 class="service-title">DISEÑO PUBLICITARIO</h4>
+                <ul class="service-list">
+                    <li>Creación de contenido</li>
+                    <li>Pautas publicitarias</li>
+                    <li>Advertisements</li>
+                    <li>Display</li>
+                    <li>Redes Sociales</li>
+                </ul>
+                <div class="service-hover-overlay"></div>
+            </div>
+
+            <!-- Service 3: Marketing & Web -->
+            <div class="service-card" data-service="marketing">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="50" r="8" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="70" cy="50" r="8" stroke="currentColor" stroke-width="3"/>
+                        <path d="M38 50 L62 50 M30 42 Q50 20 70 42" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+                <h4 class="service-title">MARKETING & WEB</h4>
+                <ul class="service-list">
+                    <li>Marketing Digital</li>
+                    <li>ATL, BTL</li>
+                    <li>FB Ads</li>
+                    <li>Google Ads</li>
+                    <li>Desarrollo web & Ecommerce</li>
+                </ul>
+                <div class="service-hover-overlay"></div>
+            </div>
+
+            <!-- Service 4: Diseño UX/UI -->
+            <div class="service-card" data-service="uxui">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="25" width="50" height="50" rx="5" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="10" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </div>
+                <h4 class="service-title">DISEÑO UX/UI</h4>
+                <ul class="service-list">
+                    <li>Diseño centrado en el usuario y usabilidad</li>
+                    <li>Prototipado</li>
+                    <li>Validación intuitiva</li>
+                </ul>
+                <div class="service-hover-overlay"></div>
+            </div>
+
+            <!-- Service 5: Diseño de Producto -->
+            <div class="service-card" data-service="product">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="30" y="25" width="40" height="50" stroke="currentColor" stroke-width="3"/>
+                        <path d="M30 40 L70 40 M30 55 L70 55" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </div>
+                <h4 class="service-title">DISEÑO DE PRODUCTO</h4>
+                <ul class="service-list">
+                    <li>Diseño de etiquetas</li>
+                    <li>Producto Shot</li>
+                    <li>Diseño de empaque</li>
+                    <li>Experiencia de compra</li>
+                </ul>
+                <div class="service-hover-overlay"></div>
+            </div>
+
+            <!-- Service 6: Diseño Gráfico -->
+            <div class="service-card" data-service="graphic">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 30 L75 30 L75 70 L25 70 Z" stroke="currentColor" stroke-width="3" fill="none"/>
+                        <path d="M35 45 L65 45 M35 55 L55 55" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                </div>
+                <h4 class="service-title">DISEÑO GRÁFICO</h4>
+                <ul class="service-list">
+                    <li>Diseño de catálogos</li>
+                    <li>Folletería</li>
+                    <li>Presentaciones corporativas</li>
+                    <li>Diseño editorial</li>
+                </ul>
+                <div class="service-hover-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="portfolio-header">
+            <h2 class="portfolio-title">BRIEFCASE BRANDS</h2>
+            <p class="portfolio-subtitle">DIRÍGETE A TU PÚBLICO ADECUADO CON EL MENSAJE CORRECTO</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="branding">BRANDING</button>
+            <button class="filter-btn" data-filter="diseno">DISEÑO</button>
+            <button class="filter-btn" data-filter="web">WEB</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item" data-category="branding diseno">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&q=80" alt="Livret">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Livret</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80" alt="Yamile">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Yamile</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-item" data-category="branding web">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Share App">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Share App</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-item" data-category="branding diseno">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Go Most">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Go Most</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="portfolio-item" data-category="diseno">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Gin MX">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Gin MX</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="portfolio-item" data-category="branding diseno">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Yahuil">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Yahuil</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="Seele Neurociencia">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Seele Neurociencia</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" alt="Eco Neural">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Eco Neural</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="portfolio-item" data-category="diseno">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Xanath">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Xanath</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="portfolio-item" data-category="branding web">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80" alt="DL Green">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">DL Green</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 11 -->
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Jhaen">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Jhaen</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 12 -->
+            <div class="portfolio-item" data-category="diseno web">
+                <div class="portfolio-image">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80" alt="Menthalising">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-item-title">Menthalising</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Immersive Branding Section -->
+    <section class="immersive-section">
+        <div class="immersive-bg"></div>
+        <div class="immersive-overlay"></div>
+        
+        <div class="immersive-container">
+            <div class="immersive-header">
+                <p class="immersive-label">AGENCIA DE BRANDING INMERSIVO</p>
+                <h2 class="immersive-title">ARQUITECTURA DE MARCA PROFUNDA</h2>
+                <p class="immersive-tagline">¡Branding que conectan y emociona!</p>
+            </div>
+
+            <div class="immersive-content">
+                <div class="immersive-text">
+                    <p class="immersive-intro">
+                        En <strong>CreativeBrandManagement®</strong> descubrimos el ADN de tu marca, exploramos la escencia 
+                        misma de tu marca de forma inmersiva a detalle hacia un branding exitoso y cautivador.
+                    </p>
+                    
+                    <h3 class="immersive-question">¿Cómo lo logramos?</h3>
+                    
+                    <p class="immersive-description">
+                        Diseñamos estrategias y tácticas experienciales pensadas para crear marcas memorables de alto 
+                        impacto que trascienden y generan valor capitalizando la arquitectura de marca.
+                    </p>
+                    
+                    <p class="immersive-description">
+                        Desde la <strong>ARQUITECTURA DE MARCA</strong>, <strong>POSICIONAMIENTO ESTRATÉGICO</strong> y 
+                        el poder del <strong>BRANDING DIGITAL</strong>, abarcamos todos los aspectos para potenciar tu presencia.
+                    </p>
+                </div>
+
+                <div class="immersive-image">
+                    <div class="image-wrapper">
+                        <img src="https://brandingmx.com/wp-content/uploads/2023/09/ARQUITECTURA-DE-MARCA-PROFUNDA.png" alt="Arquitectura de Marca">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿QUÉ IDEA TIENES EN MENTE?</h2>
+                <p class="cta-subtitle">Transformemos tu visión en una marca inolvidable</p>
+                
+                <div class="cta-social">
+                    <p class="social-label">CONTÁCTANOS</p>
+                    <div class="social-icons">
+                        <a href="https://wa.me/+525585337207" class="social-icon whatsapp" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                        <a href="http://facebook.com/CreativeBrandManagement/" class="social-icon facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/creativebrandmanagemet/" class="social-icon linkedin" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branding & Marketing Section -->
+    <section class="marketing-section">
+        <div class="marketing-container">
+            <!-- Two Column Layout -->
+            <div class="marketing-content">
+                <div class="marketing-text">
+                    <p class="marketing-label">BRANDING & MARKETING</p>
+                    <h2 class="marketing-title">Trapping and Empowering Customer Sales</h2>
+                    <h3 class="marketing-subtitle">Branding estratégico, conectado con marketing</h3>
+                    
+                    <p class="marketing-description">
+                        En <strong>CreativeBrandManagement®</strong> Diseñamos planes personalizados para alcanzar sus objetivos. 
+                        Aumentar el tráfico orgánico a través de la optimización SEO impulsada por content management. 
+                        Conversión de clientes potenciales impulsando por tráfico de alta calidad a su sitio. 
+                        Aumenta la visibilidad de tu marca.
+                    </p>
+                    
+                    <p class="marketing-description">
+                        Potenciamos las estrategias de branding con la efectividad del marketing.
+                    </p>
+                    
+                    <p class="marketing-description">
+                        Marcas y empresas B2B a través de marketing de búsqueda estratégica, marketing en redes sociales 
+                        <strong>FB ads</strong> <strong>Google Ads</strong> y marketing de contenido y marketing colaborativo.
+                    </p>
+                </div>
+
+                <div class="marketing-image">
+                    <div class="image-wrapper">
+                        <img src="https://brandingmx.com/wp-content/uploads/2022/09/marketing-canvas.png" alt="Marketing Digital">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Column Images -->
+            <div class="marketing-partners">
+                <div class="partner-image">
+                    <img src="https://brandingmx.com/wp-content/uploads/2022/09/Google-Partner.jpeg" alt="Google Partner">
+                    <p class="partner-label">Google Partner</p>
+                </div>
+                <div class="partner-image">
+                    <img src="https://brandingmx.com/wp-content/uploads/2022/09/Facebook-Partners.jpeg" alt="Facebook Partners">
+                    <p class="partner-label">Facebook Partners</p>
+                </div>
+                <div class="partner-image">
+                    <img src="https://brandingmx.com/wp-content/uploads/2022/09/Linkedin-Sales.jpeg" alt="LinkedIn Sales">
+                    <p class="partner-label">LinkedIn Sales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BrandThink Section -->
+    <section class="brandthink-section">
+        <div class="brandthink-decoration decoration-1"></div>
+        <div class="brandthink-decoration decoration-2"></div>
+        
+        <div class="brandthink-container">
+            <div class="brandthink-header">
+                <h2 class="brandthink-badge">¡BRANDTHINK!</h2>
+                <p class="brandthink-label">INSPIRACIÓN INTELECTUAL</p>
+                <h3 class="brandthink-title">CREATIVIDAD CON SENTIDO</h3>
+            </div>
+
+            <div class="brandthink-content">
+                <div class="brandthink-text-block">
+                    <p class="brandthink-paragraph">
+                        Tomamos retos y desafíos superándolos con maestría, como <strong>Agencia de Branding Experimentada</strong>, 
+                        fusionamos método y creatividad para lograr resultados increíbles.
+                    </p>
+                </div>
+
+                <div class="brandthink-text-block">
+                    <p class="brandthink-paragraph">
+                        Con profundo conocimiento y creatividad de diseño, storytelling y estrategias, creamos historias en cohesión 
+                        con <strong>branding digital</strong> impulsado con ideas multidisciplinarias.
+                    </p>
+                </div>
+
+                <div class="brandthink-text-block">
+                    <p class="brandthink-paragraph">
+                        Llevamos el branding y diseño a niveles excepcionales, maximizando los diferenciadores y valor de tu marca, 
+                        sacamos el máximo para tu estrategia de marketing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="brandthink-quote">
+                <p class="brandthink-quote-text">
+                    Estamos para llevar a tu marca a un nivel 
+                    <span class="brandthink-quote-highlight">¡IMPACTANTE!</span>
+                </p>
+            </div>
+        </div>
+    </section>
+     <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">WHAT THEY SPEAK</h2>
+                <p class="testimonials-subtitle">CON ORGULLO PRESUMIMOS QUE…</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-logo">
+                            <img src="https://brandingmx.com/wp-content/uploads/2023/09/unger-travel.png" alt="Duckfish">
+                        </div>
+                        <div class="testimonial-quote">
+                            <p class="testimonial-text">
+                                Estamos sumamente agradecidos por en desarrollo de nuestra marca y las estrategias comerciales y de marketing. 
+                                Su equipo se tomó el tiempo para comprender nuestra visión y modelo de negocio para reflejar nuestro valor y marca única.
+                            </p>
+                            <p class="testimonial-author">Daniel Aranda</p>
+                            <p class="testimonial-position">CEO de Duckfish</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-logo">
+                            <img src="https://brandingmx.com/wp-content/uploads/2023/09/unger-travel.png" alt="Unger Travel">
+                        </div>
+                        <div class="testimonial-quote">
+                            <p class="testimonial-text">
+                                La agencia de branding lidera el camino en la creación de marcas atractivas y marketing que funciona resaltando 
+                                los diferenciadores de forma única y coherente. Su equipo tiene un talento y una pasión inigualables por lo que hacen.
+                            </p>
+                            <p class="testimonial-author">Bernardo Unger y Mónica Unger</p>
+                            <p class="testimonial-position">CMO de Unger Travel, Itinerant Designers</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-logo">
+                            <img src="https://brandingmx.com/wp-content/uploads/2023/09/chaul.png" alt="Chaul Technologies">
+                        </div>
+                        <div class="testimonial-quote">
+                            <p class="testimonial-text">
+                                CreativeBrandManagement es una fuerza importante detrás de nuestro crecimiento y éxito como empresa. 
+                                Han sido innovadores y siempre entregan un trabajo de alta calidad de forma proactiva y dando pautas para 
+                                fortalecer nuestras estrategias de branding y de marketing.
+                            </p>
+                            <p class="testimonial-author">Cesar F Chaul</p>
+                            <p class="testimonial-position">CEO de Chaul Technologies That Inspires</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="slider-nav">
+                <div class="slider-arrow prev">←</div>
+                <div class="slider-dots">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                </div>
+                <div class="slider-arrow next">→</div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Left Column - Info -->
+            <div class="contact-info">
+                <h2 class="contact-badge">¡BRAND STARTUP!</h2>
+                <h3 class="contact-question">¿Cuántos futuros tiene tu marca hoy?</h3>
+                <p class="contact-tagline">¡Queremos hacerte feliz!</p>
+                <p class="contact-mission">
+                    Aceptamos el desafío, branding que vende.<br>
+                    <strong>Opciones de servicio:</strong> Citas en línea
+                </p>
+
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <div class="detail-icon"><i class="bi bi-geo-fill"></i></div>
+                        <div class="detail-content">
+                            <h4>Dirección</h4>
+                            <p>Cozumel 38, Roma Nte., Cuauhtémoc,<br>06700 Ciudad de México, CDMX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="detail-icon"><i class="bi bi-clock-history"></i></div>
+                        <div class="detail-content">
+                            <h4>Horas</h4>
+                            <p>Abierto ⋅ Cierra a las 19:00</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="detail-icon"><i class="bi bi-phone"></i></div>
+                        <div class="detail-content">
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:5584374644">55 8437 4644</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="detail-icon"><i class="bi bi-envelope"></i></div>
+                        <div class="detail-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:proyectos@brandingmx.com">proyectos@brandingmx.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--div class="contact-logo">
+                    <img src="https://brandingmx.com/wp-content/uploads/2022/09/cropped-CBM_creativebrandmanagement_agencia_de_branding_mexico.png" alt="BrandingMX Logo">
+                </div-->
+            </div>
+
+            <!-- Right Column - Form -->
+            <div class="contact-form-wrapper">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre<span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos<span class="required">*</span></label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo<span class="required">*</span></label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa<span class="required">*</span></label>
+                        <input type="text" id="empresa" name="empresa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Cuéntanos de tu marca<span class="required">*</span></label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- Left Column - Logo & Hashtags -->
+        <div class="footer-column">
+            <div class="footer-logo">
+                <img src="https://brandingmx.com/wp-content/uploads/2022/09/cropped-CBM_creativebrandmanagement_agencia_de_branding_mexico.png" alt="Creative Brand Management">
+            </div>
+            <div class="footer-hashtags">
+                <p>#branding #brandthink</p>
+                <p>#CreativeBrandManagement</p>
+            </div>
+        </div>
+
+        <!-- Center Column - Description -->
+        <div class="footer-column footer-center">
+            <h3 class="footer-title">AGENCIA DE BRANDING</h3>
+            <p class="footer-description">
+                Expertos estrategas en branding con más de 20 años de experiencia.
+            </p>
+            <p class="footer-description">
+                Branding, Publicidad, Marketing Web y SEO, Arquitectura de marca, 
+                Diseño de imagen y producto.
+            </p>
+        </div>
+
+        <!-- Right Column - Contact -->
+        <div class="footer-column footer-right">
+            <h3 class="footer-title">CUÉNTANOS SOBRE TU MARCA</h3>
+            <div class="footer-contact">
+                <p class="footer-email">
+                    <a href="mailto:proyectos@brandingmx.com">proyectos@brandingmx.com</a>
+                </p>
+                <p class="footer-phone">
+                    <a href="tel:+525584374644">+(52) 55 8437 4644</a>
+                </p>
+                <p class="footer-link">
+                    <a href="#contacto">Contacto</a>
+                </p>
+                <p class="footer-location">
+                    Agencia de Branding en México y Latam
+                </p>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+                <a href="https://wa.me/+525585337207" class="footer-social-icon whatsapp" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="http://facebook.com/CreativeBrandManagement/" class="footer-social-icon facebook" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/creativebrandmanagemet/" class="footer-social-icon linkedin" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Creative Brand Management. Todos los derechos reservados.</p>
+    </div>
+</footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+</button>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        // Navbar scroll effect
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+// Hamburger menu toggle
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-menu a');
+const mobileClose = document.querySelector('.mobile-close');
+
+// Open menu
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close menu with X button
+mobileClose.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close mobile menu when clicking a link
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+        // Animación de entrada del Hero
+        gsap.timeline()
+            .to('.masked-text', {
+                opacity: 1,
+                duration: 1.5,
+                ease: 'power3.out',
+                delay: 0.3
+            })
+            .to('.subtitle', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.8')
+            .to('.cta-button', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.6')
+            .to('.scroll-indicator', {
+                opacity: 0.7,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.5');
+
+        // Parallax del fondo
+        gsap.to('.hero-bg', {
+            yPercent: 30,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+
+        // Parallax del texto enmascarado
+        gsap.to('.masked-text', {
+            yPercent: -20,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+
+        // Animación de las cards al hacer scroll
+        gsap.utils.toArray('.card').forEach((card, i) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 60,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    end: 'top 60%',
+                    toggleActions: 'play none none reverse'
+                },
+                delay: i * 0.1
+            });
+        });
+
+        // Animación del header de proceso
+        gsap.from('.process-header', {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.process-header',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+        // Animación de las cards de servicios
+        gsap.utils.toArray('.service-card').forEach((card, i) => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 80,
+                rotateX: -15,
+                duration: 1,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    end: 'top 50%',
+                    toggleActions: 'play none none reverse'
+                },
+                delay: i * 0.15
+            });
+        });
+
+        // Animación del header de servicios
+        gsap.from('.services-header', {
+            opacity: 0,
+            y: 60,
+            duration: 1.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-header',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Efecto parallax en los iconos de servicio
+        gsap.utils.toArray('.service-icon').forEach((icon) => {
+            gsap.to(icon, {
+                y: -30,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: icon,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+        });
+        // Marketing Section Animations
+        gsap.from('.marketing-text', {
+            opacity: 0,
+            x: -60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.marketing-section',
+                start: 'top 75%'
+            }
+        });
+
+        gsap.from('.marketing-image', {
+            opacity: 0,
+            x: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.marketing-section',
+                start: 'top 75%'
+            }
+        });
+
+        gsap.from('.partner-image', {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.marketing-partners',
+                start: 'top 85%'
+            }
+        });
+
+        // Immersive Section Animations
+        gsap.from('.immersive-header', {
+            opacity: 0,
+            y: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.immersive-header',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        gsap.from('.immersive-text', {
+            opacity: 0,
+            x: -60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.immersive-text',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        gsap.from('.immersive-image', {
+            opacity: 0,
+            x: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.immersive-image',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Parallax del fondo inmersivo
+       
+
+        // Portfolio Filter Functionality - Sin huecos, reorganización completa
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Fade out all items first
+                portfolioItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                });
+
+                // Wait for fade out, then reorganize
+                setTimeout(() => {
+                    // Hide all items first
+                    portfolioItems.forEach(item => {
+                        item.style.display = 'none';
+                    });
+
+                    // Get matching items
+                    const matchingItems = Array.from(portfolioItems).filter(item => {
+                        const categories = item.getAttribute('data-category');
+                        return filterValue === 'all' || categories.includes(filterValue);
+                    });
+
+                    // Clear grid and re-append only matching items
+                    portfolioGrid.innerHTML = '';
+                    
+                    matchingItems.forEach((item, index) => {
+                        portfolioGrid.appendChild(item);
+                        item.style.display = 'block';
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        
+                        // Animate in with stagger
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, index * 60);
+                    });
+                }, 400);
+            });
+        });
+
+        // Animación de entrada del portafolio
+        gsap.from('.portfolio-header', {
+            opacity: 0,
+            y: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.portfolio-header',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+        // Animación de los filtros
+        ScrollTrigger.create({
+            trigger: '.portfolio-filters',
+            start: 'top 80%',
+            once: true,
+            onEnter: () => {
+                gsap.set('.filter-btn', { clearProps: 'all' });
+            }
+        });
+
+        // Animación inicial de los items del portafolio
+        gsap.utils.toArray('.portfolio-item').forEach((item, index) => {
+            gsap.from(item, {
+                opacity: 0,
+                y: 40,
+                duration: 0.6,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 90%',
+                    toggleActions: 'play none none reverse'
+                },
+                delay: (index % 4) * 0.05
+            });
+        });
+        // Animación del header
+        gsap.from('.brandthink-badge', {
+            opacity: 0,
+            scale: 0.5,
+            duration: 1,
+            ease: 'back.out(2)',
+            scrollTrigger: {
+                trigger: '.brandthink-section',
+                start: 'top 70%'
+            }
+        });
+
+        gsap.from('.brandthink-label', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: '.brandthink-section',
+                start: 'top 70%'
+            }
+        });
+
+        gsap.from('.brandthink-title', {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            delay: 0.5,
+            scrollTrigger: {
+                trigger: '.brandthink-section',
+                start: 'top 70%'
+            }
+        });
+
+        // Animación de los bloques de texto
+        gsap.utils.toArray('.brandthink-text-block').forEach((block, i) => {
+            gsap.from(block, {
+                opacity: 0,
+                x: -60,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: block,
+                    start: 'top 85%'
+                },
+                delay: i * 0.2
+            });
+        });
+
+        // Animación del quote final
+        gsap.from('.brandthink-quote-text', {
+            opacity: 0,
+            y: 50,
+            scale: 0.9,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.brandthink-quote',
+                start: 'top 80%'
+            }
+        });
+         // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.slider-arrow.prev');
+        const nextBtn = document.querySelector('.slider-arrow.next');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Ensure index is within bounds
+            if (index >= totalSlides) currentSlide = 0;
+            if (index < 0) currentSlide = totalSlides - 1;
+
+            // Add active class to current slide
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+
+            // Animate slide
+            gsap.fromTo(slides[currentSlide], 
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
+            );
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            showSlide(currentSlide);
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Auto-play
+        let autoPlay = setInterval(nextSlide, 3000);
+
+        // Pause on hover
+        const slider = document.querySelector('.testimonials-slider');
+        slider.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        slider.addEventListener('mouseleave', () => {
+            autoPlay = setInterval(nextSlide, 5000);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Animación de entrada
+        gsap.from('.testimonials-header', {
+            opacity: 0,
+            y: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.testimonials-section',
+                start: 'top 70%'
+            }
+        });
+
+        gsap.from('.testimonials-slider', {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            delay: 0.3,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.testimonials-section',
+                start: 'top 70%'
+            }
+        });
+
+        gsap.from('.slider-nav', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            delay: 0.5,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.testimonials-section',
+                start: 'top 70%'
+            }
+        });
+        // Animaciones de entrada
+        gsap.from('.contact-info', {
+            opacity: 0,
+            x: -60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.contact-section',
+                start: 'top 70%'
+            }
+        });
+
+        gsap.from('.contact-form-wrapper', {
+            opacity: 0,
+            x: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.contact-section',
+                start: 'top 70%'
+            }
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aquí puedes agregar la lógica para enviar el formulario
+            const formData = new FormData(this);
+            
+            // Simulación de envío
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+        // Footer animations
+    gsap.from('.footer-column', {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.footer-section',
+            start: 'top 85%'
+        }
+    });
+
+    gsap.from('.footer-bottom', {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        delay: 0.6,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.footer-section',
+            start: 'top 85%'
+        }
+    });
+    // Scroll to Top functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // Add a little animation feedback
+        scrollToTopBtn.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            scrollToTopBtn.style.transform = '';
+        }, 150);
+    });
+
+    // GSAP animation for button entrance
+    ScrollTrigger.create({
+        start: 500,
+        onEnter: () => {
+            gsap.to(scrollToTopBtn, {
+                scale: 1.1,
+                duration: 0.3,
+                yoyo: true,
+                repeat: 1,
+                ease: 'power2.inOut'
+            });
+        },
+        onLeaveBack: () => {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+    </script>
+</body>
+</html>
