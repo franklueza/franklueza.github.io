@@ -502,14 +502,14 @@ body {
 
 /* Evento destacado */
 .event-card.featured {
-  border-left: 3px solid #c0392b;
+  border-left: 3px solid #651923;
 }
 
 .event-card.featured .event-tag {
   position: absolute;
   top: 25px;
   right: 25px;
-  background: #c0392b;
+  background: #651923;
   color: #fff;
   font-size: 0.8rem;
   padding: 5px 12px;
@@ -1115,7 +1115,7 @@ body {
 /* Botón de mapa por ubicación */
 .btn-map {
   display: inline-block;
-  background-color: #222;
+  background-color: #651923;
   color: #fff;
   padding: 10px 20px;
   font-family: "Manrope", sans-serif;
@@ -1458,6 +1458,7 @@ body {
   }
 
 }
+
 
 
 
