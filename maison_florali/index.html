@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maison Florali</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold:        #8B7336;
+      --gold-light:  #C9A84C;
+      --gold-pale:   #E8D5A3;
+      --black:       #090909;
+      --off-white:   #F5F0E8;
+      --cream:       #EDE5D4;
+      --charcoal:    #F3EFE7;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--black);
+      color: var(--off-white);
+      font-family: 'EB Garamond', serif;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    #hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+      min-height: 600px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle grain overlay */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0.35;
+    }
+
+    /* ── LEFT PANEL ───────────────────────────────────── */
+    .hero-left {
+      position: relative;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .video-wrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.75;
+      filter: saturate(0.6) contrast(1.1);
+    }
+
+    /* dark vignette on video */
+    .video-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(9,9,9,0.15) 0%,
+        rgba(9,9,9,0.05) 40%,
+        rgba(9,9,9,0.5) 100%
+      );
+    }
+
+    /* logo on top of video */
+    .hero-logo {
+      position: absolute;
+      top: 36px;
+      left: 36px;
+      z-index: 5;
+      width: clamp(90px, 11vw, 140px);
+      opacity: 0;          /* animated in */
+    }
+
+    .hero-logo img {
+      width: 100%;
+      display: block;
+      filter: brightness(1.1);
+    }
+
+    /* thin gold line — decorative separator */
+    .divider-line {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--gold) 20%,
+        var(--gold-light) 50%,
+        var(--gold) 80%,
+        transparent 100%
+      );
+      opacity: 0.45;
+      z-index: 6;
+    }
+
+    /* ── RIGHT PANEL ──────────────────────────────────── */
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(32px, 5vw, 80px);
+      background: var(--charcoal);
+      position: relative;
+    }
+
+    /* very faint radial glow */
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%,
+        rgba(139,115,54,0.07) 0%,
+        transparent 70%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 480px;
+      text-align: center;
+    }
+
+    /* ornamental rule */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 36px;
+      opacity: 0;
+    }
+
+    .ornament-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-light));
+    }
+    .ornament-line.r {
+      background: linear-gradient(to left, transparent, var(--gold-light));
+    }
+
+    .ornament-diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--gold-light);
+      transform: rotate(45deg);
+    }
+
+    /* brand name */
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      letter-spacing: 0.22em;
+      color: var(--black);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 6px;
+      opacity: 0;
+    }
+
+    .brand-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: clamp(0.62rem, 1vw, 0.78rem);
+      letter-spacing: 0.42em;
+      color: var(--black);
+      text-transform: uppercase;
+      margin-bottom: 48px;
+      opacity: 0;
+    }
+
+    /* tagline */
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+      color: var(--black);
+      line-height: 1.4;
+      margin-bottom: 40px;
+      opacity: 0;
+    }
+
+    /* thin rule */
+    .rule {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      margin: 0 auto 40px;
+      opacity: 0;
+    }
+
+    /* concept text */
+    .concept {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(0.88rem, 1.3vw, 1.02rem);
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--black);
+      letter-spacing: 0.03em;
+      opacity: 0;
+    }
+
+    /* bottom micro label */
+    .hero-meta {
+      margin-top: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      opacity: 0;
+    }
+
+    .meta-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+
+    .meta-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.35);
+    }
+
+    /* ── SCROLL HINT ─────────────────────────────────── */
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+    }
+
+    .scroll-hint span {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.55rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.3);
+    }
+
+    .scroll-arrow {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold-light), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50%       { opacity: 0.9; transform: scaleY(1.15); }
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      #hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 45vh 55vh;
+      }
+
+      .divider-line { display: none; }
+
+      .hero-right::before {
+        background: radial-gradient(ellipse 80% 60% at 50% 30%,
+          rgba(139,115,54,0.09) 0%, transparent 70%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+
+  <!-- LEFT -->
+  <div class="hero-left">
+    <div class="video-wrap">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="DOLSTEN_NR_B.webm" type="video/webm">
+      </video>
+    </div>
+
+    <div class="hero-logo" id="logo">
+      <img src="Logo maison Florali .png" alt="Maison Florali">
+    </div>
+
+    <!--div class="divider-line"></div-->
+  </div>
+
+  <!-- RIGHT -->
+  <div class="hero-right">
+    <div class="hero-content">
+
+      <!--div class="ornament" id="orn">
+        <div class="ornament-line"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line r"></div>
+      </div-->
+
+      <h1 class="brand-name" id="brandName">Maison Florali</h1>
+      <p class="brand-sub" id="brandSub">Hacemos florecer tus momentos”</p>
+
+      <p class="tagline" id="tagline">Floreria de autor</p>
+
+      <div class="rule" id="rule"></div>
+
+      <p class="concept" id="concept">
+        Maison Florali es un estudio de diseño floral de autor que transforma 
+        emociones en piezas únicas. No se percibe como florería tradicional, 
+        sino como una marca estética, íntima y sofisticada.
+      </p>
+
+      <!--div class="hero-meta" id="meta">
+        <div class="meta-dot"></div>
+        <span class="meta-label">Ciudad de México</span>
+        <div class="meta-dot"></div>
+        <span class="meta-label">Diseño Floral de Autor</span>
+        <div class="meta-dot"></div>
+      </div-->
+
+    </div>
+  </div>
+
+  <!-- scroll hint -->
+  <div class="scroll-hint" id="scrollHint">
+    <span>Descubrir</span>
+    <div class="scroll-arrow"></div>
+  </div>
+
+</section>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+  // Logo slides down & fades in
+  tl.fromTo('#logo',
+    { y: -30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1.2, delay: 0.3 }
+  )
+
+  // Ornament expands
+  .fromTo('#orn',
+    { scaleX: 0, opacity: 0 },
+    { scaleX: 1, opacity: 1, duration: 0.9, transformOrigin: 'center' },
+    '-=0.6'
+  )
+
+  // Brand name rises
+  .fromTo('#brandName',
+    { y: 28, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    '-=0.5'
+  )
+
+  // Subtitle
+  .fromTo('#brandSub',
+    { y: 12, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.8 },
+    '-=0.6'
+  )
+
+  // Tagline
+  .fromTo('#tagline',
+    { y: 20, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    '-=0.4'
+  )
+
+  // Rule line grows
+  .fromTo('#rule',
+    { scaleY: 0, opacity: 0 },
+    { scaleY: 1, opacity: 1, duration: 0.7, transformOrigin: 'top' },
+    '-=0.3'
+  )
+
+  // Concept fades in
+  .fromTo('#concept',
+    { y: 16, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1 },
+    '-=0.2'
+  )
+
+  // Meta row
+  .fromTo('#meta',
+    { opacity: 0 },
+    { opacity: 1, duration: 0.9 },
+    '-=0.4'
+  )
+
+  // Scroll hint
+  .fromTo('#scrollHint',
+    { opacity: 0, y: 10 },
+    { opacity: 1, y: 0, duration: 0.8 },
+    '-=0.2'
+  );
+</script>
+
+</body>
+</html>
