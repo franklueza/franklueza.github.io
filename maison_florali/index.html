@@ -250,7 +250,7 @@ html, body {
 
 /* ══ CTA ═══════════════════════════ */
 #cta {
-  background: var(--cream);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,7 +287,7 @@ html, body {
   font-weight: 300;
   font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   line-height: 1.9;
-  color: rgba(29,27,30,0.55);
+  color: rgba(29,27,30,0.5);
   margin-bottom: 48px;
 }
 
@@ -297,6 +297,7 @@ html, body {
   gap: 12px;
   padding: 18px 48px;
   background: var(--black);
+  border: none;
   color: var(--cream);
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -321,6 +322,7 @@ html, body {
 }
 
 .cta-btn:hover::before { transform: scaleX(1); }
+.cta-btn:hover { color: var(--black); }
 .cta-btn:hover { color: var(--black); }
 
 .cta-btn span,
@@ -524,6 +526,195 @@ html, body {
   .exp-step   { border-left: none; border-top: 1px solid rgba(194,166,110,0.15); }
   .exp-step:first-child { border-top: none; }
 }
+
+/* ══ CUIDADO ════════════════════════════════════════════ */
+#cuidado {
+  background: var(--cream);
+  padding: clamp(100px, 14vh, 160px) clamp(32px, 8vw, 120px);
+}
+
+.care-header {
+  text-align: center;
+  margin-bottom: clamp(56px, 8vh, 90px);
+}
+
+.care-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 0.6rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 18px;
+}
+
+.care-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  color: var(--black);
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.care-title em {
+  font-style: italic;
+  color: var(--brown);
+}
+
+/* ── Acordeón ── */
+.care-accordion {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.acc-item {
+  border-bottom: 1px solid rgba(105,83,27,0.2);
+  overflow: hidden;
+}
+
+.acc-item:first-child {
+  border-top: 1px solid rgba(105,83,27,0.2);
+}
+
+.acc-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0;
+  background: none;
+  border: none;
+  cursor: none;
+  text-align: left;
+}
+
+.acc-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.acc-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  flex-shrink: 0;
+}
+
+.acc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  color: var(--black);
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+
+.acc-trigger:hover .acc-title { color: var(--brown); }
+
+.acc-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(105,83,27,0.2);
+  transition: background 0.3s ease;
+}
+
+.acc-trigger:hover .acc-line { background: var(--gold); }
+
+.acc-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.35s ease, transform 0.5s cubic-bezier(0.76,0,0.24,1);
+  color: var(--gold-dark);
+}
+
+.acc-icon svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  transition: transform 0.5s cubic-bezier(0.76,0,0.24,1);
+}
+
+.acc-item.open .acc-icon {
+  background: var(--gold);
+  color: var(--cream);
+}
+
+.acc-item.open .acc-icon svg {
+  transform: rotate(45deg);
+}
+
+/* Panel desplegable */
+.acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acc-panel-inner {
+  padding: 0 0 36px 56px;
+}
+
+.acc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.acc-list li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.78rem, 1.1vw, 0.88rem);
+  line-height: 1.85;
+  color: rgba(29,27,30,0.65);
+  padding-left: 18px;
+  position: relative;
+}
+
+.acc-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Footer */
+.care-footer {
+  text-align: center;
+  margin-top: clamp(56px, 8vh, 80px);
+}
+
+.care-footer-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  color: rgba(29,27,30,0.4);
+}
+
+@media (max-width: 600px) {
+  .acc-panel-inner { padding-left: 0; }
+}
 </style>
 </head>
 <body>
@@ -648,6 +839,7 @@ html, body {
 
 </section>
 
+
 <!-- ══ CTA ══ -->
 <section id="cta">
   <div class="cta-inner">
@@ -674,6 +866,116 @@ html, body {
       </svg>
     </a>
   </div>
+</section>
+
+<!-- ══ CUIDADO ══ -->
+<section id="cuidado">
+
+  <div class="care-header">
+    <p class="care-label" id="careLabel">Consejos de Maison Florali</p>
+    <h2 class="care-title" id="careTitle">
+      Cómo preservar la <em>belleza</em><br>de tu arreglo
+    </h2>
+  </div>
+
+  <div class="care-accordion">
+
+    <div class="acc-item" id="accItem1">
+      <button class="acc-trigger">
+        <div class="acc-trigger-left">
+          <span class="acc-num">01</span>
+          <span class="acc-title">Bouquets con burbuja de agua</span>
+        </div>
+        <div class="acc-line"></div>
+        <div class="acc-icon">
+          <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+        </div>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <ul class="acc-list">
+            <li>Mantener la burbuja hasta colocarlo en agua limpia.</li>
+            <li>Cortar los tallos en diagonal antes de pasarlo a un florero.</li>
+            <li>Disolver el alimento floral incluido en el agua para prolongar la frescura.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item" id="accItem2">
+      <button class="acc-trigger">
+        <div class="acc-trigger-left">
+          <span class="acc-num">02</span>
+          <span class="acc-title">Arreglos con oasis</span>
+        </div>
+        <div class="acc-line"></div>
+        <div class="acc-icon">
+          <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+        </div>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <ul class="acc-list">
+            <li>Agregar agua diariamente directamente sobre el oasis sin retirar las flores.</li>
+            <li>Mantener en un ambiente fresco.</li>
+            <li>Añadir el alimento floral incluido diluido en el agua para nutrir las flores.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item" id="accItem3">
+      <button class="acc-trigger">
+        <div class="acc-trigger-left">
+          <span class="acc-num">03</span>
+          <span class="acc-title">Flores en maceta</span>
+        </div>
+        <div class="acc-line"></div>
+        <div class="acc-icon">
+          <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+        </div>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <ul class="acc-list">
+            <li>Regar según el tipo de planta y evitar el exceso de agua.</li>
+            <li>Colocar en un espacio con luz indirecta.</li>
+            <li>Usar el alimento floral de forma ligera para favorecer su mantenimiento.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item" id="accItem4">
+      <button class="acc-trigger">
+        <div class="acc-trigger-left">
+          <span class="acc-num">04</span>
+          <span class="acc-title">Cuidados generales</span>
+        </div>
+        <div class="acc-line"></div>
+        <div class="acc-icon">
+          <svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+        </div>
+      </button>
+      <div class="acc-panel">
+        <div class="acc-panel-inner">
+          <ul class="acc-list">
+            <li>Evitar la exposición directa al sol, corrientes de aire y calor excesivo.</li>
+            <li>Mantener en espacios frescos.</li>
+            <li>Utilizar el alimento floral incluido para extender su duración.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="care-footer">
+    <p class="care-footer-text" id="careFooter">
+      Con los cuidados correctos, tu arreglo puede durar hasta dos veces más.
+    </p>
+  </div>
+
 </section>
 
 <script>
@@ -923,6 +1225,47 @@ ScrollTrigger.create({
       });
     }, 400);
   }
+});
+
+
+/* ══ CUIDADO ══ */
+gsap.set(['#careLabel','#careTitle'], { opacity: 0, y: 30 });
+gsap.set('.acc-item', { opacity: 0, y: 20 });
+gsap.set('#careFooter', { opacity: 0 });
+
+ScrollTrigger.create({
+  trigger: '#cuidado',
+  start: 'top 80%',
+  once: true,
+  onEnter: () => {
+    gsap.timeline({ defaults: { ease: 'power3.out' } })
+      .to('#careLabel',  { opacity: 1, y: 0, duration: 0.7 })
+      .to('#careTitle',  { opacity: 1, y: 0, duration: 1 }, '-=0.4')
+      .to('.acc-item',   { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, '-=0.3')
+      .to('#careFooter', { opacity: 1, duration: 0.8 }, '-=0.2');
+  }
+});
+
+/* Lógica acordeón */
+document.querySelectorAll('.acc-item').forEach(item => {
+  const trigger = item.querySelector('.acc-trigger');
+  const panel   = item.querySelector('.acc-panel');
+
+  trigger.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+
+    // Cerrar todos
+    document.querySelectorAll('.acc-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.acc-panel').style.maxHeight = '0';
+    });
+
+    // Abrir el clickeado si estaba cerrado
+    if (!isOpen) {
+      item.classList.add('open');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
 });
 
 </script>
