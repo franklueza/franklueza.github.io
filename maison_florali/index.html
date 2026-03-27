@@ -6,7 +6,7 @@
   <title>Maison Florali</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -25,8 +25,10 @@
       height: 100%;
       background: var(--black);
       overflow-x: hidden;
+      font-family: 'Montserrat', sans-serif;
     }
 
+    /* ══ HERO ══════════════════════════════════════════════ */
     #hero {
       position: relative;
       width: 100%;
@@ -54,13 +56,6 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      /*background:
-        linear-gradient(to bottom,
-          rgba(29,27,30,0.6)  0%,
-          rgba(29,27,30,0.1) 30%,
-          rgba(29,27,30,0.1) 70%,
-          rgba(29,27,30,0.65) 100%
-        );*/
     }
 
     .hero-grain {
@@ -110,12 +105,12 @@
     }
 
     .scroll-hint span {
-      font-family: 'Josefin Sans', sans-serif;
-      font-weight: 100;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
       font-size: 1rem;
       letter-spacing: 0.45em;
       text-transform: uppercase;
-      color: rgba(239,235,224,0.45);
+      color: white;
     }
 
     .scroll-line {
@@ -131,227 +126,424 @@
       50%       { opacity: 1;   transform: scaleY(1);    }
     }
 
-    /* ══ ABOUT ═══════════════════════════════════════════ */
+    /* ══ ABOUT ═════════════════════════════════════════════ */
     #about {
       background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
-      padding: clamp(60px, 10vh, 120px) clamp(24px, 8vw, 80px);
-    }
-
-    .about-inner {
-      text-align: center;
-      max-width: 680px;
-    }
-
-    .about-ornament {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
+      overflow: hidden;
+    }
+
+    .about-left {
+      padding: clamp(60px, 10vw, 130px) clamp(40px, 7vw, 100px);
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      gap: 14px;
-      margin-bottom: 40px;
-    }
-
-    .about-line {
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold));
-    }
-    .about-line.r {
-      background: linear-gradient(to left, transparent, var(--gold));
-    }
-
-    .about-diamond {
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
-      transform: rotate(45deg);
     }
 
     .about-name {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
-      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-size: clamp(2rem, 4vw, 3.2rem);
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--black);
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .about-sub {
-      font-family: 'Josefin Sans', sans-serif;
-      font-weight: 100;
-      font-size: clamp(0.6rem, 1vw, 0.75rem);
-      letter-spacing: 0.4em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: clamp(0.55rem, 0.9vw, 0.7rem);
+      letter-spacing: 0.38em;
       text-transform: uppercase;
       color: var(--gold-dark);
-      margin-bottom: 52px;
+      margin-bottom: 40px;
     }
 
-    .about-tagline {
+    .about-quote {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       font-weight: 300;
-      font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      line-height: 1.5;
       color: var(--brown);
-      line-height: 1.4;
-      margin-bottom: 44px;
+      margin-bottom: 32px;
     }
 
     .about-rule {
-      width: 1px;
-      height: 52px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-      margin: 0 auto 44px;
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 28px;
     }
 
     .about-concept {
-      font-family: 'EB Garamond', serif;
-      font-size: clamp(1rem, 1.5vw, 1.15rem);
-      font-weight: 400;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.82rem, 1.1vw, 0.95rem);
       line-height: 1.9;
-      color: rgba(29,27,30,0.65);
-      letter-spacing: 0.02em;
+      color: rgba(29,27,30,0.6);
+      margin-bottom: 36px;
+    }
+
+    .about-founder { margin-bottom: 40px; }
+
+    .about-founder-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .about-founder-role {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    .about-cta {
+      display: inline-block;
+      padding: 14px 40px;
+      border: 1px solid var(--gold);
+      color: var(--gold-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: transparent;
+      transition: color 0.4s ease;
+    }
+
+    .about-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+      z-index: 0;
+    }
+
+    .about-cta:hover::before { transform: scaleX(1); }
+    .about-cta:hover { color: var(--cream); }
+    .about-cta span { position: relative; z-index: 1; }
+
+    .about-right {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     @media (max-width: 768px) {
-      .about-concept br { display: none; }
+      #about { grid-template-columns: 1fr; grid-template-rows: auto 70vw; }
+      .about-left { padding: 60px 32px 40px; order: 1; }
+      .about-right { height: 70vw; order: 2; }
+    }
+
+    /* ══ GALLERY ════════════════════════════════════════════ */
+    #gallery {
+      background: #fff;
+      padding: clamp(80px, 12vh, 130px) clamp(32px, 6vw, 80px);
+    }
+
+    .gallery-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: clamp(40px, 7vh, 72px);
+      border-bottom: 1px solid rgba(194,166,110,0.25);
+      padding-bottom: 24px;
+    }
+
+    .gallery-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 0.6rem;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+    }
+
+    .gallery-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      letter-spacing: 0.08em;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .gallery-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: rgba(29,27,30,0.3);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.4fr 1.8fr;
+      grid-template-rows: 340px 240px 300px;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .g-item:nth-child(1) { grid-column: 1; grid-row: 1 / 3; }
+    .g-item:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .g-item:nth-child(3) { grid-column: 3; grid-row: 1; }
+    .g-item:nth-child(4) { grid-column: 2 / 4; grid-row: 2; }
+    .g-item:nth-child(5) { grid-column: 1; grid-row: 3; }
+    .g-item:nth-child(6) { grid-column: 2 / 4; grid-row: 3; }
+
+    .g-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .g-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.8) brightness(0.97);
+      transform: scale(1);
+      transition: transform 0.9s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.9s ease;
+    }
+
+    .g-item:hover img {
+      transform: scale(1.07);
+      filter: saturate(1.05) brightness(1.02);
+    }
+
+    .g-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(29,27,30,0.18);
+      transition: opacity 0.7s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .g-item:hover::before { opacity: 0; }
+
+    .g-item::after {
+      content: attr(data-num);
+      position: absolute;
+      bottom: 16px;
+      right: 18px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.6rem;
+      color: rgba(239,235,224,0.7);
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .g-item:hover::after { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 42vw);
+      }
+      .g-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1; }
+      .g-item:nth-child(2) { grid-column: 1;     grid-row: 2; }
+      .g-item:nth-child(3) { grid-column: 2;     grid-row: 2; }
+      .g-item:nth-child(4) { grid-column: 1 / 3; grid-row: 3; }
+      .g-item:nth-child(5) { grid-column: 1;     grid-row: 4; }
+      .g-item:nth-child(6) { grid-column: 2;     grid-row: 4; }
+      .gallery-header { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
   </style>
 </head>
 <body>
-<section id="hero">
 
-  <!-- Desktop -->
+<!-- ══ HERO ══ -->
+<section id="hero">
   <video class="hero-video hero-video-desktop" autoplay muted loop playsinline>
     <source src="video1.mp4" type="video/mp4">
   </video>
-
-  <!-- Mobile -->
   <video class="hero-video hero-video-mobile" autoplay muted loop playsinline>
     <source src="video2.mp4" type="video/mp4">
   </video>
-
   <div class="hero-overlay"></div>
   <div class="hero-grain"></div>
-
   <div class="hero-logo" id="logo">
     <img src="Logo_Maison_Florali.png" alt="Maison Florali">
   </div>
-
   <div class="scroll-hint" id="scrollHint">
     <span>Descubrir</span>
     <div class="scroll-line"></div>
   </div>
-
 </section>
 
-
-
-
-<!-- ══════════════════ ABOUT ══════════════════ -->
+<!-- ══ ABOUT ══ -->
 <section id="about">
-
-  <div class="about-inner">
-
-    <div class="about-ornament" id="aboutOrn">
-      <!--div class="about-line"></div>
-      <div class="about-diamond"></div>
-      <div class="about-line r"></div-->
-    </div>
-
+  <div class="about-left">
     <h2 class="about-name" id="aboutName">Maison Florali</h2>
     <p class="about-sub" id="aboutSub">Estudio de Diseño Floral de Autor</p>
-
-    <p class="about-tagline" id="aboutTagline">"Hacemos florecer tus momentos"</p>
-
-    <!--div class="about-rule" id="aboutRule"></div-->
-
+    <blockquote class="about-quote" id="aboutQuote">"Hacemos florecer tus momentos"</blockquote>
+    <div class="about-rule" id="aboutRule"></div>
     <p class="about-concept" id="aboutConcept">
-      Maison Florali es un estudio de diseño floral de autor que transforma<br>
-      emociones en piezas únicas. No somos una florería tradicional —<br>
+      Maison Florali es un estudio de diseño floral de autor que transforma
+      emociones en piezas únicas. No somos una florería tradicional —
       somos una marca estética, íntima y sofisticada.
     </p>
-
+    <div class="about-founder" id="aboutFounder">
+      <p class="about-founder-name">Alison M</p>
+      <p class="about-founder-role">Fundadora de Maison Florali</p>
+    </div>
+    <a class="about-cta" id="aboutCta" href="#">
+      <span>Crear mi diseño floral</span>
+    </a>
   </div>
-
+  <div class="about-right">
+    <img class="about-img" id="aboutImg" src="alison.jpeg" alt="Alison M">
+  </div>
 </section>
 
+<!-- ══ GALLERY ══ -->
+<section id="gallery">
+  <div class="gallery-header" id="galleryHeader">
+    <div>
+      <p class="gallery-label">Nuestro trabajo</p>
+      <h2 class="gallery-title">Piezas que florecen</h2>
+    </div>
+    <span class="gallery-count">06 fotografías</span>
+  </div>
+  <div class="gallery-grid">
+    <div class="g-item" data-num="01"><img src="img1.jpeg" alt="Diseño floral 1"></div>
+    <div class="g-item" data-num="02"><img src="img2.jpeg" alt="Diseño floral 2"></div>
+    <div class="g-item" data-num="03"><img src="img3.jpeg" alt="Diseño floral 3"></div>
+    <div class="g-item" data-num="04"><img src="img4.jpeg" alt="Diseño floral 4"></div>
+    <div class="g-item" data-num="05"><img src="img5.jpeg" alt="Diseño floral 5"></div>
+    <div class="g-item" data-num="06"><img src="flor1.jpeg" alt="Diseño floral 6"></div>
+  </div>
+</section>
 
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  /* ── Smooth scroll con JS + GSAP ticker ── */
+  /* ── Smooth scroll ── */
   (() => {
     const lerp = (a, b, t) => a + (b - a) * t;
-    let scrollY   = window.scrollY;
-    let targetY   = window.scrollY;
-    let bodyH     = () => document.body.scrollHeight - window.innerHeight;
-
+    let scrollY = window.scrollY;
+    let targetY = window.scrollY;
     window.addEventListener('scroll', () => { targetY = window.scrollY; }, { passive: true });
-
     gsap.ticker.add(() => {
       scrollY = lerp(scrollY, targetY, 0.09);
       if (Math.abs(scrollY - targetY) < 0.1) scrollY = targetY;
       ScrollTrigger.update();
     });
-
     gsap.ticker.lagSmoothing(0);
   })();
 
-  /* ── HERO ── */
+  /* ══ HERO ══ */
   gsap.fromTo('.hero-video-desktop, .hero-video-mobile',
     { scale: 1.06 },
     { scale: 1, duration: 3, ease: 'power2.out' }
   );
 
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  tl.fromTo('#logo',
-    { y: -20, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1.4, delay: 0.6 }
-  )
-  .fromTo('#scrollHint',
-    { opacity: 0, y: 8 },
-    { opacity: 1, y: 0, duration: 1 },
-    '-=0.2'
-  );
+  gsap.timeline({ defaults: { ease: 'power3.out' } })
+    .fromTo('#logo',
+      { y: -20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.4, delay: 0.6 }
+    )
+    .fromTo('#scrollHint',
+      { opacity: 0, y: 8 },
+      { opacity: 1, y: 0, duration: 1 },
+      '-=0.2'
+    );
 
-  /* ── ABOUT ── */
-  /* ── ABOUT: entrada suave con GSAP ── */
-  gsap.set(['#aboutOrn','#aboutName','#aboutSub','#aboutTagline','#aboutRule','#aboutConcept'], 
-    { opacity: 0, y: 30 }
+  /* ══ ABOUT — texto ══ */
+  gsap.set(['#aboutName','#aboutSub','#aboutQuote','#aboutRule','#aboutConcept','#aboutFounder','#aboutCta'],
+    { opacity: 0, y: 40 }
   );
-  gsap.set('#aboutOrn', { scaleX: 0, y: 0 });
 
   ScrollTrigger.create({
     trigger: '#about',
-    start: 'top 85%',
+    start: 'top 75%',
+    once: true,
     onEnter: () => {
       gsap.timeline({ defaults: { ease: 'power3.out' } })
-        .to('#aboutOrn',
-          { scaleX: 1, opacity: 1, duration: 0.8, transformOrigin: 'center' }
-        )
-        .to('#aboutName',
-          { y: 0, opacity: 1, duration: 0.9 }, '-=0.3'
-        )
-        .to('#aboutSub',
-          { y: 0, opacity: 1, duration: 0.7 }, '-=0.6'
-        )
-        .to('#aboutTagline',
-          { y: 0, opacity: 1, duration: 0.9 }, '-=0.5'
-        )
-        .to('#aboutRule',
-          { y: 0, opacity: 1, duration: 0.6, scaleY: 1, transformOrigin: 'top' }, '-=0.5'
-        )
-        .to('#aboutConcept',
-          { y: 0, opacity: 1, duration: 0.9 }, '-=0.5'
-        );
+        .to('#aboutName',    { y: 0, opacity: 1, duration: 0.8 })
+        .to('#aboutSub',     { y: 0, opacity: 1, duration: 0.7 }, '-=0.5')
+        .to('#aboutQuote',   { y: 0, opacity: 1, duration: 0.9 }, '-=0.4')
+        .to('#aboutRule',    { y: 0, opacity: 1, duration: 0.5 }, '-=0.5')
+        .to('#aboutConcept', { y: 0, opacity: 1, duration: 0.9 }, '-=0.4')
+        .to('#aboutFounder', { y: 0, opacity: 1, duration: 0.7 }, '-=0.4')
+        .to('#aboutCta',     { y: 0, opacity: 1, duration: 0.7 }, '-=0.4');
     }
   });
 
+  /* ══ ABOUT — imagen: reveal de abajo hacia arriba ══ */
+  gsap.fromTo('#aboutImg',
+    { clipPath: 'inset(100% 0% 0% 0%)', scale: 1.1 },
+    {
+      clipPath: 'inset(0% 0% 0% 0%)',
+      scale: 1,
+      duration: 1.6,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 65%',
+        once: true,
+      }
+    }
+  );
+
+  /* ══ GALLERY ══ */
+  gsap.set('#galleryHeader', { opacity: 0, y: 24 });
+  gsap.set('.g-item', { clipPath: 'inset(100% 0% 0% 0%)' });
+
+  ScrollTrigger.create({
+    trigger: '#gallery',
+    start: 'top 80%',
+    once: true,
+    onEnter: () => {
+      gsap.to('#galleryHeader', {
+        opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
+      });
+      gsap.to('.g-item', {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        duration: 1.1,
+        ease: 'power4.out',
+        stagger: { each: 0.1, from: 'start' },
+        delay: 0.2
+      });
+    }
+  });
 </script>
 </body>
 </html>
