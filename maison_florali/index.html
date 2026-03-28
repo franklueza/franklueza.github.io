@@ -349,13 +349,28 @@ html, body {
   letter-spacing: 0.04em;
 }
 
+/* ── MOBILE ── */
 @media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+  .scroll-hint{
+    bottom: 150px;
   }
-  .g-item:nth-child(n) { height: 52vw; }
-  .g-overlay { opacity: 1; }
-  .g-info    { opacity: 1; transform: translateY(0); }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .g-item {
+    height: 75vw;
+  }
+
+  /* En mobile el overlay y texto NO se muestran por defecto */
+  .g-overlay { opacity: 0; }
+  .g-info    { opacity: 0; transform: translateY(12px); }
+
+  /* Se activan solo con clase .active (al dar clic) */
+  .g-item.active .g-overlay { opacity: 1; }
+  .g-item.active .g-info    { opacity: 1; transform: translateY(0); }
+
   .gallery-header { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
 
@@ -1612,6 +1627,38 @@ ScrollTrigger.create({
       opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
     });
   }
+});
+
+document.querySelectorAll('.g-item').forEach(item => {
+  ScrollTrigger.create({
+    trigger: item,
+    start: 'top 92%',
+    once: true,
+    onEnter: () => {
+      gsap.to(item, {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        duration: 1.1,
+        ease: 'power4.out',
+      });
+    }
+  });
+});
+
+/* ── Clic en mobile para mostrar/ocultar texto ── */
+const isMobile = () => window.innerWidth <= 768;
+
+document.querySelectorAll('.g-item').forEach(item => {
+  item.addEventListener('click', () => {
+    if (!isMobile()) return;
+
+    const isActive = item.classList.contains('active');
+
+    // Cerrar todos
+    document.querySelectorAll('.g-item').forEach(i => i.classList.remove('active'));
+
+    // Abrir si estaba cerrado
+    if (!isActive) item.classList.add('active');
+  });
 });
 
 document.querySelectorAll('.g-item').forEach(item => {
