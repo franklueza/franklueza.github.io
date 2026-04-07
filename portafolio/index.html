@@ -39,6 +39,7 @@
   position: relative;
   overflow: hidden;
   display: block;
+  aspect-ratio: 4/5;
 }
 
 .gallery-item img {
@@ -48,6 +49,18 @@
   transition: transform 0.6s ease;
 }
 
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
 /* HOVER ZOOM */
 .gallery-item:hover img {
   transform: scale(1.05);
@@ -56,36 +69,36 @@
 /* OVERLAY */
 .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
   color: #fff;
 
   opacity: 0;
-  transform: translateY(20px);
   transition: all 0.4s ease;
 }
 
-/* TEXTO */
-.overlay h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-
+/* Animación del texto */
+.overlay h3,
 .overlay span {
-  font-size: 14px;
-  opacity: 0.8;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
-/* HOVER ACTIVA OVERLAY */
 .gallery-item:hover .overlay {
   opacity: 1;
-  transform: translateY(0);
 }
 
+.gallery-item:hover .overlay h3,
+.gallery-item:hover .overlay span {
+  transform: translateY(0);
+  opacity: 1;
+}
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .gallery {
