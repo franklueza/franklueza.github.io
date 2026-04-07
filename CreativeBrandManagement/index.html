@@ -15,91 +15,137 @@
 /* TEXTO SUPERIOR */
 .portfolio-header h2 {
   font-size: 3em;
-  letter-spacing: 3px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  letter-spacing: 6px; /* más editorial */
+  font-weight: 700;
 }
 
 .portfolio-header p {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 300;
-  line-height: 1.4;
-  margin-bottom: 60px;
+  max-width: 700px;
+  margin: 0 auto 60px;
 }
 
 /* GRID */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0px;
+  grid-auto-rows: 250px;
+  gap: 8px;
 }
 
 /* ITEM */
 .gallery-item {
   position: relative;
   overflow: hidden;
-  display: block;
+  margin-bottom: 0px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.gallery-item:nth-child(4) { animation-delay: 0.3s; }
+.gallery-item:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .gallery-item img {
-  width: 100%;
+   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
 }
 
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* NORMAL */
+.gallery-item {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* GRANDE (cuadrado 2x2) */
+.gallery-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* HORIZONTAL */
+.gallery-item.wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* VERTICAL */
+.gallery-item.tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.gallery-item:hover::after {
+  opacity: 1;
+}
 /* HOVER ZOOM */
 .gallery-item:hover img {
   transform: scale(1.05);
+  z-index: 2;
 }
 
 /* OVERLAY */
 .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 60%);
   color: #fff;
 
   opacity: 0;
-  transform: translateY(20px);
   transition: all 0.4s ease;
 }
 
-/* TEXTO */
-.overlay h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-
+/* Animación del texto */
+.overlay h3,
 .overlay span {
-  font-size: 14px;
-  opacity: 0.8;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
-/* HOVER ACTIVA OVERLAY */
 .gallery-item:hover .overlay {
   opacity: 1;
-  transform: translateY(0);
 }
 
+.gallery-item:hover .overlay h3,
+.gallery-item:hover .overlay span {
+  transform: translateY(0);
+  opacity: 1;
+}
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 }
 
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-header p {
-    font-size: 22px;
+    column-count: 1;
   }
 }
   </style>
@@ -113,7 +159,7 @@
 
     <div class="gallery">
       
-      <a href="proyecto1.html" class="gallery-item">
+      <a href="proyecto1.html" class="gallery-item large">
         <img src="https://brandingmx.com/wp-content/uploads/2022/10/folleto_amero.jpg" alt="Letras Muertas">
         <div class="overlay">
           <h3>Letras Muertas</h3>
@@ -121,7 +167,7 @@
         </div>
       </a>
 
-      <a href="proyecto2.html" class="gallery-item">
+      <a href="proyecto2.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2022/10/lenguas_muertas.jpg" alt="Marca 2">
         <div class="overlay">
           <h3>Marca 2</h3>
@@ -129,7 +175,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2024/02/Laptop-DL-Green.webp" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -137,7 +183,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item wide">
         <img src="https://brandingmx.com/wp-content/uploads/2022/10/seele-neuroscience.jpg" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -145,7 +191,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2022/10/brandingmx_agencia_diseno_marca_lady_king.jpg" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -153,7 +199,7 @@
         </div>
       </a>
       
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2024/02/anuncio-energy.webp" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -161,7 +207,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2022/10/chaul.jpg" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -169,7 +215,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item wide">
         <img src="https://brandingmx.com/wp-content/uploads/2022/10/beer-hunter.jpg" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -177,7 +223,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2024/02/jhaen-card-.webp" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -185,7 +231,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item large">
         <img src="https://brandingmx.com/wp-content/uploads/2024/02/Logo-menthalising-2.webp" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -193,7 +239,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item tall">
         <img src="https://brandingmx.com/wp-content/uploads/2024/02/Gin-MX-botellas.webp" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
@@ -201,7 +247,7 @@
         </div>
       </a>
 
-      <a href="proyecto3.html" class="gallery-item">
+      <a href="proyecto3.html" class="gallery-item large">
         <img src="https://brandingmx.com/wp-content/uploads/2024/02/box.-brand-livret_11zon.webp" alt="Marca 3">
         <div class="overlay">
           <h3>Marca 3</h3>
