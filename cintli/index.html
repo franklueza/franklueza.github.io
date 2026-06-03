@@ -3,430 +3,648 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cintli — Mockup App</title>
+<title>Sistema Milpa — Análisis Técnico-Económico Tlalpan</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#f0f7f4;font-family:'DM Sans',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem;gap:1.5rem}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-h1{font-family:'Fraunces',serif;color:#085041;font-size:1.4rem;letter-spacing:1px}
-.subtitle{font-size:.85rem;color:#5DCAA5;text-align:center}
+:root {
+  --verde-oscuro: #085041;
+  --verde-medio: #0F6E56;
+  --verde-vivo: #1D9E75;
+  --verde-claro: #5DCAA5;
+  --verde-menta: #9FE1CB;
+  --verde-palido: #E1F5EE;
+  --verde-hoja: #3B6D11;
+  --verde-lima: #C0DD97;
+  --amarillo: #FAC775;
+  --amarillo-osc: #BA7517;
+  --crema: #f7f3ec;
+  --tierra: #633806;
+}
 
-.nav-btns{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
-.nav-btns button{background:#E1F5EE;color:#085041;border:.5px solid #5DCAA5;border-radius:8px;padding:6px 14px;font-size:.8rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
-.nav-btns button:hover{background:#5DCAA5;color:white}
-.nav-btns button.active{background:#0F6E56;color:#E1F5EE;border-color:#0F6E56}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--crema); color: #1a1a1a; overflow-x: hidden; }
 
-.phone-frame{width:280px;border-radius:38px;border:3px solid #085041;background:#f4fdf8;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(15,110,86,.18),0 4px 12px rgba(15,110,86,.08)}
-.status-bar{background:#085041;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
-.status-bar span{font-size:11px;color:#9FE1CB;font-weight:500}
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background-image: url('maiz.png');
+  background-repeat: no-repeat; 
+  background-size: cover; background-position: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 4rem 2rem; position: relative; overflow: hidden;
+}
 
-.screen{display:none;flex-direction:column;min-height:580px}
-.screen.active{display:flex}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+.hero-deco { position: absolute; pointer-events: none; border-radius: 50%; border: 1px solid rgba(93,202,165,0.08); }
+.hero-deco-1 { top: -80px; right: -80px; width: 420px; height: 420px; }
+.hero-deco-2 { bottom: 5%; left: -60px; width: 240px; height: 240px; border-color: rgba(250,199,117,0.07); }
+.hero-deco-3 { top: 30%; left: 5%; width: 120px; height: 120px; border-color: rgba(93,202,165,0.05); }
 
-/* ── Pantalla 0: Bienvenida ── */
-.s0-bg{background:linear-gradient(160deg,#085041 0%,#0F6E56 50%,#1D9E75 100%);flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 20px;position:relative;overflow:hidden}
-.s0-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(157,225,203,.12) 0%,transparent 60%)}
-.s0-title{font-family:'Fraunces',serif;font-size:2rem;color:#E1F5EE;letter-spacing:5px}
-.s0-sub{font-size:.75rem;color:#9FE1CB;text-align:center;line-height:1.5}
-.btn-white{background:#E1F5EE;color:#085041;border:none;border-radius:12px;padding:12px;font-size:.88rem;font-weight:600;width:100%;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
-.btn-white:hover{background:white}
-.btn-ghost{background:transparent;color:#9FE1CB;border:1px solid rgba(157,225,203,.4);border-radius:12px;padding:11px;font-size:.85rem;font-weight:500;width:100%;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
-.btn-ghost:hover{border-color:#9FE1CB;color:#E1F5EE}
-.dots-row{display:flex;gap:8px}
-.dot-deco{width:8px;height:8px;border-radius:50%;background:rgba(157,225,203,.3)}
-.dot-deco.lit{background:#5DCAA5}
+.hero-logo { margin-bottom: 2rem; animation: fadeInDown 0.9s ease both; }
+.hero-logo svg { filter: drop-shadow(0 8px 32px rgba(0,0,0,0.35)); }
 
-/* ── Headers ── */
-.hdr{padding:14px 16px;display:flex;align-items:center;gap:10px}
-.hdr-title{color:#E1F5EE;font-size:.95rem;font-weight:500}
-.hdr-sub{color:rgba(225,245,238,.6);font-size:.7rem;margin-top:1px}
-.back-btn{color:rgba(225,245,238,.7);font-size:1rem;cursor:pointer;background:rgba(255,255,255,.1);border:none;border-radius:8px;padding:4px 8px;font-family:'DM Sans',sans-serif}
+.hero-tag {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--verde-menta); margin-bottom: 1.4rem;
+  animation: fadeInDown 0.9s 0.15s ease both; opacity: 0;
+}
 
-/* ── Body ── */
-.body{padding:14px;flex:1;display:flex;flex-direction:column;gap:10px;background:#f4fdf8;overflow-y:auto}
-.field-label{font-size:.7rem;color:#085041;font-weight:600;margin-bottom:3px;text-transform:uppercase;letter-spacing:.5px}
-.field-val{border:.5px solid #9FE1CB;border-radius:8px;padding:9px 11px;font-size:.82rem;color:#085041;background:white;width:100%}
-.btn-main{border:none;border-radius:12px;padding:12px;font-size:.88rem;font-weight:600;width:100%;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;color:white;margin-top:2px}
-.tag{padding:4px 10px;border-radius:20px;font-size:.7rem;font-weight:500;cursor:pointer;display:inline-block}
-.card{background:white;border:.5px solid #C0DD97;border-radius:12px;padding:12px}
-.card-title{font-size:.75rem;font-weight:600;color:#27500A;margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px}
-.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.metric{border-radius:10px;padding:10px;text-align:center}
-.metric .val{font-family:'Fraunces',serif;font-size:1rem;font-weight:600}
-.metric .lbl{font-size:.65rem;margin-top:2px;font-weight:500}
-.step-dots{display:flex;gap:6px;justify-content:center;padding:8px 0}
-.sdot{width:7px;height:7px;border-radius:50%;background:#C0DD97}
-.sdot.on{background:#0F6E56;width:20px;border-radius:4px}
-.alert-box{border-radius:10px;padding:10px 11px;display:flex;align-items:flex-start;gap:8px}
-.alert-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
-.alert-text{font-size:.72rem;line-height:1.4}
-.progress-bar{height:7px;border-radius:6px;overflow:hidden;margin-top:6px}
-.progress-fill{height:100%;border-radius:6px}
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+  font-weight: 700; color: #fff; text-align: center; line-height: 1.18;
+  max-width: 780px; margin-bottom: 1.4rem;
+  animation: fadeInDown 0.9s 0.25s ease both; opacity: 0;
+}
+.hero-title em { font-style: italic; color: var(--amarillo); font-weight: 300; }
 
-/* ── Bottom nav ── */
-.bottom-nav{background:white;border-top:.5px solid #C0DD97;display:flex;justify-content:space-around;padding:8px 0 10px}
-.bnav-item{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:2px 8px}
-.bnav-icon{font-size:1.15rem;color:#9FE1CB}
-.bnav-item.on .bnav-icon{color:#0F6E56}
-.bnav-label{font-size:.58rem;color:#9FE1CB;font-weight:500}
-.bnav-item.on .bnav-label{color:#0F6E56;font-weight:600}
+.hero-divider {
+  width: 56px; height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--verde-claro), transparent);
+  margin: 0 auto 1.8rem;
+  animation: fadeIn 1s 0.4s ease both; opacity: 0;
+}
 
-/* ── Market ── */
-.market-item{background:white;border:.5px solid #C0DD97;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center}
-.mthumb{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-.mname{font-size:.82rem;font-weight:600;color:#085041}
-.mdet{font-size:.68rem;color:#0F6E56;margin-top:2px}
-.mprice{font-family:'Fraunces',serif;font-size:.9rem;font-weight:600;color:#0F6E56;white-space:nowrap}
-.pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:.65rem;font-weight:500;margin-top:4px}
+.hero-subtitle {
+  font-size: 0.95rem; color: rgba(225,245,238,0.65);
+  letter-spacing: 8px; text-transform: uppercase; font-weight: 300;
+  animation: fadeInDown 0.9s 0.35s ease both; opacity: 0;
+}
 
-/* ── Bar chart ── */
-.bar-wrap{display:flex;align-items:flex-end;gap:6px;height:56px;margin:4px 0}
-.bar{border-radius:5px 5px 0 0;min-width:22px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px}
-.bar span{font-size:.58rem;color:white;font-weight:600}
-.bar-labels{display:flex;gap:6px;font-size:.62rem;color:#3B6D11}
-.bar-labels span{min-width:22px;text-align:center}
+.hero-scroll {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: rgba(157,225,203,0.4); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase;
+  animation: fadeIn 1s 1.2s ease both; opacity: 0;
+}
+.hero-scroll-line {
+  width: 1px; height: 44px;
+  background: linear-gradient(to bottom, rgba(157,225,203,0.45), transparent);
+  animation: scrollPulse 2s 1.8s ease-in-out infinite;
+}
 
-/* ── Search bar ── */
-.search-bar{border:.5px solid #9FE1CB;border-radius:10px;padding:8px 11px;font-size:.78rem;color:#0F6E56;display:flex;align-items:center;gap:6px;background:white;flex:1}
-.filter-btn{border:.5px solid #9FE1CB;border-radius:10px;padding:8px 10px;background:white;cursor:pointer;display:flex;align-items:center}
+/* MOCKUP SECTION */
+.mockup-section {
+  background: linear-gradient(175deg, #f7f3ec 0%, #edf7f1 60%, #f0f7f4 100%);
+  padding: 7rem 2rem; position: relative; overflow: hidden;
+}
+.mockup-section::before {
+  content: ''; position: absolute; top: -150px; right: -150px;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(93,202,165,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.mockup-inner {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+}
+@media (max-width: 780px) {
+  .mockup-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .mockup-phone-col { order: -1; }
+}
 
-/* ── Cost rows ── */
-.cost-row{display:flex;justify-content:space-between;font-size:.76rem;padding:3px 0}
-.cost-row span:first-child{color:#854F0B}
-.cost-row span:last-child{color:#633806;font-weight:600}
-.cost-row.total{border-top:.5px solid #FAC775;padding-top:5px;margin-top:2px}
-.cost-row.total span{color:#633806;font-weight:600}
+.section-label {
+  font-size: 0.67rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--verde-claro); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 12px;
+}
+.section-label::before { content: ''; width: 30px; height: 1px; background: var(--verde-claro); }
 
-/* ── SVG Logo ── */
-svg.logo{display:block}
+.section-heading {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  font-weight: 700; color: var(--verde-oscuro); line-height: 1.2; margin-bottom: 1.5rem;
+}
+
+.mockup-intro {
+  font-size: 1rem; color: #3a5a3a; line-height: 1.72; margin-bottom: 2.5rem;
+}
+
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; }
+.feature-item { display: flex; gap: 14px; align-items: flex-start; }
+.feature-icon {
+  width: 40px; height: 40px; border-radius: 11px;
+  background: var(--verde-palido); display: flex; align-items: center;
+  justify-content: center; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
+}
+.feature-text strong { display: block; font-size: 0.88rem; font-weight: 600; color: var(--verde-oscuro); margin-bottom: 3px; }
+.feature-text p { font-size: 0.81rem; color: #5a7a5a; line-height: 1.5; }
+
+.mockup-phone-col { display: flex; justify-content: center; position: relative; }
+.mockup-phone-col::before {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px; height: 360px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(29,158,117,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* PHONE FRAME */
+.phone-wrap {
+  transform: perspective(900px) rotateY(-5deg) rotateX(2deg);
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 28px 56px rgba(8,80,65,0.2)) drop-shadow(0 8px 18px rgba(8,80,65,0.1));
+}
+.phone-wrap:hover { transform: perspective(900px) rotateY(0deg) rotateX(0deg); }
+
+.phone-frame { width: 280px; border-radius: 38px; border: 3px solid #085041; background: #f4fdf8; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(15,110,86,.18),0 4px 12px rgba(15,110,86,.08); }
+.status-bar { background: #085041; height: 28px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; }
+.status-bar span { font-size: 11px; color: #9FE1CB; font-weight: 500; }
+.p-screen { display: none; flex-direction: column; min-height: 580px; }
+.p-screen.active { display: flex; }
+.s0-bg { background: linear-gradient(160deg,#085041 0%,#0F6E56 50%,#1D9E75 100%); flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 28px 20px; position: relative; overflow: hidden; }
+.s0-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%,rgba(157,225,203,.12) 0%,transparent 60%); }
+.s0-title { font-family: 'Fraunces', serif; font-size: 2rem; color: #E1F5EE; letter-spacing: 5px; }
+.btn-white { background: #E1F5EE; color: #085041; border: none; border-radius: 12px; padding: 12px; font-size: .88rem; font-weight: 600; width: 100%; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; }
+.btn-white:hover { background: white; }
+.btn-ghost { background: transparent; color: #9FE1CB; border: 1px solid rgba(157,225,203,.4); border-radius: 12px; padding: 11px; font-size: .85rem; font-weight: 500; width: 100%; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; }
+.dots-row { display: flex; gap: 8px; }
+.dot-deco { width: 8px; height: 8px; border-radius: 50%; background: rgba(157,225,203,.3); }
+.dot-deco.lit { background: #5DCAA5; }
+.hdr { padding: 14px 16px; display: flex; align-items: center; gap: 10px; }
+.hdr-title { color: #E1F5EE; font-size: .95rem; font-weight: 500; }
+.hdr-sub { color: rgba(225,245,238,.6); font-size: .7rem; margin-top: 1px; }
+.back-btn { color: rgba(225,245,238,.7); font-size: 1rem; cursor: pointer; background: rgba(255,255,255,.1); border: none; border-radius: 8px; padding: 4px 8px; font-family: 'DM Sans',sans-serif; }
+.p-body { padding: 14px; flex: 1; display: flex; flex-direction: column; gap: 10px; background: #f4fdf8; overflow-y: auto; }
+.field-label { font-size: .7rem; color: #085041; font-weight: 600; margin-bottom: 3px; text-transform: uppercase; letter-spacing: .5px; }
+.field-val { border: .5px solid #9FE1CB; border-radius: 8px; padding: 9px 11px; font-size: .82rem; color: #085041; background: white; width: 100%; }
+.btn-main { border: none; border-radius: 12px; padding: 12px; font-size: .88rem; font-weight: 600; width: 100%; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; color: white; margin-top: 2px; }
+.p-tag { padding: 4px 10px; border-radius: 20px; font-size: .7rem; font-weight: 500; cursor: pointer; display: inline-block; }
+.p-card { background: white; border: .5px solid #C0DD97; border-radius: 12px; padding: 12px; }
+.card-title { font-size: .75rem; font-weight: 600; color: #27500A; margin-bottom: 7px; text-transform: uppercase; letter-spacing: .5px; }
+.metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.metric { border-radius: 10px; padding: 10px; text-align: center; }
+.metric .val { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; }
+.metric .lbl { font-size: .65rem; margin-top: 2px; font-weight: 500; }
+.step-dots { display: flex; gap: 6px; justify-content: center; padding: 8px 0; }
+.sdot { width: 7px; height: 7px; border-radius: 50%; background: #C0DD97; }
+.sdot.on { background: #0F6E56; width: 20px; border-radius: 4px; }
+.alert-box { border-radius: 10px; padding: 10px 11px; display: flex; align-items: flex-start; gap: 8px; }
+.alert-text { font-size: .72rem; line-height: 1.4; }
+.progress-bar { height: 7px; border-radius: 6px; overflow: hidden; margin-top: 6px; }
+.progress-fill { height: 100%; border-radius: 6px; }
+.bottom-nav { background: white; border-top: .5px solid #C0DD97; display: flex; justify-content: space-around; padding: 8px 0 10px; }
+.bnav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; padding: 2px 8px; }
+.bnav-icon { font-size: 1.15rem; color: #9FE1CB; }
+.bnav-item.on .bnav-icon { color: #0F6E56; }
+.bnav-label { font-size: .58rem; color: #9FE1CB; font-weight: 500; }
+.bnav-item.on .bnav-label { color: #0F6E56; font-weight: 600; }
+.market-item { background: white; border: .5px solid #C0DD97; border-radius: 12px; padding: 10px; display: flex; gap: 10px; align-items: center; }
+.mthumb { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.mname { font-size: .82rem; font-weight: 600; color: #085041; }
+.mdet { font-size: .68rem; color: #0F6E56; margin-top: 2px; }
+.mprice { font-family: 'Fraunces', serif; font-size: .9rem; font-weight: 600; color: #0F6E56; white-space: nowrap; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: .65rem; font-weight: 500; margin-top: 4px; }
+.bar-wrap { display: flex; align-items: flex-end; gap: 6px; height: 56px; margin: 4px 0; }
+.bar { border-radius: 5px 5px 0 0; min-width: 22px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3px; }
+.bar span { font-size: .58rem; color: white; font-weight: 600; }
+.bar-labels { display: flex; gap: 6px; font-size: .62rem; color: #3B6D11; }
+.bar-labels span { min-width: 22px; text-align: center; }
+.search-bar { border: .5px solid #9FE1CB; border-radius: 10px; padding: 8px 11px; font-size: .78rem; color: #0F6E56; display: flex; align-items: center; gap: 6px; background: white; flex: 1; }
+.filter-btn { border: .5px solid #9FE1CB; border-radius: 10px; padding: 8px 10px; background: white; cursor: pointer; display: flex; align-items: center; }
+.cost-row { display: flex; justify-content: space-between; font-size: .76rem; padding: 3px 0; }
+.cost-row span:first-child { color: #854F0B; }
+.cost-row span:last-child { color: #633806; font-weight: 600; }
+.cost-row.total { border-top: .5px solid #FAC775; padding-top: 5px; margin-top: 2px; }
+.cost-row.total span { color: #633806; font-weight: 600; }
+
+.p-nav { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem; }
+.p-nav button { background: var(--verde-palido); color: var(--verde-oscuro); border: 0.5px solid var(--verde-claro); border-radius: 8px; padding: 5px 12px; font-size: 0.72rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; }
+.p-nav button:hover { background: var(--verde-claro); color: white; }
+.p-nav button.on { background: var(--verde-medio); color: var(--verde-palido); border-color: var(--verde-medio); }
+
+/* CONCLUSIONS */
+.conclusions-section {
+  background: var(--verde-oscuro); padding: 7rem 2rem; position: relative; overflow: hidden;
+}
+.conclusions-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 5% 50%, rgba(93,202,165,0.09) 0%, transparent 50%),
+              radial-gradient(ellipse at 95% 20%, rgba(250,199,117,0.06) 0%, transparent 45%);
+  pointer-events: none;
+}
+.conclusions-inner { max-width: 880px; margin: 0 auto; position: relative; }
+.conclusions-inner .section-label { color: var(--verde-claro); }
+.conclusions-inner .section-label::before { background: var(--verde-claro); }
+.conclusions-inner .section-heading { color: var(--verde-palido); }
+
+.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+@media (max-width: 620px) { .cards-grid { grid-template-columns: 1fr; } }
+
+.conclusion-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(93,202,165,0.18); border-radius: 18px;
+  padding: 2rem 1.8rem; position: relative;
+  transition: transform 0.35s ease, background 0.35s ease; backdrop-filter: blur(4px);
+}
+.conclusion-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.07); }
+.conclusion-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--verde-claro), var(--verde-vivo));
+}
+.conclusion-card:nth-child(2)::before { background: linear-gradient(90deg, var(--amarillo), var(--amarillo-osc)); }
+.conclusion-card:nth-child(3)::before { background: linear-gradient(90deg, var(--verde-vivo), var(--verde-claro)); }
+.conclusion-card:nth-child(4)::before { background: linear-gradient(90deg, var(--verde-lima), var(--verde-hoja)); }
+
+.card-num {
+  font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700;
+  color: rgba(93,202,165,0.12); position: absolute; top: 0.8rem; right: 1.4rem; line-height: 1;
+}
+.conclusion-card:nth-child(2) .card-num { color: rgba(250,199,117,0.12); }
+.conclusion-card:nth-child(3) .card-num { color: rgba(93,202,165,0.12); }
+.conclusion-card:nth-child(4) .card-num { color: rgba(192,221,151,0.12); }
+
+.conclusion-card p { font-size: 0.97rem; color: rgba(225,245,238,0.82); line-height: 1.68; }
+
+/* FOOTER */
+.footer { background: #040f0c; padding: 2.5rem 2rem; text-align: center; }
+.footer p { font-size: 0.72rem; color: rgba(93,202,165,0.35); letter-spacing: 2.5px; text-transform: uppercase; }
+
+/* KEYFRAMES */
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scrollPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.32s; }
+.reveal-delay-4 { transition-delay: 0.44s; }
 </style>
 </head>
 <body>
 
-<h1>🌽 CINTLI — App Agrícola</h1>
-<p class="subtitle">Mockup interactivo · Sistema de datos del campo · Tlalpan, CDMX</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-deco hero-deco-1"></div>
+  <div class="hero-deco hero-deco-2"></div>
+  <div class="hero-deco hero-deco-3"></div>
 
-<div class="nav-btns" id="navbtns">
-  <button class="active" onclick="go(0)">① Bienvenida</button>
-  <button onclick="go(1)">② Registro</button>
-  <button onclick="go(2)">③ Captura</button>
-  <button onclick="go(3)">④ Tablero</button>
-  <button onclick="go(4)">⑤ Mercado</button>
-</div>
-
-<div class="phone-frame">
-  <div class="status-bar">
-    <span>9:41</span>
-    <span style="font-family:'Fraunces',serif;letter-spacing:2px;font-size:12px">CINTLI</span>
-    <span>100%</span>
+  <div class="hero-logo">
+    <img src="logo.png" alt="Logo Sistema Milpa">
+   
   </div>
 
-  <!-- ══ PANTALLA 0: BIENVENIDA ══ -->
-  <div class="screen active" id="s0">
-    <div class="s0-bg">
-      <!-- Logo mazorca SVG -->
-      <svg class="logo" width="96" height="96" viewBox="0 0 100 100" aria-label="Logo Cintli — mazorca estilizada">
-        <rect width="100" height="100" rx="22" fill="#085041"/>
-        <rect x="46" y="10" width="8" height="15" rx="3" fill="#97C459"/>
-        <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#97C459"/>
-        <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#97C459"/>
-        <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
-        <circle cx="44" cy="36" r="3.8" fill="#BA7517"/>
-        <circle cx="44" cy="47" r="3.8" fill="#BA7517"/>
-        <circle cx="44" cy="58" r="3.8" fill="#BA7517"/>
-        <circle cx="44" cy="69" r="3.8" fill="#BA7517"/>
-        <circle cx="56" cy="36" r="3.8" fill="#EF9F27"/>
-        <circle cx="56" cy="47" r="3.8" fill="#EF9F27"/>
-        <circle cx="56" cy="58" r="3.8" fill="#EF9F27"/>
-        <circle cx="56" cy="69" r="3.8" fill="#EF9F27"/>
-        <ellipse cx="50" cy="80" rx="13" ry="5" fill="#FAC775"/>
-        <circle cx="74" cy="20" r="11" fill="#1D9E75"/>
-        <rect x="68" y="16" width="12" height="2.5" rx="1.2" fill="white"/>
-        <rect x="68" y="20.5" width="8" height="2.5" rx="1.2" fill="white"/>
-        <rect x="68" y="25" width="10" height="2.5" rx="1.2" fill="white"/>
-      </svg>
-      <div style="text-align:center">
-        <p class="s0-title">CINTLI</p>
-        <p style="font-size:.72rem;color:#9FE1CB;margin-top:2px;letter-spacing:2px">DATOS DEL CAMPO</p>
-        <p class="s0-sub" style="margin-top:6px">Tu parcela, tus datos, tu decisión</p>
+  <p class="hero-tag">Investigación · Alcaldía Tlalpan, CDMX · 2024</p>
+
+  <h1 class="hero-title">
+    Análisis técnico-económico de la
+    <em>diversificación del cultivo de maíz</em>
+    en la Alcaldía Tlalpan
+  </h1>
+
+  <div class="hero-divider"></div>
+
+  <p class="hero-subtitle">Sistema Milpa</p>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Explorar</span>
+  </div>
+</section>
+
+<!-- MOCKUP SECTION -->
+<section class="mockup-section">
+  <div class="mockup-inner">
+
+    <div class="mockup-text-col">
+      <p class="section-label reveal">Herramienta de campo</p>
+      <h2 class="section-heading reveal reveal-delay-1">CINTLI<br>App de datos agrícolas</h2>
+      <p class="mockup-intro reveal reveal-delay-2">
+        Plataforma digital diseñada para que los productores de Tlalpan registren, analicen y compartan sus datos productivos. Conecta la parcela con el mercado y con las políticas públicas.
+      </p>
+      <ul class="feature-list">
+        <li class="feature-item reveal reveal-delay-1">
+          <div class="feature-icon">🌽</div>
+          <div class="feature-text">
+            <strong>Registro del productor y ciclo</strong>
+            <p>Captura de datos del cultivo, costos por ciclo, modalidad de tenencia y apoyos recibidos.</p>
+          </div>
+        </li>
+        <li class="feature-item reveal reveal-delay-2">
+          <div class="feature-icon">📊</div>
+          <div class="feature-text">
+            <strong>Tablero de análisis económico</strong>
+            <p>Utilidad neta, ROI del ciclo, rendimiento por hectárea y comparativo frente al precio SEGALMEX.</p>
+          </div>
+        </li>
+        <li class="feature-item reveal reveal-delay-3">
+          <div class="feature-icon">🏪</div>
+          <div class="feature-text">
+            <strong>Mercado Cintli</strong>
+            <p>Directorio de oferta y demanda de productos agrícolas en la zona sur de la CDMX.</p>
+          </div>
+        </li>
+        <li class="feature-item reveal reveal-delay-4">
+          <div class="feature-icon">🔗</div>
+          <div class="feature-text">
+            <strong>Datos para modelos matemáticos</strong>
+            <p>Insumo para análisis de Sistemas Complejos y diseño de políticas de precios justos.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mockup-phone-col">
+      <div>
+        <div class="phone-wrap">
+          <div class="phone-frame">
+            <div class="status-bar">
+              <span>9:41</span>
+              <span style="font-family:'Fraunces',serif;letter-spacing:2px;font-size:12px">CINTLI</span>
+              <span>100%</span>
+            </div>
+
+            <!-- PANTALLA 0: BIENVENIDA -->
+            <div class="p-screen active" id="ps0">
+              <div class="s0-bg">
+                <svg width="72" height="72" viewBox="0 0 100 100">
+                  <rect width="100" height="100" rx="22" fill="#085041"/>
+                  <rect x="46" y="10" width="8" height="15" rx="3" fill="#97C459"/>
+                  <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#97C459"/>
+                  <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#97C459"/>
+                  <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
+                  <circle cx="44" cy="36" r="3.8" fill="#BA7517"/><circle cx="44" cy="47" r="3.8" fill="#BA7517"/>
+                  <circle cx="44" cy="58" r="3.8" fill="#BA7517"/><circle cx="44" cy="69" r="3.8" fill="#BA7517"/>
+                  <circle cx="56" cy="36" r="3.8" fill="#EF9F27"/><circle cx="56" cy="47" r="3.8" fill="#EF9F27"/>
+                  <circle cx="56" cy="58" r="3.8" fill="#EF9F27"/><circle cx="56" cy="69" r="3.8" fill="#EF9F27"/>
+                  <ellipse cx="50" cy="80" rx="13" ry="5" fill="#FAC775"/>
+                </svg>
+                <div style="text-align:center">
+                  <p class="s0-title">CINTLI</p>
+                  <p style="font-size:.72rem;color:#9FE1CB;margin-top:2px;letter-spacing:2px">DATOS DEL CAMPO</p>
+                  <p style="font-size:.75rem;color:#9FE1CB;text-align:center;line-height:1.5;margin-top:6px">Tu parcela, tus datos, tu decisión</p>
+                </div>
+                <div style="width:100%;display:flex;flex-direction:column;gap:9px;margin-top:8px">
+                  <button class="btn-white" onclick="pgo(2)">Iniciar sesión</button>
+                  <button class="btn-ghost" onclick="pgo(1)">Registrarse</button>
+                </div>
+                <div class="dots-row" style="margin-top:10px">
+                  <div class="dot-deco lit"></div><div class="dot-deco lit"></div><div class="dot-deco"></div>
+                </div>
+                <p style="font-size:.65rem;color:rgba(157,225,203,.45);margin-top:4px">Sistema de datos agrícolas · Tlalpan, CDMX</p>
+              </div>
+            </div>
+
+            <!-- PANTALLA 1: REGISTRO -->
+            <div class="p-screen" id="ps1">
+              <div class="hdr" style="background:#0F6E56">
+                <button class="back-btn" onclick="pgo(0)">←</button>
+                <div><p class="hdr-title">Registro del productor</p><p class="hdr-sub">Paso 1 de 3</p></div>
+              </div>
+              <div class="step-dots"><div class="sdot on"></div><div class="sdot"></div><div class="sdot"></div></div>
+              <div class="p-body">
+                <div><p class="field-label">Nombre completo</p><div class="field-val">Juan Pérez Hernández</div></div>
+                <div><p class="field-label">Alcaldía / municipio</p><div class="field-val">Tlalpan, CDMX</div></div>
+                <div><p class="field-label">Teléfono</p><div class="field-val">55 1234 5678</div></div>
+                <div><p class="field-label">Años de experiencia</p><div class="field-val">15 años</div></div>
+                <div>
+                  <p class="field-label">¿Recibe apoyos gubernamentales?</p>
+                  <div style="display:flex;gap:8px;margin-top:4px">
+                    <div style="flex:1;text-align:center;padding:8px;border-radius:10px;background:#0F6E56;color:#E1F5EE;font-size:.8rem;font-weight:600;cursor:pointer">Sí</div>
+                    <div style="flex:1;text-align:center;padding:8px;border-radius:10px;border:.5px solid #9FE1CB;color:#0F6E56;font-size:.8rem;cursor:pointer">No</div>
+                  </div>
+                </div>
+                <div>
+                  <p class="field-label">Tipo de tenencia</p>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
+                    <span class="p-tag" style="background:#E1F5EE;color:#085041">Propia ✓</span>
+                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Ejidal</span>
+                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Rentada</span>
+                  </div>
+                </div>
+                <button class="btn-main" style="background:#0F6E56" onclick="pgo(2)">Siguiente →</button>
+              </div>
+            </div>
+
+            <!-- PANTALLA 2: CAPTURA -->
+            <div class="p-screen" id="ps2">
+              <div class="hdr" style="background:#BA7517">
+                <button class="back-btn" onclick="pgo(0)" style="background:rgba(255,255,255,.15)">←</button>
+                <div><p class="hdr-title">Captura del ciclo</p><p class="hdr-sub">Ciclo PV 2024</p></div>
+              </div>
+              <div class="step-dots">
+                <div class="sdot" style="background:#FAC775"></div>
+                <div class="sdot on" style="background:#BA7517;width:20px;border-radius:4px"></div>
+                <div class="sdot" style="background:#FAC775"></div>
+              </div>
+              <div class="p-body">
+                <div>
+                  <p class="field-label">Cultivo sembrado</p>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
+                    <span class="p-tag" style="background:#0F6E56;color:#E1F5EE">Milpa ✓</span>
+                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Maíz</span>
+                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Frijol</span>
+                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Otro</span>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                  <div><p class="field-label">Hectáreas</p><div class="field-val">0.80 ha</div></div>
+                  <div><p class="field-label">Modalidad</p><div class="field-val">Temporal</div></div>
+                </div>
+                <div class="p-card" style="border-color:#FAC775">
+                  <p class="card-title" style="color:#633806">💰 Costos del ciclo</p>
+                  <div class="cost-row"><span>Preparación terreno</span><span>$6,000</span></div>
+                  <div class="cost-row"><span>Semilla + insumos</span><span>$5,200</span></div>
+                  <div class="cost-row"><span>Fertilizantes (2 aplic.)</span><span>$4,500</span></div>
+                  <div class="cost-row"><span>Mano de obra</span><span>$3,500</span></div>
+                  <div class="cost-row total"><span>Total</span><span>$19,200</span></div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                  <div><p class="field-label">Producción</p><div class="field-val">1.32 t/ha</div></div>
+                  <div><p class="field-label">Precio venta</p><div class="field-val">$7,390/t</div></div>
+                </div>
+                <button class="btn-main" style="background:#BA7517" onclick="pgo(3)">Guardar ciclo ✓</button>
+              </div>
+            </div>
+
+            <!-- PANTALLA 3: TABLERO -->
+            <div class="p-screen" id="ps3">
+              <div class="hdr" style="background:#27500A">
+                <svg width="28" height="28" viewBox="0 0 100 100" style="flex-shrink:0">
+                  <rect width="100" height="100" rx="16" fill="#173404"/>
+                  <rect x="46" y="10" width="8" height="15" rx="3" fill="#97C459"/>
+                  <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#97C459"/>
+                  <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#97C459"/>
+                  <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
+                  <circle cx="44" cy="38" r="3.5" fill="#BA7517"/><circle cx="44" cy="50" r="3.5" fill="#BA7517"/>
+                  <circle cx="44" cy="62" r="3.5" fill="#BA7517"/><circle cx="56" cy="38" r="3.5" fill="#EF9F27"/>
+                  <circle cx="56" cy="50" r="3.5" fill="#EF9F27"/><circle cx="56" cy="62" r="3.5" fill="#EF9F27"/>
+                </svg>
+                <div style="flex:1">
+                  <p style="color:#C0DD97;font-size:.92rem;font-weight:500">Hola, Juan</p>
+                  <p style="color:#97C459;font-size:.68rem">Ciclo PV 2024 · Tlalpan</p>
+                </div>
+                <span style="background:#3B6D11;color:#C0DD97;font-size:.65rem;padding:3px 9px;border-radius:20px;font-weight:500">Activo</span>
+              </div>
+              <div class="p-body">
+                <div class="metric-row">
+                  <div class="metric" style="background:#E1F5EE"><p class="val" style="color:#085041">$43,368</p><p class="lbl" style="color:#0F6E56">Utilidad neta</p></div>
+                  <div class="metric" style="background:#EAF3DE"><p class="val" style="color:#27500A">201.7%</p><p class="lbl" style="color:#3B6D11">ROI del ciclo</p></div>
+                </div>
+                <div class="metric-row">
+                  <div class="metric" style="background:#FAEEDA"><p class="val" style="color:#633806">1.32 t</p><p class="lbl" style="color:#854F0B">Rendimiento/ha</p></div>
+                  <div class="metric" style="background:#FAECE7"><p class="val" style="color:#712B13">0%</p><p class="lbl" style="color:#993C1D">Siniestro</p></div>
+                </div>
+                <div class="p-card" style="border-color:#C0DD97">
+                  <p class="card-title">📊 Producción histórica (ton)</p>
+                  <div class="bar-wrap">
+                    <div class="bar" style="height:30px;background:#9FE1CB"><span>21</span></div>
+                    <div class="bar" style="height:24px;background:#5DCAA5"><span>22</span></div>
+                    <div class="bar" style="height:42px;background:#1D9E75"><span>23</span></div>
+                    <div class="bar" style="height:36px;background:#085041"><span>24</span></div>
+                  </div>
+                  <div class="bar-labels"><span>2021</span><span>2022</span><span>2023</span><span>2024</span></div>
+                </div>
+                <div class="alert-box" style="background:#FAEEDA">
+                  <span style="font-size:1rem;flex-shrink:0;margin-top:1px">💡</span>
+                  <span class="alert-text" style="color:#633806">Tu precio/ha supera 3x al monocultivo de maíz. Considera aumentar la superficie de frijol.</span>
+                </div>
+                <div class="p-card" style="border-color:#FAC775">
+                  <p class="card-title" style="color:#633806">💰 Tu precio vs SEGALMEX</p>
+                  <div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:3px">
+                    <span style="color:#0F6E56">Tu precio maíz</span><span style="color:#085041;font-weight:600">$7,390/ton</span>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:6px">
+                    <span style="color:#BA7517">Garantía SEGALMEX</span><span style="color:#633806;font-weight:600">$5,840/ton</span>
+                  </div>
+                  <div class="progress-bar" style="background:#EAF3DE"><div class="progress-fill" style="width:76%;background:#3B6D11"></div></div>
+                  <p style="font-size:.65rem;color:#3B6D11;margin-top:3px">26.5% sobre precio de garantía</p>
+                </div>
+              </div>
+              <div class="bottom-nav">
+                <div class="bnav-item" onclick="pgo(2)"><span class="bnav-icon">➕</span><span class="bnav-label">Capturar</span></div>
+                <div class="bnav-item on"><span class="bnav-icon" style="color:#0F6E56">📊</span><span class="bnav-label">Tablero</span></div>
+                <div class="bnav-item" onclick="pgo(4)"><span class="bnav-icon">🏪</span><span class="bnav-label">Mercado</span></div>
+                <div class="bnav-item"><span class="bnav-icon">👤</span><span class="bnav-label">Perfil</span></div>
+              </div>
+            </div>
+
+            <!-- PANTALLA 4: MERCADO -->
+            <div class="p-screen" id="ps4">
+              <div class="hdr" style="background:#993C1D">
+                <svg width="26" height="26" viewBox="0 0 100 100" style="flex-shrink:0">
+                  <rect width="100" height="100" rx="16" fill="#712B13"/>
+                  <rect x="46" y="10" width="8" height="15" rx="3" fill="#F0997B"/>
+                  <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#F0997B"/>
+                  <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#F0997B"/>
+                  <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
+                  <circle cx="44" cy="38" r="3.5" fill="#993C1D"/><circle cx="44" cy="50" r="3.5" fill="#993C1D"/>
+                  <circle cx="44" cy="62" r="3.5" fill="#993C1D"/><circle cx="56" cy="38" r="3.5" fill="#D85A30"/>
+                  <circle cx="56" cy="50" r="3.5" fill="#D85A30"/><circle cx="56" cy="62" r="3.5" fill="#D85A30"/>
+                </svg>
+                <div><p class="hdr-title">Mercado Cintli</p><p class="hdr-sub">Tlalpan y zona sur CDMX</p></div>
+              </div>
+              <div class="p-body">
+                <div style="display:flex;gap:7px">
+                  <div class="search-bar">🔍 Buscar producto...</div>
+                  <div class="filter-btn" style="border:.5px solid #9FE1CB">⚙️</div>
+                </div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap">
+                  <span class="p-tag" style="background:#0F6E56;color:#E1F5EE">Todos</span>
+                  <span class="p-tag" style="background:#EAF3DE;color:#27500A">🌽 Maíz</span>
+                  <span class="p-tag" style="background:#FAEEDA;color:#633806">🫓 Tortilla</span>
+                  <span class="p-tag" style="background:#E1F5EE;color:#085041">🫘 Frijol</span>
+                </div>
+                <div class="market-item">
+                  <div class="mthumb" style="background:#EAF3DE">🌽</div>
+                  <div style="flex:1"><p class="mname">Maíz criollo blanco</p><p class="mdet">San Miguel Topilejo · 500 kg</p><span class="pill" style="background:#E1F5EE;color:#085041">Disponible</span></div>
+                  <p class="mprice">$7.80/kg</p>
+                </div>
+                <div class="market-item">
+                  <div class="mthumb" style="background:#FAEEDA">🫘</div>
+                  <div style="flex:1"><p class="mname">Frijol negro temporal</p><p class="mdet">Tlalpan · 120 kg disp.</p><span class="pill" style="background:#E1F5EE;color:#085041">Disponible</span></div>
+                  <p class="mprice">$28/kg</p>
+                </div>
+                <div class="market-item">
+                  <div class="mthumb" style="background:#FAECE7">🫓</div>
+                  <div style="flex:1"><p class="mname">Tortilla artesanal</p><p class="mdet">Topilejo · producción diaria</p><span class="pill" style="background:#FAEEDA;color:#633806">Bajo pedido</span></div>
+                  <p class="mprice">$22/kg</p>
+                </div>
+                <div class="market-item">
+                  <div class="mthumb" style="background:#EAF3DE">🌿</div>
+                  <div style="flex:1"><p class="mname">Elote de milpa</p><p class="mdet">Tlalpan · temporada jun-ago</p><span class="pill" style="background:#FAEEDA;color:#633806">Próximamente</span></div>
+                  <p class="mprice">$12/pza</p>
+                </div>
+              </div>
+              <div class="bottom-nav">
+                <div class="bnav-item" onclick="pgo(2)"><span class="bnav-icon">➕</span><span class="bnav-label">Capturar</span></div>
+                <div class="bnav-item" onclick="pgo(3)"><span class="bnav-icon">📊</span><span class="bnav-label">Tablero</span></div>
+                <div class="bnav-item on"><span class="bnav-icon" style="color:#0F6E56">🏪</span><span class="bnav-label">Mercado</span></div>
+                <div class="bnav-item"><span class="bnav-icon">👤</span><span class="bnav-label">Perfil</span></div>
+              </div>
+            </div>
+
+          </div><!-- /phone-frame -->
+        </div><!-- /phone-wrap -->
+
+        <div class="p-nav">
+          <button class="on" onclick="pgo(0)">① Bienvenida</button>
+          <button onclick="pgo(1)">② Registro</button>
+          <button onclick="pgo(2)">③ Captura</button>
+          <button onclick="pgo(3)">④ Tablero</button>
+          <button onclick="pgo(4)">⑤ Mercado</button>
+        </div>
       </div>
-      <div style="width:100%;display:flex;flex-direction:column;gap:9px;margin-top:8px">
-        <button class="btn-white" onclick="go(2)">Iniciar sesión</button>
-        <button class="btn-ghost" onclick="go(1)">Registrarse</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONCLUSIONS -->
+<section class="conclusions-section">
+  <div class="conclusions-inner">
+    <p class="section-label reveal">Hallazgos principales</p>
+    <h2 class="section-heading reveal reveal-delay-1">Conclusiones del análisis</h2>
+    <div class="cards-grid">
+      <div class="conclusion-card reveal reveal-delay-1">
+        <span class="card-num">01</span>
+        <p>La ciencia de datos es una gran herramienta para contextualizar la problemática socioeconómica agrícola en México.</p>
       </div>
-      <div class="dots-row" style="margin-top:10px">
-        <div class="dot-deco lit"></div>
-        <div class="dot-deco lit"></div>
-        <div class="dot-deco"></div>
+      <div class="conclusion-card reveal reveal-delay-2">
+        <span class="card-num">02</span>
+        <p>La centralización de los datos nos provee el motor analítico, permitiendo el uso y creación de modelos matemáticos.</p>
       </div>
-      <p style="font-size:.65rem;color:rgba(157,225,203,.5);margin-top:4px">Sistema de datos agrícolas · Tlalpan, CDMX</p>
+      <div class="conclusion-card reveal reveal-delay-3">
+        <span class="card-num">03</span>
+        <p>Esto nos sirve para que el estado diseñe e implemente políticas públicas para que los precios sean justos.</p>
+      </div>
+      <div class="conclusion-card reveal reveal-delay-4">
+        <span class="card-num">04</span>
+        <p>Desde el enfoque de los Sistemas Complejos se observan todos los agentes (actores o nodos) para una mejor comprensión del problema y cómo se relacionan.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- ══ PANTALLA 1: REGISTRO ══ -->
-  <div class="screen" id="s1">
-    <div class="hdr" style="background:#0F6E56">
-      <button class="back-btn" onclick="go(0)">←</button>
-      <div>
-        <p class="hdr-title">Registro del productor</p>
-        <p class="hdr-sub">Paso 1 de 3</p>
-      </div>
-    </div>
-    <div class="step-dots">
-      <div class="sdot on"></div>
-      <div class="sdot"></div>
-      <div class="sdot"></div>
-    </div>
-    <div class="body">
-      <div><p class="field-label">Nombre completo</p><div class="field-val">Juan Pérez Hernández</div></div>
-      <div><p class="field-label">Alcaldía / municipio</p><div class="field-val">Tlalpan, CDMX</div></div>
-      <div><p class="field-label">Teléfono</p><div class="field-val">55 1234 5678</div></div>
-      <div><p class="field-label">Años de experiencia</p><div class="field-val">15 años</div></div>
-      <div>
-        <p class="field-label">¿Recibe apoyos gubernamentales?</p>
-        <div style="display:flex;gap:8px;margin-top:4px">
-          <div style="flex:1;text-align:center;padding:8px;border-radius:10px;background:#0F6E56;color:#E1F5EE;font-size:.8rem;font-weight:600;cursor:pointer">Sí</div>
-          <div style="flex:1;text-align:center;padding:8px;border-radius:10px;border:.5px solid #9FE1CB;color:#0F6E56;font-size:.8rem;cursor:pointer">No</div>
-        </div>
-      </div>
-      <div>
-        <p class="field-label">Tipo de tenencia</p>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
-          <span class="tag" style="background:#E1F5EE;color:#085041">Propia ✓</span>
-          <span class="tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Ejidal</span>
-          <span class="tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Rentada</span>
-        </div>
-      </div>
-      <button class="btn-main" style="background:#0F6E56" onclick="go(2)">Siguiente →</button>
-    </div>
-  </div>
-
-  <!-- ══ PANTALLA 2: CAPTURA ══ -->
-  <div class="screen" id="s2">
-    <div class="hdr" style="background:#BA7517">
-      <button class="back-btn" onclick="go(0)" style="background:rgba(255,255,255,.15)">←</button>
-      <div>
-        <p class="hdr-title">Captura del ciclo</p>
-        <p class="hdr-sub">Ciclo PV 2024</p>
-      </div>
-    </div>
-    <div class="step-dots">
-      <div class="sdot" style="background:#FAC775"></div>
-      <div class="sdot on" style="background:#BA7517;width:20px;border-radius:4px"></div>
-      <div class="sdot" style="background:#FAC775"></div>
-    </div>
-    <div class="body">
-      <div>
-        <p class="field-label">Cultivo sembrado</p>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
-          <span class="tag" style="background:#0F6E56;color:#E1F5EE">Milpa ✓</span>
-          <span class="tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Maíz</span>
-          <span class="tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Frijol</span>
-          <span class="tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Otro</span>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div><p class="field-label">Hectáreas</p><div class="field-val">0.80 ha</div></div>
-        <div><p class="field-label">Modalidad</p><div class="field-val">Temporal</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div><p class="field-label">Tipo de semilla</p><div class="field-val">Criolla</div></div>
-        <div><p class="field-label">Ciclo</p><div class="field-val">PV 2024</div></div>
-      </div>
-      <div class="card" style="border-color:#FAC775">
-        <p class="card-title" style="color:#633806">💰 Costos del ciclo</p>
-        <div class="cost-row"><span>Preparación terreno</span><span>$6,000</span></div>
-        <div class="cost-row"><span>Semilla + insumos</span><span>$5,200</span></div>
-        <div class="cost-row"><span>Fertilizantes (2 aplic.)</span><span>$4,500</span></div>
-        <div class="cost-row"><span>Mano de obra</span><span>$3,500</span></div>
-        <div class="cost-row total"><span>Total</span><span>$19,200</span></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div><p class="field-label">Producción (ton)</p><div class="field-val">1.32 t/ha</div></div>
-        <div><p class="field-label">Precio venta</p><div class="field-val">$7,390/t</div></div>
-      </div>
-      <div>
-        <p class="field-label">¿Hubo siniestro?</p>
-        <div style="display:flex;gap:8px;margin-top:4px">
-          <div style="flex:1;text-align:center;padding:8px;border-radius:10px;border:.5px solid #9FE1CB;color:#0F6E56;font-size:.8rem;cursor:pointer">Sí</div>
-          <div style="flex:1;text-align:center;padding:8px;border-radius:10px;background:#0F6E56;color:#E1F5EE;font-size:.8rem;font-weight:600;cursor:pointer">No ✓</div>
-        </div>
-      </div>
-      <button class="btn-main" style="background:#BA7517" onclick="go(3)">Guardar ciclo ✓</button>
-    </div>
-  </div>
-
-  <!-- ══ PANTALLA 3: TABLERO ══ -->
-  <div class="screen" id="s3">
-    <div class="hdr" style="background:#27500A">
-      <svg width="28" height="28" viewBox="0 0 100 100" style="flex-shrink:0" aria-label="Logo Cintli pequeño">
-        <rect width="100" height="100" rx="16" fill="#173404"/>
-        <rect x="46" y="10" width="8" height="15" rx="3" fill="#97C459"/>
-        <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#97C459"/>
-        <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#97C459"/>
-        <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
-        <circle cx="44" cy="38" r="3.5" fill="#BA7517"/>
-        <circle cx="44" cy="50" r="3.5" fill="#BA7517"/>
-        <circle cx="44" cy="62" r="3.5" fill="#BA7517"/>
-        <circle cx="56" cy="38" r="3.5" fill="#EF9F27"/>
-        <circle cx="56" cy="50" r="3.5" fill="#EF9F27"/>
-        <circle cx="56" cy="62" r="3.5" fill="#EF9F27"/>
-      </svg>
-      <div style="flex:1">
-        <p style="color:#C0DD97;font-size:.92rem;font-weight:500">Hola, Juan</p>
-        <p style="color:#97C459;font-size:.68rem">Ciclo PV 2024 · Tlalpan</p>
-      </div>
-      <span style="background:#3B6D11;color:#C0DD97;font-size:.65rem;padding:3px 9px;border-radius:20px;font-weight:500">Activo</span>
-    </div>
-    <div class="body">
-      <div class="metric-row">
-        <div class="metric" style="background:#E1F5EE">
-          <p class="val" style="color:#085041">$43,368</p>
-          <p class="lbl" style="color:#0F6E56">Utilidad neta</p>
-        </div>
-        <div class="metric" style="background:#EAF3DE">
-          <p class="val" style="color:#27500A">201.7%</p>
-          <p class="lbl" style="color:#3B6D11">ROI del ciclo</p>
-        </div>
-      </div>
-      <div class="metric-row">
-        <div class="metric" style="background:#FAEEDA">
-          <p class="val" style="color:#633806">1.32 t</p>
-          <p class="lbl" style="color:#854F0B">Rendimiento/ha</p>
-        </div>
-        <div class="metric" style="background:#FAECE7">
-          <p class="val" style="color:#712B13">0%</p>
-          <p class="lbl" style="color:#993C1D">Siniestro</p>
-        </div>
-      </div>
-      <div class="card" style="border-color:#C0DD97">
-        <p class="card-title">📊 Producción histórica (ton)</p>
-        <div class="bar-wrap">
-          <div class="bar" style="height:30px;background:#9FE1CB"><span>21</span></div>
-          <div class="bar" style="height:24px;background:#5DCAA5"><span>22</span></div>
-          <div class="bar" style="height:42px;background:#1D9E75"><span>23</span></div>
-          <div class="bar" style="height:36px;background:#085041"><span>24</span></div>
-        </div>
-        <div class="bar-labels">
-          <span>2021</span><span>2022</span><span>2023</span><span>2024</span>
-        </div>
-      </div>
-      <div class="alert-box" style="background:#FAEEDA">
-        <span class="alert-icon">💡</span>
-        <span class="alert-text" style="color:#633806">Tu precio/ha supera 3x al monocultivo de maíz. Considera aumentar la superficie de frijol.</span>
-      </div>
-      <div class="card" style="border-color:#FAC775">
-        <p class="card-title" style="color:#633806">💰 Tu precio vs SEGALMEX</p>
-        <div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:3px">
-          <span style="color:#0F6E56">Tu precio maíz</span><span style="color:#085041;font-weight:600">$7,390/ton</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:6px">
-          <span style="color:#BA7517">Garantía SEGALMEX</span><span style="color:#633806;font-weight:600">$5,840/ton</span>
-        </div>
-        <div class="progress-bar" style="background:#EAF3DE">
-          <div class="progress-fill" style="width:76%;background:#3B6D11"></div>
-        </div>
-        <p style="font-size:.65rem;color:#3B6D11;margin-top:3px">26.5% sobre precio de garantía</p>
-      </div>
-    </div>
-    <div class="bottom-nav">
-      <div class="bnav-item" onclick="go(2)"><span class="bnav-icon">➕</span><span class="bnav-label">Capturar</span></div>
-      <div class="bnav-item on"><span class="bnav-icon" style="color:#0F6E56">📊</span><span class="bnav-label">Tablero</span></div>
-      <div class="bnav-item" onclick="go(4)"><span class="bnav-icon">🏪</span><span class="bnav-label">Mercado</span></div>
-      <div class="bnav-item"><span class="bnav-icon">👤</span><span class="bnav-label">Perfil</span></div>
-    </div>
-  </div>
-
-  <!-- ══ PANTALLA 4: MERCADO ══ -->
-  <div class="screen" id="s4">
-    <div class="hdr" style="background:#993C1D">
-      <svg width="26" height="26" viewBox="0 0 100 100" style="flex-shrink:0" aria-label="Logo Cintli rojo">
-        <rect width="100" height="100" rx="16" fill="#712B13"/>
-        <rect x="46" y="10" width="8" height="15" rx="3" fill="#F0997B"/>
-        <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#F0997B"/>
-        <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#F0997B"/>
-        <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
-        <circle cx="44" cy="38" r="3.5" fill="#993C1D"/>
-        <circle cx="44" cy="50" r="3.5" fill="#993C1D"/>
-        <circle cx="44" cy="62" r="3.5" fill="#993C1D"/>
-        <circle cx="56" cy="38" r="3.5" fill="#D85A30"/>
-        <circle cx="56" cy="50" r="3.5" fill="#D85A30"/>
-        <circle cx="56" cy="62" r="3.5" fill="#D85A30"/>
-      </svg>
-      <div>
-        <p class="hdr-title">Mercado Cintli</p>
-        <p class="hdr-sub">Tlalpan y zona sur CDMX</p>
-      </div>
-    </div>
-    <div class="body">
-      <div style="display:flex;gap:7px">
-        <div class="search-bar">🔍 Buscar producto...</div>
-        <div class="filter-btn" style="border:.5px solid #9FE1CB">⚙️</div>
-      </div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap">
-        <span class="tag" style="background:#0F6E56;color:#E1F5EE">Todos</span>
-        <span class="tag" style="background:#EAF3DE;color:#27500A">🌽 Maíz</span>
-        <span class="tag" style="background:#FAEEDA;color:#633806">🫓 Tortilla</span>
-        <span class="tag" style="background:#E1F5EE;color:#085041">🫘 Frijol</span>
-        <span class="tag" style="background:#FAECE7;color:#712B13">🌿 Elote</span>
-      </div>
-      <div class="market-item">
-        <div class="mthumb" style="background:#EAF3DE;font-size:1.4rem">🌽</div>
-        <div style="flex:1">
-          <p class="mname">Maíz criollo blanco</p>
-          <p class="mdet">San Miguel Topilejo · 500 kg disp.</p>
-          <span class="pill" style="background:#E1F5EE;color:#085041">Disponible</span>
-        </div>
-        <p class="mprice">$7.80/kg</p>
-      </div>
-      <div class="market-item">
-        <div class="mthumb" style="background:#FAEEDA;font-size:1.4rem">🫘</div>
-        <div style="flex:1">
-          <p class="mname">Frijol negro temporal</p>
-          <p class="mdet">Tlalpan · 120 kg disp.</p>
-          <span class="pill" style="background:#E1F5EE;color:#085041">Disponible</span>
-        </div>
-        <p class="mprice">$28/kg</p>
-      </div>
-      <div class="market-item">
-        <div class="mthumb" style="background:#FAECE7;font-size:1.4rem">🫓</div>
-        <div style="flex:1">
-          <p class="mname">Tortilla artesanal</p>
-          <p class="mdet">Topilejo · producción diaria</p>
-          <span class="pill" style="background:#FAEEDA;color:#633806">Bajo pedido</span>
-        </div>
-        <p class="mprice">$22/kg</p>
-      </div>
-      <div class="market-item">
-        <div class="mthumb" style="background:#EAF3DE;font-size:1.4rem">🌿</div>
-        <div style="flex:1">
-          <p class="mname">Elote de milpa</p>
-          <p class="mdet">Tlalpan · temporada jun-ago</p>
-          <span class="pill" style="background:#FAEEDA;color:#633806">Próximamente</span>
-        </div>
-        <p class="mprice">$12/pza</p>
-      </div>
-      <button class="btn-main" style="background:#993C1D" onclick="go(2)">➕ Publicar mi producto</button>
-    </div>
-    <div class="bottom-nav">
-      <div class="bnav-item" onclick="go(2)"><span class="bnav-icon">➕</span><span class="bnav-label">Capturar</span></div>
-      <div class="bnav-item" onclick="go(3)"><span class="bnav-icon">📊</span><span class="bnav-label">Tablero</span></div>
-      <div class="bnav-item on"><span class="bnav-icon" style="color:#0F6E56">🏪</span><span class="bnav-label">Mercado</span></div>
-      <div class="bnav-item"><span class="bnav-icon">👤</span><span class="bnav-label">Perfil</span></div>
-    </div>
-  </div>
-
-</div>
-
-<p style="font-size:.75rem;color:#5DCAA5;text-align:center;margin-top:.5rem">Usa los botones de arriba para navegar entre pantallas</p>
+<footer class="footer">
+  <p>Sistema Milpa · Alcaldía Tlalpan · CDMX · 2003-2024</p>
+</footer>
 
 <script>
-function go(n){
-  document.querySelectorAll('.screen').forEach(function(s,i){s.classList.toggle('active',i===n)});
-  document.querySelectorAll('#navbtns button').forEach(function(b,i){b.classList.toggle('active',i===n)});
+function pgo(n){
+  document.querySelectorAll('.p-screen').forEach(function(s,i){ s.classList.toggle('active',i===n); });
+  document.querySelectorAll('.p-nav button').forEach(function(b,i){ b.classList.toggle('on',i===n); });
 }
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+reveals.forEach(function(el){ obs.observe(el); });
 </script>
 </body>
 </html>
