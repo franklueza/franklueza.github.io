@@ -1450,9 +1450,6 @@ button {
 
 /* Responsive Evaluación */
 @media (max-width: 900px) {
-    .fit-container {
-        padding: 40px 24px;
-    }
     
     .fit-grid {
         grid-template-columns: 1fr;
