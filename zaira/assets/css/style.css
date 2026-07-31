@@ -1247,7 +1247,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 80px 60px 40px;
+    
     box-sizing: border-box;
 }
 
@@ -1266,6 +1266,9 @@ button {
     margin-top: 24px;
 }
 
+.about-inter{
+    padding: 30px 0 20px 30px
+}
 /* Responsive Acerca de la Terapeuta */
 @media (max-width: 1024px) {
     .about-container {
