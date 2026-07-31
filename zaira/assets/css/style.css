@@ -1583,3 +1583,306 @@ button {
     }
 }
 
+/* =========================================
+   12. SECCIÓN FAQ (PREGUNTAS FRECUENTES)
+========================================= */
+.faq-section {
+    background-color: #FFF9F4; /* Fondo crema */
+    padding: 0; 
+    overflow: hidden;
+}
+
+.faq-container {
+    display: flex;
+    align-items: stretch; /* Asegura que la columna de texto y la imagen midan lo mismo */
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Columna de la Imagen */
+.faq-image-col {
+    flex: 0 0 50%;
+    display: flex;
+}
+
+.faq-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*object-position: right center;  Alinea la imagen hacia la curva */
+}
+
+/* Columna del Texto y Acordeón */
+.faq-content-col {
+    flex: 0 0 50%;
+    padding: 80px 80px 80px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.faq-accordion {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+/* Cada pregunta (Cajita blanca) */
+.faq-item {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    overflow: hidden;
+}
+
+/* Botón de la pregunta */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #52466B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #F8F6F1;
+}
+
+/* Icono de "+" */
+.faq-icon {
+    font-size: 24px;
+    font-weight: 400;
+    color: #52466B;
+    transition: transform 0.3s ease; /* Animación al girar */
+}
+
+/* Respuesta oculta por defecto */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 24px;
+}
+
+.faq-answer p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+/* Clases activas (cuando se abre la pregunta) */
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Un valor alto para que el texto quepa al expandirse */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Convierte el "+" en una "x" */
+}
+
+/* === RESPONSIVE PARA EL FAQ (MÓVIL) === */
+@media (max-width: 1024px) {
+    .faq-container {
+        flex-direction: column; /* Apila la imagen arriba y el texto abajo */
+    }
+
+    .faq-image-col, 
+    .faq-content-col {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .faq-photo {
+        height: 400px; /* Le damos una altura fija a la imagen en celular */
+        object-position: center;
+    }
+
+    .faq-content-col {
+        padding: 60px 24px; /* Ajustamos márgenes para celular */
+    }
+}
+
+/* =========================================
+   13. BANNER CTA FINAL
+========================================= */
+.final-cta-section {
+    padding: 60px 24px 80px 24px;
+    background-color: #FFF9F4; /* Fondo crema para integrar con el FAQ */
+}
+
+.final-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.final-cta-content {
+    background-color: #52466B; /* Fondo morado oscuro */
+    border-radius: 50px; /* Bordes de píldora */
+    padding: 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Envoltura del círculo de la rama */
+.cta-icon-wrapper {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borde blanco sutil */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.cta-branch-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Si la rama original no es blanca, esta línea la vuelve blanca: */
+    filter: brightness(0) invert(1); 
+}
+
+/* Área de texto */
+.cta-text {
+    flex-grow: 1;
+    color: #FFFFFF;
+}
+
+.cta-text h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.cta-text p {
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.cta-button {
+    flex-shrink: 0;
+}
+
+/* Responsive Banner CTA */
+@media (max-width: 1024px) {
+    .final-cta-content {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 40px; /* Reducimos la curva en celular para que no se vea extraño */
+        padding: 40px 30px;
+    }
+}
+
+
+/* =========================================
+   14. FOOTER
+========================================= */
+.main-footer {
+    background-color: #FFF9F4; /* Fondo crema unificado */
+    padding: 40px 24px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo-img {
+    height: 45px;
+    width: auto;
+}
+
+/* Círculos de redes sociales */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #52466B;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: #7AC6BA; /* Cambia a turquesa al pasar el mouse */
+    transform: translateY(-3px);
+}
+
+/* Textos de la derecha */
+.footer-info {
+    text-align: right;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #52466B;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #7AC6BA;
+}
+
+.separator {
+    color: #CCC;
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
