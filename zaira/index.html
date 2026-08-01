@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="page-emdr">
 <!-- ============ HEADER / MENU ============ -->
 <header class="main-header" id="mainHeader">
     <div class="header-container">
@@ -697,35 +697,97 @@
     </div>
 </section>
 
-<!-- ============ 14. FOOTER ============ -->
-<footer class="main-footer">
-    <div class="footer-container">
+<!-- ============ 14. FOOTER (ACTUALIZADO) ============ -->
+<footer class="site-footer">
+    <div class="site-footer-container">
         
-        <!-- Logo -->
-        <div class="footer-logo">
-            <!-- NOTA: Reemplaza "logo.svg" con la ruta real de tu logo -->
-            <img src="assets/images/Logo_Zaira_miller.svg" alt="Zaira Miller Therapy" class="footer-logo-img">
-        </div>
-
-        <!-- Redes Sociales -->
-        <div class="footer-social">
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-
-        <!-- Copyright y Enlaces Legales -->
-        <div class="footer-info">
-            <p>&copy; 2026 Zaira Miller Therapy, PLLC. Todos los derechos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Política de privacidad</a>
-                <span class="separator">|</span>
-                <a href="#">Términos de servicio</a>
+        <div class="footer-top-grid">
+            
+            <!-- Columna Izquierda: Información de la Terapeuta -->
+            <div class="footer-col-info">
+                <h3>Zaira Miller, M.S., LPC, NCC</h3>
+                <p>Psicoterapeuta bilingüe</p>
+                <p>Licensed Professional Counselor (LPC) en Texas</p>
+                <p>Terapeuta certificada en EMDR por EMDRIA</p>
+                <p>Zaira Miller Counseling PLLC</p>
+                
+                <p class="footer-disclaimer-text">
+                    Terapia virtual en español e inglés para personas adultas que se encuentren físicamente en Texas al momento de cada sesión.
+                </p>
             </div>
+
+            <!-- Columna Central: Navegación y Documentos -->
+            <div class="footer-col-links">
+                
+                <div class="footer-nav-section">
+                    <h4>Explora</h4>
+                    <ul>
+                        <li><a href="#">Inicio <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Acerca de Zaira <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Servicios de terapia <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Intensivos de EMDR <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Especialidades <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Recursos y artículos <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Preguntas frecuentes <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Contacto <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-section footer-docs">
+                    <h4>Información importante</h4>
+                    <ul>
+                        <li><a href="#">Aviso de prácticas de privacidad <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Estimación de buena fe <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <li><a href="#">Política de privacidad <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li>
+                        <!-- Términos de uso comentados por si decides agregarlos después -->
+                        <!-- <li><a href="#">Términos de uso <i class="fa-solid fa-chevron-right arrow-icon"></i></a></li> -->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Columna Derecha: Sellos de Verificación -->
+            <div class="footer-col-badges">
+                <h4>Credenciales verificadas</h4>
+                
+                <div class="badges-wrapper">
+                    
+                    <!-- Sello de Psychology Today -->
+                    <div class="badge-item pt-badge">
+                        <!-- Professional verification provided by Psychology Today -->
+                        <a href="https://www.psychologytoday.com/profile/1133993" class="sx-verified-seal"></a>
+                        <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="1133993" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzExMzM5OTM/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="></script>
+                        <!-- End Verification -->
+                    </div>
+
+                    <!-- Sello de EMDRIA (Usando la imagen provista para mejor control responsivo) -->
+                    <div class="badge-item emdr-badge">
+                        <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/129388017" alt="EMDR Certified Therapist">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Línea inferior: Copyright y Descargo de Responsabilidad -->
+        <div class="footer-bottom-bar">
+            <p>&copy; <span id="current-year"></span> Zaira Miller Counseling PLLC. Todos los derechos reservados.</p>
+            <p>Este sitio web ofrece información general y no sustituye la atención profesional ni constituye una relación terapéutica.</p>
         </div>
 
     </div>
 </footer>
+
+<!-- Script para actualizar el año automáticamente -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const yearSpan = document.getElementById("current-year");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+</script>
 <script>
     // 1. Efecto Scroll del Menú
     const header = document.getElementById('mainHeader');
