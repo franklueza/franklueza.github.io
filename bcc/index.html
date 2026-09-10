@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bañuelos Consultores Corporativos (bcc)</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP for animations (we will configure animations later) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+        <div class="header-left">
+            <img src="assets/img/BCC_Logo.png" alt="bcc Logo" class="header-logo">
+            <span class="header-title">Bañuelos<br>Consultores<br>Corporativos</span>
+        </div>
+        <nav class="header-nav">
+            <a href="#inicio" class="active">01. Inicio</a>
+            <a href="#clientes">02. Clientes</a>
+            <a href="#target">03. Target</a>
+            <a href="#servicios">04. Servicios</a>
+        </nav>
+        <!-- Menú Hamburguesa para Móvil -->
+        <button class="hamburger-btn" aria-label="Abrir menú">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <!-- Menú Overlay (Móvil) -->
+    <div class="menu-overlay">
+        <ul class="nav-links">
+            <li><a href="#inicio">01. Inicio</a></li>
+            <li><a href="#clientes">02. Clientes</a></li>
+            <li><a href="#target">03. Target</a></li>
+            <li><a href="#servicios">04. Servicios</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenedor Horizontal para (Hero, Clientes, Target, Servicios) -->
+    <main id="horizontal-container">
+        
+        <!-- Hero Section (Slide 1) -->
+        <section id="inicio" class="hero">
+            <!-- Parte Superior del Hero (Edificio oscuro) -->
+            <div class="hero-top">
+                <div class="hero-left">
+                    <h1 class="hero-main-title">
+                        Bañuelos<br>
+                        <span class="text-yellow">Consultores</span><br>
+                        Corporativos
+                    </h1>
+                    <p class="hero-subtitle">Consultores que impulsan<br>tu crecimiento.</p>
+                    <div class="scroll-indicator">
+                        <span class="mouse-icon">🖱️</span> Desliza para continuar
+                        <div class="scroll-line"></div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <!-- Imagen de un edificio corporativo -->
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Edificio corporativo bcc">
+                    </div>
+                    <!-- Paginación lateral (Desktop) -->
+                    <div class="hero-pagination">
+                        <a href="#inicio" class="active">01</a>
+                        <a href="#clientes">02</a>
+                        <a href="#target">03</a>
+                        <a href="#servicios">04</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte Inferior del Hero (Misión) -->
+            <div class="about-mission-banner">
+                <div class="amb-left">
+                    <div class="amb-content">
+                        <div class="yellow-line"></div>
+                        <h2>¿Qué significa<br>BCC?</h2>
+                        <p>Sinónimo de altos estándares de servicio y calidad. Somos consultores integrales, dedicados a ofrecer soluciones y estrategias dependiendo de las necesidades de nuestros clientes.</p>
+                    </div>
+                </div>
+                <div class="amb-right">
+                    <div class="amb-content">
+                        <div class="yellow-line"></div>
+                        <h2>Misión</h2>
+                        <div class="mission-cols">
+                            <div class="m-col">
+                                <span class="m-num">01</span>
+                                <p>Emitir estados e informes que cumplan leyes.</p>
+                            </div>
+                            <div class="m-col">
+                                <span class="m-num">02</span>
+                                <p>Asegurar la precisión de la información.</p>
+                            </div>
+                            <div class="m-col">
+                                <span class="m-num">03</span>
+                                <p>Garantizar un servicio personalizado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principales Clientes (Slide 2) -->
+        <section id="clientes" class="hero target-slide">
+            <!-- Parte Superior -->
+            <div class="hero-top">
+                <div class="hero-left target-hero-left">
+                    <div class="yellow-line"></div>
+                    <h2 class="hero-main-title" style="margin-bottom: 20px;">
+                        <span class="text-yellow" style="font-size: 2.5rem; display: block; margin-bottom: 10px;">02</span>
+                        Principales Clientes
+                    </h2>
+                    <p class="hero-subtitle" style="font-size: 1.1rem; max-width: 450px;">Empresas que confían en nuestro trabajo.</p>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <!-- Imagen Principales Clientes -->
+                        <img src="assets/img/clientes.jpg" alt="Principales Clientes">
+                    </div>
+                    <!-- Paginación lateral -->
+                    <div class="hero-pagination">
+                        <a href="#inicio">01</a>
+                        <a href="#clientes" class="active">02</a>
+                        <a href="#target">03</a>
+                        <a href="#servicios">04</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte Inferior del Clientes -->
+            <div class="clientes-bottom-banner">
+                <div class="cbb-left">
+                    <!-- Imagen de Logos (Fondo oscuro para logos blancos) -->
+                    <img src="assets/img/Logos_Aliados.png" alt="Logos de Clientes" class="clientes-logos-img">
+                </div>
+                <div class="cbb-right">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <p>Nuestra experiencia nos permite colaborar con empresas de distintos sectores, impulsando su crecimiento y competitividad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target (Slide 3) -->
+        <section id="target" class="hero target-slide">
+            <!-- Parte Superior del Target -->
+            <div class="hero-top">
+                <div class="hero-left target-hero-left">
+                    <h2 class="hero-main-title" style="margin-bottom: 20px;">
+                        <span class="text-yellow" style="font-size: 2.5rem; display: block; margin-bottom: 10px;">03</span>
+                        Target
+                    </h2>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <!-- Imagen Target -->
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Gente de negocios en oficina">
+                    </div>
+                    <!-- Paginación lateral -->
+                    <div class="hero-pagination">
+                        <a href="#inicio">01</a>
+                        <a href="#clientes">02</a>
+                        <a href="#target" class="active">03</a>
+                        <a href="#servicios">04</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte Inferior del Target (Banner Blanco) -->
+            <div class="target-bottom-banner">
+                <div class="tbb-left target-text-block">
+                    <p><strong>Mantener la evolución</strong> mediante el uso de tecnología de vanguardia para cumplir con las <strong>actuales y futuras</strong> reformas fiscales y financieras.</p>
+                    <p><strong>Asegurar</strong> la precisión y disponibilidad de la información financiera para el proceso de toma de decisiones corporativas.</p>
+                    <img src="assets/img/Resolucion%20Problemas.png" alt="Resolución de problemas" class="cursive-image">
+                </div>
+                <div class="tbb-right-shapes">
+                    <div class="tbb-orange"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios (Slide 4) -->
+        <section id="servicios" class="hero target-slide">
+            <!-- Parte Superior -->
+            <div class="hero-top">
+                <div class="hero-left target-hero-left">
+                    <h2 class="hero-main-title" style="margin-bottom: 20px;">
+                        <span class="text-yellow" style="font-size: 2.5rem; display: block; margin-bottom: 10px;">04</span>
+                        Servicios
+                    </h2>
+                    <p class="hero-subtitle" style="font-size: 1.1rem; max-width: 450px;">Soluciones integrales para el crecimiento de tu empresa.</p>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-wrapper">
+                        <!-- Imagen Servicios -->
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Servicios Empresariales">
+                    </div>
+                    <!-- Paginación lateral -->
+                    <div class="hero-pagination">
+                        <a href="#inicio">01</a>
+                        <a href="#clientes">02</a>
+                        <a href="#target">03</a>
+                        <a href="#servicios" class="active">04</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte Inferior -->
+            <div class="servicios-bottom-banner">
+                <div class="sbb-left">
+                    <div class="services-list-grid">
+                        <ul class="srv-col">
+                            <li><span class="srv-num">01</span> Administración</li>
+                            <li><span class="srv-num">02</span> Consultoría</li>
+                            <li><span class="srv-num">03</span> Implementación de Sistemas</li>
+                            <li><span class="srv-num">04</span> Capacitación</li>
+                            <li><span class="srv-num">05</span> Contabilidad</li>
+                        </ul>
+                        <ul class="srv-col">
+                            <li><span class="srv-num">06</span> Tesorería</li>
+                            <li><span class="srv-num">07</span> Gestoría</li>
+                            <li><span class="srv-num">08</span> Nómina</li>
+                            <li><span class="srv-num">09</span> Impuestos</li>
+                            <li><span class="srv-num">10</span> Facturación</li>
+                        </ul>
+                        <ul class="srv-col">
+                            <li><span class="srv-num">11</span> Recursos Humanos</li>
+                            <li><span class="srv-num">12</span> Estrategia Financiera</li>
+                            <li><span class="srv-num">13</span> Almacenamiento</li>
+                            <li><span class="srv-num">14</span> Distribución y Logística</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sbb-right">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--color-white)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Cada servicio está diseñado para responder a las necesidades específicas de cada cliente.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main> <!-- Fin Contenedor Horizontal -->
+
+
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+            </form>
+            <p class="mail-to"><strong>Mail a:</strong> <a href="mailto:alejandrabanuelos@banuelosconsultores.mx">alejandrabanuelos@banuelosconsultores.mx</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="final-slide">
+        <div class="container footer-content-centered">
+            <div class="footer-badge-large">
+                <span class="years-number">40</span>
+                <span class="years-text">años de excelencia<br>1983-2023</span>
+            </div>
+            <div class="footer-info-large">
+                <p>Avenida Río Churubusco 601, Piso 8, Oficina 107<br>
+                Col. Xoco, Alcaldía Benito Juárez, CP 03330, CDMX, México</p>
+                <p class="footer-email">contacto@bcc.com.mx</p>
+            </div>
+            <div class="footer-bottom">
+                <p>© Bañuelos Consultores Corporativos 2023<br>Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Animations & Scripts -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hamburger Menu Logic
+        const hamburgerBtn = document.querySelector(".hamburger-btn");
+        const menuOverlay = document.querySelector(".menu-overlay");
+        const menuLinks = document.querySelectorAll(".menu-overlay .nav-links a");
+
+        if(hamburgerBtn) {
+            hamburgerBtn.addEventListener("click", () => {
+                hamburgerBtn.classList.toggle("active");
+                menuOverlay.classList.toggle("active");
+            });
+        }
+
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburgerBtn.classList.remove("active");
+                menuOverlay.classList.remove("active");
+            });
+        });
+
+        // Horizontal Slider Logic
+        const horizontalContainer = document.querySelector("#horizontal-container");
+        if(horizontalContainer) {
+            const hSections = gsap.utils.toArray("#horizontal-container > section");
+            if(hSections.length > 0) {
+                let scrollTween = gsap.to(hSections, {
+                    xPercent: -100 * (hSections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: horizontalContainer,
+                        pin: true,
+                        scrub: 1,
+                        snap: 1 / (hSections.length - 1),
+                        end: () => "+=" + horizontalContainer.offsetWidth
+                    }
+                });
+            }
+        }
+
+        // Animación suave de los elementos (Vertical)
+        const vSections = gsap.utils.toArray("section:not(#horizontal-container > section)");
+        vSections.forEach((sec) => {
+            const content = sec.querySelectorAll(".hero-left > *, .amb-content > *");
+            if(content.length > 0) {
+                gsap.from(content, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sec,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
