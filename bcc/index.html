@@ -248,39 +248,49 @@
 
 
 
-    <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <div class="footer-left">
+                <!-- Logotipo principal de BCC -->
+                <div class="footer-logo-block">
+                    <img src="assets/img/BCC Logo_Final.png" alt="BCC Logo" class="footer-main-logo">
                 </div>
-                <div class="form-group">
-                    <label for="correo">Correo:</label>
-                    <input type="email" id="correo" name="correo" required>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-right">
+                <!-- 40 años (Imagen Original) -->
+                <div class="footer-badge">
+                    <img src="assets/img/BCC%2040_Logo_Final.png" alt="40 Años BCC" class="badge-40-img">
                 </div>
-            </form>
-            <p class="mail-to"><strong>Mail a:</strong> <a href="mailto:alejandrabanuelos@banuelosconsultores.mx">alejandrabanuelos@banuelosconsultores.mx</a></p>
+                
+                <!-- Dirección e Información -->
+                <div class="footer-address">
+                    Avenida Río Churubusco 601<br>
+                    Piso 8, Oficina 107, Col. Xoco<br>
+                    Alcaldía Benito Juárez<br>
+                    CP 03330, CDMX, México<br>
+                    contacto@bcc.com.mx
+                </div>
+                
+                <!-- Partners -->
+                <div class="footer-partners">
+                    <img src="assets/img/Mitikah_Logo_FINAL.png" alt="MÍTIKAH" class="partner-mitikah">
+                    <span class="partner-wework">wework.</span>
+                </div>
+                
+                <!-- Social -->
+                <div class="footer-social">
+                    <a href="#" class="linkedin-btn">in</a>
+                    <span class="social-text">Bañuelos Consultores Corporativos</span>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="final-slide">
-        <div class="container footer-content-centered">
-            <div class="footer-badge-large">
-                <span class="years-number">40</span>
-                <span class="years-text">años de excelencia<br>1983-2023</span>
-            </div>
-            <div class="footer-info-large">
-                <p>Avenida Río Churubusco 601, Piso 8, Oficina 107<br>
-                Col. Xoco, Alcaldía Benito Juárez, CP 03330, CDMX, México</p>
-                <p class="footer-email">contacto@bcc.com.mx</p>
-            </div>
-            <div class="footer-bottom">
-                <p>© Bañuelos Consultores Corporativos 2023<br>Todos los derechos reservados</p>
-            </div>
+        
+        <div class="footer-bottom-bar">
+            © Bañuelos Consultores Corporativos 2023 / Todos los derechos reservados
         </div>
     </footer>
 
@@ -307,29 +317,112 @@
             });
         });
 
-        // Horizontal Slider Logic
-        const horizontalContainer = document.querySelector("#horizontal-container");
-        if(horizontalContainer) {
-            const hSections = gsap.utils.toArray("#horizontal-container > section");
-            if(hSections.length > 0) {
-                let scrollTween = gsap.to(hSections, {
-                    xPercent: -100 * (hSections.length - 1),
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: horizontalContainer,
-                        pin: true,
-                        scrub: 1,
-                        snap: 1 / (hSections.length - 1),
-                        end: () => "+=" + horizontalContainer.offsetWidth
-                    }
-                });
+        // Media Query para activar el slider horizontal solo en Desktop
+        let mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1025px)", () => {
+            // Horizontal Slider Logic
+            const horizontalContainer = document.querySelector("#horizontal-container");
+            let horizontalScrollTrigger = null;
+
+            if(horizontalContainer) {
+                const hSections = gsap.utils.toArray("#horizontal-container > section");
+                if(hSections.length > 0) {
+                    let scrollTween = gsap.to(hSections, {
+                        xPercent: -100 * (hSections.length - 1),
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: horizontalContainer,
+                            pin: true,
+                            scrub: 1,
+                            snap: 1 / (hSections.length - 1),
+                            end: () => "+=" + horizontalContainer.offsetWidth,
+                            id: "hScroll"
+                        }
+                    });
+                    
+                    horizontalScrollTrigger = ScrollTrigger.getById("hScroll");
+                }
             }
-        }
+
+            // Navegación suave para los enlaces del menú y la paginación lateral
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            
+            const smoothScrollHandler = function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetSection = document.querySelector(targetId);
+                if (!targetSection) return;
+
+                // Si la sección destino está dentro del contenedor horizontal
+                if (horizontalContainer && horizontalContainer.contains(targetSection) && horizontalScrollTrigger) {
+                    const hSectionsArray = gsap.utils.toArray("#horizontal-container > section");
+                    const index = hSectionsArray.indexOf(targetSection);
+                    
+                    if (index !== -1) {
+                        // Calcula la posición de scroll vertical
+                        const st = horizontalScrollTrigger;
+                        const scrollPos = st.start + (st.end - st.start) * (index / (hSectionsArray.length - 1));
+                        
+                        window.scrollTo({
+                            top: scrollPos,
+                            behavior: 'smooth'
+                        });
+                        return;
+                    }
+                }
+                
+                // Scroll por defecto para otras secciones verticales
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            };
+
+            anchorLinks.forEach(anchor => {
+                anchor.addEventListener('click', smoothScrollHandler);
+            });
+
+            // Cleanup function para cuando se pasa a mobile
+            return () => {
+                anchorLinks.forEach(anchor => anchor.removeEventListener('click', smoothScrollHandler));
+                if(horizontalScrollTrigger) horizontalScrollTrigger.kill();
+            };
+        });
+
+        // Para mobile, activamos el smooth scroll nativo genérico
+        mm.add("(max-width: 1024px)", () => {
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            const mobileScrollHandler = function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    // Calculamos el offset del header móvil (aprox 70px)
+                    const headerOffset = 70;
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            };
+            
+            anchorLinks.forEach(anchor => {
+                anchor.addEventListener('click', mobileScrollHandler);
+            });
+            
+            return () => {
+                anchorLinks.forEach(anchor => anchor.removeEventListener('click', mobileScrollHandler));
+            };
+        });
 
         // Animación suave de los elementos (Vertical)
-        const vSections = gsap.utils.toArray("section:not(#horizontal-container > section)");
+        const vSections = gsap.utils.toArray("section");
         vSections.forEach((sec) => {
-            const content = sec.querySelectorAll(".hero-left > *, .amb-content > *");
+            const content = sec.querySelectorAll(".hero-left > *, .hero-subtitle, .target-text-block > p");
             if(content.length > 0) {
                 gsap.from(content, {
                     y: 40,

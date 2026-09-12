@@ -751,115 +751,146 @@ img {
 }
 
 /* =========================================
-   Contacto
+   Footer (New Design)
    ========================================= */
-.contact {
-    background-color: var(--color-white);
-    padding: 80px 0;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.contact-form {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-    max-width: 800px;
-}
-
-.form-group {
-    flex: 1;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.form-group input {
-    width: 100%;
-    background-color: var(--color-black);
+.site-footer {
+    background-color: #000000;
     color: var(--color-white);
-    border: none;
-    padding: 15px;
-    font-size: 1rem;
-}
-
-.mail-to {
-    font-size: 1.1rem;
-}
-
-.mail-to a {
-    color: var(--color-dark);
-    text-decoration: none;
-}
-
-/* =========================================
-   Footer (Final Slide)
-   ========================================= */
-.final-slide {
-    background-color: var(--color-white);
-    color: var(--color-dark);
+    padding: 80px 20px 40px 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.footer-layout {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-
-.footer-content-centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 800px;
-}
-
-.footer-badge-large {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-purple);
-}
-
-.footer-badge-large .years-number {
-    font-size: 8rem;
-    font-weight: 800;
-    line-height: 0.9;
-}
-
-.footer-badge-large .years-text {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.footer-info-large {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--color-dark);
-}
-
-.footer-email {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-purple);
-    margin-top: 20px;
-}
-
-.footer-bottom {
-    margin-top: 50px;
-    font-size: 0.9rem;
-    color: #888;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
+    max-width: 1080px;
+    margin: 0 auto 50px auto;
     width: 100%;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrado verticalmente en la columna */
+    padding-right: 50px;
+}
+
+.footer-logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-main-logo {
+    width: 280px;
+    margin-top: 0; 
+    object-fit: contain;
+}
+
+.footer-divider {
+    width: 1px;
+    background-color: var(--color-teal);
+    opacity: 0.5;
+    margin: 0 10px;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    text-align: left;
+    justify-content: center; /* Alineado al centro también para mantener proporción */
+}
+
+.footer-badge {
+    margin-bottom: 30px;
+}
+
+.badge-40-img {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-address {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #d0d0d0;
+}
+
+.footer-partners {
+    display: flex;
+    flex-direction: row; /* Uno al lado del otro */
+    align-items: center;
+    gap: 30px; /* Separación horizontal */
+    margin-bottom: 30px;
+}
+
+.partner-mitikah {
+    width: 110px;
+}
+
+.partner-wework {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    letter-spacing: -1px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.linkedin-btn {
+    background-color: #56b2b7; /* teal color matching the icon */
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-text {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.footer-bottom-bar {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    padding-top: 25px;
+    margin-top: 15px;
+}
+
+.footer-bottom-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 800px;
+    height: 1px;
+    background-color: #5DC2B2;
 }
 
 /* =========================================
@@ -900,23 +931,166 @@ img {
         transform: translateY(-10.5px) rotate(-45deg);
     }
     
-    .hero-left {
+    /* Disarm Horizontal Slider for Mobile */
+    #horizontal-container {
         width: 100%;
-        padding: 0 40px;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: visible;
+    }
+    
+    section.horizontal-slide, section.hero {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .hero-top {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .hero-left, .hero-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-left {
+        padding: 100px 30px 40px 30px !important;
         align-items: center;
         text-align: center;
     }
-    
-    .hero-main-title {
-        font-size: 3rem;
+
+    .yellow-line {
+        display: none !important;
     }
 
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-main-title::before {
+        display: none !important;
+    }
+    
+    .scroll-indicator {
+        display: none !important;
+    }
+
+    .yellow-accent-diagonal {
+        display: none !important;
+    }
+    
     .hero-right {
-        display: none;
+        display: block; /* Show the image that was hidden before */
+        position: relative;
+    }
+
+    .hero-image-wrapper {
+        height: 35vh; /* Fixed height for mobile hero images */
+        width: 100%;
+        clip-path: none !important; /* Quita el corte diagonal de escritorio */
+        display: flex;
     }
     
     .hero-pagination {
         display: none;
+    }
+
+    /* Banners Inferiores (Blanco y colores) */
+    .about-mission-banner, 
+    .target-bottom-banner, 
+    .clientes-bottom-banner, 
+    .servicios-bottom-banner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .amb-left, .amb-center, .amb-right,
+    .tbb-left, .cbb-left, .cbb-right,
+    .sbb-left, .sbb-right {
+        position: relative !important;
+        clip-path: none !important;
+        width: 100%;
+        height: auto;
+        padding: 40px 30px !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Target specific fix */
+    .target-hero-left {
+        padding-top: 100px !important; /* Quita el padding gigante de escritorio */
+    }
+
+    .tbb-right-shapes {
+        display: none; /* Hide the decorative geometry on mobile for cleanliness */
+    }
+
+    /* Servicios specific fix */
+    .sbb-left {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    
+    .services-list-grid {
+        flex-direction: column;
+        gap: 15px; /* Reducido para que fluya como una sola lista continua */
+    }
+
+    .srv-col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .srv-col li {
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    /* Footer Mobile */
+    .footer-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        align-items: center;
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .footer-logo-block {
+        align-items: center;
+    }
+
+    .footer-divider {
+        width: 80%;
+        height: 1px;
+        margin: 30px 0;
+    }
+
+    .footer-right {
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .footer-badge {
+        justify-content: center;
+    }
+
+    .footer-partners {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
