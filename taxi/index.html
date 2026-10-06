@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Confort Taxi Service · Tours privados en CDMX</title>
+<style>
+:root{--bg:#fffaf3;--ink:#14213d;--mut:#51586b;--card:#fff;--line:#e6dfd2;--pink:#e5287a;--blue:#1f3a93;--gold:#f4b400;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1426;--ink:#f3efe6;--mut:#aab0c4;--card:#18203a;--line:#2a3354}}
+:root[data-theme="dark"]{--bg:#0f1426;--ink:#f3efe6;--mut:#aab0c4;--card:#18203a;--line:#2a3354}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Trebuchet MS","Segoe UI",system-ui,sans-serif}
+h1,h2,h3{font-family:"Arial Black","Segoe UI",system-ui,sans-serif;line-height:1.1;margin:0}
+.w{max-width:1040px;margin:auto;padding:0 20px}
+.check{height:14px;background:repeating-linear-gradient(90deg,var(--ink) 0 14px,var(--bg) 14px 28px)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font:900 18px "Arial Black",sans-serif;display:flex;gap:8px;align-items:center}
+.logo i{background:var(--pink);color:#fff;border-radius:6px;padding:2px 7px;font-style:normal;font-size:13px}
+.lang{border:2px solid var(--ink);background:none;color:var(--ink);border-radius:20px;padding:4px 14px;font-weight:700;cursor:pointer}
+.hero{display:grid;gap:28px;align-items:center;padding:24px 0 56px}
+@media(min-width:800px){.hero{grid-template-columns:1.1fr 1fr}}
+h1{font-size:clamp(34px,6vw,58px)}
+.hero p{color:var(--mut);max-width:46ch}
+.btn{display:inline-flex;gap:10px;align-items:center;background:#1fa855;color:#fff;font-weight:700;text-decoration:none;padding:14px 22px;border-radius:40px;box-shadow:0 4px 0 #14783b}
+.btn.alt{background:none;color:var(--ink);box-shadow:none;border:2px solid var(--ink)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.scene{border-radius:24px;overflow:hidden;background:linear-gradient(#ffd27a,#ff9d6c 60%,#e5287a);aspect-ratio:4/3}
+.scene svg{width:100%;height:100%;display:block}
+section{padding:48px 0}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:8px}
+.sub{color:var(--mut);margin:0 0 26px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.tour{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pic{height:150px;display:grid;place-items:center}
+.pic svg{width:84px;height:84px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.tb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tb h3{font-size:20px}.tb p{margin:0;color:var(--mut);font-size:15px}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;font-weight:700}
+.meta a{color:var(--pink);text-decoration:none}
+.why{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.why div{padding:18px;border-left:5px solid var(--gold);background:var(--card);border-radius:0 14px 14px 0}
+.why b{display:block;margin:6px 0 2px}
+.why svg{width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root[data-theme="dark"] .why svg{stroke:var(--gold)}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));counter-reset:s}
+.steps div{counter-increment:s;padding:16px;border:2px dashed var(--line);border-radius:16px}
+.steps div:before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;margin-bottom:6px}
+.rev{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.rev blockquote{margin:0;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.rev .st{color:var(--gold);letter-spacing:2px}
+.rev cite{display:block;margin-top:8px;color:var(--mut);font-size:14px}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{font-weight:700;cursor:pointer}details p{color:var(--mut);margin:8px 0 0}
+.about{display:grid;gap:24px;align-items:center}
+@media(min-width:700px){.about{grid-template-columns:220px 1fr}}
+.face{width:200px;height:200px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--pink));display:grid;place-items:center}
+.face svg{width:110px;fill:#fff}
+footer{background:var(--ink);color:var(--bg);padding:36px 0 90px;text-align:center}
+footer a{color:var(--gold)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#1fa855;display:grid;place-items:center;box-shadow:0 4px 14px #0004;z-index:9}
+.fab svg,.btn svg{width:26px;height:26px;fill:#fff}
+.ph{font-size:13px;color:var(--mut);margin-top:14px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="check"></div>
+<div class="w">
+<nav><div class="logo"><i>CTS</i> Confort Taxi Service</div><button class="lang" id="lang" aria-label="Language">EN</button></nav>
+
+<header class="hero">
+<div>
+<h1 data-es="Conoce la CDMX sin preocuparte por nada." data-en="See Mexico City without a worry.">Conoce la CDMX sin preocuparte por nada.</h1>
+<p data-es="Tours privados con chofer local, auto con aire acondicionado y horarios a tu ritmo. Recojo en tu hotel o en el aeropuerto." data-en="Private tours with a local driver, an air-conditioned car and your own pace. Pickup at your hotel or the airport.">Tours privados con chofer local, auto con aire acondicionado y horarios a tu ritmo. Recojo en tu hotel o en el aeropuerto.</p>
+<div class="cta">
+<a class="btn" href="#wa" data-wa data-es="Cotiza por WhatsApp" data-en="Get a quote on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.4.100.1.100.7-.1 1.300z"/></svg><span>Cotiza por WhatsApp</span></a>
+<a class="btn alt" href="#tours" data-es="Ver tours" data-en="See tours">Ver tours</a>
+</div>
+</div>
+<div class="scene" role="img" aria-label="Ilustración de muestra: taxi frente a una pirámide">
+<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><circle cx="300" cy="90" r="42" fill="#fff6c8"/><path d="M40 210 L170 70 L300 210Z" fill="#b5502e"/><path d="M170 70 L300 210 L230 210Z" fill="#8f3a1f"/><path d="M110 210 L170 145 L230 210Z" fill="#c9683f" opacity=".6"/><rect y="205" width="400" height="95" fill="#2a2f4d"/><rect y="250" width="400" height="6" fill="#f4b400" opacity=".7"/><g transform="translate(95 205)"><path d="M0 52 V32 q0-8 8-10 l30-3 l16-18 h54 l18 18 l30 3 q10 2 10 12 v18z" fill="#fff"/><path d="M52 22 l12-14 h44 l12 14z" fill="#9fd3ff"/><rect x="0" y="24" width="152" height="9" fill="#e5287a"/><rect x="62" y="-2" width="30" height="8" rx="2" fill="#f4b400"/><circle cx="34" cy="54" r="13" fill="#14213d"/><circle cx="118" cy="54" r="13" fill="#14213d"/><circle cx="34" cy="54" r="5" fill="#ccc"/><circle cx="118" cy="54" r="5" fill="#ccc"/></g></svg>
+</div>
+</header>
+</div>
+
+<main>
+<section id="tours"><div class="w">
+<h2 data-es="Elige tu ruta" data-en="Choose your route">Elige tu ruta</h2>
+<p class="sub" data-es="Precios de ejemplo por vehículo (hasta 4 personas). Entradas no incluidas." data-en="Sample prices per vehicle (up to 4 people). Entry tickets not included.">Precios de ejemplo por vehículo (hasta 4 personas). Entradas no incluidas.</p>
+<div class="grid" id="tg"></div>
+</div></section>
+
+<section><div class="w">
+<h2 data-es="Por qué viajar con nosotros" data-en="Why ride with us">Por qué viajar con nosotros</h2><p class="sub"></p>
+<div class="why">
+<div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b data-es="Puntualidad" data-en="On time">Puntualidad</b><span data-es="Te recojo a la hora acordada." data-en="Pickup at the agreed time.">Te recojo a la hora acordada.</span></div>
+<div><svg viewBox="0 0 24 24"><path d="M3 5h18v10H8l-5 4z"/></svg><b data-es="Habla español e inglés" data-en="English & Spanish">Habla español e inglés</b><span data-es="Explico cada lugar y sus historias." data-en="I explain each place and its stories.">Explico cada lugar y sus historias.</span></div>
+<div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg><b data-es="Viaje seguro" data-en="Safe ride">Viaje seguro</b><span data-es="Auto limpio, con seguro y A/C." data-en="Clean, insured, air-conditioned car.">Auto limpio, con seguro y A/C.</span></div>
+<div><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg><b data-es="Evito multitudes" data-en="Beat the crowds">Evito multitudes</b><span data-es="Conozco horarios y atajos." data-en="I know the best times and shortcuts.">Conozco horarios y atajos.</span></div>
+</div></div></section>
+
+<section><div class="w about">
+<div class="face" role="img" aria-label="Foto de muestra del conductor"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.500"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg></div>
+<div><h2 data-es="Hola, soy [Nombre]" data-en="Hi, I'm [Name]">Hola, soy [Nombre]</h2>
+<p data-es="Llevo [X] años manejando en la Ciudad de México. Aquí va una frase personal: por qué te encanta mostrar tu ciudad a los visitantes." data-en="I've been driving in Mexico City for [X] years. A personal line goes here: why you love showing your city to visitors.">Llevo [X] años manejando en la Ciudad de México. Aquí va una frase personal: por qué te encanta mostrar tu ciudad a los visitantes.</p>
+<p class="ph" data-es="* Reemplazar por foto real del chofer y su auto." data-en="* Replace with a real photo of the driver and car.">* Reemplazar por foto real del chofer y su auto.</p></div>
+</div></section>
+
+<section><div class="w">
+<h2 data-es="Cómo funciona" data-en="How it works">Cómo funciona</h2><p class="sub"></p>
+<div class="steps">
+<div><b data-es="Escríbeme" data-en="Message me">Escríbeme</b><br><span data-es="Dime fecha, lugares y personas." data-en="Tell me date, places and group size.">Dime fecha, lugares y personas.</span></div>
+<div><b data-es="Confirmamos" data-en="We confirm">Confirmamos</b><br><span data-es="Te paso precio y horario." data-en="I send price and schedule.">Te paso precio y horario.</span></div>
+<div><b data-es="Te recojo" data-en="Pickup">Te recojo</b><br><span data-es="En tu hotel, Airbnb o aeropuerto." data-en="At your hotel, rental or airport.">En tu hotel, Airbnb o aeropuerto.</span></div>
+<div><b data-es="Disfruta" data-en="Enjoy">Disfruta</b><br><span data-es="Yo manejo, tú exploras." data-en="I drive, you explore.">Yo manejo, tú exploras.</span></div>
+</div></div></section>
+
+<section><div class="w">
+<h2 data-es="Lo que dicen los viajeros" data-en="What travelers say">Lo que dicen los viajeros</h2><p class="sub" data-es="Opiniones de ejemplo; sustituir por reseñas reales." data-en="Sample reviews; replace with real ones.">Opiniones de ejemplo; sustituir por reseñas reales.</p>
+<div class="rev">
+<blockquote><span class="st">★★★★★</span><p data-es="Puntual, amable y nos recomendó dónde comer en Coyoacán. Excelente día." data-en="Punctual, kind, and told us where to eat in Coyoacán. Great day.">Puntual, amable y nos recomendó dónde comer en Coyoacán. Excelente día.</p><cite>— Sarah, USA</cite></blockquote>
+<blockquote><span class="st">★★★★★</span><p data-es="Llegamos a Teotihuacán antes que los autobuses. Valió totalmente la pena." data-en="We reached Teotihuacán before the tour buses. Totally worth it.">Llegamos a Teotihuacán antes que los autobuses. Valió totalmente la pena.</p><cite>— Marc, Canada</cite></blockquote>
+</div></div></section>
+
+<section><div class="w">
+<h2 data-es="Preguntas frecuentes" data-en="FAQ">Preguntas frecuentes</h2><p class="sub"></p>
+<details><summary data-es="¿Esperas mientras visitamos?" data-en="Do you wait while we visit?">¿Esperas mientras visitamos?</summary><p data-es="Sí, el tiempo de espera está incluido en el precio del tour." data-en="Yes, waiting time is included in the tour price.">Sí, el tiempo de espera está incluido en el precio del tour.</p></details>
+<details><summary data-es="¿Cómo pago?" data-en="How do I pay?">¿Cómo pago?</summary><p data-es="Efectivo, transferencia o tarjeta (ajustar según tu cliente)." data-en="Cash, transfer or card (adjust for your client).">Efectivo, transferencia o tarjeta (ajustar según tu cliente).</p></details>
+<details><summary data-es="¿Incluye entradas?" data-en="Are tickets included?">¿Incluye entradas?</summary><p data-es="No. Te ayudo a comprarlas con anticipación, por ejemplo la Casa Azul." data-en="No. I help you book ahead, for example the Casa Azul.">No. Te ayudo a comprarlas con anticipación, por ejemplo la Casa Azul.</p></details>
+<details><summary data-es="¿Puedo armar mi propia ruta?" data-en="Can I build my own route?">¿Puedo armar mi propia ruta?</summary><p data-es="Claro, también hay tarifa por hora o por día." data-en="Of course, hourly and daily rates are available too.">Claro, también hay tarifa por hora o por día.</p></details>
+</div></section>
+</main>
+
+<footer><div class="w">
+<h2 data-es="¿Listo para tu recorrido?" data-en="Ready for your ride?">¿Listo para tu recorrido?</h2>
+<p><a href="#wa" data-wa>WhatsApp +52 55 0000 0000</a></p>
+<p style="opacity:.7;font-size:14px">Confort Taxi Service · Ciudad de México · Demo</p>
+</div></footer>
+
+<a class="fab" href="#wa" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.400.1.100.1.700-.1 1.300z"/></svg></a>
+
+<script>
+var NUM="5215500000000",lang="es";
+var T=[
+["#b5502e,#e5287a","M3 20 L12 5 L21 20Z M8 20 L12 13 L16 20","Pirámides de Teotihuacán","Teotihuacán Pyramids","Salida temprano para evitar calor y filas. Calzada de los Muertos y Pirámide del Sol.","Early start to beat heat and crowds. Avenue of the Dead and Pyramid of the Sun.","6-7 h","$1,800"],
+["#1f3a93,#4a7bd0","M3 17h18l-2 4H5z M7 17V9l5-4 5 4v8","Coyoacán + Casa Azul","Coyoacán + Frida's Blue House","Mercado, plaza y la Casa de Frida Kahlo. Se recomienda boleto anticipado.","Market, plaza and Frida Kahlo's house. Advance ticket recommended.","4-5 h","$1,000"],
+["#e5287a,#f4b400","M12 3a5 5 0 0 1 5 5H7a5 5 0 0 1 5-5z M4 21h16 M6 9v12 M18 9v12 M12 9v12","Centro Histórico","Historic Center","Zócalo, Catedral, Bellas Artes y Templo Mayor.","Zócalo, Cathedral, Bellas Artes and Templo Mayor.","4 h","$900"],
+["#14213d,#1f3a93","M4 20V9l8-5 8 5v11 M9 20v-7h6v7","Antropología + Chapultepec","Anthropology Museum + Chapultepec","El museo más importante del país, el bosque y Polanco.","The country's top museum, the park and Polanco.","4-5 h","$1,000"],
+["#1fa855,#f4b400","M2 15l10-8 10 8 M5 15l2 5h10l2-5 M12 7V3","Xochimilco + Ruta Sur","Xochimilco + South Route","Paseo en trajinera, Coyoacán o Ciudad Universitaria.","Trajinera ride, Coyoacán or UNAM campus.","7-8 h","$1,600"],
+["#51586b,#14213d","M2 16l20-6 M9 12L6 5 M14 11l2 7 M3 20h18","Traslado aeropuerto","Airport transfer","Con letrero de bienvenida y seguimiento de tu vuelo.","Meet-and-greet sign and flight tracking.","Por trayecto","$450"]];
+var g=document.getElementById("tg");
+T.forEach(function(t,i){var c=t[0].split(",");g.insertAdjacentHTML("beforeend",'<article class="tour"><div class="pic" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')"><svg viewBox="0 0 24 24"><path d="'+t[1]+'"/></svg></div><div class="tb"><h3 data-es="'+t[2]+'" data-en="'+t[3]+'">'+t[2]+'</h3><p data-es="'+t[4]+'" data-en="'+t[5]+'">'+t[4]+'</p><div class="meta"><span>'+t[6]+' · <span data-es="desde" data-en="from">desde</span> '+t[7]+' MXN</span><a href="#wa" data-wa data-i="'+i+'">WhatsApp</a></div></div></article>')});
+function wa(n){var m=lang=="es"?"Hola, me interesa: "+n:"Hi, I'm interested in: "+n;return"https://wa.me/"+NUM+"?text="+encodeURIComponent(m)}
+function paint(){document.documentElement.lang=lang;document.querySelectorAll("[data-"+lang+"]").forEach(function(e){var s=e.querySelector("span");var v=e.getAttribute("data-"+lang);if(e.classList.contains("btn")&&s)s.textContent=v;else e.textContent=v});
+document.querySelectorAll("[data-wa]").forEach(function(a){var i=a.getAttribute("data-i");var n=i!==null?T[i][lang=="es"?2:3]:(lang=="es"?"sus tours":"your tours");a.href=wa(n);a.target="_blank";a.rel="noopener"});
+document.getElementById("lang").textContent=lang=="es"?"EN":"ES"}
+document.getElementById("lang").onclick=function(){lang=lang=="es"?"en":"es";paint()};
+paint();
+</script>
+</body>
+</html>
