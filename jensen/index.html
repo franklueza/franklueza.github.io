@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chasis 3D · Robot Jansen</title>
+<style>
+:root{--bg:#f6f5f1;--fg:#1f1f1c;--mut:#6b6a63;--bd:#d6d4cb;--card:#ffffff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1b19;--fg:#ecebe5;--mut:#a3a29a;--bd:#3a3a36;--card:#262624}}
+:root[data-theme="dark"]{--bg:#1b1b19;--fg:#ecebe5;--mut:#a3a29a;--bd:#3a3a36;--card:#262624}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column}
+header{padding:10px 14px 6px}
+h1{font-size:16px;margin:0 0 2px;font-weight:600}
+.sub{color:var(--mut);font-size:12px}
+.bar{display:flex;flex-wrap:wrap;gap:6px;padding:4px 14px 8px}
+button{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:8px;padding:6px 10px;font:inherit;font-size:13px;cursor:pointer}
+button.on{border-color:#1D9E75;box-shadow:inset 0 0 0 1px #1D9E75}
+#wrap{flex:1;min-height:0;position:relative}
+canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+.leg{display:flex;flex-wrap:wrap;gap:4px 12px;padding:8px 14px 10px;font-size:12px;color:var(--mut)}
+.leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+</style>
+</head>
+<body>
+<header>
+<h1>Chasis del robot Jansen (vista 3D)</h1>
+<div class="sub">Arrastra para girar · rueda o pellizco para acercar · medidas reales en mm (m = 20 mm)</div>
+</header>
+<div class="bar">
+<button id="bLegs" class="on">Patas</button>
+<button id="bPlay" class="on">Animar</button>
+<button data-v="iso">Isométrica</button>
+<button data-v="side">Lado</button>
+<button data-v="front">Frente</button>
+<button data-v="top">Arriba</button>
+</div>
+<div id="wrap"><canvas id="cv"></canvas></div>
+<div class="leg">
+<span><i style="background:#8d9aa8"></i>Placas laterales 130×50×3</span>
+<span><i style="background:#7F77DD"></i>Motorreductor</span>
+<span><i style="background:#EF9F27"></i>Pila 4×AA (aprox.)</span>
+<span><i style="background:#D85A30"></i>Manivelas y pasadores</span>
+<span><i style="background:#1D9E75"></i>Triángulos rígidos</span>
+<span><i style="background:#888780"></i>Barras simples</span>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const S=4/3,U={a:38,b:41.5,c:39.3,d:40.1,e:55.8,f:39.4,g:36.7,h:65.7,i:49,j:50,k:61.9,l:7.8,m:15},L={};
+for(const k in U)L[k]=U[k]*S;
+const G=[-L.a,-L.l];
+function circ(p1,r1,p2,r2,s){const dx=p2[0]-p1[0],dy=p2[1]-p1[1],D=Math.hypot(dx,dy),x=(r1*r1-r2*r2+D*D)/(2*D),h=Math.sqrt(Math.max(r1*r1-x*x,0)),ux=dx/D,uy=dy/D;return[p1[0]+x*ux-s*h*uy,p1[1]+x*uy+s*h*ux]}
+function sol(t){const J1=[L.m*Math.cos(t),L.m*Math.sin(t)],J2=circ(J1,L.j,G,L.b,-1),J3=circ(J2,L.e,G,L.d,-1),J4=circ(J1,L.k,G,L.c,1),J5=circ(J3,L.f,J4,L.g,-1),F=circ(J4,L.i,J5,L.h,1);return{P:G,M:[0,0],1:J1,2:J2,3:J3,4:J4,5:J5,F}}
+
+const cv=document.getElementById('cv'),wrap=document.getElementById('wrap');
+const R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(40,1,1,3000);
+scene.add(new THREE.AmbientLight(0xffffff,.65));
+const dl=new THREE.DirectionalLight(0xffffff,.8);dl.position.set(150,300,200);scene.add(dl);
+const dl2=new THREE.DirectionalLight(0xffffff,.35);dl2.position.set(-200,100,-250);scene.add(dl2);
+const mat=c=>new THREE.MeshStandardMaterial({color:c,roughness:.6,metalness:.05});
+const M={plate:mat(0x8d9aa8),motor:mat(0x7F77DD),bat:mat(0xEF9F27),crank:mat(0xD85A30),tri:mat(0x1D9E75),bar:mat(0x888780),steel:mat(0xb8b8b0),sw:mat(0x444441)};
+
+const grid=new THREE.GridHelper(500,25,0x999999,0x999999);grid.position.y=-L.m*0+(-92*S)-4;grid.material.transparent=true;grid.material.opacity=.3;scene.add(grid);
+
+function rr(s,w,h,r){const x=-w/2,y=-h/2;s.moveTo(x+r,y);s.lineTo(x+w-r,y);s.absarc(x+w-r,y+r,r,-Math.PI/2,0);s.lineTo(x+w,y+h-r);s.absarc(x+w-r,y+h-r,r,0,Math.PI/2);s.lineTo(x+r,y+h);s.absarc(x+r,y+h-r,r,Math.PI/2,Math.PI);s.lineTo(x,y+r);s.absarc(x+r,y+r,r,Math.PI,1.5*Math.PI)}
+function plateGeo(){const s=new THREE.Shape();rr(s,130,50,5);
+ [[0,0,4],[L.a,-L.l,1.6],[-L.a,-L.l,1.6],[40,-18,1.6],[-40,-18,1.6]].forEach(([x,y,r])=>{const p=new THREE.Path();p.absarc(x,y,r,0,Math.PI*2,true);s.holes.push(p)});
+ return new THREE.ExtrudeGeometry(s,{depth:3,bevelEnabled:false,curveSegments:24})}
+const pg=plateGeo();
+const pl=new THREE.Mesh(pg,M.plate);pl.position.z=-36;scene.add(pl);
+const pr=new THREE.Mesh(pg,M.plate);pr.position.z=33;scene.add(pr);
+
+function cyl(r,len,m,x,y,z,axis){const c=new THREE.Mesh(new THREE.CylinderGeometry(r,r,len,16),m);c.position.set(x,y,z);if(axis==='z')c.rotation.x=Math.PI/2;scene.add(c);return c}
+const motor=new THREE.Mesh(new THREE.BoxGeometry(37,22,66),M.motor);scene.add(motor);
+cyl(2.7,80,M.steel,0,0,0,'z');
+const bat=new THREE.Mesh(new THREE.BoxGeometry(58,15,58),M.bat);bat.position.y=18.5;scene.add(bat);
+const sw=new THREE.Mesh(new THREE.BoxGeometry(14,8,10),M.sw);sw.position.set(-20,30,0);scene.add(sw);
+[[40,-18],[-40,-18]].forEach(([x,y])=>cyl(1.5,72,M.steel,x,y,0,'z'));
+
+const legs=new THREE.Group();scene.add(legs);
+const unit=new THREE.BoxGeometry(1,10,3);
+const EDGES=[['1','2','j',2],['1','4','k',3],['P','4','c',2],['3','5','f',2],['P','2','b',1],['P','3','d',1],['2','3','e',1],['4','5','g',1],['4','F','i',1],['5','F','h',1]];
+const zl=(sg,n)=>sg*(38+4*(n-1));
+const LG=[];
+for(const sg of[-1,1])for(const ty of['f','r']){
+ const base=ty==='f'?3:0,bars=[];
+ EDGES.forEach(([a,b,nm,ly])=>{const mm=new THREE.Mesh(unit,['b','d','e','g','h','i'].includes(nm)?M.tri:M.bar);mm.position.z=zl(sg,base+ly);legs.add(mm);bars.push({mm,a,b})});
+ const pb=new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,ty==='f'?25:13,12),M.steel);pb.rotation.x=Math.PI/2;
+ pb.position.set((ty==='f'?1:-1)*L.a,-L.l,sg*(33+(ty==='f'?12.5:6.5)));legs.add(pb);
+ LG.push({sg,ty,bars})}
+const cr=[],pins=[];
+for(const sg of[-1,1]){
+ const a=new THREE.Mesh(unit,M.crank);a.position.z=zl(sg,1);legs.add(a);cr.push({a,sg});
+ const p=new THREE.Mesh(new THREE.CylinderGeometry(1.5,1.5,24,12),M.crank);p.rotation.x=Math.PI/2;legs.add(p);pins.push({p,sg})}
+
+function place(mm,A,B,ext){const dx=B[0]-A[0],dy=B[1]-A[1];mm.position.x=(A[0]+B[0])/2;mm.position.y=(A[1]+B[1])/2;mm.rotation.z=Math.atan2(dy,dx);mm.scale.x=Math.hypot(dx,dy)+ext}
+let th=0.3,play=true;
+function update(){
+ for(const g of LG){
+  const te=th+(g.sg>0?Math.PI:0),sl=g.ty==='f'?sol(te):sol(Math.PI-te),w={};
+  for(const k in sl)w[k]=g.ty==='f'?[-sl[k][0],sl[k][1]]:[sl[k][0],sl[k][1]];
+  g.bars.forEach(b=>place(b.mm,w[b.a],w[b.b],10));
+ }
+ for(const c of cr){const te=th+(c.sg>0?Math.PI:0),px=-L.m*Math.cos(te),py=L.m*Math.sin(te);place(c.a,[0,0],[px,py],12);}
+ for(const q of pins){const te=th+(q.sg>0?Math.PI:0);q.p.position.set(-L.m*Math.cos(te),L.m*Math.sin(te),q.sg*49)}
+}
+
+let yaw=.8,pitch=.42,rad=430;const tgt=new THREE.Vector3(0,-30,0),pts=new Map();
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+cv.addEventListener('pointerdown',e=>{cv.setPointerCapture(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY])});
+cv.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;const o=pts.get(e.pointerId);
+ if(pts.size===1){yaw-=(e.clientX-o[0])*.008;pitch=clamp(pitch+(e.clientY-o[1])*.008,-1.4,1.5);pts.set(e.pointerId,[e.clientX,e.clientY])}
+ else if(pts.size===2){const ks=[...pts.keys()],a=pts.get(ks[0]),b=pts.get(ks[1]),d0=Math.hypot(a[0]-b[0],a[1]-b[1]);pts.set(e.pointerId,[e.clientX,e.clientY]);const a2=pts.get(ks[0]),b2=pts.get(ks[1]),d1=Math.hypot(a2[0]-b2[0],a2[1]-b2[1]);if(d1>0)rad=clamp(rad*d0/d1,120,1200)}});
+['pointerup','pointercancel'].forEach(t=>cv.addEventListener(t,e=>pts.delete(e.pointerId)));
+cv.addEventListener('wheel',e=>{e.preventDefault();rad=clamp(rad*(1+e.deltaY*.001),120,1200)},{passive:false});
+
+const V={iso:[.8,.42],side:[0,.02],front:[Math.PI/2,.02],top:[0,1.5]};
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{[yaw,pitch]=V[b.dataset.v]});
+const bL=document.getElementById('bLegs'),bP=document.getElementById('bPlay');
+bL.onclick=()=>{legs.visible=!legs.visible;bL.classList.toggle('on',legs.visible)};
+bP.onclick=()=>{play=!play;bP.classList.toggle('on',play)};
+
+function size(){const w=wrap.clientWidth,h=wrap.clientHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
+new ResizeObserver(size).observe(wrap);size();
+(function loop(){if(play)th+=.018;update();
+ cam.position.set(tgt.x+rad*Math.cos(pitch)*Math.sin(yaw),tgt.y+rad*Math.sin(pitch),tgt.z+rad*Math.cos(pitch)*Math.cos(yaw));
+ cam.lookAt(tgt);R.render(scene,cam);requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>
