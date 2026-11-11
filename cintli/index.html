@@ -1,650 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema Milpa — Análisis Técnico-Económico Tlalpan</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --verde-oscuro: #085041;
-  --verde-medio: #0F6E56;
-  --verde-vivo: #1D9E75;
-  --verde-claro: #5DCAA5;
-  --verde-menta: #9FE1CB;
-  --verde-palido: #E1F5EE;
-  --verde-hoja: #3B6D11;
-  --verde-lima: #C0DD97;
-  --amarillo: #FAC775;
-  --amarillo-osc: #BA7517;
-  --crema: #f7f3ec;
-  --tierra: #633806;
-}
-
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--crema); color: #1a1a1a; overflow-x: hidden; }
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  background-image: url('maiz.png');
-  background-repeat: no-repeat; 
-  background-size: cover; background-position: center;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 4rem 2rem; position: relative; overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
-}
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-.hero-deco { position: absolute; pointer-events: none; border-radius: 50%; border: 1px solid rgba(93,202,165,0.08); }
-.hero-deco-1 { top: -80px; right: -80px; width: 420px; height: 420px; }
-.hero-deco-2 { bottom: 5%; left: -60px; width: 240px; height: 240px; border-color: rgba(250,199,117,0.07); }
-.hero-deco-3 { top: 30%; left: 5%; width: 120px; height: 120px; border-color: rgba(93,202,165,0.05); }
-
-.hero-logo { margin-bottom: 2rem; animation: fadeInDown 0.9s ease both; }
-.hero-logo svg { filter: drop-shadow(0 8px 32px rgba(0,0,0,0.35)); }
-
-.hero-tag {
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--verde-menta); margin-bottom: 1.4rem;
-  animation: fadeInDown 0.9s 0.15s ease both; opacity: 0;
-}
-
-.hero-title {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
-  font-weight: 700; color: #fff; text-align: center; line-height: 1.18;
-  max-width: 780px; margin-bottom: 1.4rem;
-  animation: fadeInDown 0.9s 0.25s ease both; opacity: 0;
-}
-.hero-title em { font-style: italic; color: var(--amarillo); font-weight: 300; }
-
-.hero-divider {
-  width: 56px; height: 1.5px;
-  background: linear-gradient(90deg, transparent, var(--verde-claro), transparent);
-  margin: 0 auto 1.8rem;
-  animation: fadeIn 1s 0.4s ease both; opacity: 0;
-}
-
-.hero-subtitle {
-  font-size: 0.95rem; color: rgba(225,245,238,0.65);
-  letter-spacing: 8px; text-transform: uppercase; font-weight: 300;
-  animation: fadeInDown 0.9s 0.35s ease both; opacity: 0;
-}
-
-.hero-scroll {
-  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  color: rgba(157,225,203,0.4); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase;
-  animation: fadeIn 1s 1.2s ease both; opacity: 0;
-}
-.hero-scroll-line {
-  width: 1px; height: 44px;
-  background: linear-gradient(to bottom, rgba(157,225,203,0.45), transparent);
-  animation: scrollPulse 2s 1.8s ease-in-out infinite;
-}
-
-/* MOCKUP SECTION */
-.mockup-section {
-  background: linear-gradient(175deg, #f7f3ec 0%, #edf7f1 60%, #f0f7f4 100%);
-  padding: 7rem 2rem; position: relative; overflow: hidden;
-}
-.mockup-section::before {
-  content: ''; position: absolute; top: -150px; right: -150px;
-  width: 600px; height: 600px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(93,202,165,0.07) 0%, transparent 70%);
-  pointer-events: none;
-}
-.mockup-inner {
-  max-width: 1080px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-}
-@media (max-width: 780px) {
-  .mockup-inner { grid-template-columns: 1fr; gap: 3.5rem; }
-  .mockup-phone-col { order: -1; }
-}
-
-.section-label {
-  font-size: 0.67rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--verde-claro); margin-bottom: 1rem;
-  display: flex; align-items: center; gap: 12px;
-}
-.section-label::before { content: ''; width: 30px; height: 1px; background: var(--verde-claro); }
-
-.section-heading {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(1.55rem, 3vw, 2.5rem);
-  font-weight: 700; color: var(--verde-oscuro); line-height: 1.2; margin-bottom: 1.5rem;
-}
-
-.mockup-intro {
-  font-size: 1rem; color: #3a5a3a; line-height: 1.72; margin-bottom: 2.5rem;
-}
-
-.feature-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; }
-.feature-item { display: flex; gap: 14px; align-items: flex-start; }
-.feature-icon {
-  width: 40px; height: 40px; border-radius: 11px;
-  background: var(--verde-palido); display: flex; align-items: center;
-  justify-content: center; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
-}
-.feature-text strong { display: block; font-size: 0.88rem; font-weight: 600; color: var(--verde-oscuro); margin-bottom: 3px; }
-.feature-text p { font-size: 0.81rem; color: #5a7a5a; line-height: 1.5; }
-
-.mockup-phone-col { display: flex; justify-content: center; position: relative; }
-.mockup-phone-col::before {
-  content: ''; position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 360px; height: 360px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(29,158,117,0.1) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-/* PHONE FRAME */
-.phone-wrap {
-  transform: perspective(900px) rotateY(-5deg) rotateX(2deg);
-  transition: transform 0.5s ease;
-  filter: drop-shadow(0 28px 56px rgba(8,80,65,0.2)) drop-shadow(0 8px 18px rgba(8,80,65,0.1));
-}
-.phone-wrap:hover { transform: perspective(900px) rotateY(0deg) rotateX(0deg); }
-
-.phone-frame { width: 280px; border-radius: 38px; border: 3px solid #085041; background: #f4fdf8; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(15,110,86,.18),0 4px 12px rgba(15,110,86,.08); }
-.status-bar { background: #085041; height: 28px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; }
-.status-bar span { font-size: 11px; color: #9FE1CB; font-weight: 500; }
-.p-screen { display: none; flex-direction: column; min-height: 580px; }
-.p-screen.active { display: flex; }
-.s0-bg { background: linear-gradient(160deg,#085041 0%,#0F6E56 50%,#1D9E75 100%); flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 28px 20px; position: relative; overflow: hidden; }
-.s0-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%,rgba(157,225,203,.12) 0%,transparent 60%); }
-.s0-title { font-family: 'Fraunces', serif; font-size: 2rem; color: #E1F5EE; letter-spacing: 5px; }
-.btn-white { background: #E1F5EE; color: #085041; border: none; border-radius: 12px; padding: 12px; font-size: .88rem; font-weight: 600; width: 100%; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; }
-.btn-white:hover { background: white; }
-.btn-ghost { background: transparent; color: #9FE1CB; border: 1px solid rgba(157,225,203,.4); border-radius: 12px; padding: 11px; font-size: .85rem; font-weight: 500; width: 100%; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; }
-.dots-row { display: flex; gap: 8px; }
-.dot-deco { width: 8px; height: 8px; border-radius: 50%; background: rgba(157,225,203,.3); }
-.dot-deco.lit { background: #5DCAA5; }
-.hdr { padding: 14px 16px; display: flex; align-items: center; gap: 10px; }
-.hdr-title { color: #E1F5EE; font-size: .95rem; font-weight: 500; }
-.hdr-sub { color: rgba(225,245,238,.6); font-size: .7rem; margin-top: 1px; }
-.back-btn { color: rgba(225,245,238,.7); font-size: 1rem; cursor: pointer; background: rgba(255,255,255,.1); border: none; border-radius: 8px; padding: 4px 8px; font-family: 'DM Sans',sans-serif; }
-.p-body { padding: 14px; flex: 1; display: flex; flex-direction: column; gap: 10px; background: #f4fdf8; overflow-y: auto; }
-.field-label { font-size: .7rem; color: #085041; font-weight: 600; margin-bottom: 3px; text-transform: uppercase; letter-spacing: .5px; }
-.field-val { border: .5px solid #9FE1CB; border-radius: 8px; padding: 9px 11px; font-size: .82rem; color: #085041; background: white; width: 100%; }
-.btn-main { border: none; border-radius: 12px; padding: 12px; font-size: .88rem; font-weight: 600; width: 100%; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; color: white; margin-top: 2px; }
-.p-tag { padding: 4px 10px; border-radius: 20px; font-size: .7rem; font-weight: 500; cursor: pointer; display: inline-block; }
-.p-card { background: white; border: .5px solid #C0DD97; border-radius: 12px; padding: 12px; }
-.card-title { font-size: .75rem; font-weight: 600; color: #27500A; margin-bottom: 7px; text-transform: uppercase; letter-spacing: .5px; }
-.metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.metric { border-radius: 10px; padding: 10px; text-align: center; }
-.metric .val { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; }
-.metric .lbl { font-size: .65rem; margin-top: 2px; font-weight: 500; }
-.step-dots { display: flex; gap: 6px; justify-content: center; padding: 8px 0; }
-.sdot { width: 7px; height: 7px; border-radius: 50%; background: #C0DD97; }
-.sdot.on { background: #0F6E56; width: 20px; border-radius: 4px; }
-.alert-box { border-radius: 10px; padding: 10px 11px; display: flex; align-items: flex-start; gap: 8px; }
-.alert-text { font-size: .72rem; line-height: 1.4; }
-.progress-bar { height: 7px; border-radius: 6px; overflow: hidden; margin-top: 6px; }
-.progress-fill { height: 100%; border-radius: 6px; }
-.bottom-nav { background: white; border-top: .5px solid #C0DD97; display: flex; justify-content: space-around; padding: 8px 0 10px; }
-.bnav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; padding: 2px 8px; }
-.bnav-icon { font-size: 1.15rem; color: #9FE1CB; }
-.bnav-item.on .bnav-icon { color: #0F6E56; }
-.bnav-label { font-size: .58rem; color: #9FE1CB; font-weight: 500; }
-.bnav-item.on .bnav-label { color: #0F6E56; font-weight: 600; }
-.market-item { background: white; border: .5px solid #C0DD97; border-radius: 12px; padding: 10px; display: flex; gap: 10px; align-items: center; }
-.mthumb { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-.mname { font-size: .82rem; font-weight: 600; color: #085041; }
-.mdet { font-size: .68rem; color: #0F6E56; margin-top: 2px; }
-.mprice { font-family: 'Fraunces', serif; font-size: .9rem; font-weight: 600; color: #0F6E56; white-space: nowrap; }
-.pill { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: .65rem; font-weight: 500; margin-top: 4px; }
-.bar-wrap { display: flex; align-items: flex-end; gap: 6px; height: 56px; margin: 4px 0; }
-.bar { border-radius: 5px 5px 0 0; min-width: 22px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3px; }
-.bar span { font-size: .58rem; color: white; font-weight: 600; }
-.bar-labels { display: flex; gap: 6px; font-size: .62rem; color: #3B6D11; }
-.bar-labels span { min-width: 22px; text-align: center; }
-.search-bar { border: .5px solid #9FE1CB; border-radius: 10px; padding: 8px 11px; font-size: .78rem; color: #0F6E56; display: flex; align-items: center; gap: 6px; background: white; flex: 1; }
-.filter-btn { border: .5px solid #9FE1CB; border-radius: 10px; padding: 8px 10px; background: white; cursor: pointer; display: flex; align-items: center; }
-.cost-row { display: flex; justify-content: space-between; font-size: .76rem; padding: 3px 0; }
-.cost-row span:first-child { color: #854F0B; }
-.cost-row span:last-child { color: #633806; font-weight: 600; }
-.cost-row.total { border-top: .5px solid #FAC775; padding-top: 5px; margin-top: 2px; }
-.cost-row.total span { color: #633806; font-weight: 600; }
-
-.p-nav { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem; }
-.p-nav button { background: var(--verde-palido); color: var(--verde-oscuro); border: 0.5px solid var(--verde-claro); border-radius: 8px; padding: 5px 12px; font-size: 0.72rem; font-weight: 500; cursor: pointer; font-family: 'DM Sans',sans-serif; transition: all .2s; }
-.p-nav button:hover { background: var(--verde-claro); color: white; }
-.p-nav button.on { background: var(--verde-medio); color: var(--verde-palido); border-color: var(--verde-medio); }
-
-/* CONCLUSIONS */
-.conclusions-section {
-  background: var(--verde-oscuro); padding: 7rem 2rem; position: relative; overflow: hidden;
-}
-.conclusions-section::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 5% 50%, rgba(93,202,165,0.09) 0%, transparent 50%),
-              radial-gradient(ellipse at 95% 20%, rgba(250,199,117,0.06) 0%, transparent 45%);
-  pointer-events: none;
-}
-.conclusions-inner { max-width: 880px; margin: 0 auto; position: relative; }
-.conclusions-inner .section-label { color: var(--verde-claro); }
-.conclusions-inner .section-label::before { background: var(--verde-claro); }
-.conclusions-inner .section-heading { color: var(--verde-palido); }
-
-.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
-@media (max-width: 620px) { .cards-grid { grid-template-columns: 1fr; } }
-
-.conclusion-card {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(93,202,165,0.18); border-radius: 18px;
-  padding: 2rem 1.8rem; position: relative;
-  transition: transform 0.35s ease, background 0.35s ease; backdrop-filter: blur(4px);
-}
-.conclusion-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.07); }
-.conclusion-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  border-radius: 18px 18px 0 0;
-  background: linear-gradient(90deg, var(--verde-claro), var(--verde-vivo));
-}
-.conclusion-card:nth-child(2)::before { background: linear-gradient(90deg, var(--amarillo), var(--amarillo-osc)); }
-.conclusion-card:nth-child(3)::before { background: linear-gradient(90deg, var(--verde-vivo), var(--verde-claro)); }
-.conclusion-card:nth-child(4)::before { background: linear-gradient(90deg, var(--verde-lima), var(--verde-hoja)); }
-
-.card-num {
-  font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700;
-  color: rgba(93,202,165,0.12); position: absolute; top: 0.8rem; right: 1.4rem; line-height: 1;
-}
-.conclusion-card:nth-child(2) .card-num { color: rgba(250,199,117,0.12); }
-.conclusion-card:nth-child(3) .card-num { color: rgba(93,202,165,0.12); }
-.conclusion-card:nth-child(4) .card-num { color: rgba(192,221,151,0.12); }
-
-.conclusion-card p { font-size: 0.97rem; color: rgba(225,245,238,0.82); line-height: 1.68; }
-
-/* FOOTER */
-.footer { background: #040f0c; padding: 2.5rem 2rem; text-align: center; }
-.footer p { font-size: 0.72rem; color: rgba(93,202,165,0.35); letter-spacing: 2.5px; text-transform: uppercase; }
-
-/* KEYFRAMES */
-@keyframes fadeInDown { from { opacity: 0; transform: translateY(-22px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes scrollPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
-
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.32s; }
-.reveal-delay-4 { transition-delay: 0.44s; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#085041">
+  <title>CINTLI — Datos del campo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+    :root{--forest:#085041;--green:#0f6e56;--bright:#1d9e75;--mint:#9fe1cb;--pale:#e1f5ee;--cream:#f6f7f0;--ink:#173b31;--muted:#607b70;--line:#c5e5d8;--gold:#fac775;--brown:#633806;--white:#fff;--shadow:0 28px 70px #0b574525}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #fac775;outline-offset:2px}
+    .app-shell{min-height:100vh;padding:42px clamp(20px,5vw,76px);display:grid;grid-template-columns:minmax(340px,1fr) minmax(380px,1fr);gap:clamp(38px,7vw,110px);align-items:center;max-width:1440px;margin:auto;background:radial-gradient(ellipse at 88% 38%,#cceee14a,transparent 35%),linear-gradient(115deg,#f4f6ef,#eef8f2)}
+    .intro{max-width:580px}.eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:4px;color:var(--bright);font-weight:700;font-size:.69rem;margin:0 0 24px}.eyebrow:before{content:'';width:30px;height:1px;background:var(--bright)}h1{font:700 clamp(2.5rem,4vw,3.8rem)/1.05 'Fraunces',serif;letter-spacing:-1.2px;color:var(--forest);margin:0 0 24px}h1 span{display:block} .intro-copy{font-size:1rem;line-height:1.75;color:#3d6558;max-width:540px;margin:0 0 34px}.features{display:grid;gap:20px;list-style:none;padding:0;margin:0}.feature{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:start}.feature-icon{width:40px;height:40px;border-radius:12px;background:#e0f3eb;display:grid;place-items:center;font-size:1.15rem}.feature strong{display:block;color:var(--forest);font-size:.89rem;margin:1px 0 3px}.feature p{margin:0;color:#648274;font-size:.79rem;line-height:1.55;max-width:480px}
+    .demo{display:flex;flex-direction:column;align-items:center;gap:18px}.phone{width:min(100%,350px);height:min(78vh,720px);min-height:620px;border:3px solid #075746;border-radius:42px;background:#f5fcf8;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow),0 10px 24px #0b57451c;position:relative}.status{height:30px;flex:none;background:var(--forest);display:flex;justify-content:space-between;align-items:center;padding:0 20px;color:#b5e8d5;font-size:.65rem;font-weight:600}.brand-mini{font:600 .67rem 'Fraunces',serif;letter-spacing:2px}.screen{display:none;flex:1;min-height:0;flex-direction:column}.screen.active{display:flex}.welcome{flex:1;min-height:0;color:white;background:radial-gradient(circle at 85% 16%,#74d4a026,transparent 35%),linear-gradient(155deg,#0d6752,#138368 68%,#179977);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 22px;gap:9px}.logo-mark{width:76px;height:76px;border-radius:22px;background:#075b49;display:grid;place-items:center;font-size:2.5rem;margin-bottom:5px}.welcome-title{font:500 2rem 'Fraunces',serif;letter-spacing:5px;margin:0}.welcome-kicker{font-size:.64rem;letter-spacing:2px;color:#a9e3cf;margin:0}.welcome-sub{font-size:.75rem;color:#b9ead8;margin:1px 0 12px}.stack{width:100%;display:grid;gap:9px}.btn{border:0;border-radius:11px;padding:11px 13px;font-size:.82rem;font-weight:700;transition:transform .16s,background .16s,box-shadow .16s}.btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(0)}.btn-light{background:#e1f5ee;color:#085041}.btn-light:hover{background:white;box-shadow:0 5px 16px #002b201b}.btn-outline-light{color:#c2eddd;background:transparent;border:1px solid #8ad3b8a8}.btn-outline-light:hover{background:#ffffff12}.welcome-note{font-size:.62rem;color:#a9d9c8a8;margin:10px 0 0}.phone-header{padding:13px 14px;display:flex;align-items:center;gap:10px;color:white;flex:none}.phone-header h2{font-size:.91rem;font-weight:700;margin:0}.phone-header p{font-size:.68rem;opacity:.74;margin:3px 0 0}.back{border:0;color:white;background:#ffffff20;border-radius:8px;padding:5px 9px;font-size:1rem}.body{padding:13px;display:flex;flex-direction:column;gap:10px;overflow:auto;flex:1;min-height:0;background:#f5fcf8}.field{display:grid;gap:4px}.field label,.label{font-size:.65rem;letter-spacing:.35px;text-transform:uppercase;font-weight:700;color:#345f50}.input{width:100%;border:1px solid #b8ddcd;border-radius:8px;padding:9px 10px;color:var(--forest);background:white;font-size:.78rem}.input::placeholder{color:#91aa9e}.input:focus{border-color:#1d9e75}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.helper{font-size:.62rem;color:#6b887c;line-height:1.4;margin:0}.btn-main{width:100%;color:white;background:var(--green);border:0;border-radius:10px;padding:10px;font-size:.8rem;font-weight:700}.btn-main:hover{background:var(--forest)}.btn-gold{background:#a86712}.btn-gold:hover{background:#88510d}.link-btn{border:0;background:transparent;color:var(--green);font-size:.72rem;font-weight:700;padding:8px}.notice{border-radius:9px;padding:9px 10px;font-size:.7rem;line-height:1.45;background:#eef7dc;color:#496222}.error{font-size:.67rem;color:#a83322;min-height:1em;margin:0}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill-btn,.filter-btn{border:1px solid #c5e5d8;background:white;color:#386656;border-radius:18px;padding:5px 9px;font-size:.65rem}.pill-btn.active,.filter-btn.active{background:var(--green);border-color:var(--green);color:white}.card{border:1px solid #cfe5bb;background:white;border-radius:11px;padding:10px}.card-title{font-size:.69rem;text-transform:uppercase;letter-spacing:.35px;font-weight:700;color:#355b23;margin:0 0 7px}.cost-row{display:flex;justify-content:space-between;gap:8px;font-size:.69rem;padding:3px 0;color:#714a1a}.cost-row b{white-space:nowrap}.total{border-top:1px solid #f2d494;padding-top:6px;margin-top:3px;font-weight:700}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.metric{background:#e5f4ed;border-radius:9px;text-align:center;padding:10px 5px}.metric:nth-child(2){background:#edf4df}.metric:nth-child(3){background:#fbf0db}.metric:nth-child(4){background:#f9ebe6}.metric-value{font:600 1.02rem 'Fraunces',serif;color:var(--forest)}.metric-label{font-size:.59rem;color:#597568;margin-top:3px}.bar-chart{height:75px;display:flex;align-items:flex-end;justify-content:space-around;gap:5px;padding:4px 4px 0;border-bottom:1px solid #d8e9df}.chart-column{width:18%;min-height:8px;background:#37a879;border-radius:4px 4px 0 0;position:relative}.chart-column span{position:absolute;top:100%;left:50%;transform:translateX(-50%);font-size:.56rem;color:#668172;padding-top:3px}.bottom-nav{flex:none;border-top:1px solid #d7e9df;background:white;display:flex;justify-content:space-around;padding:7px 2px 9px}.nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;background:transparent;border:0;color:#91b3a4;min-width:52px}.nav-item .ico{font-size:1rem}.nav-item small{font-size:.55rem}.nav-item.active{color:var(--green);font-weight:700}.search-row{display:flex;gap:6px}.search-row .input{flex:1}.market-item{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #d4e7cf;border-radius:10px;padding:8px}.thumb{width:38px;height:38px;display:grid;place-items:center;background:#edf5df;border-radius:9px;font-size:1.15rem;flex:none}.market-info{min-width:0;flex:1}.market-name{font-size:.72rem;font-weight:700;color:var(--forest);margin:0}.market-detail{font-size:.61rem;color:#718b7d;margin:3px 0 0}.price{font:600 .79rem 'Fraunces',serif;color:var(--green);white-space:nowrap}.tag{display:inline-block;border-radius:20px;padding:2px 7px;background:#e1f5ee;color:#28624d;font-size:.56rem;margin-top:4px}.empty{padding:22px 10px;text-align:center;color:#718b7d;font-size:.75rem}.profile-row{font-size:.75rem;display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #e6f0e9;padding:8px 0}.profile-row b{color:#235641}.screen-nav{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.screen-nav button{border:1px solid #a4d9c5;background:#edf8f2;color:#075041;border-radius:8px;padding:6px 10px;font-size:.67rem;font-weight:600}.screen-nav button.active,.screen-nav button:hover{background:#0f6e56;color:white;border-color:#0f6e56}.toast{position:absolute;left:12px;right:12px;bottom:54px;z-index:5;background:#163f32;color:white;border-radius:10px;padding:10px 12px;font-size:.72rem;box-shadow:0 8px 24px #0003;animation:appear .2s ease}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.muted{color:#6c877b}.section-spacer{height:3px}
+    @media(max-width:850px){.app-shell{grid-template-columns:1fr;gap:36px;padding:38px 24px}.intro{max-width:650px;margin:auto}.demo{width:100%}.phone{height:700px;max-height:75vh;min-height:590px}}
+    @media(max-width:430px){.app-shell{padding:30px 16px}.phone{width:100%;height:72vh;min-height:570px;border-radius:34px}.screen-nav{gap:4px}.screen-nav button{padding:6px 7px;font-size:.61rem}.intro-copy{font-size:.94rem}.features{gap:16px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
 </head>
 <body>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-deco hero-deco-1"></div>
-  <div class="hero-deco hero-deco-2"></div>
-  <div class="hero-deco hero-deco-3"></div>
-
-  <div class="hero-logo">
-    <img src="logo.png" alt="Logo Sistema Milpa">
-   
-  </div>
-
-  <p class="hero-tag">Investigación · Alcaldía Tlalpan, CDMX · 2024</p>
-
-  <h1 class="hero-title">
-    Análisis técnico-económico de la
-    <em>diversificación del cultivo de maíz</em>
-    en la Alcaldía Tlalpan
-  </h1>
-
-  <div class="hero-divider"></div>
-
-  <p class="hero-subtitle">Sistema Milpa</p>
-
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
-    <span>Explorar</span>
-  </div>
-</section>
-
-<!-- MOCKUP SECTION -->
-<section class="mockup-section">
-  <div class="mockup-inner">
-
-    <div class="mockup-text-col">
-      <p class="section-label reveal">Herramienta de campo</p>
-      <h2 class="section-heading reveal reveal-delay-1">CINTLI<br>App de datos agrícolas</h2>
-      <p class="mockup-intro reveal reveal-delay-2">
-        Plataforma digital diseñada para que los productores de Tlalpan registren, analicen y compartan sus datos productivos. Conecta la parcela con el mercado y con las políticas públicas.
-      </p>
-      <ul class="feature-list">
-        <li class="feature-item reveal reveal-delay-1">
-          <div class="feature-icon">🌽</div>
-          <div class="feature-text">
-            <strong>Registro del productor y ciclo</strong>
-            <p>Captura de datos del cultivo, costos por ciclo, modalidad de tenencia y apoyos recibidos.</p>
-          </div>
-        </li>
-        <li class="feature-item reveal reveal-delay-2">
-          <div class="feature-icon">📊</div>
-          <div class="feature-text">
-            <strong>Tablero de análisis económico</strong>
-            <p>Utilidad neta, ROI del ciclo, rendimiento por hectárea y comparativo frente al precio SEGALMEX.</p>
-          </div>
-        </li>
-        <li class="feature-item reveal reveal-delay-3">
-          <div class="feature-icon">🏪</div>
-          <div class="feature-text">
-            <strong>Mercado Cintli</strong>
-            <p>Directorio de oferta y demanda de productos agrícolas en la zona sur de la CDMX.</p>
-          </div>
-        </li>
-        <li class="feature-item reveal reveal-delay-4">
-          <div class="feature-icon">🔗</div>
-          <div class="feature-text">
-            <strong>Datos para modelos matemáticos</strong>
-            <p>Insumo para análisis de Sistemas Complejos y diseño de políticas de precios justos.</p>
-          </div>
-        </li>
+  <main class="app-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Herramienta de campo</p>
+      <h1 id="page-title"><span>CINTLI</span>App de datos agrícolas</h1>
+      <p class="intro-copy">Prototipo de una plataforma para que productores de Tlalpan registren y consulten información de sus ciclos agrícolas. Explora cómo los datos de la parcela pueden apoyar decisiones productivas y comerciales.</p>
+      <ul class="features">
+        <li class="feature"><div class="feature-icon" aria-hidden="true">🌽</div><div><strong>Registro del productor y ciclo</strong><p>Datos básicos de la parcela, modalidad y ciclo agrícola.</p></div></li>
+        <li class="feature"><div class="feature-icon" aria-hidden="true">📊</div><div><strong>Tablero de análisis económico</strong><p>Consulta costos, ingresos estimados y rendimiento con los datos capturados.</p></div></li>
+        <li class="feature"><div class="feature-icon" aria-hidden="true">🏪</div><div><strong>Mercado CINTLI</strong><p>Prototipo de directorio para explorar oferta de productos agrícolas locales.</p></div></li>
+        <li class="feature"><div class="feature-icon" aria-hidden="true">🔗</div><div><strong>Información para el análisis</strong><p>Los registros podrían apoyar estudios posteriores y decisiones públicas.</p></div></li>
       </ul>
-    </div>
-
-    <div class="mockup-phone-col">
-      <div>
-        <div class="phone-wrap">
-          <div class="phone-frame">
-            <div class="status-bar">
-              <span>9:41</span>
-              <span style="font-family:'Fraunces',serif;letter-spacing:2px;font-size:12px">CINTLI</span>
-              <span>100%</span>
-            </div>
-
-            <!-- PANTALLA 0: BIENVENIDA -->
-            <div class="p-screen active" id="ps0">
-              <div class="s0-bg">
-                <svg width="72" height="72" viewBox="0 0 100 100">
-                  <rect width="100" height="100" rx="22" fill="#085041"/>
-                  <rect x="46" y="10" width="8" height="15" rx="3" fill="#97C459"/>
-                  <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#97C459"/>
-                  <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#97C459"/>
-                  <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
-                  <circle cx="44" cy="36" r="3.8" fill="#BA7517"/><circle cx="44" cy="47" r="3.8" fill="#BA7517"/>
-                  <circle cx="44" cy="58" r="3.8" fill="#BA7517"/><circle cx="44" cy="69" r="3.8" fill="#BA7517"/>
-                  <circle cx="56" cy="36" r="3.8" fill="#EF9F27"/><circle cx="56" cy="47" r="3.8" fill="#EF9F27"/>
-                  <circle cx="56" cy="58" r="3.8" fill="#EF9F27"/><circle cx="56" cy="69" r="3.8" fill="#EF9F27"/>
-                  <ellipse cx="50" cy="80" rx="13" ry="5" fill="#FAC775"/>
-                </svg>
-                <div style="text-align:center">
-                  <p class="s0-title">CINTLI</p>
-                  <p style="font-size:.72rem;color:#9FE1CB;margin-top:2px;letter-spacing:2px">DATOS DEL CAMPO</p>
-                  <p style="font-size:.75rem;color:#9FE1CB;text-align:center;line-height:1.5;margin-top:6px">Tu parcela, tus datos, tu decisión</p>
-                </div>
-                <div style="width:100%;display:flex;flex-direction:column;gap:9px;margin-top:8px">
-                  <button class="btn-white" onclick="pgo(2)">Iniciar sesión</button>
-                  <button class="btn-ghost" onclick="pgo(1)">Registrarse</button>
-                </div>
-                <div class="dots-row" style="margin-top:10px">
-                  <div class="dot-deco lit"></div><div class="dot-deco lit"></div><div class="dot-deco"></div>
-                </div>
-                <p style="font-size:.65rem;color:rgba(157,225,203,.45);margin-top:4px">Sistema de datos agrícolas · Tlalpan, CDMX</p>
-              </div>
-            </div>
-
-            <!-- PANTALLA 1: REGISTRO -->
-            <div class="p-screen" id="ps1">
-              <div class="hdr" style="background:#0F6E56">
-                <button class="back-btn" onclick="pgo(0)">←</button>
-                <div><p class="hdr-title">Registro del productor</p><p class="hdr-sub">Paso 1 de 3</p></div>
-              </div>
-              <div class="step-dots"><div class="sdot on"></div><div class="sdot"></div><div class="sdot"></div></div>
-              <div class="p-body">
-                <div><p class="field-label">Nombre completo</p><div class="field-val">Juan Pérez Hernández</div></div>
-                <div><p class="field-label">Alcaldía / municipio</p><div class="field-val">Tlalpan, CDMX</div></div>
-                <div><p class="field-label">Teléfono</p><div class="field-val">55 1234 5678</div></div>
-                <div><p class="field-label">Años de experiencia</p><div class="field-val">15 años</div></div>
-                <div>
-                  <p class="field-label">¿Recibe apoyos gubernamentales?</p>
-                  <div style="display:flex;gap:8px;margin-top:4px">
-                    <div style="flex:1;text-align:center;padding:8px;border-radius:10px;background:#0F6E56;color:#E1F5EE;font-size:.8rem;font-weight:600;cursor:pointer">Sí</div>
-                    <div style="flex:1;text-align:center;padding:8px;border-radius:10px;border:.5px solid #9FE1CB;color:#0F6E56;font-size:.8rem;cursor:pointer">No</div>
-                  </div>
-                </div>
-                <div>
-                  <p class="field-label">Tipo de tenencia</p>
-                  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
-                    <span class="p-tag" style="background:#E1F5EE;color:#085041">Propia ✓</span>
-                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Ejidal</span>
-                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Rentada</span>
-                  </div>
-                </div>
-                <button class="btn-main" style="background:#0F6E56" onclick="pgo(2)">Siguiente →</button>
-              </div>
-            </div>
-
-            <!-- PANTALLA 2: CAPTURA -->
-            <div class="p-screen" id="ps2">
-              <div class="hdr" style="background:#BA7517">
-                <button class="back-btn" onclick="pgo(0)" style="background:rgba(255,255,255,.15)">←</button>
-                <div><p class="hdr-title">Captura del ciclo</p><p class="hdr-sub">Ciclo PV 2024</p></div>
-              </div>
-              <div class="step-dots">
-                <div class="sdot" style="background:#FAC775"></div>
-                <div class="sdot on" style="background:#BA7517;width:20px;border-radius:4px"></div>
-                <div class="sdot" style="background:#FAC775"></div>
-              </div>
-              <div class="p-body">
-                <div>
-                  <p class="field-label">Cultivo sembrado</p>
-                  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
-                    <span class="p-tag" style="background:#0F6E56;color:#E1F5EE">Milpa ✓</span>
-                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Maíz</span>
-                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Frijol</span>
-                    <span class="p-tag" style="background:#f4fdf8;color:#0F6E56;border:.5px solid #9FE1CB">Otro</span>
-                  </div>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                  <div><p class="field-label">Hectáreas</p><div class="field-val">0.80 ha</div></div>
-                  <div><p class="field-label">Modalidad</p><div class="field-val">Temporal</div></div>
-                </div>
-                <div class="p-card" style="border-color:#FAC775">
-                  <p class="card-title" style="color:#633806">💰 Costos del ciclo</p>
-                  <div class="cost-row"><span>Preparación terreno</span><span>$6,000</span></div>
-                  <div class="cost-row"><span>Semilla + insumos</span><span>$5,200</span></div>
-                  <div class="cost-row"><span>Fertilizantes (2 aplic.)</span><span>$4,500</span></div>
-                  <div class="cost-row"><span>Mano de obra</span><span>$3,500</span></div>
-                  <div class="cost-row total"><span>Total</span><span>$19,200</span></div>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                  <div><p class="field-label">Producción</p><div class="field-val">1.32 t/ha</div></div>
-                  <div><p class="field-label">Precio venta</p><div class="field-val">$7,390/t</div></div>
-                </div>
-                <button class="btn-main" style="background:#BA7517" onclick="pgo(3)">Guardar ciclo ✓</button>
-              </div>
-            </div>
-
-            <!-- PANTALLA 3: TABLERO -->
-            <div class="p-screen" id="ps3">
-              <div class="hdr" style="background:#27500A">
-                <svg width="28" height="28" viewBox="0 0 100 100" style="flex-shrink:0">
-                  <rect width="100" height="100" rx="16" fill="#173404"/>
-                  <rect x="46" y="10" width="8" height="15" rx="3" fill="#97C459"/>
-                  <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#97C459"/>
-                  <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#97C459"/>
-                  <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
-                  <circle cx="44" cy="38" r="3.5" fill="#BA7517"/><circle cx="44" cy="50" r="3.5" fill="#BA7517"/>
-                  <circle cx="44" cy="62" r="3.5" fill="#BA7517"/><circle cx="56" cy="38" r="3.5" fill="#EF9F27"/>
-                  <circle cx="56" cy="50" r="3.5" fill="#EF9F27"/><circle cx="56" cy="62" r="3.5" fill="#EF9F27"/>
-                </svg>
-                <div style="flex:1">
-                  <p style="color:#C0DD97;font-size:.92rem;font-weight:500">Hola, Juan</p>
-                  <p style="color:#97C459;font-size:.68rem">Ciclo PV 2024 · Tlalpan</p>
-                </div>
-                <span style="background:#3B6D11;color:#C0DD97;font-size:.65rem;padding:3px 9px;border-radius:20px;font-weight:500">Activo</span>
-              </div>
-              <div class="p-body">
-                <div class="metric-row">
-                  <div class="metric" style="background:#E1F5EE"><p class="val" style="color:#085041">$43,368</p><p class="lbl" style="color:#0F6E56">Utilidad neta</p></div>
-                  <div class="metric" style="background:#EAF3DE"><p class="val" style="color:#27500A">201.7%</p><p class="lbl" style="color:#3B6D11">ROI del ciclo</p></div>
-                </div>
-                <div class="metric-row">
-                  <div class="metric" style="background:#FAEEDA"><p class="val" style="color:#633806">1.32 t</p><p class="lbl" style="color:#854F0B">Rendimiento/ha</p></div>
-                  <div class="metric" style="background:#FAECE7"><p class="val" style="color:#712B13">0%</p><p class="lbl" style="color:#993C1D">Siniestro</p></div>
-                </div>
-                <div class="p-card" style="border-color:#C0DD97">
-                  <p class="card-title">📊 Producción histórica (ton)</p>
-                  <div class="bar-wrap">
-                    <div class="bar" style="height:30px;background:#9FE1CB"><span>21</span></div>
-                    <div class="bar" style="height:24px;background:#5DCAA5"><span>22</span></div>
-                    <div class="bar" style="height:42px;background:#1D9E75"><span>23</span></div>
-                    <div class="bar" style="height:36px;background:#085041"><span>24</span></div>
-                  </div>
-                  <div class="bar-labels"><span>2021</span><span>2022</span><span>2023</span><span>2024</span></div>
-                </div>
-                <div class="alert-box" style="background:#FAEEDA">
-                  <span style="font-size:1rem;flex-shrink:0;margin-top:1px">💡</span>
-                  <span class="alert-text" style="color:#633806">Tu precio/ha supera 3x al monocultivo de maíz. Considera aumentar la superficie de frijol.</span>
-                </div>
-                <div class="p-card" style="border-color:#FAC775">
-                  <p class="card-title" style="color:#633806">💰 Tu precio vs SEGALMEX</p>
-                  <div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:3px">
-                    <span style="color:#0F6E56">Tu precio maíz</span><span style="color:#085041;font-weight:600">$7,390/ton</span>
-                  </div>
-                  <div style="display:flex;justify-content:space-between;font-size:.75rem;margin-bottom:6px">
-                    <span style="color:#BA7517">Garantía SEGALMEX</span><span style="color:#633806;font-weight:600">$5,840/ton</span>
-                  </div>
-                  <div class="progress-bar" style="background:#EAF3DE"><div class="progress-fill" style="width:76%;background:#3B6D11"></div></div>
-                  <p style="font-size:.65rem;color:#3B6D11;margin-top:3px">26.5% sobre precio de garantía</p>
-                </div>
-              </div>
-              <div class="bottom-nav">
-                <div class="bnav-item" onclick="pgo(2)"><span class="bnav-icon">➕</span><span class="bnav-label">Capturar</span></div>
-                <div class="bnav-item on"><span class="bnav-icon" style="color:#0F6E56">📊</span><span class="bnav-label">Tablero</span></div>
-                <div class="bnav-item" onclick="pgo(4)"><span class="bnav-icon">🏪</span><span class="bnav-label">Mercado</span></div>
-                <div class="bnav-item"><span class="bnav-icon">👤</span><span class="bnav-label">Perfil</span></div>
-              </div>
-            </div>
-
-            <!-- PANTALLA 4: MERCADO -->
-            <div class="p-screen" id="ps4">
-              <div class="hdr" style="background:#993C1D">
-                <svg width="26" height="26" viewBox="0 0 100 100" style="flex-shrink:0">
-                  <rect width="100" height="100" rx="16" fill="#712B13"/>
-                  <rect x="46" y="10" width="8" height="15" rx="3" fill="#F0997B"/>
-                  <path d="M44 23 Q22 30 20 55 Q34 46 44 38 Z" fill="#F0997B"/>
-                  <path d="M56 23 Q78 30 80 55 Q66 46 56 38 Z" fill="#F0997B"/>
-                  <rect x="37" y="25" width="26" height="54" rx="13" fill="#FAC775"/>
-                  <circle cx="44" cy="38" r="3.5" fill="#993C1D"/><circle cx="44" cy="50" r="3.5" fill="#993C1D"/>
-                  <circle cx="44" cy="62" r="3.5" fill="#993C1D"/><circle cx="56" cy="38" r="3.5" fill="#D85A30"/>
-                  <circle cx="56" cy="50" r="3.5" fill="#D85A30"/><circle cx="56" cy="62" r="3.5" fill="#D85A30"/>
-                </svg>
-                <div><p class="hdr-title">Mercado Cintli</p><p class="hdr-sub">Tlalpan y zona sur CDMX</p></div>
-              </div>
-              <div class="p-body">
-                <div style="display:flex;gap:7px">
-                  <div class="search-bar">🔍 Buscar producto...</div>
-                  <div class="filter-btn" style="border:.5px solid #9FE1CB">⚙️</div>
-                </div>
-                <div style="display:flex;gap:6px;flex-wrap:wrap">
-                  <span class="p-tag" style="background:#0F6E56;color:#E1F5EE">Todos</span>
-                  <span class="p-tag" style="background:#EAF3DE;color:#27500A">🌽 Maíz</span>
-                  <span class="p-tag" style="background:#FAEEDA;color:#633806">🫓 Tortilla</span>
-                  <span class="p-tag" style="background:#E1F5EE;color:#085041">🫘 Frijol</span>
-                </div>
-                <div class="market-item">
-                  <div class="mthumb" style="background:#EAF3DE">🌽</div>
-                  <div style="flex:1"><p class="mname">Maíz criollo blanco</p><p class="mdet">San Miguel Topilejo · 500 kg</p><span class="pill" style="background:#E1F5EE;color:#085041">Disponible</span></div>
-                  <p class="mprice">$7.80/kg</p>
-                </div>
-                <div class="market-item">
-                  <div class="mthumb" style="background:#FAEEDA">🫘</div>
-                  <div style="flex:1"><p class="mname">Frijol negro temporal</p><p class="mdet">Tlalpan · 120 kg disp.</p><span class="pill" style="background:#E1F5EE;color:#085041">Disponible</span></div>
-                  <p class="mprice">$28/kg</p>
-                </div>
-                <div class="market-item">
-                  <div class="mthumb" style="background:#FAECE7">🫓</div>
-                  <div style="flex:1"><p class="mname">Tortilla artesanal</p><p class="mdet">Topilejo · producción diaria</p><span class="pill" style="background:#FAEEDA;color:#633806">Bajo pedido</span></div>
-                  <p class="mprice">$22/kg</p>
-                </div>
-                <div class="market-item">
-                  <div class="mthumb" style="background:#EAF3DE">🌿</div>
-                  <div style="flex:1"><p class="mname">Elote de milpa</p><p class="mdet">Tlalpan · temporada jun-ago</p><span class="pill" style="background:#FAEEDA;color:#633806">Próximamente</span></div>
-                  <p class="mprice">$12/pza</p>
-                </div>
-              </div>
-              <div class="bottom-nav">
-                <div class="bnav-item" onclick="pgo(2)"><span class="bnav-icon">➕</span><span class="bnav-label">Capturar</span></div>
-                <div class="bnav-item" onclick="pgo(3)"><span class="bnav-icon">📊</span><span class="bnav-label">Tablero</span></div>
-                <div class="bnav-item on"><span class="bnav-icon" style="color:#0F6E56">🏪</span><span class="bnav-label">Mercado</span></div>
-                <div class="bnav-item"><span class="bnav-icon">👤</span><span class="bnav-label">Perfil</span></div>
-              </div>
-            </div>
-
-          </div><!-- /phone-frame -->
-        </div><!-- /phone-wrap -->
-
-        <div class="p-nav">
-          <button class="on" onclick="pgo(0)">① Bienvenida</button>
-          <button onclick="pgo(1)">② Registro</button>
-          <button onclick="pgo(2)">③ Captura</button>
-          <button onclick="pgo(3)">④ Tablero</button>
-          <button onclick="pgo(4)">⑤ Mercado</button>
-        </div>
+    </section>
+    <section class="demo" aria-label="Prototipo interactivo de CINTLI">
+      <div class="phone">
+        <div class="status"><span>9:41</span><span class="brand-mini">CINTLI</span><span>100%</span></div>
+        <section class="screen active" id="screen-home" aria-label="Bienvenida">
+          <div class="welcome"><div class="logo-mark" aria-hidden="true">🌽</div><p class="welcome-title">CINTLI</p><p class="welcome-kicker">DATOS DEL CAMPO</p><p class="welcome-sub">Tu parcela, tus datos, tu decisión</p><div class="stack"><button class="btn btn-light" data-go="login">Iniciar sesión</button><button class="btn btn-outline-light" data-go="register">Registrarse</button></div><p class="welcome-note">Prototipo de datos agrícolas · Tlalpan, CDMX</p></div>
+        </section>
+        <section class="screen" id="screen-login" aria-label="Iniciar sesión">
+          <header class="phone-header" style="background:#0f6e56"><button class="back" data-go="home" aria-label="Volver">←</button><div><h2>Iniciar sesión</h2><p>Acceso de demostración</p></div></header>
+          <form class="body" id="login-form"><div class="notice">Este prototipo no tiene cuentas reales. Usa cualquier correo y contraseña para entrar a la demostración.</div><div class="field"><label for="login-email">Correo electrónico</label><input class="input" id="login-email" type="email" placeholder="tu@correo.com" required></div><div class="field"><label for="login-password">Contraseña</label><input class="input" id="login-password" type="password" minlength="4" placeholder="Al menos 4 caracteres" required></div><p class="error" id="login-error" aria-live="polite"></p><button class="btn-main" type="submit">Entrar al prototipo</button><button class="link-btn" type="button" data-go="register">Crear una cuenta de demostración</button></form>
+        </section>
+        <section class="screen" id="screen-register" aria-label="Registro del productor">
+          <header class="phone-header" style="background:#0f6e56"><button class="back" data-go="home" aria-label="Volver">←</button><div><h2>Registro del productor</h2><p>Datos de demostración</p></div></header>
+          <form class="body" id="register-form"><div class="field"><label for="producer-name">Nombre</label><input class="input" id="producer-name" required placeholder="Nombre del productor"></div><div class="field"><label for="producer-location">Localidad</label><select class="input" id="producer-location"><option>San Miguel Topilejo</option><option>Parres</option><option>San Miguel Ajusco</option><option>Otra localidad de Tlalpan</option></select></div><div class="grid2"><div class="field"><label for="producer-phone">Teléfono (opcional)</label><input class="input" id="producer-phone" type="tel" placeholder="55 0000 0000"></div><div class="field"><label for="producer-years">Años cultivando</label><input class="input" id="producer-years" type="number" min="0" max="100" placeholder="Ej. 15"></div></div><div class="field"><span class="label">Tenencia de la parcela</span><div class="pills" id="tenure-options"><button class="pill-btn active" type="button">Propia</button><button class="pill-btn" type="button">Ejidal</button><button class="pill-btn" type="button">Rentada</button></div></div><p class="error" id="register-error" aria-live="polite"></p><button class="btn-main" type="submit">Guardar y continuar →</button></form>
+        </section>
+        <section class="screen" id="screen-capture" aria-label="Captura del ciclo">
+          <header class="phone-header" style="background:#a86712"><button class="back" data-go="home" aria-label="Volver">←</button><div><h2>Captura del ciclo</h2><p>Registra datos ilustrativos</p></div></header>
+          <form class="body" id="cycle-form"><div class="grid2"><div class="field"><label for="cycle-year">Año</label><input class="input" id="cycle-year" type="number" min="2000" max="2100" value="2024" required></div><div class="field"><label for="cycle-season">Ciclo</label><select class="input" id="cycle-season"><option>Primavera-verano</option><option>Otoño-invierno</option></select></div></div><div class="field"><span class="label">Sistema sembrado</span><div class="pills" id="crop-options"><button class="pill-btn active" type="button">Milpa</button><button class="pill-btn" type="button">Maíz</button></div><p class="helper">Selecciona el sistema que quieres registrar en este ejemplo.</p></div><div class="grid2"><div class="field"><label for="hectares">Superficie (ha)</label><input class="input" id="hectares" type="number" min="0.01" step="0.01" value="0.8" required></div><div class="field"><label for="modality">Modalidad</label><select class="input" id="modality"><option>Temporal</option><option>Riego</option></select></div></div><div class="card"><p class="card-title">Costos del ciclo (MXN)</p><div class="grid2"><div class="field"><label for="cost-prep">Preparación</label><input class="input cost-input" id="cost-prep" type="number" min="0" value="6000"></div><div class="field"><label for="cost-seed">Semilla e insumos</label><input class="input cost-input" id="cost-seed" type="number" min="0" value="5200"></div><div class="field"><label for="cost-fertilizer">Fertilizantes</label><input class="input cost-input" id="cost-fertilizer" type="number" min="0" value="4500"></div><div class="field"><label for="cost-labor">Mano de obra</label><input class="input cost-input" id="cost-labor" type="number" min="0" value="3500"></div></div><div class="cost-row total"><span>Total de costos</span><b id="cost-total">$19,200</b></div></div><div class="grid2"><div class="field"><label for="yield-ha">Producción (t/ha)</label><input class="input" id="yield-ha" type="number" min="0" step="0.01" value="1.32" required></div><div class="field"><label for="price-ton">Precio (MXN/t)</label><input class="input" id="price-ton" type="number" min="0" step="0.01" value="7390" required></div></div><p class="helper">Los valores precargados son ilustrativos. Sustitúyelos por datos reales antes de interpretar los resultados.</p><p class="error" id="cycle-error" aria-live="polite"></p><button class="btn-main btn-gold" type="submit">Guardar ciclo y ver tablero →</button></form>
+        </section>
+        <section class="screen" id="screen-dashboard" aria-label="Tablero">
+          <header class="phone-header" style="background:#27500a"><div class="logo-mark" style="width:35px;height:35px;border-radius:10px;font-size:1.1rem;margin:0">🌽</div><div style="flex:1"><h2 id="dash-greeting">Resumen del ciclo</h2><p id="dash-period">Ciclo · Tlalpan</p></div><span class="tag">Demo</span></header>
+          <div class="body"><div class="metric-grid"><div class="metric"><div class="metric-value" id="dash-income">$0</div><div class="metric-label">Ingreso estimado</div></div><div class="metric"><div class="metric-value" id="dash-profit">$0</div><div class="metric-label">Utilidad estimada</div></div><div class="metric"><div class="metric-value" id="dash-yield">0 t/ha</div><div class="metric-label">Rendimiento capturado</div></div><div class="metric"><div class="metric-value" id="dash-roi">0%</div><div class="metric-label">Retorno sobre costos</div></div></div><div class="card"><p class="card-title">Resumen del ciclo</p><div class="cost-row"><span>Superficie</span><b id="dash-area">—</b></div><div class="cost-row"><span>Costos capturados</span><b id="dash-costs">—</b></div><div class="cost-row"><span>Ingreso estimado</span><b id="dash-income-line">—</b></div><div class="cost-row total"><span>Utilidad estimada</span><b id="dash-profit-line">—</b></div></div><div class="card"><p class="card-title">Histórico ilustrativo</p><div class="bar-chart" aria-label="Gráfica de ejemplo"><div class="chart-column" style="height:42%"><span>21</span></div><div class="chart-column" style="height:34%;background:#65b994"><span>22</span></div><div class="chart-column" style="height:72%;background:#248e68"><span>23</span></div><div class="chart-column" style="height:58%;background:#0f6e56"><span id="chart-current">24</span></div></div><p class="helper" style="margin-top:16px">Barras de ejemplo, no conectadas a registros históricos.</p></div><div class="notice">Cálculo de demostración: ingreso = superficie × rendimiento × precio. Utilidad = ingreso − costos capturados. No representa una recomendación agronómica ni una comparación validada.</div><button class="btn-main" data-go="capture">＋ Registrar otro ciclo</button></div>
+          <nav class="bottom-nav" aria-label="Secciones"><button class="nav-item" data-go="capture"><span class="ico">＋</span><small>Capturar</small></button><button class="nav-item active" data-go="dashboard"><span class="ico">📊</span><small>Tablero</small></button><button class="nav-item" data-go="market"><span class="ico">🏪</span><small>Mercado</small></button><button class="nav-item" data-go="profile"><span class="ico">👤</span><small>Perfil</small></button></nav>
+        </section>
+        <section class="screen" id="screen-market" aria-label="Mercado CINTLI">
+          <header class="phone-header" style="background:#8d3a20"><div><h2>Mercado CINTLI</h2><p>Ejemplos de publicaciones locales</p></div></header>
+          <div class="body"><div class="search-row"><input class="input" id="market-search" type="search" placeholder="Buscar producto…" aria-label="Buscar producto"><button class="filter-btn active" data-filter="Todos">Todos</button></div><div class="pills" id="market-filters"><button class="pill-btn active" data-filter="Todos">Todos</button><button class="pill-btn" data-filter="Maíz">🌽 Maíz</button><button class="pill-btn" data-filter="Frijol">🫘 Frijol</button><button class="pill-btn" data-filter="Derivados">🫓 Derivados</button></div><div id="market-list" style="display:grid;gap:7px"></div><button class="btn-main" data-go="publish">＋ Publicar producto</button><p class="helper">El directorio es ilustrativo; no hay compradores ni ventas reales conectados.</p></div>
+          <nav class="bottom-nav" aria-label="Secciones"><button class="nav-item" data-go="capture"><span class="ico">＋</span><small>Capturar</small></button><button class="nav-item" data-go="dashboard"><span class="ico">📊</span><small>Tablero</small></button><button class="nav-item active" data-go="market"><span class="ico">🏪</span><small>Mercado</small></button><button class="nav-item" data-go="profile"><span class="ico">👤</span><small>Perfil</small></button></nav>
+        </section>
+        <section class="screen" id="screen-publish" aria-label="Publicar producto">
+          <header class="phone-header" style="background:#8d3a20"><button class="back" data-go="market" aria-label="Volver al mercado">←</button><div><h2>Publicar producto</h2><p>Vista previa local del prototipo</p></div></header>
+          <form class="body" id="publish-form"><div class="notice">La publicación solo aparecerá en esta demostración y no se enviará a internet.</div><div class="field"><label for="product-name">Producto</label><input class="input" id="product-name" required maxlength="50" placeholder="Ej. Maíz criollo blanco"></div><div class="grid2"><div class="field"><label for="product-type">Categoría</label><select class="input" id="product-type"><option>Maíz</option><option>Frijol</option><option>Derivados</option><option>Otro</option></select></div><div class="field"><label for="product-qty">Cantidad</label><input class="input" id="product-qty" required min="0.1" step="0.1" type="number" placeholder="Ej. 100"></div></div><div class="grid2"><div class="field"><label for="product-unit">Unidad</label><select class="input" id="product-unit"><option>kg</option><option>ton</option><option>piezas</option></select></div><div class="field"><label for="product-price">Precio (MXN)</label><input class="input" id="product-price" required min="0" step="0.01" type="number" placeholder="Ej. 25"></div></div><div class="field"><label for="product-place">Localidad</label><select class="input" id="product-place"><option>San Miguel Topilejo</option><option>Parres</option><option>San Miguel Ajusco</option><option>Tlalpan</option></select></div><p class="error" id="publish-error" aria-live="polite"></p><button class="btn-main" type="submit">Agregar al directorio de muestra</button><button class="link-btn" type="button" data-go="market">Cancelar</button></form>
+        </section>
+        <section class="screen" id="screen-profile" aria-label="Perfil del productor">
+          <header class="phone-header" style="background:#0f6e56"><div><h2>Perfil del productor</h2><p>Información de esta sesión de muestra</p></div></header><div class="body"><div class="card"><p class="card-title">Datos registrados</p><div class="profile-row"><span>Nombre</span><b id="profile-name">Sin registrar</b></div><div class="profile-row"><span>Localidad</span><b id="profile-location">—</b></div><div class="profile-row"><span>Tenencia</span><b id="profile-tenure">—</b></div></div><div class="notice">Los datos permanecen solo en esta página durante la sesión; no se envían ni guardan en un servidor.</div><button class="btn-main" data-go="register">Editar registro</button><button class="link-btn" id="reset-demo" type="button">Reiniciar demostración</button></div><nav class="bottom-nav" aria-label="Secciones"><button class="nav-item" data-go="capture"><span class="ico">＋</span><small>Capturar</small></button><button class="nav-item" data-go="dashboard"><span class="ico">📊</span><small>Tablero</small></button><button class="nav-item" data-go="market"><span class="ico">🏪</span><small>Mercado</small></button><button class="nav-item active" data-go="profile"><span class="ico">👤</span><small>Perfil</small></button></nav>
+        </section>
       </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONCLUSIONS -->
-<section class="conclusions-section">
-  <div class="conclusions-inner">
-    <p class="section-label reveal">Hallazgos principales</p>
-    <h2 class="section-heading reveal reveal-delay-1">Conclusiones del análisis</h2>
-    <div class="cards-grid">
-      <div class="conclusion-card reveal reveal-delay-1">
-        <span class="card-num">01</span>
-        <p>La ciencia de datos es una gran herramienta para contextualizar la problemática socioeconómica agrícola en México.</p>
-      </div>
-      <div class="conclusion-card reveal reveal-delay-2">
-        <span class="card-num">02</span>
-        <p>La centralización de los datos nos provee el motor analítico, permitiendo el uso y creación de modelos matemáticos.</p>
-      </div>
-      <div class="conclusion-card reveal reveal-delay-3">
-        <span class="card-num">03</span>
-        <p>Esto nos sirve para que el estado diseñe e implemente políticas públicas para que los precios sean justos.</p>
-      </div>
-      <div class="conclusion-card reveal reveal-delay-4">
-        <span class="card-num">04</span>
-        <p>Desde el enfoque de los Sistemas Complejos se observan todos los agentes (actores o nodos) para una mejor comprensión del problema y cómo se relacionan.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>Sistema Milpa · Alcaldía Tlalpan · CDMX · 2003-2024</p>
-</footer>
-
-<script>
-function pgo(n){
-  document.querySelectorAll('.p-screen').forEach(function(s,i){ s.classList.toggle('active',i===n); });
-  document.querySelectorAll('.p-nav button').forEach(function(b,i){ b.classList.toggle('on',i===n); });
-}
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-reveals.forEach(function(el){ obs.observe(el); });
-</script>
+      <nav class="screen-nav" aria-label="Navegación de demostración"><button class="active" data-go="home">① Bienvenida</button><button data-go="register">② Registro</button><button data-go="capture">③ Captura</button><button data-go="dashboard">④ Tablero</button><button data-go="market">⑤ Mercado</button></nav>
+    </section>
+  </main>
+  <script>
+    (()=>{
+      const screens=['home','login','register','capture','dashboard','market','publish','profile'];
+      const state={screen:'home',producer:{name:'',location:'',tenure:'Propia'},cycle:{year:2024,season:'Primavera-verano',crop:'Milpa',hectares:.8,modality:'Temporal',yieldHa:1.32,price:7390,costs:[6000,5200,4500,3500]},products:[
+        {name:'Maíz criollo blanco',type:'Maíz',detail:'San Miguel Topilejo · 500 kg',price:7.8,unit:'kg',icon:'🌽'},
+        {name:'Frijol negro de temporal',type:'Frijol',detail:'Tlalpan · 120 kg',price:28,unit:'kg',icon:'🫘'},
+        {name:'Tortilla artesanal',type:'Derivados',detail:'Topilejo · producción diaria',price:22,unit:'kg',icon:'🫓'},
+        {name:'Elote de milpa',type:'Otro',detail:'Tlalpan · producto de temporada',price:12,unit:'pieza',icon:'🌿'}
+      ],filter:'Todos',query:''};
+      const money=n=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(Number(n)||0);
+      function go(name){if(!screens.includes(name))return;state.screen=name;document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id==='screen-'+name));document.querySelectorAll('.screen-nav [data-go]').forEach(b=>b.classList.toggle('active',b.dataset.go===name));if(['dashboard','market','profile'].includes(name))updateNav(name);if(name==='dashboard')renderDashboard();if(name==='market')renderMarket();if(name==='profile')renderProfile();document.querySelector('.phone').scrollTop=0}
+      function updateNav(current){document.querySelectorAll('.bottom-nav').forEach(nav=>nav.querySelectorAll('[data-go]').forEach(b=>b.classList.toggle('active',b.dataset.go===current)))}
+      document.addEventListener('click',e=>{const btn=e.target.closest('[data-go]');if(btn){e.preventDefault();go(btn.dataset.go)}});
+      document.querySelectorAll('#tenure-options,#crop-options').forEach(group=>group.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;group.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));if(group.id==='tenure-options')state.producer.tenure=b.textContent.trim();else state.cycle.crop=b.textContent.trim()}));
+      document.querySelectorAll('.cost-input').forEach(i=>i.addEventListener('input',updateCostTotal));function updateCostTotal(){const total=[...document.querySelectorAll('.cost-input')].reduce((a,i)=>a+(Number(i.value)||0),0);document.getElementById('cost-total').textContent=money(total)}
+      document.getElementById('login-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;document.getElementById('login-error').textContent='';go(state.producer.name?'dashboard':'capture');toast('Sesión de demostración iniciada')});
+      document.getElementById('register-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;state.producer.name=document.getElementById('producer-name').value.trim();state.producer.location=document.getElementById('producer-location').value;state.producer.tenure=document.querySelector('#tenure-options .active')?.textContent.trim()||'Propia';document.getElementById('register-error').textContent='';go('capture');toast('Registro agregado a esta demostración')});
+      document.getElementById('cycle-form').addEventListener('input',updateCostTotal);
+      document.getElementById('cycle-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;state.cycle={year:Number(document.getElementById('cycle-year').value),season:document.getElementById('cycle-season').value,crop:document.querySelector('#crop-options .active')?.textContent.trim()||'Milpa',hectares:Number(document.getElementById('hectares').value),modality:document.getElementById('modality').value,yieldHa:Number(document.getElementById('yield-ha').value),price:Number(document.getElementById('price-ton').value),costs:[...document.querySelectorAll('.cost-input')].map(i=>Number(i.value)||0)};go('dashboard');toast('Ciclo calculado con los datos capturados')});
+      function renderDashboard(){const c=state.cycle, costs=c.costs.reduce((a,b)=>a+b,0), income=c.hectares*c.yieldHa*c.price, profit=income-costs, roi=costs?profit/costs*100:0;document.getElementById('dash-greeting').textContent=state.producer.name?`Hola, ${state.producer.name.split(' ')[0]}`:'Resumen del ciclo';document.getElementById('dash-period').textContent=`${c.crop} · ${c.season} ${c.year}${state.producer.location?' · '+state.producer.location:''}`;document.getElementById('dash-income').textContent=money(income);document.getElementById('dash-profit').textContent=money(profit);document.getElementById('dash-yield').textContent=`${c.yieldHa.toFixed(2)} t/ha`;document.getElementById('dash-roi').textContent=`${roi.toFixed(1)}%`;document.getElementById('dash-area').textContent=`${c.hectares} ha · ${c.modality}`;document.getElementById('dash-costs').textContent=money(costs);document.getElementById('dash-income-line').textContent=money(income);document.getElementById('dash-profit-line').textContent=money(profit);document.getElementById('chart-current').textContent=String(c.year).slice(-2)}
+      const icons={Maíz:'🌽',Frijol:'🫘',Derivados:'🫓',Otro:'🌿'};
+      function renderMarket(){const list=document.getElementById('market-list');const filtered=state.products.filter(p=>(state.filter==='Todos'||p.type===state.filter)&&(p.name+' '+p.detail).toLocaleLowerCase('es').includes(state.query.toLocaleLowerCase('es')));list.innerHTML='';if(!filtered.length){list.innerHTML='<div class="empty">No encontramos productos con esos filtros.</div>';return}filtered.forEach(p=>{const item=document.createElement('article');item.className='market-item';const thumb=document.createElement('div');thumb.className='thumb';thumb.textContent=p.icon||icons[p.type]||'🌱';const info=document.createElement('div');info.className='market-info';const name=document.createElement('p');name.className='market-name';name.textContent=p.name;const detail=document.createElement('p');detail.className='market-detail';detail.textContent=p.detail;const tag=document.createElement('span');tag.className='tag';tag.textContent=p.own?'Mi publicación (demo)':'Ejemplo';info.append(name,detail,tag);const price=document.createElement('div');price.className='price';price.textContent=`$${Number(p.price).toLocaleString('es-MX')}/${p.unit}`;item.append(thumb,info,price);list.append(item)})}
+      document.getElementById('market-search').addEventListener('input',e=>{state.query=e.target.value;renderMarket()});document.getElementById('market-filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;state.filter=b.dataset.filter;document.querySelectorAll('#market-filters [data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderMarket()});document.querySelector('.search-row .filter-btn').addEventListener('click',()=>{state.filter='Todos';document.querySelectorAll('#market-filters [data-filter]').forEach((x,i)=>x.classList.toggle('active',i===0));renderMarket()});
+      document.getElementById('publish-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;const type=document.getElementById('product-type').value, name=document.getElementById('product-name').value.trim(), qty=document.getElementById('product-qty').value,unit=document.getElementById('product-unit').value,price=Number(document.getElementById('product-price').value),place=document.getElementById('product-place').value;state.products.unshift({name,type,detail:`${place} · ${qty} ${unit}`,price,unit,icon:icons[type]||'🌱',own:true});f.reset();state.filter='Todos';state.query='';document.getElementById('market-search').value='';document.querySelectorAll('#market-filters [data-filter]').forEach((x,i)=>x.classList.toggle('active',i===0));go('market');toast('Producto añadido al directorio de esta sesión')});
+      function renderProfile(){document.getElementById('profile-name').textContent=state.producer.name||'Sin registrar';document.getElementById('profile-location').textContent=state.producer.location||'—';document.getElementById('profile-tenure').textContent=state.producer.tenure||'—'}
+      document.getElementById('reset-demo').addEventListener('click',()=>{state.producer={name:'',location:'',tenure:'Propia'};state.cycle={year:2024,season:'Primavera-verano',crop:'Milpa',hectares:.8,modality:'Temporal',yieldHa:1.32,price:7390,costs:[6000,5200,4500,3500]};go('home');toast('Demostración reiniciada')});
+      let toastTimer;function toast(message){document.querySelector('.toast')?.remove();const el=document.createElement('div');el.className='toast';el.setAttribute('role','status');el.textContent=message;document.querySelector('.phone').append(el);clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.remove(),2500)}
+      updateCostTotal();renderDashboard();renderMarket();
+    })();
+  </script>
 </body>
 </html>
